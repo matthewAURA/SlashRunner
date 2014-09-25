@@ -16,6 +16,10 @@ public class DampenedCamera : MonoBehaviour
 	/// </summary>
 	public Transform target;
 
+	// currently unused
+	public float offsetX = 0.0f;
+	public float offsetY = 0.0f;
+
 	Vector3 velocity = Vector3.zero;
 
 	void Update () 
