@@ -16,13 +16,15 @@ public class DampenedCamera : MonoBehaviour
 	/// </summary>
 	public Transform target;
 
-	// currently unused
+	/// <summary>
+	/// Specifies camera positional offsets relative to the target
+	/// </summary>
 	public float offsetX = 0.0f;
 	public float offsetY = 0.0f;
 
 	Vector3 velocity = Vector3.zero;
 
-	void Update () 
+	void FixedUpdate () 
 	{
 		// Only update camera position if target exists
 		if (target)
