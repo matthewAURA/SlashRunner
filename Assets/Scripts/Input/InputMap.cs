@@ -3,9 +3,11 @@
 public class InputMap {
 	
 	//Dictionary Mapping MultiPlatformInputs to function Delegates
-	Dictionary<MultiPlatformInputs, List<System.Delegate>> inputMap = new Dictionary<MultiPlatformInputs, List<System.Delegate>>();
+	Dictionary<MultiPlatformInputs, List<InputAction>> inputMap = new Dictionary<MultiPlatformInputs, List<InputAction>>();
 	
 	static InputMap instance;
+
+	public delegate void InputAction();
 	
 	public static InputMap getInputMap() {
 		if (instance == null) {
@@ -18,16 +20,16 @@ public class InputMap {
 	 * Maps a given input to a given function so that
 	 * when that input is detected the function will be called.
 	*/
-	public void Add(MultiPlatformInputs input, System.Delegate function) {
+	public void Add(MultiPlatformInputs input, InputAction function) {
 		if (inputMap.ContainsKey (input)) {
-			List<System.Delegate> value = inputMap[input];
+			List<InputAction> value = inputMap[input];
 			if(!value.Contains(function)) {
 				value.Add(function);
 				return;
 			}
 		}
 		else {
-			List<System.Delegate> value = new List<System.Delegate>();
+			List<InputAction> value = new List<InputAction>();
 			value.Add(function);
 			inputMap.Add (input, value);
 		}
@@ -37,7 +39,7 @@ public class InputMap {
 	 * Maps a given list of inputs to a given function so that
 	 * when that input is detected the function will be called.
 	*/
-	public void Add(List<MultiPlatformInputs> inputs, System.Delegate function) {
+	public void Add(List<MultiPlatformInputs> inputs, InputAction function) {
 		foreach(MultiPlatformInputs input in inputs) {
 			this.Add(input, function);
 		}
@@ -48,7 +50,7 @@ public class InputMap {
 	*/
 	public void FireInputEvents(MultiPlatformInputs input) {
 		if (inputMap.ContainsKey (input)) {
-			foreach(System.Delegate function in inputMap[input]) {
+			foreach(InputAction function in inputMap[input]) {
 				function.DynamicInvoke();
 			}
 		}
