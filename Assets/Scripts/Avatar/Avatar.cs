@@ -8,9 +8,11 @@ public class Avatar : MonoBehaviour {
 	Transform groundCheck;								
 	float groundedRadius = 0.2f;	
 	bool grounded = false;
+	private bool moving = true;
 
 	private InputMap inputMap;
 	public float jumpForce = 70f;
+	public float movementForce = 10f;
 
 
 	void Awake() {
@@ -26,7 +28,9 @@ public class Avatar : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
+		grounded = Physics2D.OverlapCircle (groundCheck.position, groundedRadius, whatIsGround);
+
+		move ();
 	}
 
 	// Update is called once per frame
@@ -34,10 +38,16 @@ public class Avatar : MonoBehaviour {
 		
 	}
 
+	public void move() {
+		if (moving) {
+			rigidbody2D.velocity = new Vector2 (movementForce, rigidbody2D.velocity.y);
+		}
+	}
+
 	public void jump () {
 		Debug.Log ("Attempting to jump");
 		if (grounded) {
-			rigidbody2D.AddForce(new Vector2(rigidbody2D.velocity.x, jumpForce));
+			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 		}
 	}
 }
