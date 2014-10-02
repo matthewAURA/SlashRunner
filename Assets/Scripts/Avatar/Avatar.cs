@@ -11,7 +11,7 @@ public class Avatar : MonoBehaviour {
 	private bool moving = true;
 
 	private InputMap inputMap;
-	public float jumpForce = 70f;
+	public float jumpForce = 500f;
 	public float movementForce = 10f;
 
 

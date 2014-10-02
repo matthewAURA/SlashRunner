@@ -250,7 +250,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
-  jumpForce: 70
+  jumpForce: 500
   movementForce: 10
 --- !u!114 &1132372592
 MonoBehaviour:
