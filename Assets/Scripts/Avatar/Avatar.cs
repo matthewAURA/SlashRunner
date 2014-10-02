@@ -45,7 +45,6 @@ public class Avatar : MonoBehaviour {
 	}
 
 	public void jump () {
-		Debug.Log ("Attempting to jump");
 		if (grounded) {
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 		}
