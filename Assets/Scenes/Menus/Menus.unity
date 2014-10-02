@@ -486,6 +486,7 @@ GameObject:
   - 4: {fileID: 659911382}
   - 212: {fileID: 659911381}
   - 61: {fileID: 659911380}
+  - 114: {fileID: 659911383}
   m_Layer: 0
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -538,6 +539,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!114 &659911383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 659911379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Settings
 --- !u!1 &719269574
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +637,7 @@ GameObject:
   - 4: {fileID: 1020809741}
   - 212: {fileID: 1020809740}
   - 61: {fileID: 1020809739}
+  - 114: {fileID: 1020809742}
   m_Layer: 0
   m_Name: StoreButton
   m_TagString: Untagged
@@ -676,6 +690,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1020809742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1020809738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Store
 --- !u!1 &1063517893
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,6 +849,7 @@ GameObject:
   - 4: {fileID: 1625714811}
   - 212: {fileID: 1625714810}
   - 61: {fileID: 1625714809}
+  - 114: {fileID: 1625714812}
   m_Layer: 0
   m_Name: AchievementButton
   m_TagString: Untagged
@@ -875,6 +902,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &1625714812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625714808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Achievements
 --- !u!1 &1643005088
 GameObject:
   m_ObjectHideFlags: 0
