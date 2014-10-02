@@ -15,7 +15,7 @@ public class UnityInputListener : MonoBehaviour {
 		if (Application.platform == RuntimePlatform.WindowsEditor) {
 			if (Input.GetAxis ("Vertical") > 0) {
 				inputMap.FireInputEvents(MultiPlatformInputs.UpArrow);
-			} else if (Input.GetAxis ("Vertical") > 0) {
+			} else if (Input.GetAxis ("Vertical") < 0) {
 				inputMap.FireInputEvents(MultiPlatformInputs.DownArrow);
 			} else if (Input.GetAxis ("Horizontal") > 0) {
 				inputMap.FireInputEvents(MultiPlatformInputs.RightArrow);
