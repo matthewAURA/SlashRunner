@@ -197,8 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb4a5731f5750247b1f64f0e3b6cf06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dampeningTime: .150000006
-  target: {fileID: 0}
+  dampeningTime: .200000003
+  target: {fileID: 326278127}
   offsetX: 0
   offsetY: 0
 --- !u!1001 &1925890353
