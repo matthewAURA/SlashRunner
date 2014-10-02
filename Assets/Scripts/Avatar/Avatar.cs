@@ -10,6 +10,7 @@ public class Avatar : MonoBehaviour {
 	bool grounded = false;
 
 	private InputMap inputMap;
+	public float jumpForce = 70f;
 
 
 	void Awake() {
@@ -30,14 +31,13 @@ public class Avatar : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (grounded) {
-			Debug.Log ("I am on the ground");
-		} else {
-			Debug.Log ("Not on the ground");
-		}
+		
 	}
 
 	public void jump () {
-		Debug.Log("I am jumpping");
+		Debug.Log ("Attempting to jump");
+		if (grounded) {
+			rigidbody2D.AddForce(new Vector2(rigidbody2D.velocity.x, jumpForce));
+		}
 	}
 }
