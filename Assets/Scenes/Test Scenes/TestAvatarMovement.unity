@@ -191,7 +191,7 @@ Transform:
   m_PrefabInternal: {fileID: 2124111495}
   m_GameObject: {fileID: 1132372586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalPosition: {x: -15, y: 4.53453016, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1784415742}
@@ -251,7 +251,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   jumpForce: 500
-  movementForce: 10
+  movementForce: 5
 --- !u!114 &1132372592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,7 +460,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1815998641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .121299744, y: 4.12152958, z: -10}
+  m_LocalPosition: {x: 0, y: 4.12152958, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -473,12 +473,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1815998641}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecb4a5731f5750247b1f64f0e3b6cf06, type: 3}
+  m_Script: {fileID: 11500000, guid: 06e03281144762949bef4aa55d270e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dampeningTime: .150000006
   target: {fileID: 1132372587}
-  offsetX: 0
+  xMargin: 2
+  yMargin: 10
+  xCamerSpeed: 1
+  yCamerSpeed: 1
+  offsetX: 15
   offsetY: 0
 --- !u!1001 &2124111495
 Prefab:
@@ -489,11 +492,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 66642a4afdea73340aa8203333e43b39, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 66642a4afdea73340aa8203333e43b39, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 4.53453016
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 66642a4afdea73340aa8203333e43b39, type: 2}
       propertyPath: m_LocalPosition.z
