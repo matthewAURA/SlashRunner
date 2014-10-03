@@ -20,8 +20,10 @@ public class PlatformSpawner : MonoBehaviour {
 		if (target) {
 			var tPos = target.position;
 			tPos.y = yHeight;
+			Debug.Log (yHeight);
 
 			if (tPos.x + target.collider2D.bounds.size.x/2 > transform.position.x+ this.collider2D.bounds.size.x/2){
+				tPos.x = tPos.x - target.collider2D.bounds.size.x/2 + this.collider2D.bounds.size.x/2;
 				transform.position = tPos;
 			}
 
