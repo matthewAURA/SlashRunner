@@ -121,6 +121,10 @@ Prefab:
       propertyPath: m_Name
       value: TestAvatar
       objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: 3559105cdf850e348af8b7df30243de5, type: 2}
+      propertyPath: m_GravityScale
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3559105cdf850e348af8b7df30243de5, type: 2}
   m_RootGameObject: {fileID: 1578182207}
@@ -213,7 +217,6 @@ GameObject:
   - 124: {fileID: 1397856113}
   - 81: {fileID: 1397856112}
   - 114: {fileID: 1397856117}
-  - 114: {fileID: 1397856118}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -298,21 +301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dampeningTime: .150000006
-  target: {fileID: 0}
-  offsetX: 0
-  offsetY: 0
---- !u!114 &1397856118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1397856111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecb4a5731f5750247b1f64f0e3b6cf06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dampeningTime: .150000006
   target: {fileID: 1578182212}
   offsetX: 0
   offsetY: 0
@@ -328,6 +316,7 @@ GameObject:
   - 114: {fileID: 1578182210}
   - 61: {fileID: 1578182209}
   - 50: {fileID: 1578182208}
+  - 114: {fileID: 1578182213}
   m_Layer: 0
   m_Name: TestAvatar
   m_TagString: Untagged
@@ -345,7 +334,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 0
+  m_GravityScale: 5
   m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -412,6 +401,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1578182213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1578182207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6c2e4df79ba4e989a655e611b812cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1578182212}
+  spawn: {fileID: 1842905674}
 --- !u!1 &1842905670
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +425,6 @@ GameObject:
   - 212: {fileID: 1842905673}
   - 61: {fileID: 1842905672}
   - 50: {fileID: 1842905671}
-  - 114: {fileID: 1842905675}
   m_Layer: 0
   m_Name: TestPlatform
   m_TagString: Untagged
@@ -494,15 +495,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!114 &1842905675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1842905670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa6c2e4df79ba4e989a655e611b812cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1578182212}
