@@ -6,13 +6,13 @@ public class FollowingDistanceCamera : MonoBehaviour {
 	/// Target on which to fixate onto
 	public Transform target;
 	
-	public float xMargin = 2f;		// Distance in the x axis the player can move before the camera follows.
-	public float yMargin = 10f;		// Distance in the y axis the player can move before the camera follows.
-	public float xCamerSpeed = 1f;		// How fast the camera follows the player in the x direction.
+	public float xMargin = 0f;		// Distance in the x axis the player can move before the camera follows.
+	public float yMargin = 5f;		// Distance in the y axis the player can move before the camera follows.
+	public float xCamerSpeed = 8f;		// How fast the camera follows the player in the x direction.
 	public float yCamerSpeed = 1f;		// How fast the camera follows the player in the y direction.
 
 	// Specifies camera positional offsets relative to the target
-	public float offsetX = 15.0f;
+	public float offsetX = 0.0f;
 	public float offsetY = 0.0f;
 	
 	// Returns true if the distance between the camera and the player in the x axis is greater than the x margin.

@@ -44,17 +44,7 @@ public class Avatar : MonoBehaviour {
 
 	public void move() {
 		if (moving) {
-			//rigidbody2D.AddForce(new Vector2(movementForce, 0f));
-			if(grounded) {
-				rigidbody2D.velocity = new Vector2 (movementForce, rigidbody2D.velocity.y);
-			}else {
-				if (jumping){
-					rigidbody2D.velocity = new Vector2 (movementForce*0.9f, rigidbody2D.velocity.y);
-				} else {
-					rigidbody2D.velocity = new Vector2 (movementForce*0.3f, rigidbody2D.velocity.y);
-				}
-
-			}
+			rigidbody2D.velocity = new Vector2 (movementForce, rigidbody2D.velocity.y);
 		}
 	}
 
