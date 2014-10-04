@@ -17,6 +17,11 @@ public class HUDScript : MonoBehaviour {
 		this.multiple = multiple;
 	}
 
+	void OnDisable(){
+		PlayerPrefs.SetInt ("Score", (int)(playerScore));
+
+	}
+
 	
 	void OnGUI(){
 		GUI.Label (new Rect (0, 0, 100, 30), "Score: " + (int)(playerScore * 100));
