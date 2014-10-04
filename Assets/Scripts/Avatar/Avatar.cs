@@ -32,7 +32,6 @@ public class Avatar : MonoBehaviour {
 
 	void FixedUpdate() {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundedRadius, whatIsGround);
-		Debug.Log (grounded);
 		move ();
 	}
 
