@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Enemy
+public class Enemy : MonoBehaviour
 {
 	public enum Shield
 	{
@@ -21,8 +21,9 @@ public class Enemy
 	void Start()
 	{
 		Rigidbody shieldInstance;
-		shieldInstance = Instantiate(shildPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
-		shieldInstance.AddForce(barrelEnd.forward * 5000);
+		shieldInstance = Instantiate(shiledPrefab, new Vector3(2.0f,0.0f,0.0f), Quaternion.identity) as Rigidbody;
+		//shieldInstance = Instantiate(shiledPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
+		//shieldInstance.AddForce(barrelEnd.forward * 5000);
 
 
 	}
