@@ -19,7 +19,7 @@ public class GameOverScript : MonoBehaviour {
 		GUI.Label (new Rect (Screen.width / 2 - 40, 50, 80, 30), "GAME OVER");
 		int y = 70;
 		foreach(ScoringSystem.ScoreEntry i in scoring.highScores){
-			GUI.Label (new Rect (Screen.width / 2 - 40, y, 100, 40), "High Scores: " + i.name + " " + i.score);
+			GUI.Label (new Rect (Screen.width / 2 - 40, y, 100, 40), "High Scores: " + i.name + " " + (int)i.score);
 			y += 40;
 		}
 		GUI.Label( new Rect (Screen.width / 2 - 40, 300, 80, 30), "Score: " + score);

@@ -8,6 +8,7 @@ using System.IO;
 using System.Runtime.Serialization;
 [System.Serializable]
 public class ScoringSystem : MonoBehaviour {
+	private ScoreEntry playerScore;
 	
 	//High score entry
 	[System.Serializable]
@@ -15,12 +16,12 @@ public class ScoringSystem : MonoBehaviour {
 		//Players name
 		public string name;
 		//Score
-		public int score;
+		public float score;
 	}
 	//High score table
 	public List<ScoreEntry> highScores = new List<ScoreEntry>();
 	
-	public void SaveScores(){
+	void SaveScores(){
 		Debug.Log ("SaveScores");
 		Debug.Log (highScores.Count);
 		//Get a binary formatter
@@ -33,9 +34,29 @@ public class ScoringSystem : MonoBehaviour {
 		PlayerPrefs.SetString("HighScores", Convert.ToBase64String(
 			m.GetBuffer()));
 	}
-	
+
+	public void FindFiveHighestScore(){
+		foreach (var i in highScores) {
+			//if(i.score )
+		}
+	}
+
 	void Start(){
+		playerScore = new ScoringSystem.ScoreEntry ();
+		playerScore.name = "Player 1";
+		playerScore.score = 0;
 		InitializeHighScore ();
+	}
+
+	void Update(){
+		playerScore.score += Time.deltaTime * 100;
+		PlayerPrefs.SetInt ("Score", (int)playerScore.score);
+	}
+
+	void OnDisable(){
+		highScores.Add (playerScore);
+		SaveScores ();
+		PlayerPrefs.SetInt ("Score", (int)playerScore.score);
 	}
 	public void InitializeHighScore(){
 		//Get the data
@@ -55,6 +76,6 @@ public class ScoringSystem : MonoBehaviour {
 		}
 	}
 	public void ClearHighScore(){
-		PlayerPrefs.DeleteAll ();
+		highScores = new List<ScoreEntry>();
 	}
 }
