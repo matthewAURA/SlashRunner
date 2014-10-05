@@ -88,6 +88,7 @@ GameObject:
   - 81: {fileID: 29832232}
   - 114: {fileID: 29832237}
   - 114: {fileID: 29832238}
+  - 114: {fileID: 29832239}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -181,13 +182,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 29832231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecb4a5731f5750247b1f64f0e3b6cf06, type: 3}
+  m_Script: {fileID: 11500000, guid: 06e03281144762949bef4aa55d270e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dampeningTime: .150000006
   target: {fileID: 1100513883}
-  offsetX: 0
+  xMargin: 2
+  yMargin: 10
+  xCamerSpeed: 1
+  yCamerSpeed: 1
+  offsetX: 1
   offsetY: 0
+--- !u!114 &29832239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 29832231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788c54ec4be0abb4086963aab650149c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScores: []
 --- !u!1001 &847145410
 Prefab:
   m_ObjectHideFlags: 0
@@ -238,6 +254,14 @@ Prefab:
     - target: {fileID: 100004, guid: 18f1366bfea4e314eb6d5d787db40a4b, type: 2}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: 18f1366bfea4e314eb6d5d787db40a4b, type: 2}
+      propertyPath: m_FixedAngle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: 18f1366bfea4e314eb6d5d787db40a4b, type: 2}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18f1366bfea4e314eb6d5d787db40a4b, type: 2}
@@ -381,9 +405,9 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
 --- !u!114 &1100513889

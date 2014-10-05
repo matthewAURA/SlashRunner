@@ -1,29 +1,33 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class HUDScript : MonoBehaviour {
-
+	private ScoringSystem.ScoreEntry scoreEntry;
+	private ScoringSystem scoringSystem;
 	private float playerScore = 0;
-	private int multiple = 1;
+
+	void Start(){
+		scoreEntry = new ScoringSystem.ScoreEntry();
+		scoringSystem = gameObject.GetComponent<ScoringSystem>();
+	}
 	void Update () {
-		playerScore += Time.deltaTime * multiple;
+		playerScore += Time.deltaTime * 100;
 	}
 	
-	public void IncreaseScoreByCollectable(int amount){
+	public void IncreaseScore(int amount){
 		playerScore += amount;
 	}
 
-	public void SetMultiple(int multiple){
-		this.multiple = multiple;
-	}
-
 	void OnDisable(){
-		PlayerPrefs.SetInt ("Score", (int)(playerScore));
-
+		Debug.Log("OnDisable");
+		scoreEntry.name = "Player 1";
+		scoreEntry.score = (int)playerScore;
+		scoringSystem.highScores.Add (scoreEntry);
+		Debug.Log (scoringSystem.highScores.Count);
+		scoringSystem.SaveScores ();
 	}
 
-	
 	void OnGUI(){
-		GUI.Label (new Rect (0, 0, 100, 30), "Score: " + (int)(playerScore * 100));
+		GUI.Label (new Rect (0, 0, 100, 30), "Score: " + (int)(playerScore));
 	}
 }
