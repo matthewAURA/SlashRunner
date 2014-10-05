@@ -9,6 +9,7 @@ using System.Runtime.Serialization;
 [System.Serializable]
 public class ScoringSystem : MonoBehaviour {
 	private ScoreEntry playerScore;
+	private int MAX_NUMBER_OF_HIGH_SCORE = 5;
 	
 	//High score entry
 	[System.Serializable]
@@ -21,7 +22,7 @@ public class ScoringSystem : MonoBehaviour {
 	//High score table
 	public List<ScoreEntry> highScores = new List<ScoreEntry>();
 	
-	void SaveScores(){
+	private void SaveScores(){
 		Debug.Log ("SaveScores");
 		Debug.Log (highScores.Count);
 		//Get a binary formatter
@@ -35,17 +36,42 @@ public class ScoringSystem : MonoBehaviour {
 			m.GetBuffer()));
 	}
 
-	public void FindFiveHighestScore(){
-		foreach (var i in highScores) {
-			//if(i.score )
+	private void MaintainHighScoreList(){
+		if (highScores.Count == 0) {
+			highScores.Add(playerScore);
+		}else if (highScores.Count == 1) {
+			if((int)highScores[0].score < (int)playerScore.score){
+				highScores.Insert(0,playerScore);
+			}else{
+				highScores.Add(playerScore);
+			}
+		}else{
+			for (int i = 0; i < highScores.Count; i++) { 
+				if ((int)highScores[i].score < (int)playerScore.score){
+					if(highScores.Count < MAX_NUMBER_OF_HIGH_SCORE){
+						highScores.Insert(i, playerScore);
+						break;
+					}else{
+						if (i == MAX_NUMBER_OF_HIGH_SCORE - 1){
+							highScores[i] = playerScore;
+						}else{
+							highScores[i + 1] = playerScore;
+						}
+						break;
+					}
+				}
+			}
 		}
 	}
+
 
 	void Start(){
 		playerScore = new ScoringSystem.ScoreEntry ();
 		playerScore.name = "Player 1";
 		playerScore.score = 0;
 		InitializeHighScore ();
+
+
 	}
 
 	void Update(){
@@ -54,7 +80,7 @@ public class ScoringSystem : MonoBehaviour {
 	}
 
 	void OnDisable(){
-		highScores.Add (playerScore);
+		MaintainHighScoreList ();
 		SaveScores ();
 		PlayerPrefs.SetInt ("Score", (int)playerScore.score);
 	}
@@ -76,6 +102,6 @@ public class ScoringSystem : MonoBehaviour {
 		}
 	}
 	public void ClearHighScore(){
-		highScores = new List<ScoreEntry>();
+		PlayerPrefs.DeleteAll ();
 	}
 }
