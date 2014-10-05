@@ -35,22 +35,7 @@ public class ScoringSystem : MonoBehaviour {
 	}
 	
 	void Start(){
-		Debug.Log ("Start");
-		//Get the data
-		var data = PlayerPrefs.GetString("HighScores");
-		//If not blank then load it
-		if(!string.IsNullOrEmpty(data))
-		{
-			Debug.Log("Doing check");
-			//Binary formatter for loading back
-			var b = new BinaryFormatter();
-			//Create a memory stream with the data
-			var m = new MemoryStream(Convert.FromBase64String(data));
-			//Load back the scores
-			highScores = (List<ScoreEntry>)b.Deserialize(m);
-			Debug.Log(highScores.Count);
-
-		}
+		InitializeHighScore ();
 	}
 	public void InitializeHighScore(){
 		//Get the data

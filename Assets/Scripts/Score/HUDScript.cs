@@ -25,6 +25,7 @@ public class HUDScript : MonoBehaviour {
 		scoringSystem.highScores.Add (scoreEntry);
 		Debug.Log (scoringSystem.highScores.Count);
 		scoringSystem.SaveScores ();
+		PlayerPrefs.SetInt ("Score", (int)playerScore);
 	}
 
 	void OnGUI(){
