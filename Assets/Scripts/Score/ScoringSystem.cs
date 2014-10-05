@@ -36,32 +36,33 @@ public class ScoringSystem : MonoBehaviour {
 			m.GetBuffer()));
 	}
 
-	private void MaintainHighScoreList(){
+	public void AddScoreIntoHighScore(ScoreEntry entry){
 		if (highScores.Count == 0) {
-			highScores.Add(playerScore);
+			highScores.Add(entry);
 		}else if (highScores.Count == 1) {
-			if((int)highScores[0].score < (int)playerScore.score){
-				highScores.Insert(0,playerScore);
+			if((int)highScores[0].score < (int)entry.score){
+				highScores.Insert(0,entry);
 			}else{
-				highScores.Add(playerScore);
+				highScores.Add(entry);
 			}
 		}else{
 			for (int i = 0; i < highScores.Count; i++) { 
-				if ((int)highScores[i].score < (int)playerScore.score){
+				if ((int)highScores[i].score < (int)entry.score){
 					if(highScores.Count < MAX_NUMBER_OF_HIGH_SCORE){
-						highScores.Insert(i, playerScore);
+						highScores.Insert(i, entry);
 						break;
 					}else{
 						if (i == MAX_NUMBER_OF_HIGH_SCORE - 1){
-							highScores[i] = playerScore;
+							highScores[i] = entry;
 						}else{
-							highScores[i + 1] = playerScore;
+							highScores[i + 1] = entry;
 						}
 						break;
 					}
 				}
 			}
 		}
+		SaveScores ();
 	}
 
 
@@ -72,6 +73,7 @@ public class ScoringSystem : MonoBehaviour {
 		InitializeHighScore ();
 
 
+
 	}
 
 	void Update(){
@@ -80,8 +82,8 @@ public class ScoringSystem : MonoBehaviour {
 	}
 
 	void OnDisable(){
-		MaintainHighScoreList ();
-		SaveScores ();
+		PlayerPrefs.SetFloat ("Score", playerScore.score);
+		PlayerPrefs.SetString ("Name", playerScore.name);
 		PlayerPrefs.SetInt ("Score", (int)playerScore.score);
 	}
 	public void InitializeHighScore(){

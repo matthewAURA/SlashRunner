@@ -4,13 +4,16 @@ using System.Collections.Generic;
 
 public class GameOverScript : MonoBehaviour {
 	private ScoringSystem scoring;
-	int score = 0;
+	private ScoringSystem.ScoreEntry scoreEntry;
 
 	void Start () {
 		Debug.Log ("Start Gameover");
-		score = PlayerPrefs.GetInt ("Score");
+		scoreEntry = new ScoringSystem.ScoreEntry ();
+		scoreEntry.score = PlayerPrefs.GetFloat ("Score");
+		scoreEntry.name = PlayerPrefs.GetString ("Name");
 		scoring = gameObject.GetComponent<ScoringSystem>();
 		scoring.InitializeHighScore ();
+		scoring.AddScoreIntoHighScore (scoreEntry);
 	}
 
 	void OnGUI(){
@@ -22,7 +25,7 @@ public class GameOverScript : MonoBehaviour {
 			GUI.Label (new Rect (Screen.width / 2 - 40, y, 100, 40), "High Scores: " + i.name + " " + (int)i.score);
 			y += 40;
 		}
-		GUI.Label( new Rect (Screen.width / 2 - 40, 300, 80, 30), "Score: " + score);
+		GUI.Label( new Rect (Screen.width / 2 - 40, 300, 80, 30), "Score: " + (int)scoreEntry.score);
 
 		if (GUI.Button( new Rect( Screen.width / 2 - 30, 350, 60, 30), "Reply??")){
 			Application.LoadLevel(0);
