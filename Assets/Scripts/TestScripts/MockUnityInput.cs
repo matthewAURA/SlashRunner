@@ -10,7 +10,6 @@ public class MockUnityInput : MonoBehaviour {
 		inputMap = InputMap.getInputMap();
 		inputMap.Add(MultiPlatformInputs.UpArrow, upArrowKey);
 		inputMap.Add(MultiPlatformInputs.DownArrow, downArrowKey);
-		inputMap.Add(MultiPlatformInputs.LeftArrow, leftArrowKey);
 		inputMap.Add(MultiPlatformInputs.RightArrow, rightArrowKey);
 	}
 	
