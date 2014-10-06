@@ -19,15 +19,21 @@ public class Avatar : MonoBehaviour {
 	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
 
 	public enum Attack {
-		JUMP, PIERCE
+		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP
 	}
 
 	void Awake() {
 		inputMap = InputMap.getInputMap();
-		inputMap.Add(MultiPlatformInputs.UpArrow, Jump);
-		inputMap.Add(MultiPlatformInputs.SwipeUp, Jump);
+		inputMap.Add(MultiPlatformInputs.UpArrow, JumpSwipe);
+		inputMap.Add(MultiPlatformInputs.SwipeUp, JumpSwipe);
 		inputMap.Add (MultiPlatformInputs.RightArrow, Pierce);
 		inputMap.Add (MultiPlatformInputs.SwipeRight, Pierce);
+		inputMap.Add (MultiPlatformInputs.Shift, OverHeadSwipe);
+		inputMap.Add (MultiPlatformInputs.SwipeUpRightDown, OverHeadSwipe);
+		inputMap.Add (MultiPlatformInputs.DownArrow, LowSwipe);
+		inputMap.Add (MultiPlatformInputs.SwipeDownRight, LowSwipe);
+		inputMap.Add (MultiPlatformInputs.Space, JumpStomp);
+		inputMap.Add (MultiPlatformInputs.SwipeUpRightDown, JumpStomp);
 
 		groundCheck = transform.Find ("GroundCheck");
 		anim = GetComponent<Animator> ();
@@ -56,22 +62,46 @@ public class Avatar : MonoBehaviour {
 		}
 	}
 
-	public void Jump () {
+	public void JumpSwipe () {
 		if (!jumping && grounded) {
 			jumping = true;
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 
 			foreach (AvatarAttackListener listener in attackListenerList) {
-				listener.OnAvatarAttack(Attack.JUMP);
+				listener.OnAvatarAttack(Attack.JUMPSWIPE);
 			}
 		}
 	}
 
 	public void Pierce () {
-		Debug.Log ("Doing Pierce attack");
+		Debug.Log ("Doing Pierce Attack");
 
 		foreach (AvatarAttackListener listener in attackListenerList) {
 			listener.OnAvatarAttack(Attack.PIERCE);
+		}
+	}
+
+	public void OverHeadSwipe () {
+		Debug.Log ("Doing Over Head Swipe");
+		
+		foreach (AvatarAttackListener listener in attackListenerList) {
+			listener.OnAvatarAttack(Attack.OVERHEADSWIPE);
+		}
+	}
+
+	public void LowSwipe () {
+		Debug.Log ("Doing Low Swipe Attack");
+		
+		foreach (AvatarAttackListener listener in attackListenerList) {
+			listener.OnAvatarAttack(Attack.LOWSWIPE);
+		}
+	}
+
+	public void JumpStomp () {
+		Debug.Log ("Doing Jump Stomp Attack");
+		
+		foreach (AvatarAttackListener listener in attackListenerList) {
+			listener.OnAvatarAttack(Attack.LOWSWIPE);
 		}
 	}
 }
