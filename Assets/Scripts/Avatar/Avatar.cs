@@ -68,6 +68,8 @@ public class Avatar : MonoBehaviour {
 	}
 
 	public void Pierce () {
+		Debug.Log ("Doing Pierce attack");
+
 		foreach (AvatarAttackListener listener in attackListenerList) {
 			listener.OnAvatarAttack(Attack.PIERCE);
 		}
