@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerAttackActionScript : MonoBehaviour {
+public class AvatarAttackListenerListBuilder : MonoBehaviour {
 
 	public Transform target;
 
@@ -28,7 +28,7 @@ public class PlayerAttackActionScript : MonoBehaviour {
 		// Attempt to get the Collider2D object's GameObject. If parent existed, get the parent GameObject instead.
 		GameObject o = other.gameObject.transform.parent == null ? other.gameObject : other.gameObject.transform.parent.gameObject;
 
-		if ((o.tag == "Enemy" || o.tag == "Destructable") && o.GetComponents(typeof(AvatarAttackListener)).Length > 1) {
+		if ((o.tag == "Enemy" || o.tag == "Destructable") && o.GetComponents(typeof(AvatarAttackListener)).Length > 0) {
 			Debug.Log ("Added " + o.tag + " to list");
 			// Add to the list
 			Avatar.attackListenerList.Add ((AvatarAttackListener)(o.GetComponents(typeof(AvatarAttackListener))[0]));
@@ -39,7 +39,7 @@ public class PlayerAttackActionScript : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D other) {
 		// Attempt to get the Collider2D object's GameObject. If parent existed, get the parent GameObject instead.
 		GameObject o = other.gameObject.transform.parent == null ? other.gameObject : other.gameObject.transform.parent.gameObject;
-		if ((o.tag == "Enemy" || o.tag == "Destructable") && o.GetComponents(typeof(AvatarAttackListener)).Length > 1) {
+		if ((o.tag == "Enemy" || o.tag == "Destructable") && o.GetComponents(typeof(AvatarAttackListener)).Length > 0) {
 			Debug.Log ("Removed " + o.tag + " from list");
 			// Remove from the list
 			Avatar.attackListenerList.Remove ((AvatarAttackListener)(o.GetComponents(typeof(AvatarAttackListener))[0]));

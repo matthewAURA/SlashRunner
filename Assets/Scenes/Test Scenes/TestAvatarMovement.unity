@@ -160,7 +160,7 @@ Transform:
   m_PrefabInternal: {fileID: 2137857522}
   m_GameObject: {fileID: 82561122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: .148849487, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1954761746}
@@ -213,7 +213,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18f1366bfea4e314eb6d5d787db40a4b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -.0372129679
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 18f1366bfea4e314eb6d5d787db40a4b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -782,6 +782,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 961466113}
+  - 114: {fileID: 961466114}
   m_Layer: 0
   m_Name: Enemy01
   m_TagString: Enemy
@@ -802,6 +803,17 @@ Transform:
   - {fileID: 1749964271}
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!114 &961466114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 961466112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70c453a9a2238b40a8a8de01eb78678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &999115771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +1027,7 @@ Transform:
   m_PrefabInternal: {fileID: 179790240}
   m_GameObject: {fileID: 1350724570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -.0372129679, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children:
   - {fileID: 999115772}
@@ -1288,6 +1300,10 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 70945ca3ae2b07a449d9d9a0e059cb47, type: 2}
+      propertyPath: listener
+      value: 
+      objectReference: {fileID: 1954761745}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 70945ca3ae2b07a449d9d9a0e059cb47, type: 2}
   m_RootGameObject: {fileID: 1342475669}
@@ -1600,6 +1616,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1954761746}
+  - 114: {fileID: 1954761747}
   m_Layer: 0
   m_Name: Enemy01
   m_TagString: Enemy
@@ -1620,6 +1637,17 @@ Transform:
   - {fileID: 82561123}
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!114 &1954761747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1954761745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70c453a9a2238b40a8a8de01eb78678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2002813078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,6 +1810,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
       propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .148849487
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
