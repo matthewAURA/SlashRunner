@@ -11,13 +11,17 @@ public class Destructible : MonoBehaviour {
 	
 	}
 
+	void Update(){
+
+	}
+
 	public GameObject remains;
 	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+	public void Destruct () {
+		//if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 			GameObject pieces = (GameObject) Instantiate(remains, transform.position, transform.rotation);
 			Destroy (gameObject);
-		}
+		//}
 
 
 	

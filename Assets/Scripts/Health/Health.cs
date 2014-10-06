@@ -45,6 +45,7 @@ public class Health : MonoBehaviour {
 
 	void die(){
 		if (isEnemy) {
+			gameObject.GetComponent<Destructible>().Destruct();
 			//Enemy died, Do something
 			Destroy(gameObject);
 		} else {
