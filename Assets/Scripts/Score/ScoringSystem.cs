@@ -10,6 +10,7 @@ using System.Runtime.Serialization;
 public class ScoringSystem : MonoBehaviour {
 	private ScoreEntry playerScore;
 	private int MAX_NUMBER_OF_HIGH_SCORE = 5;
+	private int multiple = 1;
 	
 	//High score entry
 	[System.Serializable]
@@ -37,54 +38,31 @@ public class ScoringSystem : MonoBehaviour {
 	}
 
 	public void AddScoreIntoHighScore(ScoreEntry entry){
-		if (highScores.Count == 0) {
-			highScores.Add(entry);
-		}else if (highScores.Count == 1) {
-			if((int)highScores[0].score < (int)entry.score){
-				highScores.Insert(0,entry);
-			}else{
-				highScores.Add(entry);
-			}
-		}else{
-			for (int i = 0; i < highScores.Count; i++) { 
-				if ((int)highScores[i].score < (int)entry.score){
-					if(highScores.Count < MAX_NUMBER_OF_HIGH_SCORE){
-						highScores.Insert(i, entry);
-						break;
-					}else{
-						if (i == MAX_NUMBER_OF_HIGH_SCORE - 1){
-							highScores[i] = entry;
-						}else{
-							highScores[i + 1] = entry;
-						}
-						break;
-					}
-				}
-			}
-		}
+		highScores.Add (entry);
 		SaveScores ();
+		InitializeHighScore ();
 	}
-
-
+	
 	void Start(){
 		playerScore = new ScoringSystem.ScoreEntry ();
 		playerScore.name = "Player 1";
 		playerScore.score = 0;
 		InitializeHighScore ();
-
-
-
 	}
 
 	void Update(){
-		playerScore.score += Time.deltaTime * 100;
-		PlayerPrefs.SetInt ("Score", (int)playerScore.score);
+		playerScore.score += Time.deltaTime * 100 * multiple;
+		PlayerPrefs.SetInt ("ScoreInt", (int)playerScore.score);
+	}
+
+	public void setMultiple(int multiple){
+		this.multiple = multiple;
 	}
 
 	void OnDisable(){
-		PlayerPrefs.SetFloat ("Score", playerScore.score);
+		PlayerPrefs.SetFloat ("ScoreFloat", playerScore.score);
 		PlayerPrefs.SetString ("Name", playerScore.name);
-		PlayerPrefs.SetInt ("Score", (int)playerScore.score);
+		PlayerPrefs.SetInt ("ScoreInt", (int)playerScore.score);
 	}
 	public void InitializeHighScore(){
 		//Get the data
@@ -104,6 +82,6 @@ public class ScoringSystem : MonoBehaviour {
 		}
 	}
 	public void ClearHighScore(){
-		PlayerPrefs.DeleteAll ();
+		highScores = new List<ScoreEntry>();
 	}
 }

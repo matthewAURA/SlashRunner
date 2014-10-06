@@ -9,7 +9,7 @@ public class HUDScript : MonoBehaviour {
 	}
 
 	void Update(){
-		playerScore = PlayerPrefs.GetInt ("Score");
+		playerScore = PlayerPrefs.GetInt ("ScoreInt");
 	}
 
 	void OnGUI(){

@@ -310,6 +310,7 @@ GameObject:
   - 95: {fileID: 1100513884}
   - 114: {fileID: 1100513889}
   - 114: {fileID: 1100513890}
+  - 114: {fileID: 1100513891}
   m_Layer: 0
   m_Name: Avatar
   m_TagString: Player
@@ -435,6 +436,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05ccfa0b54e50b441a54da49cb8c11c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1100513891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1100513882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a876e9b17f99a2d46a6eecf362f20bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1290230132

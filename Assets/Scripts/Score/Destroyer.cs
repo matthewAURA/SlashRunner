@@ -8,7 +8,7 @@ public class Destroyer : MonoBehaviour {
 			Application.LoadLevel(1);
 			return;
 		}
-		if (other.gameObject.transform.parent) {
+		else if (other.gameObject.transform.parent) {
 			Destroy (other.gameObject.transform.parent.gameObject);
 		} else {
 			Destroy(other.gameObject);
