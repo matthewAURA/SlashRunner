@@ -29,10 +29,10 @@ public class Avatar : MonoBehaviour {
 		inputMap.Add (MultiPlatformInputs.RightArrow, Pierce);
 		inputMap.Add (MultiPlatformInputs.SwipeRight, Pierce);
 		inputMap.Add (MultiPlatformInputs.Shift, OverHeadSwipe);
-		inputMap.Add (MultiPlatformInputs.SwipeUpRightDown, OverHeadSwipe);
+		inputMap.Add (MultiPlatformInputs.SwipeRightDown, OverHeadSwipe);
 		inputMap.Add (MultiPlatformInputs.DownArrow, LowSwipe);
 		inputMap.Add (MultiPlatformInputs.SwipeDownRight, LowSwipe);
-		inputMap.Add (MultiPlatformInputs.Space, JumpStomp);
+		inputMap.Add (MultiPlatformInputs.SpaceBar, JumpStomp);
 		inputMap.Add (MultiPlatformInputs.SwipeUpRightDown, JumpStomp);
 
 		groundCheck = transform.Find ("GroundCheck");
@@ -102,12 +102,12 @@ public class Avatar : MonoBehaviour {
 	public void JumpStomp () {
 		if (!jumping && grounded) {
 			jumping = true;
-			rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+			rigidbody2D.AddForce (new Vector2 (0f, (jumpForce*1.5f)));
 
 			Debug.Log ("Doing Jump Stomp Attack");
 
 			foreach (AvatarAttackListener listener in attackListenerList) {
-				listener.OnAvatarAttack (Attack.LOWSWIPE);
+				listener.OnAvatarAttack (Attack.JUMPSTOMP);
 			}
 		}
 	}

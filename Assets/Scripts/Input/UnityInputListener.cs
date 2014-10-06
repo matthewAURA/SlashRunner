@@ -30,9 +30,14 @@ public class UnityInputListener : MonoBehaviour {
 					inputMap.FireInputEvents(MultiPlatformInputs.RightArrow);
 					keyUp = false;
 				}
-			} else if (Input.GetAxis ("Horizontal") < 0) {
+			} else if (Input.GetKeyDown("space")) {
 				if(keyUp) {
-					inputMap.FireInputEvents(MultiPlatformInputs.LeftArrow);
+					inputMap.FireInputEvents(MultiPlatformInputs.SpaceBar);
+					keyUp = false;
+				}
+			} else if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.LeftShift)) {
+				if(keyUp) {
+					inputMap.FireInputEvents(MultiPlatformInputs.Shift);
 					keyUp = false;
 				}
 			} else {
