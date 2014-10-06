@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: tutorial
 --- !u!61 &481591416
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,6 +162,8 @@ GameObject:
   - 124: {fileID: 1182909191}
   - 81: {fileID: 1182909190}
   - 114: {fileID: 1182909189}
+  - 114: {fileID: 1182909195}
+  - 114: {fileID: 1182909196}
   m_Layer: 0
   m_Name: Dampened Camera
   m_TagString: MainCamera
@@ -254,6 +256,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1182909195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182909188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53da0cc8b61c0b64bbdda1da34b98543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1182909196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182909188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788c54ec4be0abb4086963aab650149c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScores: []
 --- !u!1 &1747196066
 GameObject:
   m_ObjectHideFlags: 0
