@@ -3,28 +3,50 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
-	public enum Shield
+	public enum ShieldPosition
+	{
+		Top=1,
+		Middle=0,
+		Bottom=-1
+	};
+
+	public enum ShieldType
 	{
 		None,
-		SmallTop,
-		SmallMiddle,
-		SmallBottom,
-		BigTop,
-		BigBottom
+		Short,
+		Tall
 	};
 	
-	public Shield shield = Shield.None;
-	public GameObject shieldPrefab;
-	public string shiledGraphic = "Some URL to a graphic";
-	public Rigidbody shiledPrefab;
-	public Transform shildRealPosition;
+	public Transform shortShield;
+	public Transform tallShield;
+
+	public ShieldType shieldType = ShieldType.Short;
+	public ShieldPosition shieldPosition = ShieldPosition.Middle;
+
+	private Transform shieldObject;
+	private Rigidbody shield;
 	
 	void Start()
 	{
-		Rigidbody shieldInstance;
-		shieldInstance = Instantiate(shiledPrefab, new Vector3(2.0f,0.0f,0.0f), Quaternion.identity) as Rigidbody;
-		//shieldInstance = Instantiate(shiledPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
-		//shieldInstance.AddForce(barrelEnd.forward * 5000);
+		switch (shieldType)
+		{
+			case ShieldType.None:
+				break;
+			case ShieldType.Short:
+				shieldObject = shortShield;
+				break;
+			case ShieldType.Tall:
+				shieldObject = tallShield;
+				break;
+		}
+
+		shield = Instantiate(shieldObject, transform.position + new Vector3(-1.0f, (float) shieldPosition, 0.0f), transform.rotation) as Rigidbody;
+
+	}
+
+	void FixedUpdate()
+	{
+		// Broken...
+		// shield.position = transform.position + new Vector3(-1.0f, (float) shieldPosition, 0.0f);
 	}
 }
-
