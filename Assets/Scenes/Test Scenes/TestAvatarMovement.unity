@@ -814,8 +814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f246937a8f1dc4510b74c12930153d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shortShield: {fileID: 1901131946}
-  tallShield: {fileID: 1492923186}
+  shortShield: {fileID: 1901131942}
+  tallShield: {fileID: 1492923182}
   shieldType: 1
   shieldPosition: 1
 --- !u!1 &999115771
@@ -1474,7 +1474,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
       propertyPath: m_LocalScale.z
@@ -1943,7 +1943,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
       propertyPath: m_Name
