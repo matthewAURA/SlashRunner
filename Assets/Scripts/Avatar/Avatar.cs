@@ -19,7 +19,7 @@ public class Avatar : MonoBehaviour {
 	private static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
 
 	public enum Attack {
-		Jump, Pierce
+		JUMP, PIERCE
 	}
 
 	public static void RegisterAttackListener(AvatarAttackListener listener) {
@@ -66,7 +66,7 @@ public class Avatar : MonoBehaviour {
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 
 			foreach (AvatarAttackListener listener in attackListenerList) {
-				listener.OnAvatarAttack(Attack.Jump);
+				listener.OnAvatarAttack(Attack.JUMP);
 			}
 		}
 	}
@@ -74,7 +74,7 @@ public class Avatar : MonoBehaviour {
 	public void Pierce () {
 		Debug.Log ("I am piercing");
 		foreach (AvatarAttackListener listener in attackListenerList) {
-			listener.OnAvatarAttack(Attack.Pierce);
+			listener.OnAvatarAttack(Attack.PIERCE);
 		}
 	}
 }
