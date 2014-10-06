@@ -16,11 +16,25 @@ public class Avatar : MonoBehaviour {
 	public float jumpForce = 500f;
 	public float movementForce = 5f;
 
+	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
+
+	public enum Attack {
+		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP
+	}
 
 	void Awake() {
 		inputMap = InputMap.getInputMap();
-		inputMap.Add(MultiPlatformInputs.UpArrow, jump);
-		inputMap.Add(MultiPlatformInputs.SwipeUp, jump);
+		inputMap.Add(MultiPlatformInputs.UpArrow, JumpSwipe);
+		inputMap.Add(MultiPlatformInputs.SwipeUp, JumpSwipe);
+		inputMap.Add (MultiPlatformInputs.RightArrow, Pierce);
+		inputMap.Add (MultiPlatformInputs.SwipeRight, Pierce);
+		inputMap.Add (MultiPlatformInputs.Shift, OverHeadSwipe);
+		inputMap.Add (MultiPlatformInputs.SwipeRightDown, OverHeadSwipe);
+		inputMap.Add (MultiPlatformInputs.DownArrow, LowSwipe);
+		inputMap.Add (MultiPlatformInputs.SwipeDownRight, LowSwipe);
+		inputMap.Add (MultiPlatformInputs.SpaceBar, JumpStomp);
+		inputMap.Add (MultiPlatformInputs.SwipeUpRightDown, JumpStomp);
+
 		groundCheck = transform.Find ("GroundCheck");
 		anim = GetComponent<Animator> ();
 	}
@@ -32,7 +46,7 @@ public class Avatar : MonoBehaviour {
 
 	void FixedUpdate() {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundedRadius, whatIsGround);
-		move ();
+		Move ();
 	}
 
 	// Update is called once per frame
@@ -42,16 +56,59 @@ public class Avatar : MonoBehaviour {
 		}
 	}
 
-	public void move() {
+	public void Move() {
 		if (moving) {
 			rigidbody2D.velocity = new Vector2 (movementForce, rigidbody2D.velocity.y);
 		}
 	}
 
-	public void jump () {
+	public void JumpSwipe () {
 		if (!jumping && grounded) {
 			jumping = true;
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+
+			Debug.Log ("Doing Jump Attack");
+
+			foreach (AvatarAttackListener listener in attackListenerList) {
+				listener.OnAvatarAttack(Attack.JUMPSWIPE);
+			}
+		}
+	}
+
+	public void Pierce () {
+		Debug.Log ("Doing Pierce Attack");
+
+		foreach (AvatarAttackListener listener in attackListenerList) {
+			listener.OnAvatarAttack(Attack.PIERCE);
+		}
+	}
+
+	public void OverHeadSwipe () {
+		Debug.Log ("Doing Over Head Swipe");
+		
+		foreach (AvatarAttackListener listener in attackListenerList) {
+			listener.OnAvatarAttack(Attack.OVERHEADSWIPE);
+		}
+	}
+
+	public void LowSwipe () {
+		Debug.Log ("Doing Low Swipe Attack");
+		
+		foreach (AvatarAttackListener listener in attackListenerList) {
+			listener.OnAvatarAttack(Attack.LOWSWIPE);
+		}
+	}
+
+	public void JumpStomp () {
+		if (!jumping && grounded) {
+			jumping = true;
+			rigidbody2D.AddForce (new Vector2 (0f, (jumpForce*1.5f)));
+
+			Debug.Log ("Doing Jump Stomp Attack");
+
+			foreach (AvatarAttackListener listener in attackListenerList) {
+				listener.OnAvatarAttack (Attack.JUMPSTOMP);
+			}
 		}
 	}
 }
