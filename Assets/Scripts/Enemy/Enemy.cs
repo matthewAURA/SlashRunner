@@ -17,13 +17,13 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 		Tall
 	};
 	
-	public Transform shortShield;
-	public Transform tallShield;
+	public GameObject shortShield;
+	public GameObject tallShield;
 
 	public ShieldType shieldType = ShieldType.Short;
 	public ShieldPosition shieldPosition = ShieldPosition.Middle;
 
-	private Transform shieldObject;
+	private GameObject shieldObject;
 	private GameObject shield;
 
 	private bool shielded = true;
@@ -56,8 +56,11 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 		}
 	}
 
-	void OnAvatarAttack(Avatar.Attack attack)
+	public void OnAvatarAttack(Avatar.Attack attack)
 	{
-
+		Debug.Log ("Avatar Attacked Enemy");
+		Avatar.attackListenerList.Remove (this);
+		Destroy (shield);
+		Destroy (gameObject);
 	}
 }

@@ -159,7 +159,7 @@ MonoBehaviour:
   shortShield: {fileID: 1279403735}
   tallShield: {fileID: 111498145}
   shieldType: 1
-  shieldPosition: 1
+  shieldPosition: 0
 --- !u!1 &111498145
 GameObject:
   m_ObjectHideFlags: 0
