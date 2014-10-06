@@ -24,13 +24,16 @@ public class Enemy : MonoBehaviour
 	public ShieldPosition shieldPosition = ShieldPosition.Middle;
 
 	private Transform shieldObject;
-	private Rigidbody shield;
+	private GameObject shield;
+
+	private bool shielded = true;
 	
 	void Start()
 	{
 		switch (shieldType)
 		{
 			case ShieldType.None:
+			shielded = false;
 				break;
 			case ShieldType.Short:
 				shieldObject = shortShield;
@@ -40,13 +43,16 @@ public class Enemy : MonoBehaviour
 				break;
 		}
 
-		shield = Instantiate(shieldObject, transform.position + new Vector3(-1.0f, (float) shieldPosition, 0.0f), transform.rotation) as Rigidbody;
+		if (shielded) {
+			shield = (GameObject) Instantiate (shieldObject, transform.position + new Vector3 (-1.0f, (float)shieldPosition, 0.0f), transform.rotation);
+		}
 
 	}
 
 	void FixedUpdate()
 	{
-		// Broken...
-		// shield.position = transform.position + new Vector3(-1.0f, (float) shieldPosition, 0.0f);
+		if (shielded) {
+			shield.transform.position = transform.position + new Vector3 (-1.0f, (float)shieldPosition, 0.0f);
+		}
 	}
 }
