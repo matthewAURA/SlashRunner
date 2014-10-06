@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
 	};
 	
 	public Shield shield = Shield.None;
+	public GameObject shieldPrefab;
 	public string shiledGraphic = "Some URL to a graphic";
 	public Rigidbody shiledPrefab;
 	public Transform shildRealPosition;
@@ -24,8 +25,6 @@ public class Enemy : MonoBehaviour
 		shieldInstance = Instantiate(shiledPrefab, new Vector3(2.0f,0.0f,0.0f), Quaternion.identity) as Rigidbody;
 		//shieldInstance = Instantiate(shiledPrefab, barrelEnd.position, barrelEnd.rotation) as Rigidbody;
 		//shieldInstance.AddForce(barrelEnd.forward * 5000);
-
-
 	}
 }
 
