@@ -14,7 +14,7 @@ public class UnityInputListener : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Application.platform == RuntimePlatform.WindowsEditor) {
+		if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor) {
 			if (Input.GetAxis ("Vertical") > 0) {
 				if(keyUp) {
 					inputMap.FireInputEvents(MultiPlatformInputs.UpArrow);

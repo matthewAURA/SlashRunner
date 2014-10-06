@@ -113,6 +113,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ae9a97b3e05d2a8408262202bc9f2041, type: 2}
+      propertyPath: m_Name
+      value: TestInput
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae9a97b3e05d2a8408262202bc9f2041, type: 2}
   m_RootGameObject: {fileID: 306389291}
@@ -128,8 +132,10 @@ GameObject:
   - 4: {fileID: 306389294}
   - 114: {fileID: 306389293}
   - 114: {fileID: 306389292}
+  - 114: {fileID: 306389295}
+  - 114: {fileID: 306389296}
   m_Layer: 0
-  m_Name: TestSwipe
+  m_Name: TestInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,6 +177,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &306389295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 306389291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761a581591cdc0a4f876749399ec1606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &306389296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 306389291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ccfa0b54e50b441a54da49cb8c11c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &340895499
 GameObject:
   m_ObjectHideFlags: 0

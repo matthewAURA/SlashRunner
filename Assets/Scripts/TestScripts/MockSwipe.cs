@@ -7,7 +7,6 @@ public class MockSwipe : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log("Starting the test for swipe input");
 		inputMap = InputMap.getInputMap();
 		inputMap.Add(MultiPlatformInputs.SwipeUp, upSwipe);
 		inputMap.Add(MultiPlatformInputs.SwipeRight, rightSwipe);
