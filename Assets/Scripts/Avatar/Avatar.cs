@@ -111,4 +111,11 @@ public class Avatar : MonoBehaviour {
 			}
 		}
 	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if(other.gameObject.tag == "PickUp"){
+			Debug.Log ("Collected " + other.gameObject.tag);
+			Destroy(other.gameObject);
+		}
+	}
 }
