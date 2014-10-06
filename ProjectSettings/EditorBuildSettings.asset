@@ -9,3 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScoringSystem/TestScoringSystem.unity
   - enabled: 1
     path: Assets/Scenes/TestScoringSystem/GameOver.unity
+    path: Assets/Scenes/Menus/Menus.unity
+  - enabled: 1
+    path: Assets/Scenes/Menus/HighScores.unity
+  - enabled: 1
+    path: Assets/Scenes/Menus/Store.unity
+  - enabled: 1
+    path: Assets/Scenes/Menus/Achievements.unity
+  - enabled: 1
+    path: Assets/Scenes/Menus/Settings.unity
