@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, AvatarAttackListener
 {
 	public enum ShieldPosition
 	{
@@ -54,5 +54,10 @@ public class Enemy : MonoBehaviour
 		if (shielded) {
 			shield.transform.position = transform.position + new Vector3 (-1.0f, (float)shieldPosition, 0.0f);
 		}
+	}
+
+	void OnAvatarAttack(Avatar.Attack attack)
+	{
+
 	}
 }
