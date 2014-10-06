@@ -16,15 +16,10 @@ public class Avatar : MonoBehaviour {
 	public float jumpForce = 500f;
 	public float movementForce = 5f;
 
-	//Attack Ranges
-	public int jumpAttackRange = 5;
-	public int maxSlashAttackRange = 5;
-	public int minSlashAttackRange = 2;
-
 	private static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
 
 	public enum Attack {
-		Jump, Slash
+		Jump, Pierce
 	}
 
 	public static void RegisterAttackListener(AvatarAttackListener listener) {
@@ -35,8 +30,8 @@ public class Avatar : MonoBehaviour {
 		inputMap = InputMap.getInputMap();
 		inputMap.Add(MultiPlatformInputs.UpArrow, Jump);
 		inputMap.Add(MultiPlatformInputs.SwipeUp, Jump);
-		inputMap.Add (MultiPlatformInputs.RightArrow, Slash);
-		inputMap.Add (MultiPlatformInputs.SwipeRight, Slash);
+		inputMap.Add (MultiPlatformInputs.RightArrow, Pierce);
+		inputMap.Add (MultiPlatformInputs.SwipeRight, Pierce);
 
 		groundCheck = transform.Find ("GroundCheck");
 		anim = GetComponent<Animator> ();
@@ -69,13 +64,17 @@ public class Avatar : MonoBehaviour {
 		if (!jumping && grounded) {
 			jumping = true;
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+
+			foreach (AvatarAttackListener listener in attackListenerList) {
+				listener.OnAvatarAttack(Attack.Jump);
+			}
 		}
 	}
 
-	public void Slash () {
-		Debug.Log ("I am slashing");
+	public void Pierce () {
+		Debug.Log ("I am piercing");
 		foreach (AvatarAttackListener listener in attackListenerList) {
-			listener.OnAvatarAttack(Attack.Slash);
+			listener.OnAvatarAttack(Attack.Pierce);
 		}
 	}
 }
