@@ -67,6 +67,8 @@ public class Avatar : MonoBehaviour {
 			jumping = true;
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 
+			Debug.Log ("Doing Jump Attack");
+
 			foreach (AvatarAttackListener listener in attackListenerList) {
 				listener.OnAvatarAttack(Attack.JUMPSWIPE);
 			}
@@ -98,10 +100,15 @@ public class Avatar : MonoBehaviour {
 	}
 
 	public void JumpStomp () {
-		Debug.Log ("Doing Jump Stomp Attack");
-		
-		foreach (AvatarAttackListener listener in attackListenerList) {
-			listener.OnAvatarAttack(Attack.LOWSWIPE);
+		if (!jumping && grounded) {
+			jumping = true;
+			rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+
+			Debug.Log ("Doing Jump Stomp Attack");
+
+			foreach (AvatarAttackListener listener in attackListenerList) {
+				listener.OnAvatarAttack (Attack.LOWSWIPE);
+			}
 		}
 	}
 }
