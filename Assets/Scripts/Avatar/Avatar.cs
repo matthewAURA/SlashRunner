@@ -16,14 +16,10 @@ public class Avatar : MonoBehaviour {
 	public float jumpForce = 500f;
 	public float movementForce = 5f;
 
-	private static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
+	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
 
 	public enum Attack {
 		JUMP, PIERCE
-	}
-
-	public static void RegisterAttackListener(AvatarAttackListener listener) {
-		attackListenerList.Add (listener);
 	}
 
 	void Awake() {
