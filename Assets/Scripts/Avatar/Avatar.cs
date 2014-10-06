@@ -21,6 +21,9 @@ public class Avatar : MonoBehaviour {
 		inputMap = InputMap.getInputMap();
 		inputMap.Add(MultiPlatformInputs.UpArrow, jump);
 		inputMap.Add(MultiPlatformInputs.SwipeUp, jump);
+		inputMap.Add (MultiPlatformInputs.RightArrow, slash);
+		inputMap.Add (MultiPlatformInputs.SwipeRight, slash);
+
 		groundCheck = transform.Find ("GroundCheck");
 		anim = GetComponent<Animator> ();
 	}
@@ -53,5 +56,9 @@ public class Avatar : MonoBehaviour {
 			jumping = true;
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 		}
+	}
+
+	public void slash () {
+		Debug.Log ("I am slashing");
 	}
 }
