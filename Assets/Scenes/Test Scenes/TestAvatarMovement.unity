@@ -207,6 +207,10 @@ Prefab:
       propertyPath: m_GravityScale
       value: 9.81000042
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 18f1366bfea4e314eb6d5d787db40a4b, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18f1366bfea4e314eb6d5d787db40a4b, type: 2}
   m_RootGameObject: {fileID: 1350724570}
@@ -769,7 +773,7 @@ GameObject:
   - 114: {fileID: 1350724578}
   m_Layer: 8
   m_Name: Avatar
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -883,6 +887,9 @@ MonoBehaviour:
     m_Bits: 1
   jumpForce: 1500
   movementForce: 20
+  jumpAttackRange: 5
+  maxSlashAttackRange: 5
+  minSlashAttackRange: 2
 --- !u!114 &1350724578
 MonoBehaviour:
   m_ObjectHideFlags: 0

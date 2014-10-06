@@ -16,13 +16,27 @@ public class Avatar : MonoBehaviour {
 	public float jumpForce = 500f;
 	public float movementForce = 5f;
 
+	//Attack Ranges
+	public int jumpAttackRange = 5;
+	public int maxSlashAttackRange = 5;
+	public int minSlashAttackRange = 2;
+
+	private static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
+
+	public enum Attack {
+		Jump, Slash
+	}
+
+	public static void RegisterAttackListener(AvatarAttackListener listener) {
+		attackListenerList.Add (listener);
+	}
 
 	void Awake() {
 		inputMap = InputMap.getInputMap();
-		inputMap.Add(MultiPlatformInputs.UpArrow, jump);
-		inputMap.Add(MultiPlatformInputs.SwipeUp, jump);
-		inputMap.Add (MultiPlatformInputs.RightArrow, slash);
-		inputMap.Add (MultiPlatformInputs.SwipeRight, slash);
+		inputMap.Add(MultiPlatformInputs.UpArrow, Jump);
+		inputMap.Add(MultiPlatformInputs.SwipeUp, Jump);
+		inputMap.Add (MultiPlatformInputs.RightArrow, Slash);
+		inputMap.Add (MultiPlatformInputs.SwipeRight, Slash);
 
 		groundCheck = transform.Find ("GroundCheck");
 		anim = GetComponent<Animator> ();
@@ -35,7 +49,7 @@ public class Avatar : MonoBehaviour {
 
 	void FixedUpdate() {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundedRadius, whatIsGround);
-		move ();
+		Move ();
 	}
 
 	// Update is called once per frame
@@ -45,20 +59,23 @@ public class Avatar : MonoBehaviour {
 		}
 	}
 
-	public void move() {
+	public void Move() {
 		if (moving) {
 			rigidbody2D.velocity = new Vector2 (movementForce, rigidbody2D.velocity.y);
 		}
 	}
 
-	public void jump () {
+	public void Jump () {
 		if (!jumping && grounded) {
 			jumping = true;
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 		}
 	}
 
-	public void slash () {
+	public void Slash () {
 		Debug.Log ("I am slashing");
+		foreach (AvatarAttackListener listener in attackListenerList) {
+			listener.OnAvatarAttack(Attack.Slash);
+		}
 	}
 }
