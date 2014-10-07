@@ -11,10 +11,12 @@ public class Avatar : MonoBehaviour {
 	bool jumping = false;
 	private bool moving = true;
 	Animator anim;
+	GameObject slash;
 	
 	private InputMap inputMap;
 	public float jumpForce = 500f;
 	public float movementForce = 5f;
+	public Sprite attackAnimation;
 	
 	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
 	
@@ -51,6 +53,11 @@ public class Avatar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (slash != null)
+		{
+			slash.transform.position = new Vector3 (gameObject.transform.position.x + 5, 
+			                                        gameObject.transform.position.y, 0);
+		}
 		if (grounded && jumping) {
 			jumping = false;
 		}
@@ -68,6 +75,7 @@ public class Avatar : MonoBehaviour {
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 			
 			Debug.Log ("Doing Jump Attack");
+			FireAttackAnimation (Attack.JUMPSWIPE);
 			fireAttackActionEvent(Attack.JUMPSWIPE);
 			
 		}
@@ -75,16 +83,19 @@ public class Avatar : MonoBehaviour {
 	
 	public void Pierce () {
 		Debug.Log ("Doing Pierce Attack");
+		FireAttackAnimation (Attack.PIERCE);
 		fireAttackActionEvent(Attack.PIERCE);
 	}
 	
 	public void OverHeadSwipe () {
 		Debug.Log ("Doing Over Head Swipe");
+		FireAttackAnimation (Attack.OVERHEADSWIPE);
 		fireAttackActionEvent(Attack.OVERHEADSWIPE);
 	}
 	
 	public void LowSwipe () {
 		Debug.Log ("Doing Low Swipe Attack");
+		FireAttackAnimation (Attack.LOWSWIPE);
 		fireAttackActionEvent(Attack.LOWSWIPE);
 	}
 	
@@ -94,7 +105,39 @@ public class Avatar : MonoBehaviour {
 			rigidbody2D.AddForce (new Vector2 (0f, (jumpForce*1.5f)));
 			
 			Debug.Log ("Doing Jump Stomp Attack");
+			FireAttackAnimation(Attack.JUMPSTOMP);
 			fireAttackActionEvent(Attack.JUMPSTOMP);
+		}
+	}
+
+	private void FireAttackAnimation(Avatar.Attack attack)
+	{
+		if (attackAnimation != null)
+		{
+			if (slash != null)
+			{
+				Destroy (slash);
+			}
+			// Spawn animation
+			slash = new GameObject ();
+			slash.AddComponent<SpriteRenderer> ();
+			slash.GetComponent<SpriteRenderer> ().sprite = attackAnimation;
+			slash.transform.position = new Vector3 (gameObject.transform.position.x + 5, 
+                                        gameObject.transform.position.y, 0);
+			Destroy(slash, 1);
+
+			switch (attack) {
+			case Attack.JUMPSWIPE:
+				slash.transform.Rotate (new Vector3(0, 0, 30));
+				break;
+			case Attack.LOWSWIPE:
+				slash.transform.Rotate (new Vector3(0, 0, -30));
+				break;
+			case Attack.JUMPSTOMP:
+			case Attack.OVERHEADSWIPE:
+			default:
+				break;
+			}
 		}
 	}
 	
