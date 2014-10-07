@@ -48,3 +48,6 @@ proguard/
 #Unity3D Generated File On Crash Reports
 sysinfo.txt
 
+#deleteme files
+deleteme.txt
+remove.me
