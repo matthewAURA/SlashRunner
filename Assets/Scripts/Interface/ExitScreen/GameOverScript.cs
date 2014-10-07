@@ -15,8 +15,12 @@ public class GameOverScript : MonoBehaviour {
 	}
 
 	void OnGUI(){
-		GUI.Label (new Rect (Screen.width / 2 - 40, 50, 80, 30), "GAME OVER");
-		GUI.Label( new Rect (Screen.width / 2 - 40, Screen.height/2 - 40, 80, 30), "Score: " + (int)scoreEntry.score);
+		GUIStyle style = new GUIStyle();
+		style.fontSize = 80;
+		style.alignment = TextAnchor.MiddleCenter;
+		GUI.Label (new Rect (Screen.width / 2 - 40, 50, 80, 30), "GAME OVER",style);
+		style.fontSize = 40;
+		GUI.Label( new Rect (Screen.width / 2 - 40, Screen.height/2 - 40, 80, 30), "Score: " + (int)scoreEntry.score,style);
 	}
 
 }
