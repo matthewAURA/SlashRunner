@@ -86,7 +86,7 @@ GameObject:
   - 61: {fileID: 481591416}
   - 114: {fileID: 481591415}
   m_Layer: 0
-  m_Name: RestartButton
+  m_Name: NextLevelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ee9f23ade7bbf5c4d896d44aab3d4b3f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c01bef115aa0584a98ccfea0ae9672b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &481591418
 Transform:
@@ -365,7 +365,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8c052955fc4e88843901e9a4a948a647, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2be906aa3a1ff2046b1379332ed649aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1747196070
 Transform:
