@@ -1,56 +1,53 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Health : MonoBehaviour {
+public class Health : MonoBehaviour, EnemyAttackListener {
+	
+	public int hp;
+	public Transform target;
+	public int yOffset;
 
-	public int hp = 1;
-	public bool isEnemy = false;
-
-
-	//For test purposes only
-	public int buttonx = 15;
-	public int buttony = 15;
-	private GameObject heart;
-
+	public Sprite heart0;
+	public Sprite heart1;
+	public Sprite heart2;
+	public Sprite heart3;
+	
 	void Start(){
 
-		if (!isEnemy) {
-			heart = GameObject.Find ("Heart");
-		}
 	}
-
+	
 	public void takeDamage(int amount){
 		hp -= amount;
 	}
-
-
+	
 	void Update(){
-		if (hp <= 0) {
+		if (target != null) {
+			transform.position = new Vector3 (target.position.x, target.position.y + yOffset);
+		} else {
+			Debug.Log ("******* SHOULD ATTACH TO A TARGET *******");
+		}
+
+		if (hp == 3) {
+			GetComponent<SpriteRenderer>().sprite = heart3;	
+		}
+		else if (hp == 2) {
+			GetComponent<SpriteRenderer>().sprite = heart2;	
+		}
+		else if (hp == 1) {
+			GetComponent<SpriteRenderer>().sprite = heart1;	
+		}
+		else if (hp == 0) {
+			GetComponent<SpriteRenderer>().sprite = heart0;
 			//hpText.text = "Player is Dead";
 			die();
 		}
-
-		if (!isEnemy) {
-			heart.gameObject.GetComponent<Heart>().renderHeart(hp);
-		}
 	}
-
-	void OnGUI(){
-		if (GUI.Button (new Rect (buttonx, buttony, 100, 50), "Take Damage")) {
-			takeDamage(1);	
-		}
+	
+	public void OnEnemyAttack() {
+		takeDamage(1);
 	}
-
-
-
+	
 	void die(){
-		if (isEnemy) {
-			gameObject.GetComponent<Destructible>().Destruct();
-			//Enemy died, Do something
-			Destroy(gameObject);
-		} else {
-			//Player died, Do something
-			Destroy(gameObject);
-		}
+		Destroy (gameObject);
 	}
 }
