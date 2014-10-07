@@ -65,5 +65,13 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 		Avatar.attackListenerList.Remove (this);
 		Destroy (shield);
 		Destroy (gameObject);
+
+		//Destroy attack range game object
+		if (this.gameObject.transform.parent != null) {
+			GameObject parent = this.gameObject.transform.parent.gameObject;
+			if(parent.gameObject.transform.Find("AttackRange") != null) {
+				Destroy(parent.gameObject.transform.Find("AttackRange").gameObject);
+			}
+		}
 	}
 }
