@@ -6,11 +6,14 @@ public class Health : MonoBehaviour, EnemyAttackListener {
 	public int hp;
 	public Transform target;
 	public int yOffset;
+	public int xOffset;
 
 	public Sprite heart0;
 	public Sprite heart1;
 	public Sprite heart2;
 	public Sprite heart3;
+
+	public GameObject child;
 	
 	void Start(){
 
@@ -22,22 +25,22 @@ public class Health : MonoBehaviour, EnemyAttackListener {
 	
 	void Update(){
 		if (target != null) {
-			transform.position = new Vector3 (target.position.x, target.position.y + yOffset);
+			transform.position = new Vector3 (target.position.x + xOffset, target.position.y + yOffset);
 		} else {
 			Debug.Log ("******* SHOULD ATTACH TO A TARGET *******");
 		}
 
 		if (hp == 3) {
-			GetComponent<SpriteRenderer>().sprite = heart3;	
+			child.GetComponent<SpriteRenderer>().sprite = heart3;	
 		}
 		else if (hp == 2) {
-			GetComponent<SpriteRenderer>().sprite = heart2;	
+			child.GetComponent<SpriteRenderer>().sprite = heart2;	
 		}
 		else if (hp == 1) {
-			GetComponent<SpriteRenderer>().sprite = heart1;	
+			child.GetComponent<SpriteRenderer>().sprite = heart1;	
 		}
 		else if (hp == 0) {
-			GetComponent<SpriteRenderer>().sprite = heart0;
+			child.GetComponent<SpriteRenderer>().sprite = heart0;
 			//hpText.text = "Player is Dead";
 			die();
 		}
@@ -48,6 +51,7 @@ public class Health : MonoBehaviour, EnemyAttackListener {
 	}
 	
 	void die(){
-		Destroy (gameObject);
+		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+		Destroy (o);
 	}
 }

@@ -17,8 +17,6 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 		Short,
 		Tall
 	};
-
-	public static List<EnemyAttackListener> attackListenerList = new List<EnemyAttackListener>();
 	
 	public GameObject shortShield;
 	public GameObject tallShield;
@@ -64,14 +62,9 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 		Debug.Log ("Avatar Attacked Enemy");
 		Avatar.attackListenerList.Remove (this);
 		Destroy (shield);
-		Destroy (gameObject);
 
-		//Destroy attack range game object
-		if (this.gameObject.transform.parent != null) {
-			GameObject parent = this.gameObject.transform.parent.gameObject;
-			if(parent.gameObject.transform.Find("AttackRange") != null) {
-				Destroy(parent.gameObject.transform.Find("AttackRange").gameObject);
-			}
-		}
+		//Destroy enemy group game object
+		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+		Destroy (o);
 	}
 }
