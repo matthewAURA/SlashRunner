@@ -5,8 +5,6 @@ TagManager:
   tags:
   - Terrain
   - Enemy
-  - PickUp
-  - Destructible
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

@@ -103,11 +103,4 @@ public class Avatar : MonoBehaviour {
 			attackListenerList[i].OnAvatarAttack(attack);
 		}
 	}
-
-	void OnTriggerEnter2D(Collider2D other) {
-		if(other.gameObject.tag == "PickUp"){
-			Debug.Log ("Collected " + other.gameObject.tag);
-			Destroy(other.gameObject);
-		}
-	}
 }
