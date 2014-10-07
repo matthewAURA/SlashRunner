@@ -25,7 +25,6 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 	public ShieldPosition shieldPosition = ShieldPosition.Middle;
 
 	private GameObject shieldObject;
-	private GameObject shield;
 
 	private bool shielded = true;
 	
@@ -45,23 +44,18 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 		}
 
 		if (shielded) {
-			shield = (GameObject) Instantiate (shieldObject, transform.position + new Vector3 (-1.0f, (float)shieldPosition, 0.0f), transform.rotation);
+			GameObject shield = (GameObject) Instantiate (shieldObject, transform.position, transform.rotation);
+			shield.transform.parent = transform;
+			shield.transform.position = transform.position + new Vector3 (-2.0f, (float)shieldPosition, 0.0f);
+			shield.transform.localScale = new Vector3(10.0f, 10.0f, 0.0f);
 		}
 
-	}
-
-	void FixedUpdate()
-	{
-		if (shielded) {
-			shield.transform.position = transform.position + new Vector3 (-1.0f, (float)shieldPosition, 0.0f);
-		}
 	}
 
 	public void OnAvatarAttack(Avatar.Attack attack)
 	{
 		Debug.Log ("Avatar Attacked Enemy");
 		Avatar.attackListenerList.Remove (this);
-		Destroy (shield);
 
 		//Destroy enemy group game object
 		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
