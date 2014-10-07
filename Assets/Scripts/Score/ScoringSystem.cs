@@ -9,32 +9,27 @@ using System.Runtime.Serialization;
 [System.Serializable]
 public class ScoringSystem : MonoBehaviour {
 	private ScoreEntry playerScore;
-	private int MAX_NUMBER_OF_HIGH_SCORE = 5;
 	private int multiple = 1;
-	
-	//High score entry
+	public List<ScoreEntry> highScores = new List<ScoreEntry>();
+
 	[System.Serializable]
 	public class ScoreEntry{
-		//Players name
 		public string name;
-		//Score
 		public float score;
 	}
-	//High score table
-	public List<ScoreEntry> highScores = new List<ScoreEntry>();
-	
+
+	public void IncreaseScore(int amount){
+		playerScore.score += amount;
+	}
+
 	private void SaveScores(){
-		Debug.Log ("SaveScores");
-		Debug.Log (highScores.Count);
-		//Get a binary formatter
-		var b = new BinaryFormatter();
-		//Create an in memory stream
-		var m = new MemoryStream();
+		var binaryFormmater = new BinaryFormatter();
+		var memoryStream = new MemoryStream();
 		//Save the scores
-		b.Serialize(m, highScores);
+		binaryFormmater.Serialize(memoryStream, highScores);
 		//Add it to player prefs
 		PlayerPrefs.SetString("HighScores", Convert.ToBase64String(
-			m.GetBuffer()));
+			memoryStream.GetBuffer()));
 	}
 
 	public void AddScoreIntoHighScore(ScoreEntry entry){
@@ -64,16 +59,11 @@ public class ScoringSystem : MonoBehaviour {
 		PlayerPrefs.SetString ("Name", playerScore.name);
 		PlayerPrefs.SetInt ("ScoreInt", (int)playerScore.score);
 	}
+
 	public void InitializeHighScore(){
-		//Get the data
 		var data = PlayerPrefs.GetString("HighScores");
-		//If not blank then load it
-		if(!string.IsNullOrEmpty(data))
-		{
-			Debug.Log("Doing check");
-			//Binary formatter for loading back
+		if(!string.IsNullOrEmpty(data)){
 			var b = new BinaryFormatter();
-			//Create a memory stream with the data
 			var m = new MemoryStream(Convert.FromBase64String(data));
 			//Load back the scores
 			highScores = (List<ScoreEntry>)b.Deserialize(m);
@@ -81,7 +71,9 @@ public class ScoringSystem : MonoBehaviour {
 			
 		}
 	}
+
 	public void ClearHighScore(){
-		highScores = new List<ScoreEntry>();
+		PlayerPrefs.DeleteAll();
+		InitializeHighScore ();
 	}
 }
