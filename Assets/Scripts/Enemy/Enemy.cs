@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour, AvatarAttackListener
 {
@@ -16,6 +17,8 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 		Short,
 		Tall
 	};
+
+	public static List<EnemyAttackListener> attackListenerList = new List<EnemyAttackListener>();
 	
 	public GameObject shortShield;
 	public GameObject tallShield;
