@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: 8c7a52b367db39148b53b111e5220f60
+guid: 8c052955fc4e88843901e9a4a948a647
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: LightGreyTexture
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,9 +25,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
