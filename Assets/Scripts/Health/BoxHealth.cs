@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BoxHealth : MonoBehaviour {
-
-	public int hp = 1;
+public class BoxHealth : MonoBehaviour ,AvatarAttackListener {
+	
 	public bool isEnemy = false;
-
+	public int hp;
 
 	//For test purposes only
 	public int buttonx = 15;
@@ -13,7 +12,7 @@ public class BoxHealth : MonoBehaviour {
 	private GameObject heart;
 
 	void Start(){
-
+		hp = 1;
 		if (!isEnemy) {
 			heart = GameObject.Find ("Heart");
 		}
@@ -21,6 +20,15 @@ public class BoxHealth : MonoBehaviour {
 
 	public void takeDamage(int amount){
 		hp -= amount;
+	}
+
+	public void OnAvatarAttack(Avatar.Attack attack){
+		takeDamage(1);
+	}
+
+	public void OnEnemyAttack() {
+		Debug.Log ("attack");
+		takeDamage(1);
 	}
 
 
@@ -40,7 +48,7 @@ public class BoxHealth : MonoBehaviour {
 			takeDamage(1);	
 		}
 	}
-
+	
 
 
 	void die(){
