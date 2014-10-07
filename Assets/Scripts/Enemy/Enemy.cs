@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 		Avatar.attackListenerList.Remove (this);
 
 		//Destroy enemy group game object
-		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+		GameObject o = transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
 		Destroy (o);
 	}
 }
