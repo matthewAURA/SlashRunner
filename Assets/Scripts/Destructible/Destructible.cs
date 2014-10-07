@@ -5,7 +5,7 @@ using System.Collections;
  * remains object, based on action. Currently on left arrow, will change to
  * being hit by gesture */
 
-public class Destructible : MonoBehaviour {
+public class Destructible : MonoBehaviour, AvatarAttackListener {
 	
 	void Start () {
 	
@@ -25,5 +25,9 @@ public class Destructible : MonoBehaviour {
 
 
 	
+	}
+
+	public void OnAvatarAttack(Avatar.Attack attack){
+		
 	}
 }
