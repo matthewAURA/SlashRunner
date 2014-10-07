@@ -32,10 +32,6 @@ public class AvatarAttackListenerListBuilder : MonoBehaviour {
 			Debug.Log ("Added " + o.tag + " to list");
 			// Add to the list
 			Avatar.attackListenerList.Add ((AvatarAttackListener)(o.GetComponents(typeof(AvatarAttackListener))[0]));
-			//Do Damage on destructible for testing purposes
-			if(o.tag=="Destructible"){
-				o.GetComponent<Health>().takeDamage(1);
-			}
 		}
 	}
 

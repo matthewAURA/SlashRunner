@@ -18,16 +18,16 @@ public class Destructible : MonoBehaviour, AvatarAttackListener {
 	public GameObject remains;
 	// Update is called once per frame
 	public void Destruct () {
-		//if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+
+		if (remains != null) {
 			GameObject pieces = (GameObject) Instantiate(remains, transform.position, transform.rotation);
-			Destroy (gameObject);
-		//}
+		}
 
-
-	
+		Destroy (gameObject);
 	}
 
 	public void OnAvatarAttack(Avatar.Attack attack){
-		
+		Avatar.attackListenerList.Remove (this);
+		Destruct ();
 	}
 }
