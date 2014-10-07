@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour, AvatarAttackListener
 {
@@ -61,6 +62,9 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 		Debug.Log ("Avatar Attacked Enemy");
 		Avatar.attackListenerList.Remove (this);
 		Destroy (shield);
-		Destroy (gameObject);
+
+		//Destroy enemy group game object
+		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+		Destroy (o);
 	}
 }
