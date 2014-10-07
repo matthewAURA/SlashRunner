@@ -13,6 +13,8 @@ public class HUDScript : MonoBehaviour {
 	}
 
 	void OnGUI(){
-		GUI.Label (new Rect (0, 0, 100, 30), "Score: " + (playerScore));
+		GUIStyle style = new GUIStyle();
+		style.fontSize = 20;
+		GUI.Label (new Rect (0, 0, 100, 30), "Score: " + (playerScore), style);
 	}
 }
