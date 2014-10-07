@@ -44,3 +44,11 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
+  - name: Enemies
+    userID: 1
+    uniqueID: 389923389
+    locked: 0
+  - name: Shields
+    userID: 2
+    uniqueID: 1380657653
+    locked: 0
