@@ -5,7 +5,7 @@ using System.Collections;
  * remains object, based on action. Currently on left arrow, will change to
  * being hit by gesture */
 
-public class Destructible : MonoBehaviour {
+public class Destructible : MonoBehaviour, AvatarAttackListener {
 	
 	void Start () {
 	
@@ -18,12 +18,16 @@ public class Destructible : MonoBehaviour {
 	public GameObject remains;
 	// Update is called once per frame
 	public void Destruct () {
-		//if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+
+		if (remains != null) {
 			GameObject pieces = (GameObject) Instantiate(remains, transform.position, transform.rotation);
-			Destroy (gameObject);
-		//}
+		}
 
+		Destroy (gameObject);
+	}
 
-	
+	public void OnAvatarAttack(Avatar.Attack attack){
+		Avatar.attackListenerList.Remove (this);
+		Destruct ();
 	}
 }
