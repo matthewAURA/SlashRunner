@@ -1389,6 +1389,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e75c8a6380339ec45a54ecde5270b8e7, type: 2}
+      propertyPath: tallShield
+      value: 
+      objectReference: {fileID: 1647139778}
+    - target: {fileID: 11400000, guid: e75c8a6380339ec45a54ecde5270b8e7, type: 2}
+      propertyPath: shortShield
+      value: 
+      objectReference: {fileID: 356866214}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e75c8a6380339ec45a54ecde5270b8e7, type: 2}
   m_RootGameObject: {fileID: 1459416934}
@@ -2016,8 +2024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f246937a8f1dc4510b74c12930153d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shortShield: {fileID: 0}
-  tallShield: {fileID: 0}
+  shortShield: {fileID: 356866214}
+  tallShield: {fileID: 1647139778}
   shieldType: 1
   shieldPosition: 1
 --- !u!114 &1459416937
