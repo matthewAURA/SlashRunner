@@ -57,5 +57,6 @@ public class Health : MonoBehaviour, EnemyAttackListener {
 	void die(){
 		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
 		Destroy (o);
+		Application.LoadLevel ("Gameover");
 	}
 }
