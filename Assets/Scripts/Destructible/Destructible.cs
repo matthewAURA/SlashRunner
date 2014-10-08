@@ -19,7 +19,7 @@ public class Destructible : MonoBehaviour {
 	// Update is called once per frame
 	public void Destruct () {
 		//if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-			GameObject pieces = (GameObject) Instantiate(remains, transform.position, transform.rotation);
+			GameObject pieces = (GameObject) Instantiate(remains, new Vector3(transform.position.x, transform.position.y, transform.position.z+5), transform.rotation);
 			Destroy (gameObject);
 		//}
 
