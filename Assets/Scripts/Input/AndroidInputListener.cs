@@ -124,7 +124,7 @@ public class AndroidInputListener : MonoBehaviour {
 	*/ 
 	private void FireSwipeEvents() {
 		//Swipe Up then Right then Down Input
-		if (directionList.Count > 2 && directionList[0].Equals(CurrentDir.up) && directionList[1].Equals(CurrentDir.right) && directionList[1].Equals(CurrentDir.down)) {
+		if (directionList.Count > 2 && directionList[0].Equals(CurrentDir.up) && directionList[1].Equals(CurrentDir.right) && directionList[2].Equals(CurrentDir.down)) {
 			inputMap.FireInputEvents(MultiPlatformInputs.SwipeUpRightDown);
 		}
 		//Swipe Right then Down Input
