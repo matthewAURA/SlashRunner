@@ -55,8 +55,4 @@ public class InputMap {
 			}
 		}
 	}
-
-	public void ClearDictionary() {
-		inputMap.Clear ();
-	}
 }
