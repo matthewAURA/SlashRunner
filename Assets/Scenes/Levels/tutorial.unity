@@ -2401,7 +2401,7 @@ MonoBehaviour:
     m_Bits: 1
   jumpForce: 1500
   movementForce: 12
-  attackAnimation: {fileID: 0}
+  attackAnimation: {fileID: 21300000, guid: ba61a3f6adce13e4587607c395aca5b1, type: 3}
 --- !u!95 &1891833053
 Animator:
   serializedVersion: 3
