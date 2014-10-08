@@ -57,6 +57,10 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 		Debug.Log ("Avatar Attacked Enemy");
 		Avatar.attackListenerList.Remove (this);
 
+		GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
+		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
+		s.IncreaseScore(2000);
+
 		//Destroy enemy group game object
 		GameObject o = transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
 		Destroy (o);
