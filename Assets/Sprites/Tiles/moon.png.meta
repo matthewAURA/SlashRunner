@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 26926833e600e8641b8a83f95f28fdde
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: moon
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

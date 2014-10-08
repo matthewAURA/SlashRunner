@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 051ea9823f52e754c849717657d0050b
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: bamboo_straight_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
