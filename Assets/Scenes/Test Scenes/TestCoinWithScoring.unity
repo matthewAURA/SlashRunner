@@ -667,7 +667,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 783718265}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Radius: 4.4000001
   m_Center: {x: 0, y: 0}
 --- !u!4 &783718268
@@ -758,7 +758,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 784108166}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Radius: 4.4000001
   m_Center: {x: 0, y: 0}
 --- !u!4 &784108170
@@ -1451,7 +1451,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1445456357}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Radius: 4.4000001
   m_Center: {x: 0, y: 0}
 --- !u!4 &1445456361
