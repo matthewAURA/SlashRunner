@@ -63,6 +63,9 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 
 		//Destroy enemy group game object
 		GameObject o = transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+		if (gameObject.GetComponent<Destructible> () != null) {
+			gameObject.GetComponent<Destructible> ().Destruct ();
+		}
 		Destroy (o);
 	}
 }
