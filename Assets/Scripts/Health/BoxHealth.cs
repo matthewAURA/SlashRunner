@@ -6,9 +6,6 @@ public class BoxHealth : MonoBehaviour ,AvatarAttackListener {
 	public bool isEnemy = false;
 	public int hp;
 
-	//For test purposes only
-	public int buttonx = 15;
-	public int buttony = 15;
 	private GameObject heart;
 
 	void Start(){
@@ -42,14 +39,6 @@ public class BoxHealth : MonoBehaviour ,AvatarAttackListener {
 			heart.gameObject.GetComponent<Heart>().renderHeart(hp);
 		}
 	}
-
-	void OnGUI(){
-		if (GUI.Button (new Rect (buttonx, buttony, 100, 50), "Take Damage")) {
-			takeDamage(1);	
-		}
-	}
-	
-
 
 	void die(){
 		if (isEnemy) {
