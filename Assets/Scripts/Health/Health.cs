@@ -24,7 +24,6 @@ public class Health : MonoBehaviour, EnemyAttackListener {
 	}
 	
 	void Update(){
-		Debug.Log ("update");
 		if (target != null) {
 			transform.position = new Vector3 (target.position.x + xOffset, target.position.y + yOffset);
 		} else {
