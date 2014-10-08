@@ -124,7 +124,7 @@ public class Avatar : MonoBehaviour {
 			slash.GetComponent<SpriteRenderer> ().sprite = attackAnimation;
 			slash.transform.position = new Vector3 (gameObject.transform.position.x + 5, 
                                         gameObject.transform.position.y, 0);
-			Destroy(slash, 1);
+			Destroy(slash, 0.3f);
 
 			switch (attack) {
 			case Attack.JUMPSWIPE:
