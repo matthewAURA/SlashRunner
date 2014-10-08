@@ -18,7 +18,7 @@ public class Avatar : MonoBehaviour {
 	public float movementForce = 5f;
 	public Sprite attackAnimation;
 	
-	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
+	public static List<AvatarAttackListener> attackListenerList;
 	
 	public enum Attack {
 		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP
@@ -49,7 +49,7 @@ public class Avatar : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+		attackListenerList = new List<AvatarAttackListener> ();
 	}
 	
 	void FixedUpdate() {
