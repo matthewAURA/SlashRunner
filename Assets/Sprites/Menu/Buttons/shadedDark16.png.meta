@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 7633e148fbaaf9a4c89cacc11b560761
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: shadedDark16
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: c2620326f496ed74b816038087b21963
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: cloud_spritesheet
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

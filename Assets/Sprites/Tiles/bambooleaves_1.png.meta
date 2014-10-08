@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 3faaf6cdd5e2d7a4196d91f5a505edbe
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: bambooleaves_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
