@@ -25,7 +25,13 @@ public class Avatar : MonoBehaviour {
 	}
 	
 	void Awake() {
+
+		// Clean up
+		attackListenerList.Clear ();
 		inputMap = InputMap.getInputMap();
+		inputMap.ClearDictionary ();
+
+		// Adding input maps (delegates)
 		inputMap.Add(MultiPlatformInputs.UpArrow, JumpSwipe);
 		inputMap.Add(MultiPlatformInputs.SwipeUp, JumpSwipe);
 		inputMap.Add (MultiPlatformInputs.RightArrow, Pierce);
