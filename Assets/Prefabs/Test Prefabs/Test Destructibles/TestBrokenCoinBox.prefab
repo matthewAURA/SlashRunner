@@ -25,7 +25,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400008}
   m_Layer: 0
-  m_Name: TestBrokenBox
+  m_Name: TestBrokenCoinBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab8c734e0a4efe428d17d979fbb258d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 100000, guid: 9daee14428d5ab844b74458b648bb0bd, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
