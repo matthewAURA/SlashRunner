@@ -1,50 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Health : MonoBehaviour, EnemyAttackListener {
+public class Health : MonoBehaviour {
 	
 	public int hp;
-	public Transform target;
-	public int yOffset;
-	public int xOffset;
 
-	public Sprite heart0;
-	public Sprite heart1;
-	public Sprite heart2;
-	public Sprite heart3;
-
-	//public GameObject child;
-	
-	void Start(){
-
-	}
-	
-	public void takeDamage(int amount){
-		Debug.Log ("TOOK DAMAGE");
+	protected void takeDamage(int amount){
 		hp -= amount;
-		Debug.Log (hp);
-	}
-	
-	void Update(){
-
-		if (target != null) {
-			transform.position = new Vector3 (target.position.x + xOffset, target.position.y + yOffset);
-		}
 		if (hp <= 0) {
-			//hpText.text = "Player is Dead";
-			die();
+			Die ();
+		} else {
+			OnHealthChange();
 		}
 	}
-	
-	public void OnEnemyAttack() {
-		takeDamage(1);
-	}
 
-	public void Kill() {
-		hp = 0;
+	protected virtual void OnHealthChange() {
+
 	}
 	
-	public virtual void die(){
+	//Allows subclasses to override for different death behaviour
+	protected virtual void BeforeDeath() {
+		
+	}
 
+	//Allows subclasses to override for different death behaviour
+	protected virtual void AfterDeath() {
+
+	}
+
+	protected void Die(){
+		BeforeDeath ();
+		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+		Destroy (o);
+		AfterDeath ();
 	}
 }

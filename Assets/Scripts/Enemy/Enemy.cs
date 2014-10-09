@@ -69,9 +69,7 @@ public class Enemy : Destructible, AvatarAttackListener
 		this.takeDamage (1);
 	}
 
-	public override void die(){
-		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+	protected override void BeforeDeath(){
 		this.Destruct ();
-		Destroy (o);
 	}
 }

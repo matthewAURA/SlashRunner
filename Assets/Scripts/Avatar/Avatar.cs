@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Avatar : Health {
+public class Avatar : Health, EnemyAttackListener {
 	
 	[SerializeField] LayerMask whatIsGround = 0;
 	Transform groundCheck;								
@@ -19,6 +19,7 @@ public class Avatar : Health {
 	public Sprite attackAnimation;
 	
 	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
+	public static List<IAvatarHeathChangeListener> healthChangeListenerList = new List<IAvatarHeathChangeListener>();
 	
 	public enum Attack {
 		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP
@@ -28,6 +29,7 @@ public class Avatar : Health {
 
 		// Clean up
 		attackListenerList.Clear ();
+		healthChangeListenerList.Clear ();
 		inputMap = InputMap.getInputMap();
 		inputMap.ClearDictionary ();
 
@@ -59,6 +61,7 @@ public class Avatar : Health {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log (hp);
 		if (slash != null)
 		{
 			slash.transform.position = new Vector3 (gameObject.transform.position.x + 5, 
@@ -67,6 +70,10 @@ public class Avatar : Health {
 		if (grounded && jumping) {
 			jumping = false;
 		}
+	}
+
+	public static void RegisterHeathChangeListener (IAvatarHeathChangeListener listener) {
+		healthChangeListenerList.Add (listener);
 	}
 	
 	public void Move() {
@@ -116,6 +123,25 @@ public class Avatar : Health {
 		}
 	}
 
+	public void OnEnemyAttack() {
+		Debug.Log ("Enemy attacked avatar");
+		this.takeDamage(1);
+	}
+
+	public void Kill() {
+		this.Die ();
+	}
+	
+	protected override void AfterDeath() {
+		Application.LoadLevel("Gameover");
+	}
+
+	protected override void OnHealthChange() {
+		foreach (IAvatarHeathChangeListener listener in healthChangeListenerList) {
+			listener.OnAvatarHealthChange(hp);
+		}
+	}
+
 	private void FireAttackAnimation(Avatar.Attack attack)
 	{
 		if (attackAnimation != null)
@@ -151,12 +177,5 @@ public class Avatar : Health {
 		for (int i = attackListenerList.Count - 1; i >= 0; i--) {
 			attackListenerList[i].OnAvatarAttack(attack);
 		}
-	}
-
-	public override void die(){
-		Debug.Log ("DIED");
-		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
-		Destroy (o);
-		Application.LoadLevel ("Gameover");
 	}
 }

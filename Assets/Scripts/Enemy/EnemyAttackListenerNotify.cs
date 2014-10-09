@@ -26,7 +26,7 @@ public class EnemyAttackListenerNotify : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		
 		// Attempt to get the Collider2D object's GameObject. If parent existed, get the parent GameObject instead.
-		GameObject o = other.gameObject.transform.parent == null ? other.gameObject : other.gameObject.transform.parent.gameObject;
+		GameObject o = other.gameObject;
 		if (o.tag == "Player" && o.GetComponents(typeof(EnemyAttackListener)).Length > 0) {
 			Debug.Log ("Added " + o.tag + " to list");
 			foreach(EnemyAttackListener obj in o.GetComponents(typeof(EnemyAttackListener))) {
