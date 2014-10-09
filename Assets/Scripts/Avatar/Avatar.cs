@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Avatar : MonoBehaviour {
+public class Avatar : Health, EnemyAttackListener {
 	
 	[SerializeField] LayerMask whatIsGround = 0;
 	Transform groundCheck;								
@@ -114,6 +114,19 @@ public class Avatar : MonoBehaviour {
 			FireAttackAnimation(Attack.JUMPSTOMP);
 			fireAttackActionEvent(Attack.JUMPSTOMP);
 		}
+	}
+
+	public void OnEnemyAttack() {
+		Debug.Log ("Enemy attacked avatar");
+		this.takeDamage(1);
+	}
+
+	public void Kill() {
+		this.Die ();
+	}
+	
+	protected override void AfterDeath() {
+		Application.LoadLevel("Gameover");
 	}
 
 	private void FireAttackAnimation(Avatar.Attack attack)

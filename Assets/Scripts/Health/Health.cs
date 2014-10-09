@@ -5,26 +5,26 @@ public class Health : MonoBehaviour {
 	
 	public int hp;
 	
-	public void takeDamage(int amount){
+	protected void takeDamage(int amount){
 		hp -= amount;
-		if (hp == 0) {
-			die ();
+		if (hp <= 0) {
+			Die ();
 		}
 	}
 	
 	//Allows subclasses to override for different death behaviour
-	public void BeforeDeath() {
+	protected virtual void BeforeDeath() {
 		
 	}
 
 	//Allows subclasses to override for different death behaviour
-	public void AfterDeath() {
+	protected virtual void AfterDeath() {
 
 	}
 	
-	void die(){
+	protected void Die(){
 		BeforeDeath ();
-		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+		GameObject o = this.gameObject;
 		Destroy (o);
 		AfterDeath ();
 	}
