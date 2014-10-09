@@ -13,34 +13,24 @@ public class Health : MonoBehaviour, EnemyAttackListener {
 	public Sprite heart2;
 	public Sprite heart3;
 
-	public GameObject child;
+	//public GameObject child;
 	
 	void Start(){
 
 	}
 	
 	public void takeDamage(int amount){
+		Debug.Log ("TOOK DAMAGE");
 		hp -= amount;
+		Debug.Log (hp);
 	}
 	
 	void Update(){
+
 		if (target != null) {
 			transform.position = new Vector3 (target.position.x + xOffset, target.position.y + yOffset);
-		} else {
-			Debug.Log ("******* SHOULD ATTACH TO A TARGET *******");
 		}
-
-		if (hp == 3) {
-			child.GetComponent<SpriteRenderer>().sprite = heart3;	
-		}
-		else if (hp == 2) {
-			child.GetComponent<SpriteRenderer>().sprite = heart2;	
-		}
-		else if (hp == 1) {
-			child.GetComponent<SpriteRenderer>().sprite = heart1;	
-		}
-		else if (hp == 0) {
-			child.GetComponent<SpriteRenderer>().sprite = heart0;
+		if (hp <= 0) {
 			//hpText.text = "Player is Dead";
 			die();
 		}
@@ -54,9 +44,7 @@ public class Health : MonoBehaviour, EnemyAttackListener {
 		hp = 0;
 	}
 	
-	void die(){
-		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
-		Destroy (o);
-		Application.LoadLevel ("Gameover");
+	public virtual void die(){
+
 	}
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Enemy : MonoBehaviour, AvatarAttackListener
+public class Enemy : Destructible, AvatarAttackListener
 {
 	public enum ShieldPosition
 	{
@@ -63,9 +63,15 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 
 		//Destroy enemy group game object
 		GameObject o = transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
-		if (gameObject.GetComponent<Destructible> () != null) {
-			gameObject.GetComponent<Destructible> ().Destruct ();
-		}
+		//if (gameObject.GetComponent<Destructible> () != null) {
+		//	gameObject.GetComponent<Destructible> ().Destruct ();
+		//}
+		this.takeDamage (1);
+	}
+
+	public override void die(){
+		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+		this.Destruct ();
 		Destroy (o);
 	}
 }

@@ -5,14 +5,10 @@ using System.Collections;
  * remains object, based on action. Currently on left arrow, will change to
  * being hit by gesture */
 
-public class Destructible : MonoBehaviour {
+public class Destructible : Health {
 	
 	void Start () {
 	
-	}
-
-	void Update(){
-
 	}
 
 	public GameObject remains;

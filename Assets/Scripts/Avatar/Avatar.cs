@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Avatar : MonoBehaviour {
+public class Avatar : Health {
 	
 	[SerializeField] LayerMask whatIsGround = 0;
 	Transform groundCheck;								
@@ -151,5 +151,12 @@ public class Avatar : MonoBehaviour {
 		for (int i = attackListenerList.Count - 1; i >= 0; i--) {
 			attackListenerList[i].OnAvatarAttack(attack);
 		}
+	}
+
+	public override void die(){
+		Debug.Log ("DIED");
+		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+		Destroy (o);
+		Application.LoadLevel ("Gameover");
 	}
 }
