@@ -9,7 +9,7 @@ public class Heart : MonoBehaviour, IAvatarHeathChangeListener {
 	public Sprite heart3;
 
 	public void Awake() {
-		Avatar.RegisterHeathChangeListener (this);
+		Avatar.healthChangeListenerList.Add (this);
 	}
 
 	public void OnAvatarHealthChange(int health){
