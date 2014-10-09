@@ -45,7 +45,7 @@ public class AvatarAttackListenerListBuilder : MonoBehaviour {
 			Debug.Log ("Removed " + o.tag + " from list");
 			foreach(AvatarAttackListener obj in o.GetComponents(typeof(AvatarAttackListener))) {
 				// Remove from the list
-				Avatar.attackListenerList.Remove ((AvatarAttackListener)(o.GetComponents(typeof(AvatarAttackListener))[0]));
+				Avatar.attackListenerList.Remove (obj);
 			}
 		}
 	}

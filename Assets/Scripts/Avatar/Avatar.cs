@@ -19,6 +19,7 @@ public class Avatar : Health, EnemyAttackListener {
 	public Sprite attackAnimation;
 	
 	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
+	public static List<IAvatarHeathChangeListener> healthChangeListenerList = new List<IAvatarHeathChangeListener>();
 	
 	public enum Attack {
 		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP
@@ -28,6 +29,7 @@ public class Avatar : Health, EnemyAttackListener {
 
 		// Clean up
 		attackListenerList.Clear ();
+		healthChangeListenerList.Clear ();
 		inputMap = InputMap.getInputMap();
 		inputMap.ClearDictionary ();
 
@@ -59,6 +61,7 @@ public class Avatar : Health, EnemyAttackListener {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log (hp);
 		if (slash != null)
 		{
 			slash.transform.position = new Vector3 (gameObject.transform.position.x + 5, 
@@ -67,6 +70,10 @@ public class Avatar : Health, EnemyAttackListener {
 		if (grounded && jumping) {
 			jumping = false;
 		}
+	}
+
+	public static void RegisterHeathChangeListener (IAvatarHeathChangeListener listener) {
+		healthChangeListenerList.Add (listener);
 	}
 	
 	public void Move() {
@@ -127,6 +134,12 @@ public class Avatar : Health, EnemyAttackListener {
 	
 	protected override void AfterDeath() {
 		Application.LoadLevel("Gameover");
+	}
+
+	protected override void OnHealthChange() {
+		foreach (IAvatarHeathChangeListener listener in healthChangeListenerList) {
+			listener.OnAvatarHealthChange(hp);
+		}
 	}
 
 	private void FireAttackAnimation(Avatar.Attack attack)

@@ -4,12 +4,18 @@ using System.Collections;
 public class Health : MonoBehaviour {
 	
 	public int hp;
-	
+
 	protected void takeDamage(int amount){
 		hp -= amount;
 		if (hp <= 0) {
 			Die ();
+		} else {
+			OnHealthChange();
 		}
+	}
+
+	protected virtual void OnHealthChange() {
+
 	}
 	
 	//Allows subclasses to override for different death behaviour
