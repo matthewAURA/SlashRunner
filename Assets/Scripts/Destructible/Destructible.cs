@@ -27,10 +27,6 @@ public class Destructible : Health, AvatarAttackListener {
 		Debug.Log ("Avatar Attacked Enemy");
 		Avatar.attackListenerList.Remove (this);
 		
-		GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
-		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
-		s.IncreaseScore(2000);
-		
 		this.takeDamage (1);
 	}
 

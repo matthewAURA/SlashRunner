@@ -51,5 +51,19 @@ public class Enemy : Destructible
 		}
 
 	}
+	
+	public override void OnAvatarAttack(Avatar.Attack attack)
+	{
+		Debug.Log ("Avatar Attacked Enemy");
+		Avatar.attackListenerList.Remove (this);
+		this.takeDamage (1);
+	}
+	
+	protected override void AfterDeath(){
+	
+		GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
+		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
+		s.IncreaseScore(2000);
+	}
 
 }
