@@ -6,24 +6,23 @@ using System.Collections;
  * being hit by gesture */
 
 public class Destructible : Health, AvatarAttackListener {
-	
+
+	public virtual void Awake() {
+
+	}
+
 	void Start () {
 	
 	}
 
 	public GameObject remains;
-	// Update is called once per frame
+
 	public void Destruct () {
-		//if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-			GameObject pieces = (GameObject) Instantiate(remains, new Vector3(transform.position.x, transform.position.y, transform.position.z+5), transform.rotation);
-			Destroy (gameObject);
-		//}
-
-
-	
+		Instantiate(remains, new Vector3(transform.position.x, transform.position.y, transform.position.z+5), transform.rotation);
+		Destroy (gameObject);
 	}
 
-	public void OnAvatarAttack(Avatar.Attack attack)
+	public virtual void OnAvatarAttack(Avatar.Attack attack)
 	{
 		Debug.Log ("Avatar Attacked Enemy");
 		Avatar.attackListenerList.Remove (this);
@@ -31,8 +30,7 @@ public class Destructible : Health, AvatarAttackListener {
 		GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
 		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
 		s.IncreaseScore(2000);
-
-		GameObject o = transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+		
 		this.takeDamage (1);
 	}
 
