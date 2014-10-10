@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Avatar : MonoBehaviour {
+public class Avatar : Health, EnemyAttackListener {
 	
 	[SerializeField] LayerMask whatIsGround = 0;
 	Transform groundCheck;								
@@ -19,6 +19,7 @@ public class Avatar : MonoBehaviour {
 	public Sprite attackAnimation;
 	
 	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
+	public static List<IAvatarHeathChangeListener> healthChangeListenerList = new List<IAvatarHeathChangeListener>();
 	
 	public enum Attack {
 		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP
@@ -28,6 +29,7 @@ public class Avatar : MonoBehaviour {
 
 		// Clean up
 		attackListenerList.Clear ();
+		healthChangeListenerList.Clear ();
 		inputMap = InputMap.getInputMap();
 		inputMap.ClearDictionary ();
 
@@ -67,6 +69,10 @@ public class Avatar : MonoBehaviour {
 		if (grounded && jumping) {
 			jumping = false;
 		}
+	}
+
+	public static void RegisterHeathChangeListener (IAvatarHeathChangeListener listener) {
+		healthChangeListenerList.Add (listener);
 	}
 	
 	public void Move() {
@@ -113,6 +119,26 @@ public class Avatar : MonoBehaviour {
 			Debug.Log ("Doing Jump Stomp Attack");
 			FireAttackAnimation(Attack.JUMPSTOMP);
 			fireAttackActionEvent(Attack.JUMPSTOMP);
+		}
+	}
+
+	public void OnEnemyAttack() {
+		Debug.Log ("Enemy attacked avatar");
+		this.takeDamage(1);
+	}
+
+	public void Kill() {
+		this.Die ();
+	}
+	
+	protected override void AfterDeath() {
+		Application.LoadLevel("Gameover");
+	}
+
+	protected override void OnHealthChange() {
+		Debug.Log ("AvatarTakingDamage");
+		foreach (IAvatarHeathChangeListener listener in healthChangeListenerList) {
+			listener.OnAvatarHealthChange(hp);
 		}
 	}
 
