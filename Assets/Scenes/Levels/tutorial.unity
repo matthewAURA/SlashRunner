@@ -203,7 +203,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 346460255}
   - 114: {fileID: 346460257}
-  - 114: {fileID: 346460256}
   m_Layer: 0
   m_Name: Enemy01
   m_TagString: Enemy
@@ -224,23 +223,6 @@ Transform:
   - {fileID: 355071113}
   m_Father: {fileID: 186097465}
   m_RootOrder: 0
---- !u!114 &346460256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 346460254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f246937a8f1dc4510b74c12930153d31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 0
-  remains: {fileID: 0}
-  shortShield: {fileID: 356866214}
-  tallShield: {fileID: 1647139778}
-  shieldType: 1
-  shieldPosition: 1
 --- !u!114 &346460257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,8 +237,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   remains: {fileID: 100008, guid: d8fa2164d381b5149b740efbad631a04, type: 2}
-  shortShield: {fileID: 0}
-  tallShield: {fileID: 0}
+  shortShield: {fileID: 356866214}
+  tallShield: {fileID: 1647139778}
   shieldType: 1
   shieldPosition: 1
 --- !u!1 &355071112
@@ -809,7 +791,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 681924917}
   - 114: {fileID: 681924919}
-  - 114: {fileID: 681924918}
   m_Layer: 0
   m_Name: Enemy01
   m_TagString: Enemy
@@ -830,23 +811,6 @@ Transform:
   - {fileID: 281690589}
   m_Father: {fileID: 695562095}
   m_RootOrder: 0
---- !u!114 &681924918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 681924916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f246937a8f1dc4510b74c12930153d31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 0
-  remains: {fileID: 0}
-  shortShield: {fileID: 356866214}
-  tallShield: {fileID: 1647139778}
-  shieldType: 1
-  shieldPosition: 1
 --- !u!114 &681924919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,8 +825,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   remains: {fileID: 100008, guid: d8fa2164d381b5149b740efbad631a04, type: 2}
-  shortShield: {fileID: 0}
-  tallShield: {fileID: 0}
+  shortShield: {fileID: 356866214}
+  tallShield: {fileID: 1647139778}
   shieldType: 1
   shieldPosition: 1
 --- !u!1 &695562094
@@ -1071,6 +1035,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
+      propertyPath: tallShield
+      value: 
+      objectReference: {fileID: 1647139778}
+    - target: {fileID: 11400000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
+      propertyPath: shortShield
+      value: 
+      objectReference: {fileID: 356866214}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
   m_RootGameObject: {fileID: 842456758}
@@ -1184,7 +1156,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 842456760}
   - 114: {fileID: 842456761}
-  - 114: {fileID: 842456759}
   m_Layer: 0
   m_Name: Enemy01
   m_TagString: Enemy
@@ -1192,23 +1163,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &842456759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 842456758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f246937a8f1dc4510b74c12930153d31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 0
-  remains: {fileID: 0}
-  shortShield: {fileID: 356866214}
-  tallShield: {fileID: 1647139778}
-  shieldType: 1
-  shieldPosition: 1
 --- !u!4 &842456760
 Transform:
   m_ObjectHideFlags: 0
@@ -1236,8 +1190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   remains: {fileID: 100008, guid: d8fa2164d381b5149b740efbad631a04, type: 2}
-  shortShield: {fileID: 0}
-  tallShield: {fileID: 0}
+  shortShield: {fileID: 356866214}
+  tallShield: {fileID: 1647139778}
   shieldType: 1
   shieldPosition: 1
 --- !u!1001 &853924283
@@ -1360,6 +1314,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
+      propertyPath: tallShield
+      value: 
+      objectReference: {fileID: 1647139778}
+    - target: {fileID: 11400000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
+      propertyPath: shortShield
+      value: 
+      objectReference: {fileID: 356866214}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
   m_RootGameObject: {fileID: 346460254}
@@ -2167,6 +2129,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
+      propertyPath: tallShield
+      value: 
+      objectReference: {fileID: 1647139778}
+    - target: {fileID: 11400000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
+      propertyPath: shortShield
+      value: 
+      objectReference: {fileID: 356866214}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0cf9fedcef283749bb479552fdd7cf7, type: 2}
   m_RootGameObject: {fileID: 681924916}
