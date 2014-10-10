@@ -61,7 +61,6 @@ public class Avatar : Health, EnemyAttackListener {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (hp);
 		if (slash != null)
 		{
 			slash.transform.position = new Vector3 (gameObject.transform.position.x + 5, 
@@ -137,6 +136,7 @@ public class Avatar : Health, EnemyAttackListener {
 	}
 
 	protected override void OnHealthChange() {
+		Debug.Log ("AvatarTakingDamage");
 		foreach (IAvatarHeathChangeListener listener in healthChangeListenerList) {
 			listener.OnAvatarHealthChange(hp);
 		}

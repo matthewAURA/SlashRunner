@@ -1,16 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Health : MonoBehaviour {
 	
 	public int hp;
+	public TimeSpan healthCoolDown = new TimeSpan(0, 0, 0, 1, 0);
+	private DateTime lastDamage;
 
 	protected void takeDamage(int amount){
-		hp -= amount;
-		if (hp <= 0) {
-			Die ();
-		} else {
-			OnHealthChange();
+		if (DateTime.Now.Subtract(lastDamage) > healthCoolDown) {
+			hp -= amount;
+			lastDamage = DateTime.Now;
+			if (hp <= 0) {
+					Die ();
+			} else {
+					OnHealthChange ();
+			}
 		}
 	}
 

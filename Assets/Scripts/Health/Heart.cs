@@ -8,7 +8,7 @@ public class Heart : MonoBehaviour, IAvatarHeathChangeListener {
 	public Sprite heart2;
 	public Sprite heart3;
 
-	public void Awake() {
+	public void Start() {
 		Avatar.healthChangeListenerList.Add (this);
 	}
 
