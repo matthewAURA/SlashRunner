@@ -5,7 +5,7 @@ using System.Collections;
  * remains object, based on action. Currently on left arrow, will change to
  * being hit by gesture */
 
-public class Destructible : Health {
+public class Destructible : Health, AvatarAttackListener {
 	
 	void Start () {
 	
@@ -21,5 +21,22 @@ public class Destructible : Health {
 
 
 	
+	}
+
+	public void OnAvatarAttack(Avatar.Attack attack)
+	{
+		Debug.Log ("Avatar Attacked Enemy");
+		Avatar.attackListenerList.Remove (this);
+		
+		GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
+		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
+		s.IncreaseScore(2000);
+
+		GameObject o = transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+		this.takeDamage (1);
+	}
+
+	protected override void BeforeDeath(){
+		this.Destruct ();
 	}
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Enemy : Destructible, AvatarAttackListener
+public class Enemy : Destructible
 {
 	public enum ShieldPosition
 	{
@@ -52,24 +52,4 @@ public class Enemy : Destructible, AvatarAttackListener
 
 	}
 
-	public void OnAvatarAttack(Avatar.Attack attack)
-	{
-		Debug.Log ("Avatar Attacked Enemy");
-		Avatar.attackListenerList.Remove (this);
-
-		GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
-		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
-		s.IncreaseScore(2000);
-
-		//Destroy enemy group game object
-		GameObject o = transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
-		//if (gameObject.GetComponent<Destructible> () != null) {
-		//	gameObject.GetComponent<Destructible> ().Destruct ();
-		//}
-		this.takeDamage (1);
-	}
-
-	protected override void BeforeDeath(){
-		this.Destruct ();
-	}
 }
