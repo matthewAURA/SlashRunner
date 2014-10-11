@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 		switch (shieldType)
 		{
 			case ShieldType.None:
-			shielded = false;
+				shielded = false;
 				break;
 			case ShieldType.Short:
 				shieldObject = shortShield;
@@ -55,6 +55,30 @@ public class Enemy : MonoBehaviour, AvatarAttackListener
 	public void OnAvatarAttack(Avatar.Attack attack)
 	{
 		Debug.Log ("Avatar Attacked Enemy");
+
+		if (shielded) {
+			switch (attack)
+			{
+				case Avatar.Attack.JUMPSTOMP:
+				case Avatar.Attack.JUMPSWIPE:
+				case Avatar.Attack.OVERHEADSWIPE:
+					if (shieldPosition == ShieldPosition.Top) {
+						return;
+					}
+					break;
+				case Avatar.Attack.PIERCE:
+					if (shieldType == ShieldType.Tall || shieldPosition == ShieldPosition.Middle) {
+						return;
+					}
+					break;
+				case Avatar.Attack.LOWSWIPE:
+					if (shieldPosition == ShieldPosition.Bottom) {
+						return;
+					}
+					break;
+			}
+		}
+
 		Avatar.attackListenerList.Remove (this);
 
 		GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
