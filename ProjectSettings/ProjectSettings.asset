@@ -10,7 +10,7 @@ PlayerSettings:
   targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: TheGreaterGood
   productName: Slash Runner
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}

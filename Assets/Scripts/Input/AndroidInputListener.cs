@@ -123,29 +123,25 @@ public class AndroidInputListener : MonoBehaviour {
 	 * listeners of the given input.
 	*/ 
 	private void FireSwipeEvents() {
-		//Swipe Up then Right Input
-		if (directionList.Count > 1 && directionList[0].Equals(CurrentDir.up) && directionList[1].Equals(CurrentDir.right)) {
-			inputMap.FireInputEvents(MultiPlatformInputs.SwipeUpRight);
+		//Swipe Up then Right then Down Input
+		if (directionList.Count > 2 && directionList[0].Equals(CurrentDir.up) && directionList[1].Equals(CurrentDir.right) && directionList[2].Equals(CurrentDir.down)) {
+			inputMap.FireInputEvents(MultiPlatformInputs.SwipeUpRightDown);
 		}
-		//Swipe Up then Left Input
-		else if (directionList.Count > 1 && directionList[0].Equals(CurrentDir.up) && directionList[1].Equals(CurrentDir.left)) {
-			inputMap.FireInputEvents(MultiPlatformInputs.SwipeUpLeft);
+		//Swipe Right then Down Input
+		else if (directionList.Count > 1 && directionList[0].Equals(CurrentDir.right) && directionList[1].Equals(CurrentDir.down)) {
+			inputMap.FireInputEvents(MultiPlatformInputs.SwipeRightDown);
+		}
+		//Swipe Down then Right Input
+		else if(directionList.Count > 1 && directionList[0].Equals(CurrentDir.down) && directionList[1].Equals(CurrentDir.right)) {
+			inputMap.FireInputEvents(MultiPlatformInputs.SwipeDownRight);
 		}
 		//Swipe Right Input
-		else if(directionList.Count > 0 && directionList[0].Equals(CurrentDir.right)) {
+		else if (directionList.Count > 0 && directionList[0].Equals(CurrentDir.right)) {
 			inputMap.FireInputEvents(MultiPlatformInputs.SwipeRight);
-		}
-		//Swipe Left Input
-		else if (directionList.Count > 0 && directionList[0].Equals(CurrentDir.left)) {
-			inputMap.FireInputEvents(MultiPlatformInputs.SwipeLeft);
 		}
 		//Swipe Up Input
 		else if (directionList.Count > 0 && directionList[0].Equals(CurrentDir.up)) {
 			inputMap.FireInputEvents(MultiPlatformInputs.SwipeUp);
 		}
-		//Swipe Down Input
-		else if (directionList.Count > 0 && directionList[0].Equals(CurrentDir.down)) {
-			inputMap.FireInputEvents(MultiPlatformInputs.SwipeDown);
-		}	
 	}
 }

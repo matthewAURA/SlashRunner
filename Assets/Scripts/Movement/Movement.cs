@@ -7,7 +7,6 @@ public abstract class Movement : MonoBehaviour
 	/// Speed of the movement
 	/// </summary>
 	public float speed = 1.0f;
-	
 
 	void Update()
 	{
