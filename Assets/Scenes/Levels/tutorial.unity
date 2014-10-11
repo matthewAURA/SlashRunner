@@ -234,8 +234,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f246937a8f1dc4510b74c12930153d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shortShield: {fileID: 555544389}
-  tallShield: {fileID: 1024497259}
+  shortShield: {fileID: 1024497259}
+  tallShield: {fileID: 555544389}
+  randomise: 1
   shieldType: 1
   shieldPosition: 1
 --- !u!1 &355071112
@@ -621,7 +622,7 @@ GameObject:
   - 4: {fileID: 555544391}
   - 212: {fileID: 555544390}
   m_Layer: 0
-  m_Name: Small Shield Sprite
+  m_Name: Tall Shield Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -877,8 +878,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f246937a8f1dc4510b74c12930153d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shortShield: {fileID: 555544389}
-  tallShield: {fileID: 1024497259}
+  shortShield: {fileID: 1024497259}
+  tallShield: {fileID: 555544389}
+  randomise: 1
   shieldType: 1
   shieldPosition: 1
 --- !u!1 &695562094
@@ -1218,8 +1220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f246937a8f1dc4510b74c12930153d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shortShield: {fileID: 555544389}
-  tallShield: {fileID: 1024497259}
+  shortShield: {fileID: 1024497259}
+  tallShield: {fileID: 555544389}
+  randomise: 1
   shieldType: 1
   shieldPosition: 1
 --- !u!4 &842456760
@@ -1432,7 +1435,7 @@ GameObject:
   - 4: {fileID: 1024497261}
   - 212: {fileID: 1024497260}
   m_Layer: 0
-  m_Name: Tall Shield Sprite
+  m_Name: Short Shield Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
