@@ -17,9 +17,10 @@ public class HUDScript : MonoBehaviour {
 		GUIStyle style = new GUIStyle ();
 		style.fontSize = 30;
 		GUI.Label (new Rect (0, 0, 100, 30), "Score: " + (playerScore), style);
-		Texture2D image = (Texture2D)Resources.Load ("shadedDark14");
-		GUI.skin.button.normal.background = image;
-		if (GUI.Button (new Rect (Screen.width - 50, 0, 40, 40), "")) {
+		Texture image = (Texture)Resources.Load ("shadedDark14");
+		GUIContent content = new GUIContent();
+		content.image = image;
+		if (GUI.Button (new Rect (Screen.width - 50, 0, 40, 40), image)) {
 			pause = true;
 		}
 		if (pause) {
