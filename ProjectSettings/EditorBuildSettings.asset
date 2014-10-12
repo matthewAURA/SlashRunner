@@ -18,7 +18,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Settings.unity
   - enabled: 1
-    path: Assets/Scenes/Levels/tutorial.unity
+    path: Assets/Scenes/Levels/RealTutorial.unity
   - enabled: 0
     path: Assets/Scenes/TestScoringSystem/TestScoringSystem.unity
   - enabled: 0
