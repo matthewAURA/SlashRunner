@@ -10,6 +10,7 @@ using System.Runtime.Serialization;
 public class ScoringSystem : MonoBehaviour {
 	private ScoreEntry playerScore;
 	private int multiple = 1;
+	public bool isEndless;
 	public List<ScoreEntry> highScores = new List<ScoreEntry>();
 
 	[System.Serializable]
@@ -19,7 +20,7 @@ public class ScoringSystem : MonoBehaviour {
 	}
 
 	public void IncreaseScore(int amount){
-		playerScore.score += amount;
+		playerScore.score += amount * multiple;
 	}
 
 	private void SaveScores(){
@@ -46,7 +47,9 @@ public class ScoringSystem : MonoBehaviour {
 	}
 
 	void Update(){
-		playerScore.score += Time.deltaTime * 100 * multiple;
+		if (isEndless) {
+			playerScore.score += Time.deltaTime * 10 * multiple;
+		}
 		PlayerPrefs.SetInt ("ScoreInt", (int)playerScore.score);
 	}
 
