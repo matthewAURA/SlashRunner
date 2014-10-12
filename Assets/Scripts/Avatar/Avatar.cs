@@ -152,4 +152,23 @@ public class Avatar : MonoBehaviour {
 			attackListenerList[i].OnAvatarAttack(attack);
 		}
 	}
+
+	void OnTriggerEnter2D(Collider2D otherCollider)
+	{
+		// Damage is caused if player is hit by colliders harmful to players
+		DamagePlayerOnContact damagePlayer =
+			otherCollider.GetComponent<DamagePlayerOnContact> ();
+		if (damagePlayer != null)
+		{
+			// The health object is not attached to the avatar, hence the Find
+			GameObject healthObj = GameObject.Find("Health");
+			Health health = healthObj.GetComponent<Health>();
+			if (health != null)
+			{
+				health.takeDamage (damagePlayer.damage);
+				Destroy (otherCollider.gameObject);
+			}
+		}
+
+	}
 }
