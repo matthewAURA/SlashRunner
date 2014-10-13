@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+namespace Platform{
+
 public class PlatformSpawner : MonoBehaviour {
 	
 	/// <summary>
@@ -22,9 +24,11 @@ public class PlatformSpawner : MonoBehaviour {
 	private Transform active;
 	private int platformID;
 	private Queue sectionQueue;
+	private ArrayList listeners;
 	
 	// Use this for initialization
 	void Start () {
+		this.listeners = new ArrayList ();
 		this.platformID = 0;
 		yHeight = this.spawn.position.y;
 		this.sectionQueue = new Queue ();
@@ -50,6 +54,11 @@ public class PlatformSpawner : MonoBehaviour {
 		}
 	}
 
+	public void registerListener(PlatformSpawnListener p){
+		this.listeners.Add (p);
+	}
+
+
 	private bool shouldSpawn(){
 		var width = this.target.collider2D.bounds.size.x;
 		return this.target.position.x + width / 2 > this.active.position.x - this.active.collider2D.bounds.size.x*2;
@@ -65,7 +74,15 @@ public class PlatformSpawner : MonoBehaviour {
 		newSection.name = spawn.name + " " + this.platformID.ToString ();
 		this.platformID++;
 		newSection.position = position;
+		//Notifiy listeners
+		foreach (var listener in this.listeners) {
+				((PlatformSpawnListener)listener).onPlatformSpawn(position);
+		}
+
+
+
 		return newSection;
-	}
+	} 
 	
+}
 }
