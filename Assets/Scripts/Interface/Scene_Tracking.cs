@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Scene_Tracking : MonoBehaviour {
 
-	private static int previouseScene;
+	private static int previousScene;
 	private static int currentScene;
 
 	void Awake () {
@@ -14,12 +14,12 @@ public class Scene_Tracking : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Application.loadedLevel != currentScene) {
-			previouseScene = currentScene;
+			previousScene = currentScene;
 			currentScene = Application.loadedLevel;
 		}
 	}
 
-	public static int GetPreviouseScene() {
-		return previouseScene;
+	public static int GetPreviousScene() {
+		return previousScene;
 	}
 }
