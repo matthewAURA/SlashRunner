@@ -741,6 +741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shortShield: {fileID: 1091963257}
   tallShield: {fileID: 1494835542}
+  randomise: 0
   shieldType: 1
   shieldPosition: 1
 --- !u!1001 &390668459
@@ -1079,7 +1080,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 564374344}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 2.55999994, y: .639999986}
   m_Center: {x: 0, y: 0}
@@ -1470,6 +1471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shortShield: {fileID: 1091963257}
   tallShield: {fileID: 1494835542}
+  randomise: 0
   shieldType: 1
   shieldPosition: 1
 --- !u!1 &756358036
@@ -2095,6 +2097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shortShield: {fileID: 1091963257}
   tallShield: {fileID: 1494835542}
+  randomise: 0
   shieldType: 1
   shieldPosition: 1
 --- !u!1 &980799527
@@ -2888,7 +2891,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1198814344}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 2.55999994, y: .639999986}
   m_Center: {x: 0, y: 0}
@@ -3842,6 +3845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shortShield: {fileID: 1091963257}
   tallShield: {fileID: 1494835542}
+  randomise: 0
   shieldType: 1
   shieldPosition: 1
 --- !u!1 &1464099824
@@ -4614,6 +4618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788c54ec4be0abb4086963aab650149c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEndless: 0
   highScores: []
 --- !u!114 &1628677799
 MonoBehaviour:
@@ -4971,6 +4976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shortShield: {fileID: 1091963257}
   tallShield: {fileID: 1494835542}
+  randomise: 0
   shieldType: 1
   shieldPosition: 1
 --- !u!1 &1791289459
@@ -5234,6 +5240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shortShield: {fileID: 1091963257}
   tallShield: {fileID: 1494835542}
+  randomise: 0
   shieldType: 1
   shieldPosition: 1
 --- !u!1 &1944800312
