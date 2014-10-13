@@ -315,6 +315,7 @@ GameObject:
   - 81: {fileID: 340895500}
   - 114: {fileID: 340895505}
   - 114: {fileID: 340895506}
+  - 114: {fileID: 340895507}
   m_Layer: 0
   m_Name: Scaled Camera
   m_TagString: MainCamera
@@ -417,6 +418,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b68ab3c0142ae04fbaa7fa9b33cfa0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &340895507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 340895499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa42fb37e3c4d514eb0855b642628fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &635802193
@@ -757,7 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: tutorial
+  sceneName: RealTutorial
 --- !u!4 &743607014
 Transform:
   m_ObjectHideFlags: 0

@@ -23,15 +23,16 @@ public class HUDScript : MonoBehaviour {
 		if (GUI.Button (new Rect (Screen.width - 50, 0, 40, 40), image)) {
 			pause = true;
 		}
+		int left = Screen.width / 2 - 150 / 2;
 		if (pause) {
-			GUI.Box(new Rect( Screen.width / 2, 100, 100, 40), "Menu");
-			if (GUI.Button (new Rect(Screen.width/2 , 140, 100, 40), "Resume")){
+			GUI.Box(new Rect( Screen.width / 2 - 170 / 2, 100, 170, 200), "Menu");
+			if (GUI.Button (new Rect(left, 140, 150, 40), "Resume")){
 				pause = false;
 			}
-			if (GUI.Button (new Rect(Screen.width/2 , 180, 100, 40), "Main Menu")){
+			if (GUI.Button (new Rect(left , 180, 150, 40), "Exit to Main Menu")){
 				Application.LoadLevel(0);
 			}
-			if (GUI.Button (new Rect(Screen.width/2 , 220, 100, 40), "Quit")){
+			if (GUI.Button (new Rect(left , 220, 150, 40), "Quit")){
 				Application.Quit();
 			}
 		}
