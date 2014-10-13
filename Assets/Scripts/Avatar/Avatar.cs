@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Avatar : MonoBehaviour {
+public class Avatar : Health, EnemyAttackListener {
 	
 	[SerializeField] LayerMask whatIsGround = 0;
 	Transform groundCheck;								
@@ -19,6 +19,7 @@ public class Avatar : MonoBehaviour {
 	public Sprite attackAnimation;
 	
 	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
+	public static List<IAvatarHeathChangeListener> healthChangeListenerList = new List<IAvatarHeathChangeListener>();
 	
 	public enum Attack {
 		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP
@@ -28,6 +29,7 @@ public class Avatar : MonoBehaviour {
 
 		// Clean up
 		attackListenerList.Clear ();
+		healthChangeListenerList.Clear ();
 		inputMap = InputMap.getInputMap();
 		inputMap.ClearDictionary ();
 
@@ -67,6 +69,10 @@ public class Avatar : MonoBehaviour {
 		if (grounded && jumping) {
 			jumping = false;
 		}
+	}
+
+	public static void RegisterHeathChangeListener (IAvatarHeathChangeListener listener) {
+		healthChangeListenerList.Add (listener);
 	}
 	
 	public void Move() {
@@ -116,6 +122,26 @@ public class Avatar : MonoBehaviour {
 		}
 	}
 
+	public void OnEnemyAttack() {
+		Debug.Log ("Enemy attacked avatar");
+		this.takeDamage(1);
+	}
+
+	public void Kill() {
+		this.Die ();
+	}
+	
+	protected override void AfterDeath() {
+		Application.LoadLevel("Gameover");
+	}
+
+	protected override void OnHealthChange() {
+		Debug.Log ("AvatarTakingDamage");
+		foreach (IAvatarHeathChangeListener listener in healthChangeListenerList) {
+			listener.OnAvatarHealthChange(hp);
+		}
+	}
+
 	private void FireAttackAnimation(Avatar.Attack attack)
 	{
 		if (attackAnimation != null)
@@ -151,5 +177,26 @@ public class Avatar : MonoBehaviour {
 		for (int i = attackListenerList.Count - 1; i >= 0; i--) {
 			attackListenerList[i].OnAvatarAttack(attack);
 		}
+	}
+
+	void OnTriggerEnter2D(Collider2D otherCollider)
+	{
+		// Damage is caused if player is hit by colliders harmful to players
+		DamagePlayerOnContact damagePlayer =
+			otherCollider.GetComponent<DamagePlayerOnContact> ();
+		if (damagePlayer != null)
+		{
+			// The health object is not attached to the avatar, hence the Find
+			//GameObject healthObj = GameObject.Find("Health");
+			//Health health = healthObj.GetComponent<Health>();
+			//if (health != null)
+			//{
+			//	health.takeDamage (damagePlayer.damage);
+			//	Destroy (otherCollider.gameObject);
+			//}
+			this.takeDamage (damagePlayer.damage);
+			Destroy (otherCollider.gameObject);
+		}
+
 	}
 }

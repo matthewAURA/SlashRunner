@@ -12,8 +12,10 @@ public class selfDestruct : MonoBehaviour {
 	void Start () {
 
 		Invoke("destruct", 1);
-		GameObject pickup = (GameObject) Instantiate(item, transform.position, transform.rotation);
-	
+
+		if(item != null){
+			GameObject pickup = (GameObject) Instantiate(item, transform.position, transform.rotation);
+		}
 	}
 	
 	// Update is called once per frame

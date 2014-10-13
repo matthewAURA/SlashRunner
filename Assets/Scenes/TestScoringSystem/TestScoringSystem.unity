@@ -86,10 +86,9 @@ GameObject:
   - 92: {fileID: 29832234}
   - 124: {fileID: 29832233}
   - 81: {fileID: 29832232}
-  - 114: {fileID: 29832237}
   - 114: {fileID: 29832238}
-  - 114: {fileID: 29832239}
   - 114: {fileID: 29832240}
+  - 114: {fileID: 29832237}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -172,9 +171,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 29832231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 607f3ba1ffcd60d4c9c534077524b82e, type: 3}
+  m_Script: {fileID: 11500000, guid: 788c54ec4be0abb4086963aab650149c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEndless: 1
+  highScores: []
 --- !u!114 &29832238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,18 +193,6 @@ MonoBehaviour:
   offsetX: 1
   offsetY: 0
   dampingTime: .5
---- !u!114 &29832239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 29832231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 788c54ec4be0abb4086963aab650149c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highScores: []
 --- !u!114 &29832240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,6 +427,7 @@ MonoBehaviour:
     m_Bits: 1
   jumpForce: 350
   movementForce: 3.5
+  attackAnimation: {fileID: 0}
 --- !u!114 &1100513890
 MonoBehaviour:
   m_ObjectHideFlags: 0
