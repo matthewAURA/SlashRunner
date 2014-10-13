@@ -20,7 +20,7 @@ public class KillBox : MonoBehaviour {
 		// Attempt to get the Collider2D object's GameObject. If parent existed, get the parent GameObject instead.
 		GameObject o = other.gameObject;
 		if (o.tag == "Player") {
-			UnityEngine.Application.LoadLevel("Gameover");
+			Application.LoadLevel("Gameover");
 		}
 	}	
 }

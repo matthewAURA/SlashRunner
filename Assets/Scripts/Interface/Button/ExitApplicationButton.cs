@@ -8,6 +8,6 @@ public class ExitApplicationButton : ButtonBehaviour
 {
 	protected override void OnButtonPress()
 	{
-		UnityEngine.Application.Quit ();
+		Application.Quit ();
 	}
 }

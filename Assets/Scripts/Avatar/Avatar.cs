@@ -132,7 +132,7 @@ public class Avatar : Health, EnemyAttackListener {
 	}
 	
 	protected override void AfterDeath() {
-		UnityEngine.Application.LoadLevel("Gameover");
+		Application.LoadLevel("Gameover");
 	}
 
 	protected override void OnHealthChange() {

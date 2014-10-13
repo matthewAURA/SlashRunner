@@ -30,10 +30,10 @@ public class HUDScript : MonoBehaviour {
 				pause = false;
 			}
 			if (GUI.Button (new Rect(left , 180, 150, 40), "Exit to Main Menu")){
-				UnityEngine.Application.LoadLevel(0);
+				Application.LoadLevel(0);
 			}
 			if (GUI.Button (new Rect(left , 220, 150, 40), "Quit")){
-				UnityEngine.Application.Quit();
+				Application.Quit();
 			}
 		}
 		if (pause == true) {
