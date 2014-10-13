@@ -10,6 +10,6 @@ public class LoadPreviousScene : ButtonBehaviour {
 	
 	protected override void OnButtonPress()
 	{
-		Application.LoadLevel(Scene_Tracking.GetPreviousScene());
+		UnityEngine.Application.LoadLevel(Scene_Tracking.GetPreviousScene());
 	}
 }

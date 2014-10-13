@@ -41,7 +41,7 @@ public class AndroidInputListener : MonoBehaviour {
 	 * Builds list of Swipes
 	*/ 
 	void Update () {
-		if (Application.platform == RuntimePlatform.Android) {
+		if (UnityEngine.Application.platform == RuntimePlatform.Android) {
 			if (Input.touchCount > 0) {
 				Touch touch = Input.touches [0];
 				

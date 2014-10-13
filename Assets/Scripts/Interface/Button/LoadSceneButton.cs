@@ -10,6 +10,6 @@ public class LoadSceneButton : ButtonBehaviour {
 
 	protected override void OnButtonPress()
 	{
-		Application.LoadLevel(sceneName);
+		UnityEngine.Application.LoadLevel(sceneName);
 	}
 }

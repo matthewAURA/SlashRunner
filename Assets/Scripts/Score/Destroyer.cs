@@ -5,7 +5,7 @@ public class Destroyer : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player") {
-			Application.LoadLevel(1);
+			UnityEngine.Application.LoadLevel(1);
 			return;
 		}
 		else if (other.gameObject.transform.parent) {

@@ -8,14 +8,14 @@ public class Scene_Tracking : MonoBehaviour {
 
 	void Awake () {
 		DontDestroyOnLoad(gameObject);
-		currentScene = Application.loadedLevel;
+		currentScene = UnityEngine.Application.loadedLevel;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Application.loadedLevel != currentScene) {
+		if (UnityEngine.Application.loadedLevel != currentScene) {
 			previousScene = currentScene;
-			currentScene = Application.loadedLevel;
+			currentScene = UnityEngine.Application.loadedLevel;
 		}
 	}
 
