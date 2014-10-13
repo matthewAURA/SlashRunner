@@ -25,7 +25,7 @@ public class HUDScript : MonoBehaviour {
 		}
 		int left = Screen.width / 2 - 150 / 2;
 		if (pause) {
-			GUI.Box(new Rect( Screen.width / 2 - 170 / 2, 100, 170, 200), "Menu");
+			GUI.Box(new Rect( Screen.width / 2 - 170 / 2, 100, 170, 180), "Menu");
 			if (GUI.Button (new Rect(left, 140, 150, 40), "Resume")){
 				pause = false;
 			}
