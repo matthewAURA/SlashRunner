@@ -81,16 +81,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  target: {fileID: 0}
-  yOffset: 0
-  xOffset: 0
-  heart0: {fileID: 0}
-  heart1: {fileID: 0}
-  heart2: {fileID: 0}
-  heart3: {fileID: 0}
   remains: {fileID: 100008, guid: d8fa2164d381b5149b740efbad631a04, type: 2}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
+  randomise: 1
   shieldType: 1
   shieldPosition: 1
 --- !u!212 &21200000
