@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class EnemyAttackListenerNotify : MonoBehaviour {
 	
 	public Transform target;
+	public const float xOffset = 1.8f;
 	
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,7 @@ public class EnemyAttackListenerNotify : MonoBehaviour {
 		
 		// Let the attack range collision box follow the target
 		if (target != null) {
-			transform.position = new Vector3 (target.position.x, target.position.y);
+			transform.position = new Vector3 (target.position.x + xOffset, target.position.y);
 		} else {
 			Debug.Log ("******* SHOULD ATTACH TO A TARGET *******");
 		}
