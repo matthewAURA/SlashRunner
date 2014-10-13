@@ -16,14 +16,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Settings.unity
   - enabled: 1
-    path: Assets/Scenes/Levels/Tutorial.unity
+    path: Assets/Scenes/Levels/RealTutorial.unity
+  - enabled: 0
+    path: Assets/Scenes/TestScoringSystem/TestScoringSystem.unity
+  - enabled: 0
+    path: Assets/Scenes/Levels/LevelEnd.unity
   - enabled: 1
     path: Assets/Scenes/Levels/Gameover.unity
   - enabled: 1
     path: Assets/Scenes/Levels/LevelEndSuccess.unity
   - enabled: 0
     path: Assets/Scenes/TestScoringSystem/GameOver.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/RealTutorial.unity
   - enabled: 0
     path: Assets/Scenes/TestScoringSystem/TestScoringSystem.unity

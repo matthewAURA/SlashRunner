@@ -1,62 +1,43 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-public class Health : MonoBehaviour, EnemyAttackListener {
+public class Health : MonoBehaviour {
 	
 	public int hp;
-	public Transform target;
-	public int yOffset;
-	public int xOffset;
+	public TimeSpan healthCoolDown = new TimeSpan(0, 0, 0, 1, 0);
+	private DateTime lastDamage;
 
-	public Sprite heart0;
-	public Sprite heart1;
-	public Sprite heart2;
-	public Sprite heart3;
+	protected void takeDamage(int amount){
+		if (DateTime.Now.Subtract(lastDamage) > healthCoolDown) {
+			hp -= amount;
+			lastDamage = DateTime.Now;
+			if (hp <= 0) {
+					Die ();
+			} else {
+					OnHealthChange ();
+			}
+		}
+	}
 
-	public GameObject child;
-	
-	void Start(){
+	protected virtual void OnHealthChange() {
 
 	}
 	
-	public void takeDamage(int amount){
-		hp -= amount;
-	}
-	
-	void Update(){
-		if (target != null) {
-			transform.position = new Vector3 (target.position.x + xOffset, target.position.y + yOffset);
-		} else {
-			Debug.Log ("******* SHOULD ATTACH TO A TARGET *******");
-		}
-
-		if (hp == 3) {
-			child.GetComponent<SpriteRenderer>().sprite = heart3;	
-		}
-		else if (hp == 2) {
-			child.GetComponent<SpriteRenderer>().sprite = heart2;	
-		}
-		else if (hp == 1) {
-			child.GetComponent<SpriteRenderer>().sprite = heart1;	
-		}
-		else if (hp == 0) {
-			child.GetComponent<SpriteRenderer>().sprite = heart0;
-			//hpText.text = "Player is Dead";
-			die();
-		}
-	}
-	
-	public void OnEnemyAttack() {
-		takeDamage(1);
+	//Allows subclasses to override for different death behaviour
+	protected virtual void BeforeDeath() {
+		
 	}
 
-	public void Kill() {
-		hp = 0;
+	//Allows subclasses to override for different death behaviour
+	protected virtual void AfterDeath() {
+
 	}
-	
-	void die(){
+
+	protected void Die(){
+		BeforeDeath ();
 		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
 		Destroy (o);
-		Application.LoadLevel ("Gameover");
+		AfterDeath ();
 	}
 }

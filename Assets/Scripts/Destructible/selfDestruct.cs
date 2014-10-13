@@ -12,6 +12,7 @@ public class selfDestruct : MonoBehaviour {
 	void Start () {
 
 		Invoke("destruct", 1);
+
 		if(item != null){
 			GameObject pickup = (GameObject) Instantiate(item, transform.position, transform.rotation);
 		}
