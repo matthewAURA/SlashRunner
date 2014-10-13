@@ -28,7 +28,9 @@ public class PlatformSpawner : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		this.listeners = new ArrayList ();
+		if (this.listeners == null) {
+				this.listeners = new ArrayList ();
+		}
 		this.platformID = 0;
 		yHeight = this.spawn.position.y;
 		this.sectionQueue = new Queue ();
@@ -55,6 +57,9 @@ public class PlatformSpawner : MonoBehaviour {
 	}
 
 	public void registerListener(PlatformSpawnListener p){
+		if (this.listeners == null) {
+				this.listeners = new ArrayList();
+		}
 		this.listeners.Add (p);
 	}
 

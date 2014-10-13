@@ -18,7 +18,7 @@ public class AvatarAttackListenerListBuilder : MonoBehaviour {
 		if (target != null) {
 			transform.position = new Vector3 (target.position.x, target.position.y);
 		} else {
-			Debug.Log ("******* SHOULD ATTACH TO A TARGET *******");
+			// Debug.Log ("******* SHOULD ATTACH TO A TARGET *******");
 		}
 	}
 
@@ -29,7 +29,7 @@ public class AvatarAttackListenerListBuilder : MonoBehaviour {
 		GameObject o = other.gameObject.transform.parent == null ? other.gameObject : other.gameObject.transform.parent.gameObject;
 
 		if ((o.tag == "Enemy" || o.tag == "Destructable") && o.GetComponents(typeof(AvatarAttackListener)).Length > 0) {
-			Debug.Log ("Added " + o.tag + " to list");
+			// Debug.Log ("Added " + o.tag + " to list");
 			foreach(AvatarAttackListener obj in o.GetComponents(typeof(AvatarAttackListener))) {
 				// Add to the list
 				Avatar.attackListenerList.Add (obj);
@@ -42,7 +42,7 @@ public class AvatarAttackListenerListBuilder : MonoBehaviour {
 		// Attempt to get the Collider2D object's GameObject. If parent existed, get the parent GameObject instead.
 		GameObject o = other.gameObject.transform.parent == null ? other.gameObject : other.gameObject.transform.parent.gameObject;
 		if ((o.tag == "Enemy" || o.tag == "Destructable") && o.GetComponents(typeof(AvatarAttackListener)).Length > 0) {
-			Debug.Log ("Removed " + o.tag + " from list");
+			// Debug.Log ("Removed " + o.tag + " from list");
 			foreach(AvatarAttackListener obj in o.GetComponents(typeof(AvatarAttackListener))) {
 				// Remove from the list
 				Avatar.attackListenerList.Remove (obj);
