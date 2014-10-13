@@ -607,8 +607,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
-<<<<<<< HEAD:Assets/Scenes/Levels/tutorial.unity
-=======
   target: {fileID: 1891833049}
   yOffset: 5
   xOffset: 0
@@ -667,7 +665,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
->>>>>>> develop:Assets/Scenes/Test Scenes/TestTutorial.unity
 --- !u!1 &564374344
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,16 +882,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f246937a8f1dc4510b74c12930153d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD:Assets/Scenes/Levels/tutorial.unity
   hp: 1
   remains: {fileID: 100008, guid: d8fa2164d381b5149b740efbad631a04, type: 2}
-  shortShield: {fileID: 356866214}
-  tallShield: {fileID: 1647139778}
-=======
   shortShield: {fileID: 1024497259}
   tallShield: {fileID: 555544389}
   randomise: 1
->>>>>>> develop:Assets/Scenes/Test Scenes/TestTutorial.unity
   shieldType: 1
   shieldPosition: 1
 --- !u!1 &695562094
@@ -1231,8 +1223,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Assets/Scenes/Levels/tutorial.unity
-=======
 --- !u!114 &842456759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1249,7 +1239,6 @@ MonoBehaviour:
   randomise: 1
   shieldType: 1
   shieldPosition: 1
->>>>>>> develop:Assets/Scenes/Test Scenes/TestTutorial.unity
 --- !u!4 &842456760
 Transform:
   m_ObjectHideFlags: 0

@@ -187,13 +187,15 @@ public class Avatar : Health, EnemyAttackListener {
 		if (damagePlayer != null)
 		{
 			// The health object is not attached to the avatar, hence the Find
-			GameObject healthObj = GameObject.Find("Health");
-			Health health = healthObj.GetComponent<Health>();
-			if (health != null)
-			{
-				health.takeDamage (damagePlayer.damage);
-				Destroy (otherCollider.gameObject);
-			}
+			//GameObject healthObj = GameObject.Find("Health");
+			//Health health = healthObj.GetComponent<Health>();
+			//if (health != null)
+			//{
+			//	health.takeDamage (damagePlayer.damage);
+			//	Destroy (otherCollider.gameObject);
+			//}
+			this.takeDamage (damagePlayer.damage);
+			Destroy (otherCollider.gameObject);
 		}
 
 	}
