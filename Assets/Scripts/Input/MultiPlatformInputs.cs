@@ -5,11 +5,13 @@
 	SwipeRightDown,
 	SwipeDownRight,
 	SwipeUpRightDown,
-	
+	Shake,
+
 	//KeyBoard Inputs
 	UpArrow,
 	DownArrow,
 	RightArrow,
 	Shift,
-	SpaceBar
+	SpaceBar,
+	Return
 }

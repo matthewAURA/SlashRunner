@@ -44,6 +44,8 @@ public class Avatar : Health, EnemyAttackListener {
 		inputMap.Add (MultiPlatformInputs.SwipeDownRight, LowSwipe);
 		inputMap.Add (MultiPlatformInputs.SpaceBar, JumpStomp);
 		inputMap.Add (MultiPlatformInputs.SwipeUpRightDown, JumpStomp);
+		inputMap.Add (MultiPlatformInputs.Shake, GoBerserk);
+		inputMap.Add (MultiPlatformInputs.Return, GoBerserk);
 		
 		groundCheck = transform.Find ("GroundCheck");
 		anim = GetComponent<Animator> ();
@@ -120,6 +122,10 @@ public class Avatar : Health, EnemyAttackListener {
 			FireAttackAnimation(Attack.JUMPSTOMP);
 			fireAttackActionEvent(Attack.JUMPSTOMP);
 		}
+	}
+
+	public void GoBerserk() {
+		Debug.Log ("Detected a shake so going berserk!");
 	}
 
 	public void OnEnemyAttack() {
