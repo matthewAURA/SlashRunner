@@ -589,7 +589,9 @@ GameObject:
   - 4: {fileID: 1629480820}
   - 114: {fileID: 1629480822}
   - 114: {fileID: 1629480823}
+  - 114: {fileID: 1629480824}
   - 114: {fileID: 1629480821}
+  - 114: {fileID: 1629480825}
   m_Layer: 0
   m_Name: Enemy01
   m_TagString: Enemy
@@ -618,11 +620,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1629480819}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eda2caf3813b6d47b5bdb751e2a47bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 20aa428f0c9267042bfdd85c3523b6b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1891833048}
-  activateDistance: 30
 --- !u!114 &1629480822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,8 +654,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 20
-  cooldown: 4
+  cooldown: 1
   shotPrefab: {fileID: 100000, guid: ed17b4e9e2fca6545af3e3107e2d3240, type: 2}
+--- !u!114 &1629480824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629480819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dedc43711b7e8f74caa26f5e81e01c76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1891833048}
+  componentNames: ConstantShootBehaviour;SineVerticalMovement
+  activateDistance: 30
+--- !u!114 &1629480825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629480819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba91677577dc5fd42b2753a6e7747bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  magnitude: 3
 --- !u!1 &1684466064
 GameObject:
   m_ObjectHideFlags: 0
