@@ -58,8 +58,8 @@ TextureImporter:
         y: 215
         width: 84
         height: 167
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: water_1
       rect:
@@ -68,8 +68,8 @@ TextureImporter:
         y: 210
         width: 90
         height: 172
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: water_2
       rect:
@@ -78,8 +78,8 @@ TextureImporter:
         y: 212
         width: 87
         height: 170
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: water_3
       rect:
@@ -88,8 +88,8 @@ TextureImporter:
         y: 209
         width: 85
         height: 173
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: water_4
       rect:
