@@ -26,6 +26,7 @@ namespace Platform
 		private void spawnEnemy(Vector3 pos){
 			var newEnemy = (Transform)Instantiate (enemy);
 			newEnemy.name = "Enemy " + enemyCounter.ToString ();
+			((Enemy)enemy.GetComponentInChildren (typeof(Enemy))).randomise = true;
 			enemyCounter++;
 			pos.y += spawnHeight;
 			newEnemy.transform.position = pos;

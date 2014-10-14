@@ -29,10 +29,10 @@ public class Enemy : Destructible
 	private GameObject shieldObject;
 
 	private bool shielded = true;
-	
-	void Start()
-	{
 
+	void Awake()
+	{
+		Debug.Log ("started " + this.name);
 		if (randomise)
 		{
 			// Debug.Log("Randomising.");
@@ -147,5 +147,7 @@ public class Enemy : Destructible
 		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
 		s.IncreaseScore(2000);
 	}
+
+
 
 }
