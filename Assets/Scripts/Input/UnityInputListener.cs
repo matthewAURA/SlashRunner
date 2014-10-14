@@ -40,6 +40,11 @@ public class UnityInputListener : MonoBehaviour {
 					inputMap.FireInputEvents(MultiPlatformInputs.Shift);
 					keyUp = false;
 				}
+			} else if (Input.GetKeyDown(KeyCode.Return)) {
+				if(keyUp) {
+					inputMap.FireInputEvents(MultiPlatformInputs.Return);
+					keyUp = false;
+				}
 			} else {
 				keyUp = true;
 			}
