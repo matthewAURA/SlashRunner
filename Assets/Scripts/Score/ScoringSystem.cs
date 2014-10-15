@@ -11,6 +11,7 @@ public class ScoringSystem : MonoBehaviour {
 	private ScoreEntry playerScore;
 	private int multiple = 1;
 	public bool isEndless;
+	public int NUMBER_OF_HIGHSCORE = 5;
 	public List<ScoreEntry> highScores = new List<ScoreEntry>();
 
 	[System.Serializable]
@@ -35,15 +36,34 @@ public class ScoringSystem : MonoBehaviour {
 
 	public void AddScoreIntoHighScore(ScoreEntry entry){
 		highScores.Add (entry);
+		if (highScores.Count > 1) {
+			SortHighScore ();
+		}
+		if (highScores.Count > NUMBER_OF_HIGHSCORE) {
+			highScores.RemoveAt(highScores.Count - 1);
+		}
 		SaveScores ();
-		InitializeHighScore ();
 	}
-	
+
+	private void SortHighScore(){
+		for (int i = 0; i < highScores.Count - 1; i++) {
+			if (highScores[highScores.Count - 1].score > highScores[i].score){
+				var holder = highScores[i];
+				highScores[i] = highScores[highScores.Count - 1];
+				highScores[highScores.Count - 1] = holder;
+			}
+		}
+		foreach (var i in highScores) {
+			Debug.Log ("SCORE: " + i.score);
+		}
+	}
+
 	void Start(){
 		playerScore = new ScoringSystem.ScoreEntry ();
 		playerScore.name = "Player 1";
 		playerScore.score = 0;
 		InitializeHighScore ();
+
 	}
 
 	void Update(){
@@ -65,13 +85,11 @@ public class ScoringSystem : MonoBehaviour {
 
 	public void InitializeHighScore(){
 		var data = PlayerPrefs.GetString("HighScores");
-		if(!string.IsNullOrEmpty(data)){
-			var b = new BinaryFormatter();
-			var m = new MemoryStream(Convert.FromBase64String(data));
+		if (!string.IsNullOrEmpty (data)) {
+			var b = new BinaryFormatter ();
+			var m = new MemoryStream (Convert.FromBase64String (data));
 			//Load back the scores
-			highScores = (List<ScoreEntry>)b.Deserialize(m);
-			// Debug.Log(highScores.Count);
-			
+			highScores = (List<ScoreEntry>)b.Deserialize (m);
 		}
 	}
 
