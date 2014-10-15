@@ -6,8 +6,8 @@ public class Avatar : Health, EnemyAttackListener {
 	
 	[SerializeField] LayerMask whatIsGround = 0;
 	Transform groundCheck;								
-	float groundedRadius = 0.2f;	
-	bool grounded = false;
+	public float groundedRadius = 0.2f;	
+	public bool grounded = false;
 	bool jumping = false;
 	private bool moving = true;
 	Animator anim;
