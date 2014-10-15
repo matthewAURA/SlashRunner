@@ -85,12 +85,11 @@ public class ScoringSystem : MonoBehaviour {
 
 	public void InitializeHighScore(){
 		var data = PlayerPrefs.GetString("HighScores");
-		if(!string.IsNullOrEmpty(data)){
-			var b = new BinaryFormatter();
-			var m = new MemoryStream(Convert.FromBase64String(data));
+		if (!string.IsNullOrEmpty (data)) {
+			var b = new BinaryFormatter ();
+			var m = new MemoryStream (Convert.FromBase64String (data));
 			//Load back the scores
-			highScores = (List<ScoreEntry>)b.Deserialize(m);
-			Debug.Log(highScores.Count);			
+			highScores = (List<ScoreEntry>)b.Deserialize (m);
 		}
 	}
 

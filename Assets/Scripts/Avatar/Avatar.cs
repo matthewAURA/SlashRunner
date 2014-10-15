@@ -88,7 +88,7 @@ public class Avatar : Health, EnemyAttackListener {
 			jumping = true;
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 			
-			Debug.Log ("Doing Jump Attack");
+			// Debug.Log ("Doing Jump Attack");
 			FireAttackAnimation (Attack.JUMPSWIPE);
 			fireAttackActionEvent(Attack.JUMPSWIPE);
 			
@@ -96,19 +96,19 @@ public class Avatar : Health, EnemyAttackListener {
 	}
 	
 	public void Pierce () {
-		Debug.Log ("Doing Pierce Attack");
+		// Debug.Log ("Doing Pierce Attack");
 		FireAttackAnimation (Attack.PIERCE);
 		fireAttackActionEvent(Attack.PIERCE);
 	}
 	
 	public void OverHeadSwipe () {
-		Debug.Log ("Doing Over Head Swipe");
+		// Debug.Log ("Doing Over Head Swipe");
 		FireAttackAnimation (Attack.OVERHEADSWIPE);
 		fireAttackActionEvent(Attack.OVERHEADSWIPE);
 	}
 	
 	public void LowSwipe () {
-		Debug.Log ("Doing Low Swipe Attack");
+		// Debug.Log ("Doing Low Swipe Attack");
 		FireAttackAnimation (Attack.LOWSWIPE);
 		fireAttackActionEvent(Attack.LOWSWIPE);
 	}
@@ -118,7 +118,7 @@ public class Avatar : Health, EnemyAttackListener {
 			jumping = true;
 			rigidbody2D.AddForce (new Vector2 (0f, (jumpForce*1.5f)));
 			
-			Debug.Log ("Doing Jump Stomp Attack");
+			// Debug.Log ("Doing Jump Stomp Attack");
 			FireAttackAnimation(Attack.JUMPSTOMP);
 			fireAttackActionEvent(Attack.JUMPSTOMP);
 		}
@@ -129,7 +129,7 @@ public class Avatar : Health, EnemyAttackListener {
 	}
 
 	public void OnEnemyAttack() {
-		Debug.Log ("Enemy attacked avatar");
+		// Debug.Log ("Enemy attacked avatar");
 		this.takeDamage(1);
 	}
 
@@ -142,7 +142,7 @@ public class Avatar : Health, EnemyAttackListener {
 	}
 
 	protected override void OnHealthChange() {
-		Debug.Log ("AvatarTakingDamage");
+		// Debug.Log ("AvatarTakingDamage");
 		foreach (IAvatarHeathChangeListener listener in healthChangeListenerList) {
 			listener.OnAvatarHealthChange(hp);
 		}

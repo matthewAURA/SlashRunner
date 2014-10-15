@@ -24,7 +24,7 @@ public class Destructible : Health, AvatarAttackListener {
 
 	public virtual void OnAvatarAttack(Avatar.Attack attack)
 	{
-		Debug.Log ("Avatar Attacked Enemy");
+		// Debug.Log ("Avatar Attacked Enemy");
 		Avatar.attackListenerList.Remove (this);
 		
 		this.takeDamage (1);

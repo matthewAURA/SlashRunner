@@ -19,7 +19,7 @@ public class EnemyAttackListenerNotify : MonoBehaviour {
 		if (target != null) {
 			transform.position = new Vector3 (target.position.x + xOffset, target.position.y);
 		} else {
-			Debug.Log ("******* SHOULD ATTACH TO A TARGET *******");
+			// Debug.Log ("******* SHOULD ATTACH TO A TARGET *******");
 		}
 	}
 	
@@ -29,7 +29,7 @@ public class EnemyAttackListenerNotify : MonoBehaviour {
 		// Attempt to get the Collider2D object's GameObject. If parent existed, get the parent GameObject instead.
 		GameObject o = other.gameObject;
 		if (o.tag == "Player" && o.GetComponents(typeof(EnemyAttackListener)).Length > 0) {
-			Debug.Log ("Added " + o.tag + " to list");
+			// Debug.Log ("Added " + o.tag + " to list");
 			foreach(EnemyAttackListener obj in o.GetComponents(typeof(EnemyAttackListener))) {
 				obj.OnEnemyAttack();
 			}
