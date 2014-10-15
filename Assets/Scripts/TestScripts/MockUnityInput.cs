@@ -19,19 +19,19 @@ public class MockUnityInput : MonoBehaviour {
 	}
 	
 	public void upArrowKey() {
-		Debug.Log("The up arrow key was pressed");
+		// Debug.Log("The up arrow key was pressed");
 	}
 	
 	public void downArrowKey() {
-		Debug.Log("The down arrow key was pressed");
+		// Debug.Log("The down arrow key was pressed");
 	}
 	
 	public void leftArrowKey() {
-		Debug.Log("The left arrow key was pressed");
+		// Debug.Log("The left arrow key was pressed");
 	}
 	
 	public void rightArrowKey() {
-		Debug.Log("The right arrow key was pressed");
+		// Debug.Log("The right arrow key was pressed");
 	}
 
 }

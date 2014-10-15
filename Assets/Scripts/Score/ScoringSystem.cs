@@ -70,7 +70,7 @@ public class ScoringSystem : MonoBehaviour {
 			var m = new MemoryStream(Convert.FromBase64String(data));
 			//Load back the scores
 			highScores = (List<ScoreEntry>)b.Deserialize(m);
-			Debug.Log(highScores.Count);
+			// Debug.Log(highScores.Count);
 			
 		}
 	}

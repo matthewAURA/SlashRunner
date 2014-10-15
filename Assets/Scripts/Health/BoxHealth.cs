@@ -19,7 +19,7 @@ public class BoxHealth : MonoBehaviour ,AvatarAttackListener {
 	}
 
 	public void OnEnemyAttack() {
-		Debug.Log ("attack");
+		// Debug.Log ("attack");
 		takeDamage(1);
 	}
 
