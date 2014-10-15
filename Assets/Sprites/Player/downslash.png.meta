@@ -1,16 +1,12 @@
 fileFormatVersion: 2
-guid: ffdde4654d37f5045b34b225368436b7
+guid: b20f4dfc5963c214ebc70ddc72f8a5f9
 TextureImporter:
   fileIDToRecycleName:
-    21300000: walk_0
-    21300002: walk_1
-    21300004: walk_2
-    21300006: walk_3
-    21300008: walk_4
-    21300010: walk_5
-    21300012: walk_6
-    21300014: walk_7
-    21300016: walk_8
+    21300000: downslash_0
+    21300002: downslash_1
+    21300004: downslash_2
+    21300006: downslash_3
+    21300008: downslash_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -52,93 +48,53 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: walk_0
+    - name: downslash_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 3
-        width: 118
-        height: 164
+        x: 7
+        y: 9
+        width: 113
+        height: 159
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: walk_1
+    - name: downslash_1
       rect:
         serializedVersion: 2
-        x: 216
-        y: 3
-        width: 118
-        height: 160
+        x: 211
+        y: 9
+        width: 122
+        height: 159
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: walk_2
+    - name: downslash_2
       rect:
         serializedVersion: 2
-        x: 408
-        y: 7
-        width: 117
-        height: 160
+        x: 403
+        y: 9
+        width: 131
+        height: 159
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: walk_3
+    - name: downslash_3
       rect:
         serializedVersion: 2
-        x: 599
-        y: 7
-        width: 118
-        height: 160
+        x: 592
+        y: 9
+        width: 125
+        height: 159
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: walk_4
+    - name: downslash_4
       rect:
         serializedVersion: 2
-        x: 792
-        y: 3
-        width: 118
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: walk_5
-      rect:
-        serializedVersion: 2
-        x: 984
-        y: 3
-        width: 117
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: walk_6
-      rect:
-        serializedVersion: 2
-        x: 1175
-        y: 3
-        width: 118
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: walk_7
-      rect:
-        serializedVersion: 2
-        x: 1368
-        y: 3
-        width: 116
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: walk_8
-      rect:
-        serializedVersion: 2
-        x: 1561
-        y: 3
-        width: 116
-        height: 164
+        x: 781
+        y: 9
+        width: 113
+        height: 159
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

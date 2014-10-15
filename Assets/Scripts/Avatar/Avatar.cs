@@ -88,7 +88,7 @@ public class Avatar : Health, EnemyAttackListener {
 			
 			Debug.Log ("Doing Jump Attack");
 			FireAttackAnimation (Attack.JUMPSWIPE);
-			fireAttackActionEvent(Attack.JUMPSWIPE);
+			FireAttackActionEvent(Attack.JUMPSWIPE);
 			
 		}
 	}
@@ -96,19 +96,20 @@ public class Avatar : Health, EnemyAttackListener {
 	public void Pierce () {
 		Debug.Log ("Doing Pierce Attack");
 		FireAttackAnimation (Attack.PIERCE);
-		fireAttackActionEvent(Attack.PIERCE);
+		FireAttackActionEvent(Attack.PIERCE);
 	}
 	
 	public void OverHeadSwipe () {
+		
 		Debug.Log ("Doing Over Head Swipe");
 		FireAttackAnimation (Attack.OVERHEADSWIPE);
-		fireAttackActionEvent(Attack.OVERHEADSWIPE);
+		FireAttackActionEvent(Attack.OVERHEADSWIPE);
 	}
 	
 	public void LowSwipe () {
 		Debug.Log ("Doing Low Swipe Attack");
 		FireAttackAnimation (Attack.LOWSWIPE);
-		fireAttackActionEvent(Attack.LOWSWIPE);
+		FireAttackActionEvent(Attack.LOWSWIPE);
 	}
 	
 	public void JumpStomp () {
@@ -118,7 +119,7 @@ public class Avatar : Health, EnemyAttackListener {
 			
 			Debug.Log ("Doing Jump Stomp Attack");
 			FireAttackAnimation(Attack.JUMPSTOMP);
-			fireAttackActionEvent(Attack.JUMPSTOMP);
+			FireAttackActionEvent(Attack.JUMPSTOMP);
 		}
 	}
 
@@ -173,7 +174,7 @@ public class Avatar : Health, EnemyAttackListener {
 		}
 	}
 	
-	private void fireAttackActionEvent(Avatar.Attack attack) {
+	private void FireAttackActionEvent(Avatar.Attack attack) {
 		for (int i = attackListenerList.Count - 1; i >= 0; i--) {
 			attackListenerList[i].OnAvatarAttack(attack);
 		}
