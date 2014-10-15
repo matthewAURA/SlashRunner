@@ -9,7 +9,9 @@ using System; //only using for Maths.Abs
  * in the InputMap.
 */
 public class AndroidInputListener : MonoBehaviour {
-	
+
+	public double accelerationThreshold = 0.5;
+
 	//The Direction the swipe is currently moving
 	private CurrentDir currentDir;
 	
@@ -42,6 +44,11 @@ public class AndroidInputListener : MonoBehaviour {
 	*/ 
 	void Update () {
 		if (Application.platform == RuntimePlatform.Android) {
+			if(UnityEngine.Input.acceleration.x > accelerationThreshold || 
+			   UnityEngine.Input.acceleration.y > accelerationThreshold || 
+			   UnityEngine.Input.acceleration.z > accelerationThreshold) {
+				inputMap.FireInputEvents(MultiPlatformInputs.Shake);
+			}
 			if (Input.touchCount > 0) {
 				Touch touch = Input.touches [0];
 				

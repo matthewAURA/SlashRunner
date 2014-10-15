@@ -30,18 +30,18 @@ public class Enemy : Destructible
 	private GameObject shieldObject;
 
 	private bool shielded = true;
-	
-	void Start()
-	{
 
+	void Awake()
+	{
+		Debug.Log ("started " + this.name);
 		if (randomise)
 		{
-			Debug.Log("Randomising.");
+			// Debug.Log("Randomising.");
 			System.Random random = new System.Random();
 
 			int randomType = random.Next(1, 300);
 
-			Debug.Log(randomType);
+			// Debug.Log(randomType);
 
 			if (randomType < 125)
 			{
@@ -67,7 +67,7 @@ public class Enemy : Destructible
 				randomPosition = random.Next(1, 200);
 			}
 
-			Debug.Log(randomPosition);
+			// Debug.Log(randomPosition);
 
 			if (randomPosition < 100)
 			{
@@ -82,10 +82,10 @@ public class Enemy : Destructible
 				shieldPosition = ShieldPosition.Top;
 			}
 
-			Debug.Log("Position:");
-			Debug.Log(shieldPosition.ToString());
-			Debug.Log("Type:");
-			Debug.Log(shieldType.ToString());
+			// Debug.Log("Position:");
+			// Debug.Log(shieldPosition.ToString());
+			// Debug.Log("Type:");
+			// Debug.Log(shieldType.ToString());
 
 		}
 
@@ -113,7 +113,7 @@ public class Enemy : Destructible
 	
 	public override void OnAvatarAttack(Avatar.Attack attack)
 	{
-		Debug.Log ("Avatar Attacked Enemy");
+		// Debug.Log ("Avatar Attacked Enemy");
 
 		if (shielded) {
 			switch (attack)
@@ -148,5 +148,7 @@ public class Enemy : Destructible
 		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
 		s.IncreaseScore(scoreOnKill);
 	}
+
+
 
 }
