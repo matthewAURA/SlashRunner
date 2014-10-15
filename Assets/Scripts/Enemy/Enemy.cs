@@ -22,6 +22,7 @@ public class Enemy : Destructible
 	public GameObject tallShield;
 
 	public bool randomise = false;
+	public int scoreOnKill = 1000;
 
 	public ShieldType shieldType = ShieldType.Short;
 	public ShieldPosition shieldPosition = ShieldPosition.Middle;
@@ -72,7 +73,7 @@ public class Enemy : Destructible
 			{
 				shieldPosition = ShieldPosition.Bottom;
 			}
-			else if (randomPosition > 200)
+			else if (randomPosition < 200)
 			{
 				shieldPosition = ShieldPosition.Middle;
 			}
@@ -104,8 +105,8 @@ public class Enemy : Destructible
 		if (shielded) {
 			GameObject shield = (GameObject) Instantiate (shieldObject, transform.position, transform.rotation);
 			shield.transform.parent = transform;
-			shield.transform.position = transform.position + new Vector3 (-2.0f, (float)shieldPosition, 0.0f);
-			shield.transform.localScale = new Vector3(10.0f, 10.0f, 0.0f);
+			shield.transform.position = transform.position + new Vector3 (-1.5f, (float)shieldPosition, 0.0f);
+			shield.transform.localScale = new Vector3(3.0f, 3.0f, 0.0f);
 		}
 
 	}
@@ -145,7 +146,7 @@ public class Enemy : Destructible
 	
 		GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
 		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
-		s.IncreaseScore(2000);
+		s.IncreaseScore(scoreOnKill);
 	}
 
 
