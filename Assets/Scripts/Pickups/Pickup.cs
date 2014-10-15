@@ -7,6 +7,7 @@ public class Pickup : MonoBehaviour {
 	private int speed = 15;
 	private int period=0;
 	public int scoreReward=100;
+	public int coinAmount = 1;
 
 	void Update(){
 		if (isPickedUp) {
@@ -15,7 +16,6 @@ public class Pickup : MonoBehaviour {
 			if(period>40){
 				Destroy(gameObject);
 			}
-
 		}
 	}
 
@@ -26,7 +26,9 @@ public class Pickup : MonoBehaviour {
 			GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
 			ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
 			s.IncreaseScore(scoreReward);
-
+			GameObject coinSystem = GameObject.FindGameObjectWithTag("MainCamera");
+			CoinSystemScript coin = (CoinSystemScript)scoreSystem.GetComponent("CoinSystemScript");
+			coin.AddCoin(coinAmount);
 		}
 	}
-	}
+}

@@ -8,18 +8,25 @@ public class HUDScript : MonoBehaviour {
 	private string musicButton;
 	private bool isSoundEffectMuted = true;
 	private string soundEffectButton;
+	private int coin;
 	void Start(){
 		playerScore = PlayerPrefs.GetInt ("Score");
+		coin = PlayerPrefs.GetInt ("Coins");
+		if (coin == null) {
+			coin = 0;	
+		}
 	}
 
 	void Update(){
 		playerScore = PlayerPrefs.GetInt ("ScoreInt");
+		coin = PlayerPrefs.GetInt ("Coins");
 	}
 
 	void OnGUI(){
 		GUIStyle style = new GUIStyle ();
 		style.fontSize = 30;
 		GUI.Label (new Rect (0, 0, 100, 30), "Score: " + (playerScore), style);
+		GUI.Label (new Rect (200, 0, 100, 30), "Coins: " + coin, style);
 		Texture image = (Texture)Resources.Load ("shadedDark14");
 		GUIContent content = new GUIContent();
 		content.image = image;
