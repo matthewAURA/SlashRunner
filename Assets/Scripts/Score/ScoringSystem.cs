@@ -94,7 +94,8 @@ public class ScoringSystem : MonoBehaviour {
 	}
 
 	public void ClearHighScore(){
-		PlayerPrefs.DeleteAll();
+		highScores = new List<ScoreEntry>();
+		SaveScores ();
 		InitializeHighScore ();
 	}
 }
