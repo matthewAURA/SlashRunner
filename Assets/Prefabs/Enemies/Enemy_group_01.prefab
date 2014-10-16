@@ -166,8 +166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
+  remains: {fileID: 100008, guid: d8fa2164d381b5149b740efbad631a04, type: 2}
   dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
-  remains: {fileID: 0}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
   randomise: 1
