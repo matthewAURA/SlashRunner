@@ -23,6 +23,7 @@ public class PowerUp : MonoBehaviour {
 		}
 
 
+		powerUps = new List<IPowerUp> ();
 		if (PlayerPrefs.HasKey ("powerKillAll")) {
 			//powerUps.Add(new PowerKillAll());
 		}
