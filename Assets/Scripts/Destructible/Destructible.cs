@@ -33,6 +33,10 @@ public class Destructible : Health, AvatarAttackListener {
 	}
 
 	protected override void BeforeDeath(){
+
+		if (dieSound != null) {
+			AudioSource.PlayClipAtPoint (dieSound, transform.position);	
+		}
 		this.Destruct ();
 	}
 }
