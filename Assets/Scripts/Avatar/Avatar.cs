@@ -14,6 +14,7 @@ public class Avatar : Health, EnemyAttackListener {
 	GameObject slash;
 
 	public AudioClip slashSound;
+
 	public IPowerUp powerUp;
 	
 	private InputMap inputMap;
