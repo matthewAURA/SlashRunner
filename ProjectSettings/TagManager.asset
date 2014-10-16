@@ -6,6 +6,7 @@ TagManager:
   - Terrain
   - Enemy
   - Player
+  - Destructible
   - Spawner
   - 
   Builtin Layer 0: Default
@@ -16,9 +17,9 @@ TagManager:
   Builtin Layer 5: UI
   Builtin Layer 6: 
   Builtin Layer 7: 
-  User Layer 8: Avatar
-  User Layer 9: 
-  User Layer 10: 
+  User Layer 8: Player
+  User Layer 9: Background
+  User Layer 10: Foreground
   User Layer 11: 
   User Layer 12: 
   User Layer 13: 
@@ -45,6 +46,14 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
+  - name: Background 1
+    userID: 3
+    uniqueID: 488757347
+    locked: 0
+  - name: Background 2
+    userID: 6
+    uniqueID: 1524014673
+    locked: 0
   - name: Enemies
     userID: 1
     uniqueID: 389923389
@@ -52,4 +61,12 @@ TagManager:
   - name: Shields
     userID: 2
     uniqueID: 1380657653
+    locked: 0
+  - name: Player
+    userID: 4
+    uniqueID: 750730523
+    locked: 0
+  - name: Foreground
+    userID: 5
+    uniqueID: 4195228787
     locked: 0
