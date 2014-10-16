@@ -13,6 +13,8 @@ public class Avatar : Health, EnemyAttackListener {
 	Animator anim;
 	GameObject slash;
 
+	public AudioClip slashSound;
+	
 	private InputMap inputMap;
 	public float jumpForce = 500f;
 	public float movementForce = 5f;
@@ -183,6 +185,10 @@ public class Avatar : Health, EnemyAttackListener {
 	}
 	
 	private void FireAttackActionEvent(Avatar.Attack attack) {
+		if (slashSound != null && attackListenerList.Count == 0) {
+			AudioSource.PlayClipAtPoint (slashSound, transform.position);	
+		}
+
 		for (int i = attackListenerList.Count - 1; i >= 0; i--) {
 			attackListenerList[i].OnAvatarAttack(attack);
 		}
