@@ -18,7 +18,9 @@ public class Destructible : Health, AvatarAttackListener {
 	public GameObject remains;
 
 	public void Destruct () {
-		Instantiate(remains, new Vector3(transform.position.x, transform.position.y, transform.position.z+5), transform.rotation);
+		if(remains != null){
+			Instantiate(remains, new Vector3(transform.position.x, transform.position.y, transform.position.z+5), transform.rotation);
+		}
 		Destroy (gameObject);
 	}
 
