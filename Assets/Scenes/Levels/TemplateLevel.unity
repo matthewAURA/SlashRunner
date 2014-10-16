@@ -411,6 +411,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2000bc0a006a0fb419f8bfe818c195ad, type: 2}
+      propertyPath: shortShield
+      value: 
+      objectReference: {fileID: 2070517715}
+    - target: {fileID: 11400000, guid: 2000bc0a006a0fb419f8bfe818c195ad, type: 2}
+      propertyPath: tallShield
+      value: 
+      objectReference: {fileID: 1667664483}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2000bc0a006a0fb419f8bfe818c195ad, type: 2}
   m_RootGameObject: {fileID: 937654811}
@@ -1529,8 +1537,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   remains: {fileID: 0}
-  shortShield: {fileID: 0}
-  tallShield: {fileID: 0}
+  shortShield: {fileID: 2070517715}
+  tallShield: {fileID: 1667664483}
   randomise: 1
   scoreOnKill: 1000
   shieldType: 1
@@ -1846,8 +1854,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   remains: {fileID: 0}
-  shortShield: {fileID: 0}
-  tallShield: {fileID: 0}
+  shortShield: {fileID: 2070517715}
+  tallShield: {fileID: 1667664483}
   randomise: 1
   scoreOnKill: 1000
   shieldType: 2
@@ -1895,8 +1903,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   remains: {fileID: 0}
-  shortShield: {fileID: 0}
-  tallShield: {fileID: 0}
+  shortShield: {fileID: 2070517715}
+  tallShield: {fileID: 1667664483}
   randomise: 1
   scoreOnKill: 1000
   shieldType: 1
@@ -3016,6 +3024,14 @@ Prefab:
       propertyPath: hp
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2928febe667e77141b59c4cfa9ce2493, type: 2}
+      propertyPath: shortShield
+      value: 
+      objectReference: {fileID: 2070517715}
+    - target: {fileID: 11400000, guid: 2928febe667e77141b59c4cfa9ce2493, type: 2}
+      propertyPath: tallShield
+      value: 
+      objectReference: {fileID: 1667664483}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2928febe667e77141b59c4cfa9ce2493, type: 2}
   m_RootGameObject: {fileID: 1205228396}
@@ -3977,8 +3993,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   remains: {fileID: 0}
-  shortShield: {fileID: 0}
-  tallShield: {fileID: 0}
+  shortShield: {fileID: 2070517715}
+  tallShield: {fileID: 1667664483}
   randomise: 1
   scoreOnKill: 1000
   shieldType: 2
@@ -5201,6 +5217,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f0ae5db422beefb478e3f7774a094dad, type: 2}
+      propertyPath: shortShield
+      value: 
+      objectReference: {fileID: 2070517715}
+    - target: {fileID: 11400000, guid: f0ae5db422beefb478e3f7774a094dad, type: 2}
+      propertyPath: tallShield
+      value: 
+      objectReference: {fileID: 1667664483}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0ae5db422beefb478e3f7774a094dad, type: 2}
   m_RootGameObject: {fileID: 1771758740}
@@ -5296,6 +5320,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 04809585cefc8264d84dd615af47f628, type: 2}
+      propertyPath: shortShield
+      value: 
+      objectReference: {fileID: 2070517715}
+    - target: {fileID: 11400000, guid: 04809585cefc8264d84dd615af47f628, type: 2}
+      propertyPath: tallShield
+      value: 
+      objectReference: {fileID: 1667664483}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04809585cefc8264d84dd615af47f628, type: 2}
   m_RootGameObject: {fileID: 166210703}
