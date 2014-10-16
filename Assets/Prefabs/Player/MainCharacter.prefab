@@ -80,7 +80,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   m_Layer: 8
-  m_Name: Character
+  m_Name: MainCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a876e9b17f99a2d46a6eecf362f20bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accelerationThreshold: .5
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,6 +266,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
+  groundedRadius: .200000003
+  grounded: 0
   jumpForce: 1500
   movementForce: 12
   attackAnimation: {fileID: 21300000, guid: ba61a3f6adce13e4587607c395aca5b1, type: 3}
