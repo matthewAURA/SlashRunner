@@ -166,15 +166,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  dieSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
   remains: {fileID: 0}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
-  enemyDeathSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
   randomise: 1
   scoreOnKill: 1000
   shieldType: 1
   shieldPosition: 1
+  littleClashSound: {fileID: 8300000, guid: 6e452fbcc0e50ee41af7e6d4444ac669, type: 3}
+  bigClashSound: {fileID: 8300000, guid: e6cfab1b9af633c42963a4d0e4df82c2, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
