@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  remains: {fileID: 0}
+  remains: {fileID: 100032, guid: bfa6c109758e945f582b0f7c6bfef268, type: 2}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
   randomise: 1
