@@ -307,6 +307,14 @@ Prefab:
       propertyPath: tallShield
       value: 
       objectReference: {fileID: 1667664483}
+    - target: {fileID: 11400000, guid: 2000bc0a006a0fb419f8bfe818c195ad, type: 2}
+      propertyPath: randomise
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2000bc0a006a0fb419f8bfe818c195ad, type: 2}
+      propertyPath: shieldType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2000bc0a006a0fb419f8bfe818c195ad, type: 2}
   m_RootGameObject: {fileID: 937654811}
@@ -1580,9 +1588,9 @@ MonoBehaviour:
   remains: {fileID: 100008, guid: d8fa2164d381b5149b740efbad631a04, type: 2}
   shortShield: {fileID: 2070517715}
   tallShield: {fileID: 1667664483}
-  randomise: 1
+  randomise: 0
   scoreOnKill: 1000
-  shieldType: 1
+  shieldType: 0
   shieldPosition: 1
   littleClashSound: {fileID: 8300000, guid: 6e452fbcc0e50ee41af7e6d4444ac669, type: 3}
   bigClashSound: {fileID: 8300000, guid: e6cfab1b9af633c42963a4d0e4df82c2, type: 3}
