@@ -8,9 +8,12 @@ public class HUDScript : MonoBehaviour {
 	private string musicButton;
 	private bool isSoundEffectMuted = true;
 	private string soundEffectButton;
+	private Texture image;
+	private GUIContent content;
 	private int coin;
 	void Start(){
 		playerScore = PlayerPrefs.GetInt ("Score");
+		content = new GUIContent ();
 		coin = PlayerPrefs.GetInt ("Coins");
 		if (coin == null) {
 			coin = 0;	
@@ -26,9 +29,11 @@ public class HUDScript : MonoBehaviour {
 		GUIStyle style = new GUIStyle ();
 		style.fontSize = 30;
 		GUI.Label (new Rect (0, 0, 100, 30), "Score: " + (playerScore), style);
-		GUI.Label (new Rect (200, 0, 100, 30), "Coins: " + coin, style);
-		Texture image = (Texture)Resources.Load ("shadedDark14");
-		GUIContent content = new GUIContent();
+		image = (Texture)Resources.Load ("gold-coin-icon");
+		content.image = image;
+		GUI.Label (new Rect (180, -5, 50, 50), content);
+		GUI.Label (new Rect (220, 0, 100, 30),"  " + coin.ToString(), style);
+		image = (Texture)Resources.Load ("shadedDark14");
 		content.image = image;
 		if (GUI.Button (new Rect (Screen.width - 50, 0, 40, 40), image)) {
 			pause = true;
