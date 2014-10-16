@@ -129,7 +129,10 @@ public class Enemy : Destructible
 						if (littleClashSound != null && shieldType == ShieldType.Short) {
 							AudioSource.PlayClipAtPoint (littleClashSound, transform.position);	
 						}
-						return;
+						if (bigClashSound != null && shieldType == ShieldType.Tall) {
+							AudioSource.PlayClipAtPoint (bigClashSound, transform.position);	
+						}
+					return;
 					}
 					break;
 				case Avatar.Attack.PIERCE:
@@ -149,7 +152,10 @@ public class Enemy : Destructible
 						if (littleClashSound != null && shieldType == ShieldType.Short) {
 							AudioSource.PlayClipAtPoint (littleClashSound, transform.position);	
 						}
-						return;
+						if (bigClashSound != null && shieldType == ShieldType.Tall) {
+							AudioSource.PlayClipAtPoint (bigClashSound, transform.position);	
+						}
+					return;
 					}
 					break;
 			}
