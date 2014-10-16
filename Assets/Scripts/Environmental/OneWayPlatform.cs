@@ -3,16 +3,13 @@ using System.Collections;
 
 public class OneWayPlatform : MonoBehaviour {
 
-	Rigidbody2D player;
-	Avatar avatar;
+	GameObject playerObj;
 	float platformTop;
 	float playerFeet;
 	// Use this for initialization
-	void Start () {
-		GameObject g = GameObject.Find ("Character");
-		player = g.rigidbody2D;
-		avatar = g.GetComponent<Avatar> ();
 
+	void Start () {
+		playerObj = GameObject.Find ("Character");
 		platformTop = this.transform.collider2D.bounds.center.y + this.transform.collider2D.bounds.size.y / 2;
 		/*
 		Debug.Log ("platform height: "+this.transform.collider2D.bounds.size.y);
@@ -28,10 +25,8 @@ public class OneWayPlatform : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (avatar.grounded);
 		//does not work for sloped platforms
-		float playerFeet = player.position.y + player.collider2D.bounds.size.y / 2;
-		if(player.velocity.y <= 0 && platformTop < playerFeet){
+		if(playerObj.rigidbody2D.velocity.y <= 0 && platformTop < playerObj.GetComponent<Avatar>().playerFeet){
 			activate();
 		}else{
 			deactivate();

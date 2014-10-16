@@ -12,11 +12,13 @@ public class Avatar : Health, EnemyAttackListener {
 	private bool moving = true;
 	Animator anim;
 	GameObject slash;
-	
+
 	private InputMap inputMap;
 	public float jumpForce = 500f;
 	public float movementForce = 5f;
 	public Sprite attackAnimation;
+
+	public float playerFeet;
 	
 	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
 	public static List<IAvatarHeathChangeListener> healthChangeListenerList = new List<IAvatarHeathChangeListener>();
@@ -59,6 +61,7 @@ public class Avatar : Health, EnemyAttackListener {
 	void FixedUpdate() {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundedRadius, whatIsGround);
 		Move ();
+		playerFeet = this.collider2D.bounds.center.y - this.collider2D.bounds.size.y / 2;
 	}
 	
 	// Update is called once per frame
