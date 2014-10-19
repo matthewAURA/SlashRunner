@@ -10,12 +10,12 @@ public class PowerSlowMotion : MonoBehaviour, IPowerUp {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (Time.timeScale);
+
 	}
 
 	public void UsePowerUp(Avatar target) {
 		Time.timeScale = 0.5F;
-		waitTime ();
+		StartCoroutine(waitTime ());
 	}
 
 	public IEnumerator waitTime() {

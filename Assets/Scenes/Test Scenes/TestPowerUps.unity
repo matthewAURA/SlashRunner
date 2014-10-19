@@ -7978,6 +7978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerBirdSpawn: {fileID: 100000, guid: bfa891eed6a32344fb7e354c5f77b642, type: 2}
+  powerSlowMotion: {fileID: 100000, guid: 422cdcc08528c84419ee5c3d1b5741fa, type: 2}
 --- !u!199 &1702792749
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -9509,6 +9510,7 @@ MonoBehaviour:
   jumpForce: 1500
   movementForce: 12
   attackAnimation: {fileID: 21300000, guid: ba61a3f6adce13e4587607c395aca5b1, type: 3}
+  playerFeet: 0
 --- !u!61 &1891374107
 BoxCollider2D:
   m_ObjectHideFlags: 0
