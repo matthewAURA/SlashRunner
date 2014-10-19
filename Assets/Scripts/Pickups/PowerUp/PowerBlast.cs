@@ -29,7 +29,7 @@ public class PowerBlast : MonoBehaviour {
 	}
 
 	public IEnumerator lifeTime() {
-		yield return new WaitForSeconds(1f);// waits 1 second
+		yield return new WaitForSeconds(1.5f);// waits 1 second
 		Destroy (this.gameObject);
 	}
 }

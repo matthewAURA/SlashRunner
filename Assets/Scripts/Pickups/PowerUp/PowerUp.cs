@@ -36,8 +36,8 @@ public class PowerUp : MonoBehaviour {
 		if (PlayerPrefs.HasKey ("powerSlowMotion")) {
 			powerUps.Add (Power.slowMotion);
 		}
-		if(!PlayerPrefs.HasKey("powerBlast")) {
-			PlayerPrefs.SetInt("powerBlast",1);
+		if(PlayerPrefs.HasKey("powerBlast")) {
+			powerUps.Add (Power.blast);
 		}
 	}
 
@@ -81,7 +81,7 @@ public class PowerUp : MonoBehaviour {
 				int random = UnityEngine.Random.Range (0, powerUps.Count);
 				//instanciates the randomly selected power up game object
 				Debug.Log (random);
-				switch (Power.blast) {
+				switch (powerUps[random]) {
 					case Power.blast:
 						GameObject blast  = (GameObject) Instantiate(powerBlast, this.transform.position, this.transform.rotation);
 						powerUp = blast.GetComponent<DoPowerBlast>();
