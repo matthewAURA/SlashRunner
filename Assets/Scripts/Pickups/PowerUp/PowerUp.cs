@@ -75,10 +75,10 @@ public class PowerUp : MonoBehaviour {
 
 		//Randomly select and instanciate the power up game object
 		if (powerUps.Count > 0) {
-			int random = UnityEngine.Random.Range (1, powerUps.Count);
+			int random = UnityEngine.Random.Range (0, powerUps.Count);
 			//instanciates the randomly selected power up game object
-			//powerUps[random-1]
-			switch (Power.slowMotion) {
+			Debug.Log (random);
+			switch (powerUps[random]) {
 				case Power.killAll:
 					break;
 				case Power.birdSpawn:
