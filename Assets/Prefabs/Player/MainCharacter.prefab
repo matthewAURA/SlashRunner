@@ -80,7 +80,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   m_Layer: 8
-  m_Name: Character
+  m_Name: MainCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

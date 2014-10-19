@@ -51,3 +51,6 @@ sysinfo.txt
 #deleteme files
 deleteme.txt
 remove.me
+
+#osx stuff
+.DS_Store
