@@ -101,13 +101,7 @@ public class PowerUp : MonoBehaviour {
 					Debug.Log ("Set power up");
 				}
 			}
-			//StartCoroutine(Kill());
 			Destroy (this.gameObject);
 		}
-	}
-
-	public IEnumerator Kill() {
-		yield return new WaitForSeconds(3f); // waits 3 seconds
-		Destroy (this.gameObject);
 	}
 }
