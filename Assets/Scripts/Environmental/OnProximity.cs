@@ -13,6 +13,7 @@ public class OnProximity : MonoBehaviour
 	/// </summary>
 	public GameObject target;
 
+	public AudioClip onProximitySound;
 	/// <summary>
 	/// Semicolon-seperated class component names that are
 	/// to be activated on a certain distance from target
@@ -40,6 +41,9 @@ public class OnProximity : MonoBehaviour
 			                                    gameObject.transform.position);
 			if (distance <= activateDistance) {
 				SetComponents (true);
+				if (onProximitySound != null) {
+					AudioSource.PlayClipAtPoint (onProximitySound, transform.position);	
+				}
 			}
 		}
 	}
@@ -64,6 +68,7 @@ public class OnProximity : MonoBehaviour
 			}
 			components.Add (component);
 		}
+
 	}
 
 	/// <summary>

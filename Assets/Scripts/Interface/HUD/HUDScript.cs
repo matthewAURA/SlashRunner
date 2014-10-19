@@ -31,9 +31,10 @@ public class HUDScript : MonoBehaviour {
 			GUI.Box(new Rect( Screen.width / 2 - 170 / 2, 100, 170, 245), "Menu");
 			if (GUI.Button (new Rect(left, 140, 150, 40), "Resume")){
 				pause = false;
+				Time.timeScale = 1;
 			}
 			if (GUI.Button (new Rect(left , 180, 150, 40), "Exit to Main Menu")){
-				Application.LoadLevel(0);
+				Application.LoadLevel("Menus");
 			}
 			if (GUI.Button (new Rect(left , 220, 150, 40), "Quit")){
 				Application.Quit();
@@ -75,8 +76,6 @@ public class HUDScript : MonoBehaviour {
 		}
 		if (pause == true) {
 			Time.timeScale = 0;
-		}else{
-			Time.timeScale = 1;
 		}
 	}
 }
