@@ -31,8 +31,12 @@ public class Enemy : Destructible
 
 	private bool shielded = true;
 
+	public AudioClip littleClashSound;
+	public AudioClip bigClashSound;
+
 	void Awake()
 	{
+
 		Debug.Log ("started " + this.name);
 		if (randomise)
 		{
@@ -122,17 +126,36 @@ public class Enemy : Destructible
 				case Avatar.Attack.JUMPSWIPE:
 				case Avatar.Attack.OVERHEADSWIPE:
 					if (shieldPosition == ShieldPosition.Top) {
-						return;
+						if (littleClashSound != null && shieldType == ShieldType.Short) {
+							AudioSource.PlayClipAtPoint (littleClashSound, transform.position);	
+						}
+						if (bigClashSound != null && shieldType == ShieldType.Tall) {
+							AudioSource.PlayClipAtPoint (bigClashSound, transform.position);	
+						}
+					return;
 					}
 					break;
 				case Avatar.Attack.PIERCE:
 					if (shieldType == ShieldType.Tall || shieldPosition == ShieldPosition.Middle) {
-						return;
+						if (littleClashSound != null && shieldType == ShieldType.Short) {
+							AudioSource.PlayClipAtPoint (littleClashSound, transform.position);	
+						}
+						if (bigClashSound != null && shieldType == ShieldType.Tall) {
+							AudioSource.PlayClipAtPoint (bigClashSound, transform.position);	
+						}
+					return;
 					}
 					break;
 				case Avatar.Attack.LOWSWIPE:
 					if (shieldPosition == ShieldPosition.Bottom) {
-						return;
+
+						if (littleClashSound != null && shieldType == ShieldType.Short) {
+							AudioSource.PlayClipAtPoint (littleClashSound, transform.position);	
+						}
+						if (bigClashSound != null && shieldType == ShieldType.Tall) {
+							AudioSource.PlayClipAtPoint (bigClashSound, transform.position);	
+						}
+					return;
 					}
 					break;
 			}
@@ -140,6 +163,7 @@ public class Enemy : Destructible
 
 		Avatar.attackListenerList.Remove (this);
 		this.takeDamage (1);
+
 	}
 	
 	protected override void AfterDeath(){
@@ -148,7 +172,5 @@ public class Enemy : Destructible
 		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
 		s.IncreaseScore(scoreOnKill);
 	}
-
-
 
 }

@@ -16,11 +16,9 @@ public class PlatformSpawner : MonoBehaviour {
 	/// </summary>
 	public Transform spawn;
 	
-	/// <summary>
-	/// Y height to spawn templates at
-	/// </summary>
-	private float yHeight;
-	
+
+	private float platformSpawnHeight;
+	private int sectionsSinceHeightChanged = 0;
 	private Transform active;
 	private int platformID;
 	private Queue sectionQueue;
@@ -31,8 +29,8 @@ public class PlatformSpawner : MonoBehaviour {
 		if (this.listeners == null) {
 				this.listeners = new ArrayList ();
 		}
+		this.platformSpawnHeight = this.spawn.transform.position.y;
 		this.platformID = 0;
-		yHeight = this.spawn.position.y;
 		this.sectionQueue = new Queue ();
 		this.sectionQueue.Enqueue ((Transform)Instantiate(spawn)); 
 		this.active = (Transform)this.sectionQueue.Peek();
@@ -42,7 +40,7 @@ public class PlatformSpawner : MonoBehaviour {
 	void Update () {
 		if (target && spawn) {
 			//If we have reached the end of the active block
-			if (this.shouldSpawn()){
+			if (this.shouldSpawnNewSection()){
 				//Update the active
 
 				this.active = this.spawnSection(this.calculateSpawnPosition());
@@ -64,14 +62,39 @@ public class PlatformSpawner : MonoBehaviour {
 	}
 
 
-	private bool shouldSpawn(){
+	private bool shouldSpawnNewSection(){
 		var width = this.target.collider2D.bounds.size.x;
 		return this.target.position.x + width / 2 > this.active.position.x - this.active.collider2D.bounds.size.x*2;
 	}
 
+	private bool shouldChangePlatformHeight(){
+		this.sectionsSinceHeightChanged++;
+		if (sectionsSinceHeightChanged < 3) {
+			return false;
+		}else if (sectionsSinceHeightChanged > 6){
+			sectionsSinceHeightChanged =0;
+			return true;
+		}else{
+			if (UnityEngine.Random.Range (0, 10) > 8){
+					sectionsSinceHeightChanged =0;
+					return true;
+			}else{
+					return false;
+			}
+		}
+	}
+
+	private bool shouldSpawnNewGameObject(){
+			return (UnityEngine.Random.Range (0, 10) > 3);
+	}
+
 	private Vector3 calculateSpawnPosition(){
 		var width = this.target.collider2D.bounds.size.x;
-		return new Vector3 (this.active.position.x + this.active.collider2D.bounds.size.x - width / 2, yHeight);
+		if (shouldChangePlatformHeight ()) {
+			this.platformSpawnHeight += Random.Range(-5,5);
+		}
+
+		return new Vector3 (this.active.position.x + this.active.collider2D.bounds.size.x - width / 2, this.platformSpawnHeight);
 	}
 
 	private Transform spawnSection(Vector3 position){
@@ -79,10 +102,13 @@ public class PlatformSpawner : MonoBehaviour {
 		newSection.name = spawn.name + " " + this.platformID.ToString ();
 		this.platformID++;
 		newSection.position = position;
+		position.y = this.platformSpawnHeight + this.spawn.collider2D.bounds.size.y;
 		//Notifiy listeners
-		foreach (var listener in this.listeners) {
-				((PlatformSpawnListener)listener).onPlatformSpawn(position);
+		if (shouldSpawnNewGameObject()){
+			var listener = this.listeners[(int)Random.Range(0,this.listeners.Count)];
+			((PlatformSpawnListener)listener).onPlatformSpawn(position);
 		}
+	
 
 
 

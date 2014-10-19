@@ -8,6 +8,7 @@ TagManager:
   - Player
   - Destructible
   - Spawner
+  - PowerUp
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

@@ -1,0 +1,971 @@
+fileFormatVersion: 2
+guid: 9c6d87a8bd6a704469c45400e42509ab
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AngryBirdSpriteSheet_0
+    21300002: AngryBirdSpriteSheet_1
+    21300004: AngryBirdSpriteSheet_2
+    21300006: AngryBirdSpriteSheet_3
+    21300008: AngryBirdSpriteSheet_4
+    21300010: AngryBirdSpriteSheet_5
+    21300012: AngryBirdSpriteSheet_6
+    21300014: AngryBirdSpriteSheet_7
+    21300016: AngryBirdSpriteSheet_8
+    21300018: AngryBirdSpriteSheet_9
+    21300020: AngryBirdSpriteSheet_10
+    21300022: AngryBirdSpriteSheet_11
+    21300024: AngryBirdSpriteSheet_12
+    21300026: AngryBirdSpriteSheet_13
+    21300028: AngryBirdSpriteSheet_14
+    21300030: AngryBirdSpriteSheet_15
+    21300032: AngryBirdSpriteSheet_16
+    21300034: AngryBirdSpriteSheet_17
+    21300036: AngryBirdSpriteSheet_18
+    21300038: AngryBirdSpriteSheet_19
+    21300040: AngryBirdSpriteSheet_20
+    21300042: AngryBirdSpriteSheet_21
+    21300044: AngryBirdSpriteSheet_22
+    21300046: AngryBirdSpriteSheet_23
+    21300048: AngryBirdSpriteSheet_24
+    21300050: AngryBirdSpriteSheet_25
+    21300052: AngryBirdSpriteSheet_26
+    21300054: AngryBirdSpriteSheet_27
+    21300056: AngryBirdSpriteSheet_28
+    21300058: AngryBirdSpriteSheet_29
+    21300060: AngryBirdSpriteSheet_30
+    21300062: AngryBirdSpriteSheet_31
+    21300064: AngryBirdSpriteSheet_32
+    21300066: AngryBirdSpriteSheet_33
+    21300068: AngryBirdSpriteSheet_34
+    21300070: AngryBirdSpriteSheet_35
+    21300072: AngryBirdSpriteSheet_36
+    21300074: AngryBirdSpriteSheet_37
+    21300076: AngryBirdSpriteSheet_38
+    21300078: AngryBirdSpriteSheet_39
+    21300080: AngryBirdSpriteSheet_40
+    21300082: AngryBirdSpriteSheet_41
+    21300084: AngryBirdSpriteSheet_42
+    21300086: AngryBirdSpriteSheet_43
+    21300088: AngryBirdSpriteSheet_44
+    21300090: AngryBirdSpriteSheet_45
+    21300092: AngryBirdSpriteSheet_46
+    21300094: AngryBirdSpriteSheet_47
+    21300096: AngryBirdSpriteSheet_48
+    21300098: AngryBirdSpriteSheet_49
+    21300100: AngryBirdSpriteSheet_50
+    21300102: AngryBirdSpriteSheet_51
+    21300104: AngryBirdSpriteSheet_52
+    21300106: AngryBirdSpriteSheet_53
+    21300108: AngryBirdSpriteSheet_54
+    21300110: AngryBirdSpriteSheet_55
+    21300112: AngryBirdSpriteSheet_56
+    21300114: AngryBirdSpriteSheet_57
+    21300116: AngryBirdSpriteSheet_58
+    21300118: AngryBirdSpriteSheet_59
+    21300120: AngryBirdSpriteSheet_60
+    21300122: AngryBirdSpriteSheet_61
+    21300124: AngryBirdSpriteSheet_62
+    21300126: AngryBirdSpriteSheet_63
+    21300128: AngryBirdSpriteSheet_64
+    21300130: AngryBirdSpriteSheet_65
+    21300132: AngryBirdSpriteSheet_66
+    21300134: AngryBirdSpriteSheet_67
+    21300136: AngryBirdSpriteSheet_68
+    21300138: AngryBirdSpriteSheet_69
+    21300140: AngryBirdSpriteSheet_70
+    21300142: AngryBirdSpriteSheet_71
+    21300144: AngryBirdSpriteSheet_72
+    21300146: AngryBirdSpriteSheet_73
+    21300148: AngryBirdSpriteSheet_74
+    21300150: AngryBirdSpriteSheet_75
+    21300152: AngryBirdSpriteSheet_76
+    21300154: AngryBirdSpriteSheet_77
+    21300156: AngryBirdSpriteSheet_78
+    21300158: AngryBirdSpriteSheet_79
+    21300160: AngryBirdSpriteSheet_80
+    21300162: AngryBirdSpriteSheet_81
+    21300164: AngryBirdSpriteSheet_82
+    21300166: AngryBirdSpriteSheet_83
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: AngryBirdSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1700
+        width: 238
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1700
+        width: 199
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1651
+        width: 83
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1651
+        width: 129
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1575
+        width: 67
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1577
+        width: 85
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1492
+        width: 37
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 1432
+        width: 34
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1529
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1529
+        width: 124
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1529
+        width: 40
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1525
+        width: 51
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1538
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1481
+        width: 85
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1481
+        width: 85
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 1439
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1458
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1428
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1428
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1430
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 1428
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 1391
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1363
+        width: 136
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1365
+        width: 83
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1391
+        width: 11
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 1391
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 1393
+        width: 46
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1312
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1310
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1312
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1313
+        width: 118
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1312
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 1315
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1329
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 1329
+        width: 73
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1248
+        width: 104
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1248
+        width: 83
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1169
+        width: 105
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1232
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1167
+        width: 154
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1167
+        width: 49
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1169
+        width: 51
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 1186
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1112
+        width: 106
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1114
+        width: 83
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1013
+        width: 134
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 1011
+        width: 134
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1013
+        width: 107
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 925
+        width: 123
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 928
+        width: 62
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 932
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 928
+        width: 62
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 950
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 950
+        width: 72
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 867
+        width: 221
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 868
+        width: 83
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 787
+        width: 80
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 791
+        width: 83
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 791
+        width: 79
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 783
+        width: 69
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 796
+        width: 76
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 715
+        width: 79
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 716
+        width: 79
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 716
+        width: 80
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 718
+        width: 80
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 730
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 730
+        width: 72
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 617
+        width: 60
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 617
+        width: 159
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 538
+        width: 79
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 540
+        width: 80
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 540
+        width: 80
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 540
+        width: 80
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 554
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 554
+        width: 72
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 453
+        width: 140
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 453
+        width: 83
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 218
+        width: 333
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 361
+        width: 67
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 363
+        width: 67
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 363
+        width: 67
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 181
+        width: 129
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_82
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 63
+        width: 77
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: AngryBirdSpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 15
+        width: 376
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
