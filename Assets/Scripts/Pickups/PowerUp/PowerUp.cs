@@ -6,6 +6,8 @@ public class PowerUp : MonoBehaviour {
 
 	public GameObject powerBirdSpawn;
 
+	public GameObject powerSlowMotion;
+
 	private List<Power> powerUps;
 
 	public enum Power {
@@ -33,7 +35,7 @@ public class PowerUp : MonoBehaviour {
 			powerUps.Add (Power.birdSpawn);
 		}
 		if (PlayerPrefs.HasKey ("powerSlowMotion")) {
-			//powerUps.Add (Power.slowMotion);
+			powerUps.Add (Power.slowMotion);
 		}
 	}
 
@@ -75,14 +77,17 @@ public class PowerUp : MonoBehaviour {
 		if (powerUps.Count > 0) {
 			int random = UnityEngine.Random.Range (1, powerUps.Count);
 			//instanciates the randomly selected power up game object
-			switch (powerUps[random-1]) {
+			//powerUps[random-1]
+			switch (Power.slowMotion) {
 				case Power.killAll:
 					break;
 				case Power.birdSpawn:
-					GameObject obj  = (GameObject) Instantiate(powerBirdSpawn, this.transform.position, this.transform.rotation);
-					powerUp = obj.GetComponent<PowerBirdSpawn>();
+					GameObject birdSpawn  = (GameObject) Instantiate(powerBirdSpawn, this.transform.position, this.transform.rotation);
+					powerUp = birdSpawn.GetComponent<PowerBirdSpawn>();
 					break;
 				case Power.slowMotion:
+					GameObject slowMotion  = (GameObject) Instantiate(powerSlowMotion, this.transform.position, this.transform.rotation);
+					powerUp = slowMotion.GetComponent<PowerSlowMotion>();
 					break;
 			}
 		}
