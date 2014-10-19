@@ -14,6 +14,8 @@ public class Avatar : Health, EnemyAttackListener {
 	GameObject slash;
 
 	public AudioClip slashSound;
+
+	public IPowerUp powerUp;
 	
 	private InputMap inputMap;
 	public float jumpForce = 500f;
@@ -95,8 +97,7 @@ public class Avatar : Health, EnemyAttackListener {
 			
 			// Debug.Log ("Doing Jump Attack");
 			FireAttackAnimation (Attack.JUMPSWIPE);
-			FireAttackActionEvent(Attack.JUMPSWIPE);
-			
+			FireAttackActionEvent(Attack.JUMPSWIPE);	
 		}
 	}
 	
@@ -130,7 +131,13 @@ public class Avatar : Health, EnemyAttackListener {
 	}
 
 	public void GoBerserk() {
-		Debug.Log ("Detected a shake so going berserk!");
+		Debug.Log ("go berserk was called");
+		if (powerUp != null) {
+			Debug.Log ("power up called");
+			powerUp.UsePowerUp (this);
+			Debug.Log ("power up made null");
+			powerUp = null;
+		}
 	}
 
 	public void OnEnemyAttack() {
