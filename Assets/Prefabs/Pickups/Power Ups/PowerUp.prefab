@@ -55,6 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerBirdSpawn: {fileID: 100000, guid: bfa891eed6a32344fb7e354c5f77b642, type: 2}
   powerSlowMotion: {fileID: 100000, guid: 422cdcc08528c84419ee5c3d1b5741fa, type: 2}
+  powerBlast: {fileID: 100000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

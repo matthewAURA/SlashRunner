@@ -455,7 +455,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
@@ -1779,6 +1779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerBirdSpawn: {fileID: 100000, guid: bfa891eed6a32344fb7e354c5f77b642, type: 2}
   powerSlowMotion: {fileID: 100000, guid: 422cdcc08528c84419ee5c3d1b5741fa, type: 2}
+  powerBlast: {fileID: 100000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
 --- !u!199 &328322346
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -3396,7 +3397,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
@@ -4313,9 +4314,9 @@ GameObject:
   - 4: {fileID: 593728474}
   - 198: {fileID: 593728473}
   - 199: {fileID: 593728472}
-  - 114: {fileID: 593728475}
   - 50: {fileID: 593728471}
   - 61: {fileID: 593728476}
+  - 114: {fileID: 593728475}
   m_Layer: 0
   m_Name: PowerBlast
   m_TagString: Untagged
@@ -6164,6 +6165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerBirdSpawn: {fileID: 100000, guid: bfa891eed6a32344fb7e354c5f77b642, type: 2}
   powerSlowMotion: {fileID: 100000, guid: 422cdcc08528c84419ee5c3d1b5741fa, type: 2}
+  powerBlast: {fileID: 100000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
 --- !u!199 &789764898
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -7417,6 +7419,50 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1ea8c43a736f8234a965400b879661b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &821230256
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 42.0344734
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.06603384
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+  m_RootGameObject: {fileID: 1331577903}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &821912899
 GameObject:
   m_ObjectHideFlags: 0
@@ -8977,6 +9023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerBirdSpawn: {fileID: 100000, guid: bfa891eed6a32344fb7e354c5f77b642, type: 2}
   powerSlowMotion: {fileID: 100000, guid: 422cdcc08528c84419ee5c3d1b5741fa, type: 2}
+  powerBlast: {fileID: 100000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
 --- !u!199 &1141054207
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -10677,6 +10724,47 @@ Transform:
   - {fileID: 949855667}
   m_Father: {fileID: 328669211}
   m_RootOrder: 1
+--- !u!1 &1331577903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+  m_PrefabInternal: {fileID: 821230256}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1331577905}
+  - 114: {fileID: 1331577904}
+  m_Layer: 0
+  m_Name: DoPowerBlast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1331577904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 43beb8eda52ad064ea234a126cac5de8,
+    type: 2}
+  m_PrefabInternal: {fileID: 821230256}
+  m_GameObject: {fileID: 1331577903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3331b2cdc09b74bb0909e7120bc43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerBlast: {fileID: 100000, guid: 2c6dc23ac5ff22d448d1ba204226e69b, type: 2}
+--- !u!4 &1331577905
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+  m_PrefabInternal: {fileID: 821230256}
+  m_GameObject: {fileID: 1331577903}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42.0344734, y: 4.06603384, z: 2.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1001 &1344895584
 Prefab:
   m_ObjectHideFlags: 0
@@ -11642,7 +11730,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
@@ -12744,6 +12832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerBirdSpawn: {fileID: 100000, guid: bfa891eed6a32344fb7e354c5f77b642, type: 2}
   powerSlowMotion: {fileID: 100000, guid: 422cdcc08528c84419ee5c3d1b5741fa, type: 2}
+  powerBlast: {fileID: 100000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
 --- !u!199 &1702792749
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0

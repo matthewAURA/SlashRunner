@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PowerBlast : MonoBehaviour {
-
+	
 	private Vector3 velocity = new Vector3(50f, 0 , 0);
 
 	// Use this for initialization
@@ -29,7 +29,7 @@ public class PowerBlast : MonoBehaviour {
 	}
 
 	public IEnumerator lifeTime() {
-		yield return new WaitForSeconds(1f);// waits 5 seconds
+		yield return new WaitForSeconds(1f);// waits 1 second
 		Destroy (this.gameObject);
 	}
 }
