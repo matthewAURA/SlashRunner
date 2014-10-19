@@ -17,7 +17,7 @@ public class PowerBirdSpawn : MonoBehaviour, IPowerUp {
 
 	public void UsePowerUp(Avatar target) {
 		if (birds != null) {
-			for(int x = 0; x<50; x++) {
+			for(int x = 0; x<15; x++) {
 				GameObject bird = (GameObject) Instantiate (birds, target.transform.position, target.transform.rotation);
 				//set avatar as proximity target
 				OnProximity pox = bird.GetComponent<OnProximity>();
