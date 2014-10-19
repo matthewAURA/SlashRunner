@@ -1,5 +1,5 @@
 ﻿public interface IPowerUp {
 	
-	void UsePowerUp();
-	
+	void UsePowerUp(Avatar target);
+
 }

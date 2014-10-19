@@ -4,7 +4,9 @@ using System.Collections.Generic;
 
 public class PowerUp : MonoBehaviour {
 
-	private List<IPowerUp> powerUps;
+	public GameObject powerBirdSpawn;
+
+	private List<Power> powerUps;
 
 	public enum Power {
 		killAll, birdSpawn, slowMotion
@@ -23,15 +25,15 @@ public class PowerUp : MonoBehaviour {
 		}
 
 
-		powerUps = new List<IPowerUp> ();
+		powerUps = new List<Power> ();
 		if (PlayerPrefs.HasKey ("powerKillAll")) {
-			//powerUps.Add(new PowerKillAll());
+			//powerUps.Add (Power.killAll);
 		}
 		if (PlayerPrefs.HasKey ("powerBirdSpawn")) {
-			//powerUps.Add(new PowerBirdSpawn());
+			powerUps.Add (Power.birdSpawn);
 		}
 		if (PlayerPrefs.HasKey ("powerSlowMotion")) {
-			//powerUps.Add(new PowerSlowMotion);
+			//powerUps.Add (Power.slowMotion);
 		}
 	}
 
@@ -68,9 +70,21 @@ public class PowerUp : MonoBehaviour {
 	// Method for handling when object with 2D collider enters the Attack-Range-Box
 	void OnTriggerEnter2D(Collider2D other) {
 		IPowerUp powerUp = null;
+
+		//Randomly select and instanciate the power up game object
 		if (powerUps.Count > 0) {
 			int random = UnityEngine.Random.Range (1, powerUps.Count);
-			powerUp = powerUps[random];
+			//instanciates the randomly selected power up game object
+			switch (powerUps[random-1]) {
+				case Power.killAll:
+					break;
+				case Power.birdSpawn:
+					GameObject obj  = (GameObject) Instantiate(powerBirdSpawn, this.transform.position, this.transform.rotation);
+					powerUp = obj.GetComponent<PowerBirdSpawn>();
+					break;
+				case Power.slowMotion:
+					break;
+			}
 		}
 
 		// Attempt to get the Collider2D object's GameObject. If parent existed, get the parent GameObject instead.
@@ -79,11 +93,9 @@ public class PowerUp : MonoBehaviour {
 			foreach (Avatar obj in o.GetComponents(typeof(Avatar))) {
 				if (powerUp != null) {
 					obj.powerUp = powerUp;
+					Debug.Log ("Set power up");
 				}
 			}
-			ParticleSystem particleSystem = GetComponent<ParticleSystem>();
-			particleSystem.startColor = Color.red;
-
 			//StartCoroutine(Kill());
 			Destroy (this.gameObject);
 		}

@@ -1538,6 +1538,46 @@ MonoBehaviour:
   shieldPosition: 1
   littleClashSound: {fileID: 0}
   bigClashSound: {fileID: 0}
+--- !u!1 &289960940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 289960941}
+  - 114: {fileID: 289960942}
+  m_Layer: 0
+  m_Name: PowerBirdSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &289960941
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 289960940}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!114 &289960942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 289960940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0779731b3ebb695499e9f5c6353cce70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birds: {fileID: 100000, guid: a270c0e2d3e86fe47b6af5eef0848dad, type: 2}
 --- !u!1 &309875205
 GameObject:
   m_ObjectHideFlags: 0
@@ -7937,6 +7977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4355f836d3abcf1429ade5cab3765e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerBirdSpawn: {fileID: 100000, guid: bfa891eed6a32344fb7e354c5f77b642, type: 2}
 --- !u!199 &1702792749
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0

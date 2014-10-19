@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4355f836d3abcf1429ade5cab3765e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerBirdSpawn: {fileID: 100000, guid: bfa891eed6a32344fb7e354c5f77b642, type: 2}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
