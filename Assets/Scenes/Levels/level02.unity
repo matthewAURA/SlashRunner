@@ -10917,6 +10917,9 @@ MonoBehaviour:
   groundedRadius: .200000003
   grounded: 0
   slashSound: {fileID: 8300000, guid: 37906b51c8a162447858b0d686faa0c3, type: 3}
+  healthSound: {fileID: 0}
+  blastSound: {fileID: 0}
+  slowSound: {fileID: 0}
   jumpForce: 1500
   movementForce: 7
   attackAnimation: {fileID: 21300000, guid: ba61a3f6adce13e4587607c395aca5b1, type: 3}
