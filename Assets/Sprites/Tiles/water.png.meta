@@ -1,8 +1,15 @@
 fileFormatVersion: 2
-guid: a9e6879ac88b26c4da325bac72e164e6
+guid: 68ba426c6f485364aa45dd3999e0b9b9
 TextureImporter:
   fileIDToRecycleName:
-    21300000: water
+    21300000: water_0
+    21300002: water_1
+    21300004: water_2
+    21300006: water_3
+    21300008: water_4
+    21300010: water_5
+    21300012: water_6
+    21300014: water_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,14 +32,14 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -43,6 +50,86 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: water_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 215
+        width: 84
+        height: 167
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: water_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 210
+        width: 90
+        height: 172
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: water_2
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 212
+        width: 87
+        height: 170
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: water_3
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 209
+        width: 85
+        height: 173
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: water_4
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 23
+        width: 84
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: water_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 18
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: water_6
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 20
+        width: 87
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: water_7
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 17
+        width: 85
+        height: 141
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

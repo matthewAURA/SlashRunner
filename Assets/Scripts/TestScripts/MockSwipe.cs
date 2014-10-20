@@ -18,10 +18,10 @@ public class MockSwipe : MonoBehaviour {
 	}
 
 	public void upSwipe() {
-		Debug.Log("An up swipe was recorded");
+		// Debug.Log("An up swipe was recorded");
 	}
 
 	public void rightSwipe() {
-		Debug.Log("A right swipe was recorded");
+		// Debug.Log("A right swipe was recorded");
 	}
 }

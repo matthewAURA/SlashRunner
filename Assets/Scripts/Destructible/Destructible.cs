@@ -18,19 +18,26 @@ public class Destructible : Health, AvatarAttackListener {
 	public GameObject remains;
 
 	public void Destruct () {
-		Instantiate(remains, new Vector3(transform.position.x, transform.position.y, transform.position.z+5), transform.rotation);
-		Destroy (gameObject);
+		if(remains != null){
+			Instantiate(remains, new Vector3(transform.position.x, transform.position.y, transform.position.z+5), transform.rotation);
+		}
 	}
 
 	public virtual void OnAvatarAttack(Avatar.Attack attack)
 	{
-		Debug.Log ("Avatar Attacked Enemy");
+		// Debug.Log ("Avatar Attacked Enemy");
 		Avatar.attackListenerList.Remove (this);
 		
 		this.takeDamage (1);
 	}
 
 	protected override void BeforeDeath(){
+
+		if (dieSound != null) {
+			AudioSource.PlayClipAtPoint (dieSound, transform.position);	
+		}
 		this.Destruct ();
 	}
+
+
 }

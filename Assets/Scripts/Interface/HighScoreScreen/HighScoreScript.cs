@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
 
 public class HighScoreScript : MonoBehaviour {
 	private ScoringSystem scoring;
@@ -22,6 +24,10 @@ public class HighScoreScript : MonoBehaviour {
 			if (y >= 140 + 40 * 5){
 				break;
 			}
+		}
+		if(GUI.Button(new Rect(Screen.width - 150, Screen.height - 70, 150 , 40), "Clear All High Score")){
+			scoring.ClearHighScore();
+			OnGUI();		
 		}
 	}
 }

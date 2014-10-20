@@ -22,6 +22,7 @@ public class Enemy : Destructible
 	public GameObject tallShield;
 
 	public bool randomise = false;
+	public int scoreOnKill = 1000;
 
 	public ShieldType shieldType = ShieldType.Short;
 	public ShieldPosition shieldPosition = ShieldPosition.Middle;
@@ -29,18 +30,22 @@ public class Enemy : Destructible
 	private GameObject shieldObject;
 
 	private bool shielded = true;
-	
-	void Start()
+
+	public AudioClip littleClashSound;
+	public AudioClip bigClashSound;
+
+	void Awake()
 	{
 
+		Debug.Log ("started " + this.name);
 		if (randomise)
 		{
-			Debug.Log("Randomising.");
+			// Debug.Log("Randomising.");
 			System.Random random = new System.Random();
 
 			int randomType = random.Next(1, 300);
 
-			Debug.Log(randomType);
+			// Debug.Log(randomType);
 
 			if (randomType < 125)
 			{
@@ -66,13 +71,13 @@ public class Enemy : Destructible
 				randomPosition = random.Next(1, 200);
 			}
 
-			Debug.Log(randomPosition);
+			// Debug.Log(randomPosition);
 
 			if (randomPosition < 100)
 			{
 				shieldPosition = ShieldPosition.Bottom;
 			}
-			else if (randomPosition > 200)
+			else if (randomPosition < 200)
 			{
 				shieldPosition = ShieldPosition.Middle;
 			}
@@ -81,10 +86,10 @@ public class Enemy : Destructible
 				shieldPosition = ShieldPosition.Top;
 			}
 
-			Debug.Log("Position:");
-			Debug.Log(shieldPosition.ToString());
-			Debug.Log("Type:");
-			Debug.Log(shieldType.ToString());
+			// Debug.Log("Position:");
+			// Debug.Log(shieldPosition.ToString());
+			// Debug.Log("Type:");
+			// Debug.Log(shieldType.ToString());
 
 		}
 
@@ -104,15 +109,15 @@ public class Enemy : Destructible
 		if (shielded) {
 			GameObject shield = (GameObject) Instantiate (shieldObject, transform.position, transform.rotation);
 			shield.transform.parent = transform;
-			shield.transform.position = transform.position + new Vector3 (-2.0f, (float)shieldPosition, 0.0f);
-			shield.transform.localScale = new Vector3(10.0f, 10.0f, 0.0f);
+			shield.transform.position = transform.position + new Vector3 (-1.5f, (float)shieldPosition, 0.0f);
+			shield.transform.localScale = new Vector3(3.0f, 3.0f, 0.0f);
 		}
 
 	}
 	
 	public override void OnAvatarAttack(Avatar.Attack attack)
 	{
-		Debug.Log ("Avatar Attacked Enemy");
+		// Debug.Log ("Avatar Attacked Enemy");
 
 		if (shielded) {
 			switch (attack)
@@ -121,17 +126,36 @@ public class Enemy : Destructible
 				case Avatar.Attack.JUMPSWIPE:
 				case Avatar.Attack.OVERHEADSWIPE:
 					if (shieldPosition == ShieldPosition.Top) {
-						return;
+						if (littleClashSound != null && shieldType == ShieldType.Short) {
+							AudioSource.PlayClipAtPoint (littleClashSound, transform.position);	
+						}
+						if (bigClashSound != null && shieldType == ShieldType.Tall) {
+							AudioSource.PlayClipAtPoint (bigClashSound, transform.position);	
+						}
+					return;
 					}
 					break;
 				case Avatar.Attack.PIERCE:
 					if (shieldType == ShieldType.Tall || shieldPosition == ShieldPosition.Middle) {
-						return;
+						if (littleClashSound != null && shieldType == ShieldType.Short) {
+							AudioSource.PlayClipAtPoint (littleClashSound, transform.position);	
+						}
+						if (bigClashSound != null && shieldType == ShieldType.Tall) {
+							AudioSource.PlayClipAtPoint (bigClashSound, transform.position);	
+						}
+					return;
 					}
 					break;
 				case Avatar.Attack.LOWSWIPE:
 					if (shieldPosition == ShieldPosition.Bottom) {
-						return;
+
+						if (littleClashSound != null && shieldType == ShieldType.Short) {
+							AudioSource.PlayClipAtPoint (littleClashSound, transform.position);	
+						}
+						if (bigClashSound != null && shieldType == ShieldType.Tall) {
+							AudioSource.PlayClipAtPoint (bigClashSound, transform.position);	
+						}
+					return;
 					}
 					break;
 			}
@@ -139,13 +163,14 @@ public class Enemy : Destructible
 
 		Avatar.attackListenerList.Remove (this);
 		this.takeDamage (1);
+
 	}
 	
 	protected override void AfterDeath(){
 	
 		GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
 		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
-		s.IncreaseScore(2000);
+		s.IncreaseScore(scoreOnKill);
 	}
 
 }
