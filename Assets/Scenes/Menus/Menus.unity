@@ -1304,7 +1304,6 @@ GameObject:
   - 4: {fileID: 1625714811}
   - 212: {fileID: 1625714810}
   - 61: {fileID: 1625714809}
-  - 114: {fileID: 1625714812}
   - 114: {fileID: 1625714813}
   m_Layer: 0
   m_Name: AchievementButton
@@ -1358,18 +1357,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
---- !u!114 &1625714812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1625714808}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 
 --- !u!114 &1625714813
 MonoBehaviour:
   m_ObjectHideFlags: 0
