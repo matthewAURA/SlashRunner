@@ -14,6 +14,9 @@ public class Avatar : Destructible, EnemyAttackListener {
 	GameObject slash;
 
 	public AudioClip slashSound;
+	public AudioClip healthSound;
+	public AudioClip blastSound;
+	public AudioClip slowSound;
 
 	public IPowerUp powerUp;
 	
@@ -135,6 +138,17 @@ public class Avatar : Destructible, EnemyAttackListener {
 		if (powerUp != null) {
 			Debug.Log ("power up called");
 			powerUp.UsePowerUp (this);
+
+			if (blastSound != null && powerUp is DoPowerBlast) {
+				AudioSource.PlayClipAtPoint (blastSound, transform.position);	
+			}
+			if (healthSound != null && powerUp is PowerBirdSpawn) {
+				AudioSource.PlayClipAtPoint (healthSound, transform.position);	
+			}
+			if (slowSound != null && powerUp is PowerSlowMotion) {
+				AudioSource.PlayClipAtPoint (slowSound, transform.position);	
+			}
+
 			Debug.Log ("power up made null");
 			powerUp = null;
 		}
