@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  onProximitySound: {fileID: 8300000, guid: d7cf752d999916b4ca138d8121641a72, type: 3}
   componentNames: RandomIntervalFlappyBounce
   activateDistance: 12
 --- !u!114 &11400002

@@ -16,6 +16,9 @@ public class Scene_Tracking : MonoBehaviour {
 		if (Application.loadedLevel != currentScene) {
 			previousScene = currentScene;
 			currentScene = Application.loadedLevel;
+			Debug.Log("Scene tracking");
+			Debug.Log (previousScene);
+			Debug.Log (currentScene);
 		}
 	}
 

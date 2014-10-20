@@ -12,11 +12,17 @@ public class Avatar : Health, EnemyAttackListener {
 	private bool moving = true;
 	Animator anim;
 	GameObject slash;
+
+	public AudioClip slashSound;
+
+	public IPowerUp powerUp;
 	
 	private InputMap inputMap;
 	public float jumpForce = 500f;
 	public float movementForce = 5f;
 	public Sprite attackAnimation;
+
+	public float playerFeet;
 	
 	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
 	public static List<IAvatarHeathChangeListener> healthChangeListenerList = new List<IAvatarHeathChangeListener>();
@@ -59,6 +65,7 @@ public class Avatar : Health, EnemyAttackListener {
 	void FixedUpdate() {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundedRadius, whatIsGround);
 		Move ();
+		playerFeet = this.collider2D.bounds.center.y - this.collider2D.bounds.size.y / 2;
 	}
 	
 	// Update is called once per frame
@@ -90,8 +97,7 @@ public class Avatar : Health, EnemyAttackListener {
 			
 			// Debug.Log ("Doing Jump Attack");
 			FireAttackAnimation (Attack.JUMPSWIPE);
-			FireAttackActionEvent(Attack.JUMPSWIPE);
-			
+			FireAttackActionEvent(Attack.JUMPSWIPE);	
 		}
 	}
 	
@@ -125,7 +131,13 @@ public class Avatar : Health, EnemyAttackListener {
 	}
 
 	public void GoBerserk() {
-		Debug.Log ("Detected a shake so going berserk!");
+		Debug.Log ("go berserk was called");
+		if (powerUp != null) {
+			Debug.Log ("power up called");
+			powerUp.UsePowerUp (this);
+			Debug.Log ("power up made null");
+			powerUp = null;
+		}
 	}
 
 	public void OnEnemyAttack() {
@@ -180,6 +192,10 @@ public class Avatar : Health, EnemyAttackListener {
 	}
 	
 	private void FireAttackActionEvent(Avatar.Attack attack) {
+		if (slashSound != null && attackListenerList.Count == 0) {
+			AudioSource.PlayClipAtPoint (slashSound, transform.position);	
+		}
+
 		for (int i = attackListenerList.Count - 1; i >= 0; i--) {
 			attackListenerList[i].OnAvatarAttack(attack);
 		}

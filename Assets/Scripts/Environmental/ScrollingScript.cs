@@ -11,10 +11,12 @@ public class ScrollingScript : MonoBehaviour
 	public bool isLooping = false;
 
 	private List<Transform> backgroundPart;
+	private Vector2 cameraInitPosition;
 	
 
 	void Start()
 	{
+		cameraInitPosition = Camera.main.transform.position;
 		// For infinite background only
 		if (isLooping)
 		{
@@ -44,6 +46,7 @@ public class ScrollingScript : MonoBehaviour
 	
 	void Update()
 	{
+//		transform.position = new Vector3(transform.position.x, Camera.main.transform.);
 		// Movement
 		Vector3 movement = new Vector3(
 			speed.x * direction.x,
@@ -52,11 +55,15 @@ public class ScrollingScript : MonoBehaviour
 		
 		movement *= Time.deltaTime;
 		transform.Translate(movement);
+		transform.position = new Vector3(
+			transform.position.x, 
+			Camera.main.transform.position.y-cameraInitPosition.y, 
+			transform.position.z);
 		
 		// Move the camera
 		if (isLinkedToCamera)
 		{
-			Camera.main.transform.Translate(movement);
+			// Camera.main.transform.Translate(movement);
 		}
 		
 		// 4 - Loop
