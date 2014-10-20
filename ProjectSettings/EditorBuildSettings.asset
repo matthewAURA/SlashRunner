@@ -35,3 +35,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/EndlessRunnerLevel.unity
   - enabled: 1
     path: Assets/Scenes/Levels/level01.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level02.unity
