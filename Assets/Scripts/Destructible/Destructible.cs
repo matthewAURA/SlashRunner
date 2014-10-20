@@ -21,7 +21,6 @@ public class Destructible : Health, AvatarAttackListener {
 		if(remains != null){
 			Instantiate(remains, new Vector3(transform.position.x, transform.position.y, transform.position.z+5), transform.rotation);
 		}
-		Destroy (gameObject);
 	}
 
 	public virtual void OnAvatarAttack(Avatar.Attack attack)
@@ -39,4 +38,6 @@ public class Destructible : Health, AvatarAttackListener {
 		}
 		this.Destruct ();
 	}
+
+
 }
