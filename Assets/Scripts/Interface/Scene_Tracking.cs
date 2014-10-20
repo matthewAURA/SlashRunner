@@ -14,6 +14,7 @@ public class Scene_Tracking : MonoBehaviour {
 		scenes.Add("Menus");
 		scenes.Add("Tutorial");
 		scenes.Add("level01");
+		scenes.Add("level02");
 		scenes.Add("Menus");
 		currentScene = Application.loadedLevelName;
 	}
