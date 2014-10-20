@@ -135,7 +135,7 @@ public class Avatar : Health, EnemyAttackListener {
 	public void GoBerserk() {
 		if (powerUp != null) {
 			powerUp.UsePowerUp (this);
-			powerUp = null;
+			setPowerUp(null);
 		}
 	}
 
