@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: EndlessRunnerLevel
+  sceneName: 
 --- !u!1 &326278126
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: HighScores
+  sceneName: 
 --- !u!1 &659911379
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Settings
+  sceneName: 
 --- !u!1 &713706657
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,9 +787,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 743607014}
-  - 114: {fileID: 743607013}
   - 212: {fileID: 743607012}
   - 61: {fileID: 743607011}
+  - 114: {fileID: 743607013}
   m_Layer: 0
   m_Name: TestLevelButton
   m_TagString: Untagged
@@ -841,7 +841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Tutorial
+  sceneName: 
 --- !u!4 &743607014
 Transform:
   m_ObjectHideFlags: 0
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Store
+  sceneName: 
 --- !u!1 &1063517893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,7 +1324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Achievements
+  sceneName: 
 --- !u!1 &1643005088
 GameObject:
   m_ObjectHideFlags: 0
