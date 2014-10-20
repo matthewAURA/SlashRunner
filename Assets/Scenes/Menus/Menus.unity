@@ -878,9 +878,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 749692074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aacf31ea4154f45f78a79d1428d17db0, type: 3}
+  m_Script: {fileID: 11500000, guid: 0adcbc817dd8648c9a5e501ff32059d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GuiSkin: {fileID: 0}
+  SignInButtonGuiSkin: {fileID: 0}
+  GooglePlusTex: {fileID: 0}
+  SignInBarTex: {fileID: 0}
+  UiBeepFx: {fileID: 0}
 --- !u!4 &749692076
 Transform:
   m_ObjectHideFlags: 0
@@ -968,7 +973,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
 --- !u!114 &935446125
 MonoBehaviour:
   m_ObjectHideFlags: 0
