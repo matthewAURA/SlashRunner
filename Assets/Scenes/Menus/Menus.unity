@@ -575,6 +575,7 @@ GameObject:
   - 4: {fileID: 486668867}
   - 212: {fileID: 486668866}
   - 61: {fileID: 486668865}
+  - 114: {fileID: 486668868}
   m_Layer: 0
   m_Name: Level 3
   m_TagString: Untagged
@@ -627,6 +628,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
+--- !u!114 &486668868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 486668864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: level02
 --- !u!1 &635802193
 GameObject:
   m_ObjectHideFlags: 0
