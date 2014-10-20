@@ -152,7 +152,7 @@ public class Avatar : Health, EnemyAttackListener {
 		Application.LoadLevel("Gameover");
 	}
 
-	protected override void OnHealthChange() {
+	public override void OnHealthChange() {
 		// Debug.Log ("AvatarTakingDamage");
 		foreach (IAvatarHeathChangeListener listener in healthChangeListenerList) {
 			listener.OnAvatarHealthChange(hp);

@@ -21,7 +21,7 @@ public class Health : MonoBehaviour {
 		}
 	}
 
-	protected virtual void OnHealthChange() {
+	public virtual void OnHealthChange() {
 
 	}
 	
