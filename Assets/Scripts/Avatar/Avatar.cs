@@ -15,8 +15,8 @@ public class Avatar : Health, EnemyAttackListener {
 
 	public AudioClip slashSound;
 
-	public IPowerUp powerUp;
-	
+	private IPowerUp powerUp;
+
 	private InputMap inputMap;
 	public float jumpForce = 500f;
 	public float movementForce = 5f;
@@ -26,7 +26,8 @@ public class Avatar : Health, EnemyAttackListener {
 	
 	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
 	public static List<IAvatarHeathChangeListener> healthChangeListenerList = new List<IAvatarHeathChangeListener>();
-	
+	public static List<IPowerUpChangeListener> powerUpChangeListenerList = new List<IPowerUpChangeListener>();
+
 	public enum Attack {
 		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP
 	}
@@ -36,6 +37,7 @@ public class Avatar : Health, EnemyAttackListener {
 		// Clean up
 		attackListenerList.Clear ();
 		healthChangeListenerList.Clear ();
+		powerUpChangeListenerList.Clear ();
 		inputMap = InputMap.getInputMap();
 		inputMap.ClearDictionary ();
 
@@ -131,11 +133,8 @@ public class Avatar : Health, EnemyAttackListener {
 	}
 
 	public void GoBerserk() {
-		Debug.Log ("go berserk was called");
 		if (powerUp != null) {
-			Debug.Log ("power up called");
 			powerUp.UsePowerUp (this);
-			Debug.Log ("power up made null");
 			powerUp = null;
 		}
 	}
@@ -220,5 +219,17 @@ public class Avatar : Health, EnemyAttackListener {
 			Destroy (otherCollider.gameObject);
 		}
 
+	}
+
+	public IPowerUp GetPowerUp() {
+		return powerUp;
+	}
+
+	public void setPowerUp(IPowerUp setPowerUp) {
+		powerUp = setPowerUp;
+		//notifies all game objects in power up listener list
+		foreach (IPowerUpChangeListener listener in powerUpChangeListenerList) {
+			listener.OnAvatarPowereUpChange (powerUp);
+		}
 	}
 }
