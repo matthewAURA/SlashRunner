@@ -121,7 +121,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 91, y: 5, z: 0}
+  m_LocalPosition: {x: -17, y: 19, z: -80}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -174,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.4000001, y: 0, z: 0}
+  m_LocalPosition: {x: 5.38999987, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400012}
@@ -224,7 +224,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: .899999976, y: .300000012}
+  m_Size: {x: 1, y: .300000012}
   m_Center: {x: 0, y: .150000006}
 --- !u!61 &6100004
 BoxCollider2D:
@@ -235,7 +235,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: .899999976, y: .300000012}
+  m_Size: {x: 1, y: .300000012}
   m_Center: {x: 0, y: .150000006}
 --- !u!114 &11400000
 MonoBehaviour:
