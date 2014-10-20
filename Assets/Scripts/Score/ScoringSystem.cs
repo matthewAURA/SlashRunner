@@ -32,6 +32,7 @@ public class ScoringSystem : MonoBehaviour {
 		//Add it to player prefs
 		PlayerPrefs.SetString("HighScores", Convert.ToBase64String(
 			memoryStream.GetBuffer()));
+
 	}
 
 	public void AddScoreIntoHighScore(ScoreEntry entry){
@@ -42,6 +43,14 @@ public class ScoringSystem : MonoBehaviour {
 		if (highScores.Count > NUMBER_OF_HIGHSCORE) {
 			highScores.RemoveAt(highScores.Count - 1);
 		}
+
+		if (GameManager.Instance.Authenticated)
+		{
+			Social.ReportScore((int)entry.score, "CgkI3OiBg-AbEAIQAg", (bool success) => {
+        		// handle success or failure
+    		});
+    	}
+
 		SaveScores ();
 	}
 
