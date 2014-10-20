@@ -40,7 +40,7 @@ public class AvatarAttackListenerListBuilder : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D other) {
 		// Attempt to get the Collider2D object's GameObject. If parent existed, get the parent GameObject instead.
 		GameObject o = other.gameObject.transform.parent == null ? other.gameObject : other.gameObject.transform.parent.gameObject;
-		if ((o.tag == "Enemy" || o.tag == "Destructable") && o.GetComponents(typeof(AvatarAttackListener)).Length > 0) {
+		if ((o.tag == "Enemy" || o.tag == "Destructible") && o.GetComponents(typeof(AvatarAttackListener)).Length > 0) {
 			// Debug.Log ("Removed " + o.tag + " from list");
 			foreach(AvatarAttackListener obj in o.GetComponents(typeof(AvatarAttackListener))) {
 				// Remove from the list

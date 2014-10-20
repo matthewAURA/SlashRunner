@@ -166,13 +166,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  remains: {fileID: 0}
+  remains: {fileID: 100008, guid: d8fa2164d381b5149b740efbad631a04, type: 2}
+  dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
   randomise: 1
   scoreOnKill: 1000
   shieldType: 1
   shieldPosition: 1
+  littleClashSound: {fileID: 8300000, guid: 6e452fbcc0e50ee41af7e6d4444ac669, type: 3}
+  bigClashSound: {fileID: 8300000, guid: e6cfab1b9af633c42963a4d0e4df82c2, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
