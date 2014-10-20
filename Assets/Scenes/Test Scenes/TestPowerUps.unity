@@ -320,6 +320,18 @@ Prefab:
       propertyPath: movementForce
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 5c0d3cc37d860064e894cf8c7bd83e7f, type: 2}
+      propertyPath: healthSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3880cf5140ee94a4b8a7de806c516ab8, type: 3}
+    - target: {fileID: 11400004, guid: 5c0d3cc37d860064e894cf8c7bd83e7f, type: 2}
+      propertyPath: slowSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 93d709fcb79ad4042967d320a0d5262a, type: 3}
+    - target: {fileID: 11400004, guid: 5c0d3cc37d860064e894cf8c7bd83e7f, type: 2}
+      propertyPath: blastSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 16553f83cf24f4a48b136c24ab8ecdbf, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c0d3cc37d860064e894cf8c7bd83e7f, type: 2}
   m_RootGameObject: {fileID: 2000434975}
@@ -457,6 +469,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
+      propertyPath: pickupPowerup
+      value: 
+      objectReference: {fileID: 8300000, guid: d2120fc5a2e75834881576edf885f1a8, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
   m_RootGameObject: {fileID: 1702792746}
@@ -1780,6 +1796,7 @@ MonoBehaviour:
   powerBirdSpawn: {fileID: 100000, guid: bfa891eed6a32344fb7e354c5f77b642, type: 2}
   powerSlowMotion: {fileID: 100000, guid: 422cdcc08528c84419ee5c3d1b5741fa, type: 2}
   powerBlast: {fileID: 100000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+  pickupPowerup: {fileID: 8300000, guid: d2120fc5a2e75834881576edf885f1a8, type: 3}
 --- !u!199 &328322346
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -3399,6 +3416,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
+      propertyPath: pickupPowerup
+      value: 
+      objectReference: {fileID: 8300000, guid: d2120fc5a2e75834881576edf885f1a8, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
   m_RootGameObject: {fileID: 328322343}
@@ -5028,6 +5049,7 @@ MonoBehaviour:
   powerBirdSpawn: {fileID: 100000, guid: bfa891eed6a32344fb7e354c5f77b642, type: 2}
   powerSlowMotion: {fileID: 100000, guid: 422cdcc08528c84419ee5c3d1b5741fa, type: 2}
   powerBlast: {fileID: 100000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+  pickupPowerup: {fileID: 8300000, guid: d2120fc5a2e75834881576edf885f1a8, type: 3}
 --- !u!199 &789764898
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -7866,6 +7888,7 @@ MonoBehaviour:
   powerBirdSpawn: {fileID: 100000, guid: bfa891eed6a32344fb7e354c5f77b642, type: 2}
   powerSlowMotion: {fileID: 100000, guid: 422cdcc08528c84419ee5c3d1b5741fa, type: 2}
   powerBlast: {fileID: 100000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+  pickupPowerup: {fileID: 8300000, guid: d2120fc5a2e75834881576edf885f1a8, type: 3}
 --- !u!199 &1141054207
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -10533,6 +10556,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
+      propertyPath: pickupPowerup
+      value: 
+      objectReference: {fileID: 8300000, guid: d2120fc5a2e75834881576edf885f1a8, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
   m_RootGameObject: {fileID: 789764895}
@@ -11635,6 +11662,7 @@ MonoBehaviour:
   powerBirdSpawn: {fileID: 100000, guid: bfa891eed6a32344fb7e354c5f77b642, type: 2}
   powerSlowMotion: {fileID: 100000, guid: 422cdcc08528c84419ee5c3d1b5741fa, type: 2}
   powerBlast: {fileID: 100000, guid: 43beb8eda52ad064ea234a126cac5de8, type: 2}
+  pickupPowerup: {fileID: 8300000, guid: d2120fc5a2e75834881576edf885f1a8, type: 3}
 --- !u!199 &1702792749
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -13031,6 +13059,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
+      propertyPath: pickupPowerup
+      value: 
+      objectReference: {fileID: 8300000, guid: d2120fc5a2e75834881576edf885f1a8, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2153bed08f92af8458c4a10e6f14f7ae, type: 2}
   m_RootGameObject: {fileID: 1141054204}
@@ -13293,12 +13325,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
+  remains: {fileID: 100032, guid: 29327b0bfae3ca144bf9a54a24eb15a6, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
   groundedRadius: .200000003
   grounded: 0
   slashSound: {fileID: 8300000, guid: 37906b51c8a162447858b0d686faa0c3, type: 3}
+  healthSound: {fileID: 8300000, guid: 3880cf5140ee94a4b8a7de806c516ab8, type: 3}
+  blastSound: {fileID: 8300000, guid: 16553f83cf24f4a48b136c24ab8ecdbf, type: 3}
+  slowSound: {fileID: 8300000, guid: 93d709fcb79ad4042967d320a0d5262a, type: 3}
   jumpForce: 1500
   movementForce: 12
   attackAnimation: {fileID: 21300000, guid: ba61a3f6adce13e4587607c395aca5b1, type: 3}
