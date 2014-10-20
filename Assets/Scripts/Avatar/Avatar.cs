@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Avatar : Health, EnemyAttackListener {
+public class Avatar : Destructible, EnemyAttackListener {
 	
 	[SerializeField] LayerMask whatIsGround = 0;
 	Transform groundCheck;								
@@ -148,7 +148,7 @@ public class Avatar : Health, EnemyAttackListener {
 	public void Kill() {
 		this.Die ();
 	}
-	
+
 	protected override void AfterDeath() {
 		Application.LoadLevel("Gameover");
 	}
@@ -221,4 +221,34 @@ public class Avatar : Health, EnemyAttackListener {
 		}
 
 	}
+
+	protected override void Die(){
+		
+		BeforeDeath ();
+		
+		if (dieSound != null) {
+			AudioSource.PlayClipAtPoint (dieSound, transform.position);	
+		}
+
+		Wait ();
+		
+	}
+
+	void Wait() 
+	{
+		StartCoroutine(WaitToDie(1));
+	}
+	
+	IEnumerator WaitToDie(float waitTime) 
+	{
+		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
+		//Hide avatar sprite
+		Renderer renderer = o.GetComponentInChildren< Renderer >();
+		renderer.enabled = false;
+		//Wait for destruction animation
+		yield return new WaitForSeconds(waitTime);
+		//Continue with after death scene
+		AfterDeath ();
+	}
+	
 }
