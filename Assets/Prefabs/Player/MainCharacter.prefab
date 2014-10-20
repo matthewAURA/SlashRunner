@@ -264,6 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
+  remains: {fileID: 100032, guid: 29327b0bfae3ca144bf9a54a24eb15a6, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -273,6 +274,7 @@ MonoBehaviour:
   jumpForce: 1500
   movementForce: 12
   attackAnimation: {fileID: 21300000, guid: ba61a3f6adce13e4587607c395aca5b1, type: 3}
+  playerFeet: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
