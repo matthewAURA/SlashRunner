@@ -4,12 +4,12 @@ using System.Collections;
 /// <summary>
 /// Loads the given scene when pressed.
 /// </summary>
-public class LoadSceneButton : ButtonBehaviour {
+public class LoadNextSceneButton : ButtonBehaviour {
 
 	public string sceneName;
 
 	protected override void OnButtonPress()
 	{
-		Application.LoadLevel(sceneName);
+		Application.LoadLevel(Scene_Tracking.GetNextLevel());
 	}
 }

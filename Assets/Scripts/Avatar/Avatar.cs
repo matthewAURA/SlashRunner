@@ -14,9 +14,12 @@ public class Avatar : Destructible, EnemyAttackListener {
 	GameObject slash;
 
 	public AudioClip slashSound;
+	public AudioClip healthSound;
+	public AudioClip blastSound;
+	public AudioClip slowSound;
 
-	public IPowerUp powerUp;
-	
+	private IPowerUp powerUp;
+
 	private InputMap inputMap;
 	public float jumpForce = 500f;
 	public float movementForce = 5f;
@@ -26,7 +29,8 @@ public class Avatar : Destructible, EnemyAttackListener {
 	
 	public static List<AvatarAttackListener> attackListenerList = new List<AvatarAttackListener>();
 	public static List<IAvatarHeathChangeListener> healthChangeListenerList = new List<IAvatarHeathChangeListener>();
-	
+	public static List<IPowerUpChangeListener> powerUpChangeListenerList = new List<IPowerUpChangeListener>();
+
 	public enum Attack {
 		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP
 	}
@@ -36,6 +40,7 @@ public class Avatar : Destructible, EnemyAttackListener {
 		// Clean up
 		attackListenerList.Clear ();
 		healthChangeListenerList.Clear ();
+		powerUpChangeListenerList.Clear ();
 		inputMap = InputMap.getInputMap();
 		inputMap.ClearDictionary ();
 
@@ -131,12 +136,19 @@ public class Avatar : Destructible, EnemyAttackListener {
 	}
 
 	public void GoBerserk() {
-		Debug.Log ("go berserk was called");
 		if (powerUp != null) {
-			Debug.Log ("power up called");
 			powerUp.UsePowerUp (this);
-			Debug.Log ("power up made null");
-			powerUp = null;
+			setPowerUp(null);
+
+			if (blastSound != null && powerUp is DoPowerBlast) {
+				AudioSource.PlayClipAtPoint (blastSound, transform.position);	
+			}
+			if (healthSound != null && powerUp is PowerBirdSpawn) {
+				AudioSource.PlayClipAtPoint (healthSound, transform.position);	
+			}
+			if (slowSound != null && powerUp is PowerSlowMotion) {
+				AudioSource.PlayClipAtPoint (slowSound, transform.position);	
+			}
 		}
 	}
 
@@ -153,7 +165,7 @@ public class Avatar : Destructible, EnemyAttackListener {
 		Application.LoadLevel("Gameover");
 	}
 
-	protected override void OnHealthChange() {
+	public override void OnHealthChange() {
 		// Debug.Log ("AvatarTakingDamage");
 		foreach (IAvatarHeathChangeListener listener in healthChangeListenerList) {
 			listener.OnAvatarHealthChange(hp);
@@ -222,6 +234,18 @@ public class Avatar : Destructible, EnemyAttackListener {
 
 	}
 
+	public IPowerUp GetPowerUp() {
+		return powerUp;
+	}
+
+	public void setPowerUp(IPowerUp setPowerUp) {
+		powerUp = setPowerUp;
+		//notifies all game objects in power up listener list
+		foreach (IPowerUpChangeListener listener in powerUpChangeListenerList) {
+			listener.OnAvatarPowereUpChange (powerUp);
+		}
+	}
+
 	protected override void Die(){
 		
 		BeforeDeath ();
@@ -250,5 +274,4 @@ public class Avatar : Destructible, EnemyAttackListener {
 		//Continue with after death scene
 		AfterDeath ();
 	}
-	
 }
