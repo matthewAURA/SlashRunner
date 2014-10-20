@@ -21,10 +21,6 @@ public class MainMenuGUI : MonoBehaviour {
             GameManager.Instance.Authenticate();
             sAutoAuthenticate = false;
         }
-
-         Social.ReportProgress("CgkI3OiBg-AbEAIQAQ", 100.0f, (bool success) => {
-            Debug.Log("Successfully sent Achievement!");
-        });
     }
 
     void OnGUI() {
