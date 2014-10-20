@@ -32,7 +32,7 @@ public class Pickup : MonoBehaviour {
 			s.IncreaseScore(scoreReward);
 
 			GameObject coinSystem = GameObject.FindGameObjectWithTag("MainCamera");
-			CoinSystemScript coin = (CoinSystemScript)scoreSystem.GetComponent("CoinSystemScript");
+			CoinSystemScript coin = (CoinSystemScript)coinSystem.GetComponent("CoinSystemScript");
 			coin.AddCoin(coinAmount);
 		}
 	}
