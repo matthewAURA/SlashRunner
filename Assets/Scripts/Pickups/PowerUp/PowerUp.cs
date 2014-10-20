@@ -10,6 +10,8 @@ public class PowerUp : MonoBehaviour {
 
 	public GameObject powerBlast;
 
+	public AudioClip pickupPowerup;
+
 	private List<Power> powerUps;
 
 	public enum Power {
@@ -73,11 +75,19 @@ public class PowerUp : MonoBehaviour {
 	
 	// Method for handling when object with 2D collider enters the Attack-Range-Box
 	void OnTriggerEnter2D(Collider2D other) {
+
+
+		
 		IPowerUp powerUp = null;
 		GameObject o = other.gameObject;
 		if (o.tag == "Player" && o.GetComponents (typeof(Avatar)).Length > 0) {
 			//Randomly select and instanciate the power up game object
 			if (powerUps.Count > 0) {
+
+				if (pickupPowerup != null) {
+					AudioSource.PlayClipAtPoint (pickupPowerup, transform.position);	
+				}
+
 				int random = UnityEngine.Random.Range (0, powerUps.Count);
 				//instanciates the randomly selected power up game object
 				Debug.Log (random);
