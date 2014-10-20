@@ -22,8 +22,12 @@ public class PowerBirdSpawn : MonoBehaviour, IPowerUp {
 				//set avatar as proximity target
 				OnProximity pox = bird.GetComponent<OnProximity>();
 				pox.target = (GameObject) target.gameObject;
-				Destroy (this.gameObject);
 			}
+			if (target.hp < 3) {
+				target.hp+=1;
+				target.OnHealthChange();
+			}
+			Destroy (this.gameObject);
 		}
 	}
 }
