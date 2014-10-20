@@ -23,6 +23,8 @@ public class GameManager : GooglePlayGames.BasicApi.OnStateLoadedListener {
     private static GameManager sInstance = new GameManager();
     private int mLevel = 0;
 
+    private GameProgress mProgress;
+
     private bool mAuthenticating = false;
     private string mAuthProgressMessage = Strings.SigningIn;
 
@@ -51,6 +53,7 @@ public class GameManager : GooglePlayGames.BasicApi.OnStateLoadedListener {
     }
 
     private GameManager() {
+        mProgress = GameProgress.LoadFromDisk();
     }
 
     #if UNITY_ANDROID || UNITY_IOS
