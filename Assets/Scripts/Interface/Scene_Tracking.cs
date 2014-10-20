@@ -1,28 +1,42 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Scene_Tracking : MonoBehaviour {
 
-	private static int previousScene;
-	private static int currentScene;
+	private static string previousScene = "Menus";
+	private static string currentScene = "Menus";
+	private static List<string> scenes = new List<string>();
 
 	void Awake () {
 		DontDestroyOnLoad(gameObject);
-		currentScene = Application.loadedLevel;
+		scenes.Clear ();
+		scenes.Add("Menus");
+		scenes.Add("Tutorial");
+		scenes.Add("level01");
+		scenes.Add("Menus");
+		currentScene = Application.loadedLevelName;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Application.loadedLevel != currentScene) {
+		if (Application.loadedLevelName != currentScene) {
 			previousScene = currentScene;
-			currentScene = Application.loadedLevel;
-			Debug.Log("Scene tracking");
-			Debug.Log (previousScene);
-			Debug.Log (currentScene);
+			currentScene = Application.loadedLevelName;
 		}
 	}
 
-	public static int GetPreviousScene() {
+	public static string GetPreviousScene() {
+		if (Application.loadedLevelName != currentScene) {
+			previousScene = currentScene;
+			currentScene = Application.loadedLevelName;
+		}
 		return previousScene;
 	}
+
+	public static string GetNextLevel() {
+		int nextLevel = scenes.IndexOf(previousScene) + 1;
+		return scenes[nextLevel];
+	}
+
 }
