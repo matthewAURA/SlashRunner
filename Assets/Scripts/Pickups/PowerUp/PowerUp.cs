@@ -109,8 +109,7 @@ public class PowerUp : MonoBehaviour {
 
 			foreach (Avatar obj in o.GetComponents(typeof(Avatar))) {
 				if (powerUp != null) {
-					obj.powerUp = powerUp;
-					Debug.Log ("Set power up");
+					obj.setPowerUp(powerUp);
 				}
 			}
 			Destroy (this.gameObject);
