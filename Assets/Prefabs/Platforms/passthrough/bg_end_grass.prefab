@@ -12,7 +12,7 @@ GameObject:
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: grass_block_medium
+  m_Name: grass_block_small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   m_Layer: 0
-  m_Name: bg_medium_grass
+  m_Name: bg_end_grass
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 11}
+  m_LocalPosition: {x: 62.8221703, y: 35.1596794, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -67,7 +67,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: 2.70000005, y: .300000012}
+  m_Size: {x: .899999976, y: .300000012}
   m_Center: {x: 0, y: .150000006}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -100,7 +100,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a6f2657598ce83443a6bde37821434b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 819b0049b1d84da49be8a44c78c1c54b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
