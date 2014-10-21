@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class GameOverScript : MonoBehaviour {
 	private ScoringSystem scoring;
 	private ScoringSystem.ScoreEntry scoreEntry;
+	private string asd = "asdasd";
 
 	void Start () {
 		scoreEntry = new ScoringSystem.ScoreEntry ();
@@ -12,6 +13,10 @@ public class GameOverScript : MonoBehaviour {
 		scoreEntry.name = PlayerPrefs.GetString("Name");
 		scoreEntry.score = PlayerPrefs.GetFloat ("ScoreFloat");
 		scoring.AddScoreIntoHighScore (scoreEntry);
+
+		//on Death Triggers 
+		//remove time powerup on death
+		Time.timeScale = 1.0F;
 	}
 
 	void OnGUI(){
