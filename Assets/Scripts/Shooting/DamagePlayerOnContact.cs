@@ -17,10 +17,10 @@ public class DamagePlayerOnContact : MonoBehaviour
 
 	void Start()
 	{
-		if (GetComponent<BoxCollider2D> () == null ||
-			GetComponent<Rigidbody2D> () == null)
+		if ((GetComponent<BoxCollider2D> () == null && GetComponent<PolygonCollider2D>() == null
+		     && GetComponent<CircleCollider2D>() == null) || GetComponent<Rigidbody2D> () == null)
 		{
-			throw new MissingComponentException("Must have both BoxCollider2D and Rigidbody2D" +
+			throw new MissingComponentException("Must have both ~Collider2D and Rigidbody2D" +
 			                                    "components attached.");
 		}
 	}

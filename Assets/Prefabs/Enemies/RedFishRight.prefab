@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 0}
-  remains: {fileID: 100000, guid: 9daee14428d5ab844b74458b648bb0bd, type: 2}
+  remains: {fileID: 100032, guid: 29ecdebf926274d4db82a395e7d45e48, type: 2}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
   randomise: 0

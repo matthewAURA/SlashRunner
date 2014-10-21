@@ -21,7 +21,7 @@ public class Health : MonoBehaviour {
 		}
 	}
 
-	protected virtual void OnHealthChange() {
+	public virtual void OnHealthChange() {
 
 	}
 	
@@ -35,18 +35,18 @@ public class Health : MonoBehaviour {
 
 	}
 
-	protected void Die(){
+	protected virtual void Die(){
 
 		BeforeDeath ();
 
 		if (dieSound != null) {
 			AudioSource.PlayClipAtPoint (dieSound, transform.position);	
 		}
-		
 
 		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
 		Destroy (o);
 		AfterDeath ();
 
 	}
+
 }
