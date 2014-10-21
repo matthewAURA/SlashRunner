@@ -20,6 +20,9 @@ public class Success : MonoBehaviour {
 		// Attempt to get the Collider2D object's GameObject. If parent existed, get the parent GameObject instead.
 		GameObject o = other.gameObject;
 		if (o.tag == "Player") {
+			if (!PlayerPrefs.HasKey(Scene_Tracking.GetNextLevelInGame())) {
+				PlayerPrefs.SetInt(Scene_Tracking.GetNextLevelInGame(), 1);
+			}
 			Application.LoadLevel("LevelEndSuccess");
 		}
 	}	
