@@ -218,21 +218,8 @@ public class Avatar : Destructible, EnemyAttackListener {
 			AudioSource.PlayClipAtPoint (slashSound, transform.position);	
 		}
 		
-		switch (attack) {
-		case Attack.JUMPSWIPE:
-			SendAttackMessage(attack, 0.3f);
-			break;
-		case Attack.LOWSWIPE:
-			SendAttackMessage(attack, 0.2f);
-			break;
-		case Attack.JUMPSTOMP:
-			SendAttackMessage(attack, 1f);
-			break;
-		case Attack.OVERHEADSWIPE:
-			SendAttackMessage(attack, 0.2f);
-			break;
-		default:
-			break;
+		for (int i = attackListenerList.Count - 1; i >= 0; i--) {
+			attackListenerList[i].OnAvatarAttack(attack);
 		}
 		
 	}
@@ -297,22 +284,5 @@ public class Avatar : Destructible, EnemyAttackListener {
 		yield return new WaitForSeconds(waitTime);
 		//Continue with after death scene
 		AfterDeath ();
-	}
-	
-	public void SendAttackMessage(Avatar.Attack attack, float delayTime) {
-	
-		if(attack == Avatar.Attack.JUMPSTOMP) {
-			Time.timeScale = 0.5F;
-		}
-		
-		StartCoroutine(DelayDamage(attack, delayTime));
-	}
-	
-	public IEnumerator DelayDamage(Avatar.Attack attack, float delayTime) {
-		yield return new WaitForSeconds(delayTime);// waits 5 seconds
-		Time.timeScale = 1.0F;
-		for (int i = attackListenerList.Count - 1; i >= 0; i--) {
-			attackListenerList[i].OnAvatarAttack(attack);
-		}
 	}
 }

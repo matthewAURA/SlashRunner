@@ -33,9 +33,17 @@ public class Destructible : Health, AvatarAttackListener {
 
 	protected override void BeforeDeath(){
 
+		GameObject attackRangeBox = this.gameObject.transform.parent.Find ("AttackRange").gameObject;
+		if(attackRangeBox != null) {
+			Destroy (attackRangeBox);
+		}
+
 		if (dieSound != null) {
 			AudioSource.PlayClipAtPoint (dieSound, transform.position);	
 		}
+		
+		// TODO: ADD DELAY
+		
 		this.Destruct ();
 	}
 
