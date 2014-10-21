@@ -9,7 +9,6 @@ public class HUDScript : MonoBehaviour {
 	private bool isSoundEffectMuted = true;
 	private string soundEffectButton;
 
-
 	void Start(){
 		playerScore = PlayerPrefs.GetInt ("Score");
 	}

@@ -40,4 +40,9 @@ public class Scene_Tracking : MonoBehaviour {
 		return scenes[nextLevel];
 	}
 
+	public static string GetNextLevelInGame() {
+		int nextLevel = scenes.IndexOf(currentScene) + 1;
+		return scenes[nextLevel];
+	}
+
 }

@@ -512,7 +512,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 408484371}
   - 212: {fileID: 408484370}
-  - 61: {fileID: 408484372}
+  - 61: {fileID: 408484373}
+  - 114: {fileID: 408484372}
   m_Layer: 0
   m_Name: Level 4
   m_TagString: Untagged
@@ -549,12 +550,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 408484369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.42482, y: .08101964, z: -.00830078125}
+  m_LocalPosition: {x: 102.42482, y: .0279242992, z: -.00830078125}
   m_LocalScale: {x: 2.6989944, y: 2.69899416, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 24
---- !u!61 &408484372
+--- !u!114 &408484372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 408484369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d32aa31b4686d74a91190acb6ae2b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: level03
+--- !u!61 &408484373
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -636,7 +649,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 486668864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d32aa31b4686d74a91190acb6ae2b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: level02
@@ -714,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: HighScores
 --- !u!1 &659911379
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: Settings
 --- !u!1 &713706657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,6 +1176,7 @@ GameObject:
   - 4: {fileID: 1043104020}
   - 212: {fileID: 1043104019}
   - 61: {fileID: 1043104018}
+  - 114: {fileID: 1043104021}
   m_Layer: 0
   m_Name: Level5
   m_TagString: Untagged
@@ -1215,6 +1229,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 25
+--- !u!114 &1043104021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043104017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d32aa31b4686d74a91190acb6ae2b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: level04
 --- !u!1 &1063517893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,6 +1354,7 @@ GameObject:
   - 4: {fileID: 1178127952}
   - 212: {fileID: 1178127951}
   - 61: {fileID: 1178127950}
+  - 114: {fileID: 1178127953}
   m_Layer: 0
   m_Name: Level 6
   m_TagString: Untagged
@@ -1380,6 +1407,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 26
+--- !u!114 &1178127953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1178127949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d32aa31b4686d74a91190acb6ae2b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: level05
 --- !u!1 &1193293871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,7 +1624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: Achievements
 --- !u!1 &1643005088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,7 +1983,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2077167844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.459946, y: 2.24624872, z: -.00830078125}
+  m_LocalPosition: {x: 102.433403, y: 2.24624872, z: -.00830078125}
   m_LocalScale: {x: 2.64848733, y: 2.64848542, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1957,7 +1996,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2077167844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d32aa31b4686d74a91190acb6ae2b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: level01

@@ -24,6 +24,10 @@ public class ScoringSystem : MonoBehaviour {
 		playerScore.score += amount * multiple;
 	}
 
+	public float GetScore(){
+		return playerScore.score;
+	}
+
 	private void SaveScores(){
 		var binaryFormmater = new BinaryFormatter();
 		var memoryStream = new MemoryStream();
