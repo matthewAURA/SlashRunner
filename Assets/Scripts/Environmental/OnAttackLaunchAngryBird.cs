@@ -15,6 +15,8 @@ public class OnAttackLaunchAngryBird : MonoBehaviour, AvatarAttackListener
 	public float xTarget = 0f;
 	public float yTarget = 0f;
 
+	public AudioClip angryBirdSound;
+
 	/// <summary>
 	/// Prefab of the remains after explosion
 	/// i.e. crater, coins, dead enemies
@@ -31,6 +33,11 @@ public class OnAttackLaunchAngryBird : MonoBehaviour, AvatarAttackListener
 	/// </summary>
 	public void OnAvatarAttack(Avatar.Attack attack)
 	{
+
+		if (angryBirdSound != null) {
+			AudioSource.PlayClipAtPoint (angryBirdSound, transform.position);	
+		}
+
 		Avatar.attackListenerList.Remove (this);
 
 		// Launched bird should be affected by physics
