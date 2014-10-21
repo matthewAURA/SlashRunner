@@ -29,61 +29,69 @@ public class HUDScript : MonoBehaviour {
 
 	void OnGUI(){
 		GUIStyle style = new GUIStyle ();
-		style.fontSize = 30;
-		GUI.Label (new Rect (0, 0, 100, 30), "Score: " + (playerScore), style);
-		image = (Texture)Resources.Load ("gold-coin-icon");
+		style.fontSize = (int)(Screen.width * 0.035f);
+		GUI.Label (new Rect (0, 0, Screen.width * 0.02f,Screen.height * 0.02f), "Score: " + (playerScore), style);
+		Texture image = (Texture)Resources.Load ("shadedDark14");
+		GUIContent content = new GUIContent();
 		content.image = image;
-		GUI.Label (new Rect (180, -5, 50, 50), content);
-		GUI.Label (new Rect (220, 0, 100, 30),"  " + coin.ToString(), style);
-		image = (Texture)Resources.Load ("shadedDark14");
-		content.image = image;
-		if (GUI.Button (new Rect (Screen.width - 50, 0, 40, 40), image)) {
+		if (GUI.Button (new Rect (Screen.width - Screen.width * 0.07f, Screen.height * 0.03f, Screen.width * 0.05f, Screen.width * 0.05f), image)) {
 			pause = true;
 		}
-		int left = Screen.width / 2 - 150 / 2;
+
+		float left = 150;
+		style.fontSize = (int)(Screen.width * 0.01f);
 		if (pause) {
-			GUI.Box(new Rect( Screen.width / 2 - 170 / 2, 100, 170, 245), "Menu");
-			if (GUI.Button (new Rect(left, 140, 150, 40), "Resume")){
+			image = (Texture)Resources.Load ("Resume");
+			content.image = image;
+			if (GUI.Button (new Rect( Screen.width / 2 - Screen.width / 12, Screen.height / 2 - Screen.height / 5f, Screen.width /5 , Screen.height / 15), image)){
 				pause = false;
 				Time.timeScale = 1;
 			}
-			if (GUI.Button (new Rect(left , 180, 150, 40), "Exit to Main Menu")){
+			image = (Texture)Resources.Load ("ExitToMenu");
+			content.image = image;
+			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 12, Screen.height / 2 - Screen.height / 8.4f, Screen.width / 5 , Screen.height / 15), image)){
 				Application.LoadLevel("Menus");
 			}
-			if (GUI.Button (new Rect(left , 220, 150, 40), "Quit")){
+			image = (Texture)Resources.Load ("QuitGame");
+			content.image = image;
+			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 12, Screen.height / 2 - Screen.height / 25f, Screen.width / 5 , Screen.height / 15), image)){
 				Application.Quit();
 			}
 			if (isMusicMuted){
-				musicButton = "ON";
+				image = (Texture)Resources.Load ("Music");
+				content.image = image;
 			}else{
-				musicButton = "OFF";
+				image = (Texture)Resources.Load ("NoMusic");
+				content.image = image;
 			}
-			GUI.Label(new Rect (left , 275, 150, 40),"Music");
-			if (GUI.Button (new Rect(left + 90, 270, 40, 30), musicButton)){
+			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 12, Screen.height / 2  + Screen.height / 25f, Screen.width / 5 , Screen.height / 15), image)){
 				if(isMusicMuted == true){
-					Debug.Log(true);
-					musicButton = "OFF";
+					image = (Texture)Resources.Load ("NoMusic");
+					content.image = image;
 					isMusicMuted = false;
 				}else{
-					Debug.Log(false);
-					musicButton = "ON";
+					image = (Texture)Resources.Load ("Music");
+					content.image = image;
 					isMusicMuted = true;
 				}
 			}
 			if (isSoundEffectMuted){
-				soundEffectButton = "ON";
+				image = (Texture)Resources.Load ("SoundEffect");
+				content.image = image;
 			}else{
-				soundEffectButton = "OFF";
+				image = (Texture)Resources.Load ("NoSoundEffect");
+				content.image = image;
 			}
-			GUI.Label(new Rect (left , 305, 150, 40),"Sound Effect");
-			if (GUI.Button (new Rect(left + 90, 310, 40, 30), soundEffectButton)){
+			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 12, Screen.height / 2  + Screen.height / 8.5f, Screen.width / 5 , Screen.height / 15), image)){
 				if(isSoundEffectMuted == true){
 					Debug.Log(true);
-					soundEffectButton = "OFF";
+					image = (Texture)Resources.Load ("NoSoundEffect");
+					content.image = image;
 					isSoundEffectMuted = false;
 				}else{
 					Debug.Log(false);
-					soundEffectButton = "ON";
+					image = (Texture)Resources.Load ("SoundEffect");
+					content.image = image;
 					isSoundEffectMuted = true;
 				}
 			}
