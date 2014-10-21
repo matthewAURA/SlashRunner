@@ -138,7 +138,7 @@ public class Avatar : Destructible, EnemyAttackListener {
 	public void GoBerserk() {
 		if (powerUp != null) {
 			powerUp.UsePowerUp (this);
-			setPowerUp(null);
+
 
 			if (blastSound != null && powerUp is DoPowerBlast) {
 				AudioSource.PlayClipAtPoint (blastSound, transform.position);	
@@ -149,6 +149,8 @@ public class Avatar : Destructible, EnemyAttackListener {
 			if (slowSound != null && powerUp is PowerSlowMotion) {
 				AudioSource.PlayClipAtPoint (slowSound, transform.position);	
 			}
+
+			setPowerUp(null);
 		}
 	}
 
