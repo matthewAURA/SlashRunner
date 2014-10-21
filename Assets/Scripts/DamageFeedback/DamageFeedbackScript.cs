@@ -2,44 +2,37 @@
 using System.Collections;
 
 public class DamageFeedbackScript : MonoBehaviour {
-	Vector3 originalCameraPosition;
-	Vector3 camPos;
-	float shakeAmt = 0;
+	public float shakeAmt = 0.15f; // Shake variable to make the shake harder
 	
-	public Camera mainCamera;
+	public Camera mainCamera;// Camera that will be shaked
 
-	void Start(){
-		Debug.Log("OASHD:OASHBF:OBHSFA");
-	}
-
+	// If player collides to enemy, invoke CameraShake.
 	void OnTriggerEnter2D(Collider2D other) {
-		// Attempt to get the Collider2D object's GameObject. If parent existed, get the parent GameObject instead.
 		GameObject o = other.gameObject;
 		if (o.tag == "Player") {
-			Debug.Log("OASHD:OASHBF:OBHSFA");
-			shakeAmt = 0.15f;
 			InvokeRepeating("CameraShake", 0, .01f);
 			Invoke("StopShaking", 0.3f);
 		}
-
-		
 	}
-	
+
+	// Shake camera logic
 	void CameraShake()
 	{
 		if(shakeAmt>0) 
 		{
 			Time.timeScale = 0.8f;
 			float quakeAmt = Random.value*shakeAmt*2 - shakeAmt;
-			Vector3 pp = mainCamera.transform.position;
-			pp.y+= quakeAmt; // can also add to x and/or z
-			mainCamera.transform.position = pp;
+			// move the camera to quakeAmt
+			Vector3 pos = mainCamera.transform.position;
+			pos.y+= quakeAmt;
+			pos.x += quakeAmt;
+			mainCamera.transform.position = pos;
 		}
 	}
-	
+
+	// Stop the camera from shaking
 	void StopShaking()
 	{
-
 		CancelInvoke("CameraShake");
 		Time.timeScale = 1;
 
