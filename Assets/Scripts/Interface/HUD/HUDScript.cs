@@ -20,59 +20,69 @@ public class HUDScript : MonoBehaviour {
 
 	void OnGUI(){
 		GUIStyle style = new GUIStyle ();
-		style.fontSize = (int)(Screen.width * 0.02f);
+		style.fontSize = (int)(Screen.width * 0.035f);
 		GUI.Label (new Rect (0, 0, Screen.width * 0.02f,Screen.height * 0.02f), "Score: " + (playerScore), style);
 		Texture image = (Texture)Resources.Load ("shadedDark14");
 		GUIContent content = new GUIContent();
 		content.image = image;
-		if (GUI.Button (new Rect (Screen.width - Screen.width * 0.05f, Screen.height * 0.03f, Screen.width * 0.04f, Screen.width * 0.04f), image)) {
+		if (GUI.Button (new Rect (Screen.width - Screen.width * 0.07f, Screen.height * 0.03f, Screen.width * 0.05f, Screen.width * 0.05f), image)) {
 			pause = true;
 		}
+
 		float left = 150;
 		style.fontSize = (int)(Screen.width * 0.01f);
 		if (pause) {
-			GUI.Box(new Rect( Screen.width / 2 - Screen.width / 12, Screen.height / 2 - Screen.height / 4, Screen.width / 6 , Screen.height / 2.5f), "Menu");
-			if (GUI.Button (new Rect( Screen.width / 2 - Screen.width / 14, Screen.height / 2 - Screen.height / 5f, Screen.width / 7 , Screen.height / 15), "Resume")){
+			image = (Texture)Resources.Load ("Resume");
+			content.image = image;
+			if (GUI.Button (new Rect( Screen.width / 2 - Screen.width / 12, Screen.height / 2 - Screen.height / 5f, Screen.width /5 , Screen.height / 15), image)){
 				pause = false;
 				Time.timeScale = 1;
 			}
-			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 14, Screen.height / 2 - Screen.height / 7.4f, Screen.width / 7 , Screen.height / 15), "Exit to Main Menu")){
+			image = (Texture)Resources.Load ("ExitToMenu");
+			content.image = image;
+			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 12, Screen.height / 2 - Screen.height / 8.4f, Screen.width / 5 , Screen.height / 15), image)){
 				Application.LoadLevel("Menus");
 			}
-			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 14, Screen.height / 2 - Screen.height / 14.5f, Screen.width / 7 , Screen.height / 15), "Quit Game")){
+			image = (Texture)Resources.Load ("QuitGame");
+			content.image = image;
+			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 12, Screen.height / 2 - Screen.height / 25f, Screen.width / 5 , Screen.height / 15), image)){
 				Application.Quit();
 			}
 			if (isMusicMuted){
-				musicButton = "ON";
+				image = (Texture)Resources.Load ("Music");
+				content.image = image;
 			}else{
-				musicButton = "OFF";
+				image = (Texture)Resources.Load ("NoMusic");
+				content.image = image;
 			}
-			GUI.Label(new Rect (Screen.width / 2 - Screen.width / 14, Screen.height / 2 - Screen.height / 15f +  Screen.height / 13, Screen.width / 7 , Screen.height / 15),"Music");
-			if (GUI.Button (new Rect(Screen.width / 2, Screen.height / 2 - Screen.height / 15f +  Screen.height / 14, Screen.width / 35 , Screen.height / 20), musicButton)){
+			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 12, Screen.height / 2  + Screen.height / 25f, Screen.width / 5 , Screen.height / 15), image)){
 				if(isMusicMuted == true){
-					Debug.Log(true);
-					musicButton = "OFF";
+					image = (Texture)Resources.Load ("NoMusic");
+					content.image = image;
 					isMusicMuted = false;
 				}else{
-					Debug.Log(false);
-					musicButton = "ON";
+					image = (Texture)Resources.Load ("Music");
+					content.image = image;
 					isMusicMuted = true;
 				}
 			}
 			if (isSoundEffectMuted){
-				soundEffectButton = "ON";
+				image = (Texture)Resources.Load ("SoundEffect");
+				content.image = image;
 			}else{
-				soundEffectButton = "OFF";
+				image = (Texture)Resources.Load ("NoSoundEffect");
+				content.image = image;
 			}
-			GUI.Label(new Rect(Screen.width / 2 - Screen.width / 14, Screen.height / 2 - Screen.height / 15f +  Screen.height * 2f / 14 , Screen.width / 7 , Screen.height / 15),"Sound Effect");
-			if (GUI.Button (new Rect(Screen.width / 2 , Screen.height / 2 - Screen.height / 15f +  Screen.height * 2f / 14 , Screen.width / 35 , Screen.height / 20), soundEffectButton)){
+			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 12, Screen.height / 2  + Screen.height / 8.5f, Screen.width / 5 , Screen.height / 15), image)){
 				if(isSoundEffectMuted == true){
 					Debug.Log(true);
-					soundEffectButton = "OFF";
+					image = (Texture)Resources.Load ("NoSoundEffect");
+					content.image = image;
 					isSoundEffectMuted = false;
 				}else{
 					Debug.Log(false);
-					soundEffectButton = "ON";
+					image = (Texture)Resources.Load ("SoundEffect");
+					content.image = image;
 					isSoundEffectMuted = true;
 				}
 			}
