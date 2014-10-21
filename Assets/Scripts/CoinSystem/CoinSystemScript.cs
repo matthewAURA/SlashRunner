@@ -12,6 +12,7 @@ public class CoinSystemScript : MonoBehaviour {
 	}
 	public void AddCoin(int amount){
 		coin += amount;
+		Debug.Log (coin);
 	}
 
 	void Update(){

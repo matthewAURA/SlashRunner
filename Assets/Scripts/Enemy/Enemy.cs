@@ -23,6 +23,7 @@ public class Enemy : Destructible
 
 	public bool randomise = false;
 	public int scoreOnKill = 1000;
+	public int coinWorth = 1;
 
 	public ShieldType shieldType = ShieldType.Short;
 	public ShieldPosition shieldPosition = ShieldPosition.Middle;
@@ -171,6 +172,10 @@ public class Enemy : Destructible
 		GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
 		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
 		s.IncreaseScore(scoreOnKill);
+
+		GameObject coinSystem = GameObject.FindGameObjectWithTag("MainCamera");
+		CoinSystemScript c = (CoinSystemScript)coinSystem.GetComponent("CoinSystemScript");
+		c.AddCoin(coinWorth);
 	}
 
 }

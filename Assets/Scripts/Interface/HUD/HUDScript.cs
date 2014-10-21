@@ -12,11 +12,13 @@ public class HUDScript : MonoBehaviour {
 	private Texture image;
 	private GUIContent content;
 	private int coin;
+	private int initialCoin;
 
 	void Start(){
 		playerScore = PlayerPrefs.GetInt ("Score");
 		content = new GUIContent ();
 		coin = PlayerPrefs.GetInt ("Coins");
+		initialCoin = coin;
 		if (coin == null) {
 			coin = 0;	
 		}
@@ -29,17 +31,24 @@ public class HUDScript : MonoBehaviour {
 
 	void OnGUI(){
 		GUIStyle style = new GUIStyle ();
-		style.fontSize = (int)(Screen.width * 0.035f);
-		GUI.Label (new Rect (0, 0, Screen.width * 0.02f,Screen.height * 0.02f), "Score: " + (playerScore), style);
-		Texture image = (Texture)Resources.Load ("shadedDark14");
 		GUIContent content = new GUIContent();
+		style.fontSize = (int)(Screen.width * 0.04f);
+
+		//Score
+		GUI.Label (new Rect (Screen.width * 0.01f, Screen.height * 0.01f, Screen.width * 0.2f,Screen.height * 0.1f), "Score: " + (playerScore), style);
+
+		//Coin
+		Texture image = (Texture)Resources.Load ("gold-coin-icon");
+		GUI.Label (new Rect (Screen.width * 0.28f, 0, Screen.width * 0.1f,Screen.height * 0.1f), image);
+		GUI.Label (new Rect (Screen.width * 0.35f, Screen.height * 0.01f, Screen.width * 0.1f,Screen.height * 0.1f), (coin - initialCoin).ToString(),style);
+
+		//Pause button
+		image = (Texture)Resources.Load ("shadedDark14");
 		content.image = image;
-		if (GUI.Button (new Rect (Screen.width - Screen.width * 0.07f, Screen.height * 0.03f, Screen.width * 0.05f, Screen.width * 0.05f), image)) {
+		if (GUI.Button (new Rect (Screen.width - Screen.width * 0.09f, Screen.height * 0.03f, Screen.width * 0.07f, Screen.width * 0.07f), image)) {
 			pause = true;
 		}
-
-		float left = 150;
-		style.fontSize = (int)(Screen.width * 0.01f);
+		
 		if (pause) {
 			image = (Texture)Resources.Load ("Resume");
 			content.image = image;
