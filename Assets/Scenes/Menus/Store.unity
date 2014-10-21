@@ -284,6 +284,7 @@ MonoBehaviour:
   timerPowerAmount: 2000
   headerFont: {fileID: 12800000, guid: 61842f4d10fdf114c9c9944858ac76f8, type: 3}
   bodyFont: {fileID: 12800000, guid: 98b578a2a6a8dc04f8c8dd34ae0fdd84, type: 3}
+  messageInterval: 0
 --- !u!1 &1453268698
 GameObject:
   m_ObjectHideFlags: 0
