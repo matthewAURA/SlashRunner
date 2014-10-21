@@ -101,6 +101,8 @@ public class Avatar : Destructible, EnemyAttackListener {
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 			
 			// Debug.Log ("Doing Jump Attack");
+			anim.SetTrigger("char_downslash");
+			
 			FireAttackAnimation (Attack.JUMPSWIPE);
 			FireAttackActionEvent(Attack.JUMPSWIPE);	
 		}
@@ -108,18 +110,24 @@ public class Avatar : Destructible, EnemyAttackListener {
 	
 	public void Pierce () {
 		// Debug.Log ("Doing Pierce Attack");
+		anim.SetTrigger("char_stab");
+		
 		FireAttackAnimation (Attack.PIERCE);
 		FireAttackActionEvent(Attack.PIERCE);
 	}
 	
 	public void OverHeadSwipe () {
 		// Debug.Log ("Doing Over Head Swipe");
+		anim.SetTrigger("char_downslash");
+		
 		FireAttackAnimation (Attack.OVERHEADSWIPE);
 		FireAttackActionEvent(Attack.OVERHEADSWIPE);
 	}
 	
 	public void LowSwipe () {
 		// Debug.Log ("Doing Low Swipe Attack");
+		anim.SetTrigger("char_upslash");
+		
 		FireAttackAnimation (Attack.LOWSWIPE);
 		FireAttackActionEvent(Attack.LOWSWIPE);
 	}
@@ -130,6 +138,8 @@ public class Avatar : Destructible, EnemyAttackListener {
 			rigidbody2D.AddForce (new Vector2 (0f, (jumpForce*1.5f)));
 			
 			// Debug.Log ("Doing Jump Stomp Attack");
+			anim.SetTrigger("char_stomp");
+			
 			FireAttackAnimation(Attack.JUMPSTOMP);
 			FireAttackActionEvent(Attack.JUMPSTOMP);
 		}
@@ -207,10 +217,24 @@ public class Avatar : Destructible, EnemyAttackListener {
 		if (slashSound != null && attackListenerList.Count == 0) {
 			AudioSource.PlayClipAtPoint (slashSound, transform.position);	
 		}
-
-		for (int i = attackListenerList.Count - 1; i >= 0; i--) {
-			attackListenerList[i].OnAvatarAttack(attack);
+		
+		switch (attack) {
+		case Attack.JUMPSWIPE:
+			SendAttackMessage(attack, 0.3f);
+			break;
+		case Attack.LOWSWIPE:
+			SendAttackMessage(attack, 0.2f);
+			break;
+		case Attack.JUMPSTOMP:
+			SendAttackMessage(attack, 1f);
+			break;
+		case Attack.OVERHEADSWIPE:
+			SendAttackMessage(attack, 0.2f);
+			break;
+		default:
+			break;
 		}
+		
 	}
 
 	void OnTriggerEnter2D(Collider2D otherCollider)
@@ -273,5 +297,22 @@ public class Avatar : Destructible, EnemyAttackListener {
 		yield return new WaitForSeconds(waitTime);
 		//Continue with after death scene
 		AfterDeath ();
+	}
+	
+	public void SendAttackMessage(Avatar.Attack attack, float delayTime) {
+	
+		if(attack == Avatar.Attack.JUMPSTOMP) {
+			Time.timeScale = 0.5F;
+		}
+		
+		StartCoroutine(DelayDamage(attack, delayTime));
+	}
+	
+	public IEnumerator DelayDamage(Avatar.Attack attack, float delayTime) {
+		yield return new WaitForSeconds(delayTime);// waits 5 seconds
+		Time.timeScale = 1.0F;
+		for (int i = attackListenerList.Count - 1; i >= 0; i--) {
+			attackListenerList[i].OnAvatarAttack(attack);
+		}
 	}
 }
