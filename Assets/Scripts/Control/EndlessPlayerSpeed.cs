@@ -3,17 +3,22 @@ using System.Collections;
 
 namespace Platform {
 
-	public class EndlessPlayerSpeed : SpeedUpAvatarScript,PlatformSpawnListener {
-		
-		public PlatformSpawner spawner;
+	public class EndlessPlayerSpeed : SpeedUpAvatarScript {
+
+		private ScoringSystem s;
+		public float SpeedUpScore;
 
 		void Start(){
-			spawner.registerListener (this);
+			GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
+			this.s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
 		}
 
-		public void onPlatformSpawn(Vector3 position){
-			Debug.Log ("speed up!");
-			this.speedUp ();
+		void Update(){
+			if (s.GetScore () > SpeedUpScore) {
+				SpeedUpScore = s.GetScore() + SpeedUpScore;
+				this.speedUp ();
+				Debug.Log("speedup!");
+			}
 		}
-}
+	}
 }
