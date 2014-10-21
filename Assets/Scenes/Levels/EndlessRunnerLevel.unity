@@ -91,7 +91,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 29ae9fbff7bac05479073b1253a83456, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 29ae9fbff7bac05479073b1253a83456, type: 2}
       propertyPath: m_LocalRotation.x
@@ -123,7 +123,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 29ae9fbff7bac05479073b1253a83456, type: 2}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 29ae9fbff7bac05479073b1253a83456, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 29ae9fbff7bac05479073b1253a83456, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29ae9fbff7bac05479073b1253a83456, type: 2}
@@ -220,7 +228,7 @@ Transform:
   m_PrefabInternal: {fileID: 25538377}
   m_GameObject: {fileID: 75824270}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 309875206}
@@ -234,7 +242,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 75824270}
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 5.11999989, y: 5.11999989}
   m_Center: {x: 0, y: 0}
 --- !u!212 &75824273
@@ -767,7 +775,7 @@ Transform:
   m_PrefabInternal: {fileID: 25538377}
   m_GameObject: {fileID: 309875205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 75824271}
@@ -805,7 +813,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bdf1f39e98858a54380c0c6f78c43f2a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bdf1f39e98858a54380c0c6f78c43f2a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1126,9 +1134,9 @@ MonoBehaviour:
   remains: {fileID: 100032, guid: ee1671bb763f94a288938e426f236eff, type: 2}
   shortShield: {fileID: 2070517715}
   tallShield: {fileID: 1667664483}
-  randomise: 1
+  randomise: 0
   scoreOnKill: 1000
-  shieldType: 1
+  shieldType: 0
   shieldPosition: 0
   littleClashSound: {fileID: 8300000, guid: 6e452fbcc0e50ee41af7e6d4444ac669, type: 3}
   bigClashSound: {fileID: 8300000, guid: e6cfab1b9af633c42963a4d0e4df82c2, type: 3}
@@ -1477,9 +1485,9 @@ MonoBehaviour:
   remains: {fileID: 100032, guid: bfa6c109758e945f582b0f7c6bfef268, type: 2}
   shortShield: {fileID: 2070517715}
   tallShield: {fileID: 1667664483}
-  randomise: 1
+  randomise: 0
   scoreOnKill: 1000
-  shieldType: 2
+  shieldType: 0
   shieldPosition: 0
   littleClashSound: {fileID: 8300000, guid: 6e452fbcc0e50ee41af7e6d4444ac669, type: 3}
   bigClashSound: {fileID: 8300000, guid: e6cfab1b9af633c42963a4d0e4df82c2, type: 3}
@@ -1831,7 +1839,7 @@ Transform:
   m_PrefabInternal: {fileID: 355371885}
   m_GameObject: {fileID: 1024533216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 110, y: 2.5999999, z: 0}
+  m_LocalPosition: {x: 110, y: 2.5999999, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1288943831}
@@ -2208,6 +2216,14 @@ Prefab:
       propertyPath: tallShield
       value: 
       objectReference: {fileID: 1667664483}
+    - target: {fileID: 11400000, guid: 2928febe667e77141b59c4cfa9ce2493, type: 2}
+      propertyPath: randomise
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2928febe667e77141b59c4cfa9ce2493, type: 2}
+      propertyPath: shieldType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2928febe667e77141b59c4cfa9ce2493, type: 2}
   m_RootGameObject: {fileID: 1205228396}
@@ -2787,9 +2803,9 @@ MonoBehaviour:
   remains: {fileID: 100032, guid: 297354a78a4a547158c9f48fe9baef0c, type: 2}
   shortShield: {fileID: 2070517715}
   tallShield: {fileID: 1667664483}
-  randomise: 1
+  randomise: 0
   scoreOnKill: 1000
-  shieldType: 2
+  shieldType: 0
   shieldPosition: 0
   littleClashSound: {fileID: 8300000, guid: 6e452fbcc0e50ee41af7e6d4444ac669, type: 3}
   bigClashSound: {fileID: 8300000, guid: e6cfab1b9af633c42963a4d0e4df82c2, type: 3}
@@ -3085,7 +3101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788c54ec4be0abb4086963aab650149c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEndless: 0
+  isEndless: 1
   NUMBER_OF_HIGHSCORE: 5
   highScores: []
 --- !u!114 &1628677799
@@ -3320,7 +3336,7 @@ Transform:
   m_PrefabInternal: {fileID: 25538377}
   m_GameObject: {fileID: 1884831120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100, y: 2.5999999, z: 0}
+  m_LocalPosition: {x: 100, y: 2.5999999, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 309875206}
@@ -3402,15 +3418,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
+  remains: {fileID: 100032, guid: 29327b0bfae3ca144bf9a54a24eb15a6, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
   groundedRadius: .200000003
   grounded: 0
   slashSound: {fileID: 8300000, guid: 37906b51c8a162447858b0d686faa0c3, type: 3}
+  healthSound: {fileID: 0}
+  blastSound: {fileID: 0}
+  slowSound: {fileID: 0}
   jumpForce: 1500
   movementForce: 12
   attackAnimation: {fileID: 21300000, guid: ba61a3f6adce13e4587607c395aca5b1, type: 3}
+  playerFeet: 0
 --- !u!61 &1891374107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3629,6 +3650,10 @@ GameObject:
   - 114: {fileID: 2000434977}
   - 114: {fileID: 2000434978}
   - 114: {fileID: 2000434979}
+  - 114: {fileID: 2000434980}
+  - 114: {fileID: 2000434983}
+  - 114: {fileID: 2000434982}
+  - 114: {fileID: 2000434981}
   m_Layer: 8
   m_Name: MainCharacter
   m_TagString: Player
@@ -3688,6 +3713,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 1884831121}
+  spawner: {fileID: 2000434977}
+--- !u!114 &2000434980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000434975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdaa754ae505d458abe684dce2cdd873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increase: 2
+  SpeedUpScore: 500
+--- !u!114 &2000434981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000434975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470cc953a89b2473d8b7a9c6e6f3e678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 1771758741}
+  spawner: {fileID: 2000434977}
+--- !u!114 &2000434982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000434975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470cc953a89b2473d8b7a9c6e6f3e678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 166210704}
+  spawner: {fileID: 2000434977}
+--- !u!114 &2000434983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000434975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470cc953a89b2473d8b7a9c6e6f3e678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 1205228397}
   spawner: {fileID: 2000434977}
 --- !u!1 &2020421092
 GameObject:
@@ -3807,6 +3884,14 @@ Prefab:
       propertyPath: tallShield
       value: 
       objectReference: {fileID: 1667664483}
+    - target: {fileID: 11400000, guid: f0ae5db422beefb478e3f7774a094dad, type: 2}
+      propertyPath: randomise
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f0ae5db422beefb478e3f7774a094dad, type: 2}
+      propertyPath: shieldType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0ae5db422beefb478e3f7774a094dad, type: 2}
   m_RootGameObject: {fileID: 1771758740}
@@ -3910,6 +3995,14 @@ Prefab:
       propertyPath: tallShield
       value: 
       objectReference: {fileID: 1667664483}
+    - target: {fileID: 11400000, guid: 04809585cefc8264d84dd615af47f628, type: 2}
+      propertyPath: randomise
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 04809585cefc8264d84dd615af47f628, type: 2}
+      propertyPath: shieldType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04809585cefc8264d84dd615af47f628, type: 2}
   m_RootGameObject: {fileID: 166210703}
