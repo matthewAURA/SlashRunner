@@ -11,6 +11,8 @@ public class Barrel : Destructible {
 
 	public float jumpForce = 800f;
 
+	public bool bounce = false;
+
 	void Awake() {
 		groundCheck = transform.Find ("GroundCheck");
 	}
@@ -28,7 +30,7 @@ public class Barrel : Destructible {
 	void FixedUpdate() {
 		Rigidbody2D rigidbody = GetComponent<Rigidbody2D> ();
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundedRadius, whatIsGround);
-		if (grounded && rigidbody.velocity.y == 0) {
+		if (grounded && rigidbody.velocity.y == 0 && bounce) {
 			rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		}
 		rigidbody2D.velocity = new Vector2 (movementForce, rigidbody2D.velocity.y);
