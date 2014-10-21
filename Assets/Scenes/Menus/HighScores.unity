@@ -100,7 +100,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 372239948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
+  m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Menus
@@ -291,6 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788c54ec4be0abb4086963aab650149c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEndless: 0
+  NUMBER_OF_HIGHSCORE: 5
   highScores: []
 --- !u!1001 &1364366773
 Prefab:

@@ -401,10 +401,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1747196066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f72f12389b30a49b18be8fb7f87e6d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fdc73025200d384eb7e6e6fb712a870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Menus
+  sceneName: 
 --- !u!61 &1747196068
 BoxCollider2D:
   m_ObjectHideFlags: 0
