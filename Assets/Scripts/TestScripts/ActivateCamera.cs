@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ActivateCamera : MonoBehaviour {
 
-	public WebCamTexture cam;
+	private WebCamTexture cam;
 
 	void Start(){
 //		Vector3 scale = transform.localScale;
