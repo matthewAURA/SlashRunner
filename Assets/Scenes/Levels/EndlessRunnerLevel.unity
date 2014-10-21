@@ -3402,15 +3402,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
+  remains: {fileID: 100032, guid: 29327b0bfae3ca144bf9a54a24eb15a6, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
   groundedRadius: .200000003
   grounded: 0
   slashSound: {fileID: 8300000, guid: 37906b51c8a162447858b0d686faa0c3, type: 3}
+  healthSound: {fileID: 0}
+  blastSound: {fileID: 0}
+  slowSound: {fileID: 0}
   jumpForce: 1500
   movementForce: 12
   attackAnimation: {fileID: 21300000, guid: ba61a3f6adce13e4587607c395aca5b1, type: 3}
+  playerFeet: 0
 --- !u!61 &1891374107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3629,6 +3634,7 @@ GameObject:
   - 114: {fileID: 2000434977}
   - 114: {fileID: 2000434978}
   - 114: {fileID: 2000434979}
+  - 114: {fileID: 2000434980}
   m_Layer: 8
   m_Name: MainCharacter
   m_TagString: Player
@@ -3688,6 +3694,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 1884831121}
+  spawner: {fileID: 2000434977}
+--- !u!114 &2000434980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000434975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdaa754ae505d458abe684dce2cdd873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increase: 5
   spawner: {fileID: 2000434977}
 --- !u!1 &2020421092
 GameObject:
