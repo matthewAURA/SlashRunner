@@ -8,9 +8,11 @@ public class HUDScript : MonoBehaviour {
 	private string musicButton;
 	private bool isSoundEffectMuted = true;
 	private string soundEffectButton;
+
 	private Texture image;
 	private GUIContent content;
 	private int coin;
+
 	void Start(){
 		playerScore = PlayerPrefs.GetInt ("Score");
 		content = new GUIContent ();
