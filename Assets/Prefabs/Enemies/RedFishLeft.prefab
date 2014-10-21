@@ -200,13 +200,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  remains: {fileID: 100000, guid: 9daee14428d5ab844b74458b648bb0bd, type: 2}
+  dieSound: {fileID: 0}
+  remains: {fileID: 100032, guid: 29ecdebf926274d4db82a395e7d45e48, type: 2}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
   randomise: 0
   scoreOnKill: 1000
   shieldType: 0
   shieldPosition: -1
+  littleClashSound: {fileID: 0}
+  bigClashSound: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,9 +221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b76721a7aafea141b734111e6425267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 20
   height: 4
-  finalX: -1.5
-  finalTorque: -7
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  onProximitySound: {fileID: 0}
   componentNames: FishScript
   activateDistance: 20
 --- !u!114 &11400006
