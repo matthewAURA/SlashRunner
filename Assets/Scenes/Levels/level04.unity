@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -567,7 +567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -940,7 +940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -2079,7 +2079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -2339,7 +2339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -2487,7 +2487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -3543,7 +3543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -3680,7 +3680,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 424768585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -.0885152817, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1085692920}
@@ -3714,7 +3714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -4339,8 +4339,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .699999988}
+  m_Center: {x: -1.5, y: .200000003}
 --- !u!1 &515180811
 GameObject:
   m_ObjectHideFlags: 0
@@ -4466,7 +4466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -4958,7 +4958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -5691,7 +5691,7 @@ MonoBehaviour:
   shortShield: {fileID: 2070517715}
   tallShield: {fileID: 1667664483}
   randomise: 1
-  scoreOnKill: 1000
+  scoreOnKill: 100
   shieldType: 2
   shieldPosition: 0
   littleClashSound: {fileID: 8300000, guid: 6e452fbcc0e50ee41af7e6d4444ac669, type: 3}
@@ -5802,7 +5802,7 @@ MonoBehaviour:
   shortShield: {fileID: 2070517715}
   tallShield: {fileID: 1667664483}
   randomise: 1
-  scoreOnKill: 1000
+  scoreOnKill: 100
   shieldType: 1
   shieldPosition: 1
   littleClashSound: {fileID: 8300000, guid: 6e452fbcc0e50ee41af7e6d4444ac669, type: 3}
@@ -6090,7 +6090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -6211,7 +6211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -6638,7 +6638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -7143,7 +7143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -9430,7 +9430,7 @@ MonoBehaviour:
   shortShield: {fileID: 2070517715}
   tallShield: {fileID: 1667664483}
   randomise: 1
-  scoreOnKill: 1000
+  scoreOnKill: 100
   shieldType: 2
   shieldPosition: 0
   littleClashSound: {fileID: 8300000, guid: 6e452fbcc0e50ee41af7e6d4444ac669, type: 3}
@@ -9644,7 +9644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -10332,7 +10332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -10530,7 +10530,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1118073322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.085144043, y: 0, z: 0}
+  m_LocalPosition: {x: -.085144043, y: .0885158181, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 1212130862}
@@ -10564,7 +10564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -10762,7 +10762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -11238,7 +11238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -11367,8 +11367,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .699999988}
+  m_Center: {x: -1.5, y: .25}
 --- !u!1 &1189231653
 GameObject:
   m_ObjectHideFlags: 0
@@ -11837,7 +11837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -11958,7 +11958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -12079,7 +12079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -13568,7 +13568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -14201,7 +14201,7 @@ MonoBehaviour:
   shortShield: {fileID: 2070517715}
   tallShield: {fileID: 1667664483}
   randomise: 1
-  scoreOnKill: 1000
+  scoreOnKill: 100
   shieldType: 2
   shieldPosition: 0
   littleClashSound: {fileID: 8300000, guid: 6e452fbcc0e50ee41af7e6d4444ac669, type: 3}
@@ -14726,7 +14726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -14833,7 +14833,7 @@ MonoBehaviour:
   shortShield: {fileID: 2070517715}
   tallShield: {fileID: 1667664483}
   randomise: 1
-  scoreOnKill: 1000
+  scoreOnKill: 100
   shieldType: 2
   shieldPosition: 0
   littleClashSound: {fileID: 8300000, guid: 6e452fbcc0e50ee41af7e6d4444ac669, type: 3}
@@ -14899,7 +14899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -15093,7 +15093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -15412,8 +15412,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .600000024}
+  m_Center: {x: -1.5, y: .200000003}
 --- !u!1 &1624392921
 GameObject:
   m_ObjectHideFlags: 0
@@ -15665,8 +15665,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .600000024}
+  m_Center: {x: -1.5, y: .200000003}
 --- !u!1 &1633934277
 GameObject:
   m_ObjectHideFlags: 0
@@ -15918,7 +15918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -16319,7 +16319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -16481,7 +16481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -16722,7 +16722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -16843,7 +16843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -17517,7 +17517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -17638,7 +17638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -18174,7 +18174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -18503,8 +18503,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .699999988}
+  m_Center: {x: -1.5, y: .200000003}
 --- !u!1 &2033010138
 GameObject:
   m_ObjectHideFlags: 0
@@ -18580,7 +18580,7 @@ MonoBehaviour:
   shortShield: {fileID: 2070517715}
   tallShield: {fileID: 1667664483}
   randomise: 1
-  scoreOnKill: 1000
+  scoreOnKill: 100
   shieldType: 1
   shieldPosition: 0
   littleClashSound: {fileID: 8300000, guid: 6e452fbcc0e50ee41af7e6d4444ac669, type: 3}
@@ -19429,7 +19429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 1
   dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
-  remains: {fileID: 100002, guid: 3c403d8fd317da9418461d390ecef79a, type: 2}
+  remains: {fileID: 100010, guid: 1d82f416895404767869b303e57705d8, type: 2}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1
