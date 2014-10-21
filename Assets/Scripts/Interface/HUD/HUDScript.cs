@@ -9,6 +9,7 @@ public class HUDScript : MonoBehaviour {
 	private bool isSoundEffectMuted = true;
 	private string soundEffectButton;
 
+
 	void Start(){
 		playerScore = PlayerPrefs.GetInt ("Score");
 	}
@@ -19,25 +20,26 @@ public class HUDScript : MonoBehaviour {
 
 	void OnGUI(){
 		GUIStyle style = new GUIStyle ();
-		style.fontSize = (int)(Screen.width * 0.05f);
-		GUI.Label (new Rect (0, 0, 100, 40), "Score: " + (playerScore), style);
+		style.fontSize = (int)(Screen.width * 0.02f);
+		GUI.Label (new Rect (0, 0, Screen.width * 0.02f,Screen.height * 0.02f), "Score: " + (playerScore), style);
 		Texture image = (Texture)Resources.Load ("shadedDark14");
 		GUIContent content = new GUIContent();
 		content.image = image;
-		if (GUI.Button (new Rect (Screen.width - 50, 0, 40, 40), image)) {
+		if (GUI.Button (new Rect (Screen.width - Screen.width * 0.05f, Screen.height * 0.03f, Screen.width * 0.04f, Screen.width * 0.04f), image)) {
 			pause = true;
 		}
-		int left = Screen.width / 2 - 150 / 2;
+		float left = 150;
+		style.fontSize = (int)(Screen.width * 0.01f);
 		if (pause) {
-			GUI.Box(new Rect( Screen.width / 2 - 170 / 2, 100, 170, 245), "Menu");
-			if (GUI.Button (new Rect(left, 140, 150, 40), "Resume")){
+			GUI.Box(new Rect( Screen.width / 2 - Screen.width / 12, Screen.height / 2 - Screen.height / 4, Screen.width / 6 , Screen.height / 2.5f), "Menu");
+			if (GUI.Button (new Rect( Screen.width / 2 - Screen.width / 14, Screen.height / 2 - Screen.height / 5f, Screen.width / 7 , Screen.height / 15), "Resume")){
 				pause = false;
 				Time.timeScale = 1;
 			}
-			if (GUI.Button (new Rect(left , 180, 150, 40), "Exit to Main Menu")){
+			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 14, Screen.height / 2 - Screen.height / 7.4f, Screen.width / 7 , Screen.height / 15), "Exit to Main Menu")){
 				Application.LoadLevel("Menus");
 			}
-			if (GUI.Button (new Rect(left , 220, 150, 40), "Quit")){
+			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 14, Screen.height / 2 - Screen.height / 14.5f, Screen.width / 7 , Screen.height / 15), "Quit Game")){
 				Application.Quit();
 			}
 			if (isMusicMuted){
@@ -45,8 +47,8 @@ public class HUDScript : MonoBehaviour {
 			}else{
 				musicButton = "OFF";
 			}
-			GUI.Label(new Rect (left , 275, 150, 40),"Music");
-			if (GUI.Button (new Rect(left + 90, 270, 40, 30), musicButton)){
+			GUI.Label(new Rect (Screen.width / 2 - Screen.width / 14, Screen.height / 2 - Screen.height / 15f +  Screen.height / 13, Screen.width / 7 , Screen.height / 15),"Music");
+			if (GUI.Button (new Rect(Screen.width / 2, Screen.height / 2 - Screen.height / 15f +  Screen.height / 14, Screen.width / 35 , Screen.height / 20), musicButton)){
 				if(isMusicMuted == true){
 					Debug.Log(true);
 					musicButton = "OFF";
@@ -62,8 +64,8 @@ public class HUDScript : MonoBehaviour {
 			}else{
 				soundEffectButton = "OFF";
 			}
-			GUI.Label(new Rect (left , 305, 150, 40),"Sound Effect");
-			if (GUI.Button (new Rect(left + 90, 310, 40, 30), soundEffectButton)){
+			GUI.Label(new Rect(Screen.width / 2 - Screen.width / 14, Screen.height / 2 - Screen.height / 15f +  Screen.height * 2f / 14 , Screen.width / 7 , Screen.height / 15),"Sound Effect");
+			if (GUI.Button (new Rect(Screen.width / 2 , Screen.height / 2 - Screen.height / 15f +  Screen.height * 2f / 14 , Screen.width / 35 , Screen.height / 20), soundEffectButton)){
 				if(isSoundEffectMuted == true){
 					Debug.Log(true);
 					soundEffectButton = "OFF";
