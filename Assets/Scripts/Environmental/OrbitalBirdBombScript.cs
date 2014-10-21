@@ -15,6 +15,7 @@ public class OrbitalBirdBombScript : MonoBehaviour
 	public float xTarget;
 	public float yTarget;
 
+	public AudioClip explosionSound;
 	/// <summary>
 	/// This sprite for the bomb
 	/// </summary>
@@ -87,6 +88,11 @@ public class OrbitalBirdBombScript : MonoBehaviour
 	
 	void PlayAnimation()
 	{
+
+		if (explosionSound != null) {
+			AudioSource.PlayClipAtPoint (explosionSound, transform.position);	
+		}
+
 		var explosionObj = (GameObject)Instantiate (explosion);
 		explosionObj.transform.localScale = new Vector3 (40, 15);
 		Destroy (explosionObj, 1);

@@ -16,6 +16,7 @@ public class OnAttackLaunchAngryBird : MonoBehaviour, AvatarAttackListener
 	public float yTarget = 0f;
 
 	public AudioClip angryBirdSound;
+	public AudioClip explosionSound;
 
 	/// <summary>
 	/// Prefab of the remains after explosion
@@ -62,6 +63,7 @@ public class OnAttackLaunchAngryBird : MonoBehaviour, AvatarAttackListener
 		bombScript.bomb = gameObject.GetComponent<SpriteRenderer> ().sprite;
 		bombScript.remains = remains;
 		bombScript.explosion = explosion;
+		bombScript.explosionSound = explosionSound;
 
 		// Configure bomb animation to play on a set distance
 		var onProximity = proximityTrigger.AddComponent<OnProximity> ();
