@@ -21,6 +21,9 @@ public class Success : MonoBehaviour {
 		GameObject o = other.gameObject;
 
 		if (o.tag == "Player") {
+			if (!PlayerPrefs.HasKey(Scene_Tracking.GetNextLevelInGame())) {
+				PlayerPrefs.SetInt(Scene_Tracking.GetNextLevelInGame(), 1);
+			}
 			Application.LoadLevel("LevelEndSuccess");
 		}
 	}	

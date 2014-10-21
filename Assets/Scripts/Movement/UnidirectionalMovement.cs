@@ -20,6 +20,7 @@ public sealed class UnidirectionalMovement : Movement
 
 	protected sealed override void ComputeMovement()
 	{
+		speed2d = new Vector2 (speed, speed);
 		// Compute directional velocity
 		movement = new Vector2(
 			speed2d.x * direction.x,
