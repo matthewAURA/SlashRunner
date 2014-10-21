@@ -1086,7 +1086,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &236561805
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1150,7 +1150,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &247381435
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1255,6 +1255,7 @@ MonoBehaviour:
   tallShield: {fileID: 1667664483}
   randomise: 1
   scoreOnKill: 1000
+  coinWorth: 1
   shieldType: 1
   shieldPosition: 1
   littleClashSound: {fileID: 0}
@@ -1382,6 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreReward: 200
+  coinAmount: 1
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
 --- !u!82 &277947233
 AudioSource:
@@ -1490,6 +1492,7 @@ MonoBehaviour:
   tallShield: {fileID: 1667664483}
   randomise: 1
   scoreOnKill: 1000
+  coinWorth: 1
   shieldType: 1
   shieldPosition: 1
   littleClashSound: {fileID: 0}
@@ -1578,7 +1581,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &317032435
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1878,7 +1881,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &368058989
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2221,7 +2224,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &435258095
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2421,7 +2424,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &458312396
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2573,7 +2576,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &484353468
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3019,6 +3022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreReward: 200
+  coinAmount: 1
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
 --- !u!212 &600716365
 SpriteRenderer:
@@ -3321,6 +3325,7 @@ MonoBehaviour:
   tallShield: {fileID: 1667664483}
   randomise: 1
   scoreOnKill: 1000
+  coinWorth: 1
   shieldType: 1
   shieldPosition: 1
   littleClashSound: {fileID: 0}
@@ -3485,7 +3490,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &731701292
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3806,7 +3811,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &811862738
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4052,6 +4057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreReward: 200
+  coinAmount: 1
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
 --- !u!212 &869741383
 SpriteRenderer:
@@ -4199,7 +4205,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &872048830
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4349,6 +4355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreReward: 200
+  coinAmount: 1
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
 --- !u!212 &907410222
 SpriteRenderer:
@@ -4569,7 +4576,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &949855669
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4625,6 +4632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreReward: 200
+  coinAmount: 1
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
 --- !u!212 &974877889
 SpriteRenderer:
@@ -5004,7 +5012,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &1063548022
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5472,7 +5480,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &1189231655
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5621,7 +5629,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &1213165032
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5685,7 +5693,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &1259425593
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6133,7 +6141,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &1433470851
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6236,6 +6244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreReward: 200
+  coinAmount: 1
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
 --- !u!82 &1439319608
 AudioSource:
@@ -6716,6 +6725,7 @@ MonoBehaviour:
   tallShield: {fileID: 1667664483}
   randomise: 1
   scoreOnKill: 1000
+  coinWorth: 1
   shieldType: 1
   shieldPosition: 1
   littleClashSound: {fileID: 0}
@@ -7092,6 +7102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreReward: 200
+  coinAmount: 1
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
 --- !u!212 &1591035265
 SpriteRenderer:
@@ -7239,7 +7250,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &1592706152
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7452,6 +7463,7 @@ GameObject:
   - 114: {fileID: 1628677793}
   - 114: {fileID: 1628677799}
   - 114: {fileID: 1628677798}
+  - 114: {fileID: 1628677800}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7568,6 +7580,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd8612899ee22248a77fb33e64701f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1628677800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1628677791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae117f50684421b49a421f5d9598889e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1641003435
 GameObject:
   m_ObjectHideFlags: 0
@@ -7616,6 +7639,7 @@ MonoBehaviour:
   tallShield: {fileID: 1667664483}
   randomise: 1
   scoreOnKill: 1000
+  coinWorth: 1
   shieldType: 1
   shieldPosition: 1
   littleClashSound: {fileID: 0}
@@ -7660,7 +7684,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &1644183433
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7775,7 +7799,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &1674275566
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7867,7 +7891,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &1690122394
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7959,7 +7983,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &1744578804
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8601,8 +8625,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: 2.5, y: 0}
+  m_Size: {x: 4, y: 1.5}
+  m_Center: {x: 1.5, y: 0}
 --- !u!1001 &1962188260
 Prefab:
   m_ObjectHideFlags: 0
@@ -8731,7 +8755,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &1983406117
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8795,7 +8819,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &1984992705
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8971,7 +8995,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: b053b9a8412b00e44a35f403b9949467, type: 2}
   m_IsTrigger: 0
   m_Size: {x: 8.10000038, y: .75}
-  m_Center: {x: 0, y: 1}
+  m_Center: {x: 0, y: 1.10000002}
 --- !u!212 &2077500015
 SpriteRenderer:
   m_ObjectHideFlags: 0

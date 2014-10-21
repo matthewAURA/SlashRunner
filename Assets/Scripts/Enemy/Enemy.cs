@@ -172,10 +172,6 @@ public class Enemy : Destructible
 		GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
 		ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
 		s.IncreaseScore(scoreOnKill);
-
-		GameObject coinSystem = GameObject.FindGameObjectWithTag("MainCamera");
-		CoinSystemScript c = (CoinSystemScript)coinSystem.GetComponent("CoinSystemScript");
-		c.AddCoin(coinWorth);
 	}
 
 }
