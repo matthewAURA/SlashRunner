@@ -45,8 +45,8 @@ public class HUDScript : MonoBehaviour {
 
 		//Coin
 		Texture image = (Texture)Resources.Load ("gold-coin-icon");
-		GUI.Label (new Rect (Screen.width * 0.4f, Screen.height * 0.02f, Screen.width * 0.1f,Screen.height * 0.1f), image);
-		GUI.Label (new Rect (Screen.width * 0.47f, Screen.height * 0.03f, Screen.width * 0.1f,Screen.height * 0.1f), (coin - initialCoin).ToString(),style);
+		GUI.Label (new Rect (Screen.width * 0.5f, Screen.height * 0.02f, Screen.width * 0.1f,Screen.height * 0.1f), image);
+		GUI.Label (new Rect (Screen.width * 0.57f, Screen.height * 0.03f, Screen.width * 0.1f,Screen.height * 0.1f), (coin - initialCoin).ToString(),style);
 
 		//Pause button
 		image = (Texture)Resources.Load ("Pause");
