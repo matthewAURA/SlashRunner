@@ -51,8 +51,9 @@ public class Avatar : Destructible, EnemyAttackListener {
 		inputMap.Add (MultiPlatformInputs.SwipeRight, Pierce);
 		inputMap.Add (MultiPlatformInputs.Shift, OverHeadSwipe);
 		inputMap.Add (MultiPlatformInputs.SwipeRightDown, OverHeadSwipe);
+		inputMap.Add (MultiPlatformInputs.SwipeRightDown, LowSwipe);
 		inputMap.Add (MultiPlatformInputs.DownArrow, LowSwipe);
-		inputMap.Add (MultiPlatformInputs.SwipeDownRight, LowSwipe);
+		inputMap.Add (MultiPlatformInputs.SwipeDown, LowSwipe);
 		inputMap.Add (MultiPlatformInputs.SpaceBar, JumpStomp);
 		inputMap.Add (MultiPlatformInputs.SwipeUpRightDown, JumpStomp);
 		inputMap.Add (MultiPlatformInputs.Shake, GoBerserk);
