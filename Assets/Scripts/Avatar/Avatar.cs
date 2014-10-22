@@ -242,8 +242,8 @@ public class Avatar : Destructible, EnemyAttackListener {
 		
 	}
 
-	private void sanic() {
-		
+	public void sanic() {
+		movementForce = 20f;
 	}
 
 	void Wait() 

@@ -3,10 +3,10 @@ using System.Collections;
 
 namespace Platform{
 
+[RequireComponent(typeof(AudioSource))]
 public class SanicPlatformSpawner: PlatformSpawner {
 
-	public bool sanic = false;
-
+	private bool sanic = false;
 
 	protected override bool shouldSpawnNewSection() {
 
@@ -15,6 +15,15 @@ public class SanicPlatformSpawner: PlatformSpawner {
 		}
 		return false;
 			
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		GameObject o = other.gameObject;
+		if (!sanic && o.tag == "Player") {
+			sanic = true;
+			audio.Play();
+			Debug.Log(audio);
+		}
 	}
 
 }
