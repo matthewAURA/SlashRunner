@@ -13,10 +13,9 @@ public class Health : MonoBehaviour {
 		if (DateTime.Now.Subtract(lastDamage) > healthCoolDown) {
 			hp -= amount;
 			lastDamage = DateTime.Now;
+			OnHealthChange ();
 			if (hp <= 0) {
-					Die ();
-			} else {
-					OnHealthChange ();
+				Die ();
 			}
 		}
 	}
