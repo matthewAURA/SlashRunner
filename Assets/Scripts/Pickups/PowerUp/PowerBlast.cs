@@ -23,7 +23,7 @@ public class PowerBlast : MonoBehaviour {
 		if ((o.tag == "Enemy" || o.tag == "Destructible") && o.GetComponents(typeof(AvatarAttackListener)).Length > 0) {
 			foreach(AvatarAttackListener obj in o.GetComponents(typeof(AvatarAttackListener))) {
 				//Assume that this attack will kill all enemies
-				obj.OnAvatarAttack(Avatar.Attack.JUMPSTOMP);
+				obj.OnAvatarAttack(Avatar.Attack.KILL);
 			}
 		}
 	}

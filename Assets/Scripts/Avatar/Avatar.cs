@@ -32,7 +32,7 @@ public class Avatar : Destructible, EnemyAttackListener {
 	public static List<IPowerUpChangeListener> powerUpChangeListenerList = new List<IPowerUpChangeListener>();
 
 	public enum Attack {
-		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP
+		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP, KILL
 	}
 	
 	void Awake() {
