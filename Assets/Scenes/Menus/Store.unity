@@ -328,7 +328,7 @@ MonoBehaviour:
   heartPowerAmount: 1000
   timerPowerAmount: 2000
   headerFont: {fileID: 12800000, guid: 61842f4d10fdf114c9c9944858ac76f8, type: 3}
-  bodyFont: {fileID: 12800000, guid: 98b578a2a6a8dc04f8c8dd34ae0fdd84, type: 3}
+  bodyFont: {fileID: 12800000, guid: 974447b7894fc374c8f48af54c83d99a, type: 3}
   messageInterval: 0
 --- !u!114 &1146985060
 MonoBehaviour:
