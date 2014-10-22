@@ -242,6 +242,10 @@ public class Avatar : Destructible, EnemyAttackListener {
 		
 	}
 
+	private void sanic() {
+		
+	}
+
 	void Wait() 
 	{
 		StartCoroutine(WaitToDie(1));
