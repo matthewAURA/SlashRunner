@@ -2495,7 +2495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  dieSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
   remains: {fileID: 100032, guid: 29ecdebf926274d4db82a395e7d45e48, type: 2}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
@@ -2532,7 +2532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1008617597}
-  onProximitySound: {fileID: 0}
+  onProximitySound: {fileID: 8300000, guid: 2a52fdaa45d583940813183505c8deb4, type: 3}
   componentNames: FishScript
   activateDistance: 40
 --- !u!50 &279803189
@@ -2751,7 +2751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  dieSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
   remains: {fileID: 100032, guid: 29ecdebf926274d4db82a395e7d45e48, type: 2}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
@@ -2788,7 +2788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1008617597}
-  onProximitySound: {fileID: 0}
+  onProximitySound: {fileID: 8300000, guid: 2a52fdaa45d583940813183505c8deb4, type: 3}
   componentNames: FishScript
   activateDistance: 50
 --- !u!50 &321135280
@@ -3247,7 +3247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  dieSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
   remains: {fileID: 100032, guid: 29ecdebf926274d4db82a395e7d45e48, type: 2}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
@@ -3284,7 +3284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1008617597}
-  onProximitySound: {fileID: 0}
+  onProximitySound: {fileID: 8300000, guid: 2a52fdaa45d583940813183505c8deb4, type: 3}
   componentNames: FishScript
   activateDistance: 40
 --- !u!50 &441061373
@@ -5638,8 +5638,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .600000024}
+  m_Center: {x: -1.5, y: .150000006}
 --- !u!1 &676911624
 GameObject:
   m_ObjectHideFlags: 0
@@ -5853,7 +5853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  dieSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
   remains: {fileID: 100032, guid: 29ecdebf926274d4db82a395e7d45e48, type: 2}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
@@ -5890,7 +5890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1008617597}
-  onProximitySound: {fileID: 0}
+  onProximitySound: {fileID: 8300000, guid: 2a52fdaa45d583940813183505c8deb4, type: 3}
   componentNames: FishScript
   activateDistance: 40
 --- !u!50 &685426327
@@ -8440,8 +8440,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .600000024}
+  m_Center: {x: -1.5, y: .150000006}
 --- !u!4 &894803403
 Transform:
   m_ObjectHideFlags: 0
@@ -9651,7 +9651,7 @@ MonoBehaviour:
   blastSound: {fileID: 0}
   slowSound: {fileID: 0}
   jumpForce: 1500
-  movementForce: 7
+  movementForce: 12
   attackAnimation: {fileID: 0}
   playerFeet: 0
 --- !u!61 &1008617602
@@ -10178,8 +10178,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .600000024}
+  m_Center: {x: -1.5, y: .150000006}
 --- !u!1 &1039171142
 GameObject:
   m_ObjectHideFlags: 0
@@ -11455,7 +11455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  dieSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
   remains: {fileID: 100032, guid: 29ecdebf926274d4db82a395e7d45e48, type: 2}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
@@ -11492,7 +11492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1008617597}
-  onProximitySound: {fileID: 0}
+  onProximitySound: {fileID: 8300000, guid: 2a52fdaa45d583940813183505c8deb4, type: 3}
   componentNames: FishScript
   activateDistance: 50
 --- !u!50 &1165822578
@@ -11728,8 +11728,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .600000024}
+  m_Center: {x: -1.5, y: .150000006}
 --- !u!1 &1189231653
 GameObject:
   m_ObjectHideFlags: 0
@@ -11895,7 +11895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  dieSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
   remains: {fileID: 100032, guid: 29ecdebf926274d4db82a395e7d45e48, type: 2}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
@@ -11932,7 +11932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1008617597}
-  onProximitySound: {fileID: 0}
+  onProximitySound: {fileID: 8300000, guid: 2a52fdaa45d583940813183505c8deb4, type: 3}
   componentNames: FishScript
   activateDistance: 40
 --- !u!50 &1210189103
@@ -12852,8 +12852,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .600000024}
+  m_Center: {x: -1.5, y: .150000006}
 --- !u!1 &1311022701
 GameObject:
   m_ObjectHideFlags: 0
@@ -13147,8 +13147,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .600000024}
+  m_Center: {x: -1.5, y: .150000006}
 --- !u!1001 &1350845971
 Prefab:
   m_ObjectHideFlags: 0
@@ -13374,8 +13374,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .600000024}
+  m_Center: {x: -1.5, y: .150000006}
 --- !u!1001 &1367995450
 Prefab:
   m_ObjectHideFlags: 0
@@ -16128,8 +16128,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .600000024}
+  m_Center: {x: -1.5, y: .150000006}
 --- !u!1001 &1573100116
 Prefab:
   m_ObjectHideFlags: 0
@@ -16539,6 +16539,7 @@ GameObject:
   - 114: {fileID: 1628677793}
   - 114: {fileID: 1628677799}
   - 114: {fileID: 1628677798}
+  - 114: {fileID: 1628677800}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -16653,6 +16654,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccd8612899ee22248a77fb33e64701f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1628677800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1628677791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae117f50684421b49a421f5d9598889e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1635473036
@@ -18007,8 +18019,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 3, y: 1.5}
-  m_Center: {x: -1.5, y: 0}
+  m_Size: {x: 3, y: .600000024}
+  m_Center: {x: -1.5, y: .150000006}
 --- !u!1001 &1814282942
 Prefab:
   m_ObjectHideFlags: 0
@@ -18288,7 +18300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  dieSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
   remains: {fileID: 100032, guid: 29ecdebf926274d4db82a395e7d45e48, type: 2}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
@@ -18325,7 +18337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1008617597}
-  onProximitySound: {fileID: 0}
+  onProximitySound: {fileID: 8300000, guid: 2a52fdaa45d583940813183505c8deb4, type: 3}
   componentNames: FishScript
   activateDistance: 40
 --- !u!50 &1865463550
@@ -20372,7 +20384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
-  dieSound: {fileID: 0}
+  dieSound: {fileID: 8300000, guid: cedd52114138a844094e47516c68e47f, type: 3}
   remains: {fileID: 100032, guid: 29ecdebf926274d4db82a395e7d45e48, type: 2}
   shortShield: {fileID: 0}
   tallShield: {fileID: 0}
@@ -20409,7 +20421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1008617597}
-  onProximitySound: {fileID: 0}
+  onProximitySound: {fileID: 8300000, guid: 2a52fdaa45d583940813183505c8deb4, type: 3}
   componentNames: FishScript
   activateDistance: 40
 --- !u!50 &2082603600

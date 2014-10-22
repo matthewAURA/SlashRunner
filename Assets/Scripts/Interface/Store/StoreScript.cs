@@ -160,6 +160,6 @@ public class StoreScript : MonoBehaviour {
 			}
 		}
 		style.fontSize = (int)(Screen.width * 0.04f);
-		GUI.Label(new Rect(Screen.width / 3.5f, Screen.height / 1.3f,Screen.width * 0.3f, Screen.height * 0.05f),"You have: " + coin + " coins", style);
+		GUI.Label(new Rect(Screen.width / 3.5f, Screen.height / 1.3f,Screen.width * 0.6f, Screen.height * 0.15f),"You have: " + coin + " coins", style);
 	}
 }
