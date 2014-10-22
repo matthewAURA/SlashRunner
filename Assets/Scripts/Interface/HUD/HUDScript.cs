@@ -33,14 +33,20 @@ public class HUDScript : MonoBehaviour {
 		GUIStyle style = new GUIStyle ();
 		GUIContent content = new GUIContent();
 		style.fontSize = (int)(Screen.width * 0.04f);
+		GameObject cam = GameObject.FindGameObjectWithTag("MainCamera");
+		Transform transform = cam.transform.Find ("Heart");
+		transform.localPosition = new Vector3 (-Screen.width/60f, Screen.height/63f, 1);
+
+		transform = cam.transform.Find ("PoweUpDisplay");
+		transform.localPosition = new Vector3 (Screen.width/100f, Screen.height/63f, 1);
 
 		//Score
-		GUI.Label (new Rect (Screen.width * 0.01f, Screen.height * 0.01f, Screen.width * 0.2f,Screen.height * 0.1f), "Score: " + (playerScore), style);
+		GUI.Label (new Rect (Screen.width * 0.15f, Screen.height * 0.03f, Screen.width * 0.2f,Screen.height * 0.1f), "Score: " + (playerScore), style);
 
 		//Coin
 		Texture image = (Texture)Resources.Load ("gold-coin-icon");
-		GUI.Label (new Rect (Screen.width * 0.28f, 0, Screen.width * 0.1f,Screen.height * 0.1f), image);
-		GUI.Label (new Rect (Screen.width * 0.35f, Screen.height * 0.01f, Screen.width * 0.1f,Screen.height * 0.1f), (coin - initialCoin).ToString(),style);
+		GUI.Label (new Rect (Screen.width * 0.4f, Screen.height * 0.02f, Screen.width * 0.1f,Screen.height * 0.1f), image);
+		GUI.Label (new Rect (Screen.width * 0.47f, Screen.height * 0.03f, Screen.width * 0.1f,Screen.height * 0.1f), (coin - initialCoin).ToString(),style);
 
 		//Pause button
 		image = (Texture)Resources.Load ("Pause");
