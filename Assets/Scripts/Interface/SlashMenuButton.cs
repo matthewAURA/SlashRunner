@@ -36,12 +36,12 @@ public class SlashMenuButton : MonoBehaviour {
 				endx = Input.GetTouch(0).position.x;
 				endy = Input.GetTouch(0).position.y;
 
-				if(startx < objectx && endx > objectx && (starty > objecty-veritcalSpace && endy < objecty+veritcalSpace)){
-					Debug.Log("swiped");
+				if(startx < objectx && endx > objectx && (starty > objecty-veritcalSpace && endy < objecty+veritcalSpace) || (starty < objecty+veritcalSpace && endy > objecty-veritcalSpace)){
+					gameObject.GetComponent<DestructButton>().Wait();
 				}
 
-				if(startx > objectx && endx < objectx && (starty > objecty-veritcalSpace && endy < objecty+veritcalSpace)){
-					Debug.Log("swiped");
+				else if(startx > objectx && endx < objectx && (starty > objecty-veritcalSpace && endy < objecty+veritcalSpace) || (starty < objecty+veritcalSpace && endy > objecty-veritcalSpace)){
+					gameObject.GetComponent<DestructButton>().Wait();
 				}
 
 				break;
@@ -51,5 +51,6 @@ public class SlashMenuButton : MonoBehaviour {
 
 		}
 	}
+
 
 }

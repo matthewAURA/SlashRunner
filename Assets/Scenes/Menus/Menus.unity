@@ -101,7 +101,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 2.42000008, y: 5.96999979}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!212 &143488500
 SpriteRenderer:
@@ -1020,7 +1020,6 @@ GameObject:
   - 212: {fileID: 719269576}
   - 61: {fileID: 719269575}
   - 114: {fileID: 719269578}
-  - 114: {fileID: 719269579}
   m_Layer: 0
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1079,24 +1078,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 719269574}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16715f19e28879246bad4cb959672c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 340895499}
   target: {fileID: 1193293872}
---- !u!114 &719269579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 719269574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6831658b7d0fc164dbfc9330a49057d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &780401234
 Prefab:
   m_ObjectHideFlags: 0
