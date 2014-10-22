@@ -150,5 +150,8 @@ public class AndroidInputListener : MonoBehaviour {
 		else if (directionList.Count > 0 && directionList[0].Equals(CurrentDir.up)) {
 			inputMap.FireInputEvents(MultiPlatformInputs.SwipeUp);
 		}
+		else if (directionList.Count > 0 && directionList[0].Equals(CurrentDir.down)) {
+			inputMap.FireInputEvents(MultiPlatformInputs.SwipeDown);
+		}
 	}
 }
