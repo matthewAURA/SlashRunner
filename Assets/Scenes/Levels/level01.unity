@@ -3848,8 +3848,7 @@ MonoBehaviour:
   movementForce: 12
   attackAnimation: {fileID: 0}
   playerFeet: 0
-  sanicSprite:
-  - {fileID: 21300002, guid: 7df0919648ee4471499195f420ed60c4, type: 3}
+  sanicAnimController: {fileID: 9100000, guid: 60e15e29db4b243a9b95a90b162baecb, type: 2}
 --- !u!61 &591252550
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15088,11 +15087,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 420.620972
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 24.7653885
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -15127,6 +15126,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300002, guid: 7df0919648ee4471499195f420ed60c4,
         type: 3}
+    - target: {fileID: 11400004, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
+      propertyPath: sanicAnimController
+      value: 
+      objectReference: {fileID: 9100000, guid: 60e15e29db4b243a9b95a90b162baecb, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
   m_RootGameObject: {fileID: 2026615341}
@@ -15154,7 +15157,7 @@ Transform:
   m_PrefabInternal: {fileID: 2010528737}
   m_GameObject: {fileID: 2026615341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 420.620972, y: 24.7653885, z: 0}
+  m_LocalPosition: {x: 30, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 591252546}
