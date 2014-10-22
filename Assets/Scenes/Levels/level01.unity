@@ -574,6 +574,45 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1 &55680914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 55680916}
+  - 61: {fileID: 55680915}
+  m_Layer: 0
+  m_Name: LargeSanicCollider
+  m_TagString: Sanic
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &55680915
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55680914}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 1, y: 20}
+  m_Center: {x: 0, y: 0}
+--- !u!4 &55680916
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55680914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 453.847687, y: 23.1079617, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
 --- !u!1 &66093432
 GameObject:
   m_ObjectHideFlags: 0
@@ -3809,6 +3848,8 @@ MonoBehaviour:
   movementForce: 12
   attackAnimation: {fileID: 0}
   playerFeet: 0
+  sanicSprite:
+  - {fileID: 21300002, guid: 7df0919648ee4471499195f420ed60c4, type: 3}
 --- !u!61 &591252550
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15003,13 +15044,17 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1078382829}
     m_Modifications:
+    - target: {fileID: 11400004, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
+      propertyPath: sanicSprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 33.916954
+      value: 420.620972
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.34919715
+      value: 24.7653885
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -15035,6 +15080,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
+      propertyPath: sanicSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
+      propertyPath: sanicSprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300002, guid: 7df0919648ee4471499195f420ed60c4,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
   m_RootGameObject: {fileID: 2026615341}
@@ -15062,7 +15116,7 @@ Transform:
   m_PrefabInternal: {fileID: 2010528737}
   m_GameObject: {fileID: 2026615341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.916954, y: 2.34919715, z: 0}
+  m_LocalPosition: {x: 420.620972, y: 24.7653885, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 591252546}

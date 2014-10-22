@@ -32,6 +32,8 @@ public class Avatar : Destructible, EnemyAttackListener {
 	public static List<IAvatarHeathChangeListener> healthChangeListenerList = new List<IAvatarHeathChangeListener>();
 	public static List<IPowerUpChangeListener> powerUpChangeListenerList = new List<IPowerUpChangeListener>();
 
+	public Sprite[] sanicSprite;
+
 	public enum Attack {
 		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP, KILL
 	}
@@ -66,7 +68,6 @@ public class Avatar : Destructible, EnemyAttackListener {
 	
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	void FixedUpdate() {
@@ -199,6 +200,15 @@ public class Avatar : Destructible, EnemyAttackListener {
 
 	void OnTriggerEnter2D(Collider2D otherCollider)
 	{
+
+		GameObject o = otherCollider.gameObject;
+
+		if (o.tag == "Sanic") {
+			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+			movementForce = 30f;
+			spriteRenderer.sprite = sanicSprite[0];
+		}
+
 		// Damage is caused if player is hit by colliders harmful to players
 		DamagePlayerOnContact damagePlayer =
 			otherCollider.GetComponent<DamagePlayerOnContact> ();
@@ -240,10 +250,6 @@ public class Avatar : Destructible, EnemyAttackListener {
 
 		Wait ();
 		
-	}
-
-	public void sanic() {
-		movementForce = 20f;
 	}
 
 	void Wait() 
