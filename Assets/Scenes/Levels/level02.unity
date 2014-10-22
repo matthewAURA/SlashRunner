@@ -1525,6 +1525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &185798054
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1961,6 +1962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &222694839
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2551,6 +2553,74 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!1 &285953769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 2a11525c5dc34e741bec398ecd202640, type: 2}
+  m_PrefabInternal: {fileID: 1881176094}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 285953770}
+  - 212: {fileID: 285953772}
+  - 114: {fileID: 285953771}
+  m_Layer: 0
+  m_Name: PoweUpDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &285953770
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 2a11525c5dc34e741bec398ecd202640, type: 2}
+  m_PrefabInternal: {fileID: 1881176094}
+  m_GameObject: {fileID: 285953769}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -52.3571587, y: 7, z: 3.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1628677792}
+  m_RootOrder: 2
+--- !u!114 &285953771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 2a11525c5dc34e741bec398ecd202640,
+    type: 2}
+  m_PrefabInternal: {fileID: 1881176094}
+  m_GameObject: {fileID: 285953769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b21ebc309b2fd42a17d3acf2be0b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  empty: {fileID: 21300006, guid: 260f14bfc045c044297968b7913cad7f, type: 3}
+  time: {fileID: 21300000, guid: 260f14bfc045c044297968b7913cad7f, type: 3}
+  blast: {fileID: 21300004, guid: 260f14bfc045c044297968b7913cad7f, type: 3}
+  health: {fileID: 21300002, guid: 260f14bfc045c044297968b7913cad7f, type: 3}
+--- !u!212 &285953772
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: 2a11525c5dc34e741bec398ecd202640,
+    type: 2}
+  m_PrefabInternal: {fileID: 1881176094}
+  m_GameObject: {fileID: 285953769}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300006, guid: 260f14bfc045c044297968b7913cad7f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &295708721
 GameObject:
   m_ObjectHideFlags: 0
@@ -4026,6 +4096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &514553306
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5208,6 +5279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &635188914
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5732,6 +5804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &676911627
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6438,6 +6511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &731673997
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9647,11 +9721,11 @@ MonoBehaviour:
   groundedRadius: .200000003
   grounded: 1
   slashSound: {fileID: 8300000, guid: 37906b51c8a162447858b0d686faa0c3, type: 3}
-  healthSound: {fileID: 0}
-  blastSound: {fileID: 0}
-  slowSound: {fileID: 0}
+  healthSound: {fileID: 8300000, guid: 3880cf5140ee94a4b8a7de806c516ab8, type: 3}
+  blastSound: {fileID: 8300000, guid: 16553f83cf24f4a48b136c24ab8ecdbf, type: 3}
+  slowSound: {fileID: 8300000, guid: 93d709fcb79ad4042967d320a0d5262a, type: 3}
   jumpForce: 1500
-  movementForce: 12
+  movementForce: 7
   attackAnimation: {fileID: 0}
   playerFeet: 0
 --- !u!61 &1008617602
@@ -12551,6 +12625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1271682737
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13072,6 +13147,10 @@ Prefab:
     - target: {fileID: 9500000, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
+      propertyPath: movementForce
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6be3c748126bd6943aac66d5034661dd, type: 2}
@@ -14162,6 +14241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1438021245
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16559,6 +16639,7 @@ Transform:
   m_Children:
   - {fileID: 1596461740}
   - {fileID: 131254939}
+  - {fileID: 285953770}
   m_Father: {fileID: 66093433}
   m_RootOrder: 8
 --- !u!114 &1628677793
@@ -17648,6 +17729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1783384984
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17851,6 +17933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1790078751
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18705,6 +18788,50 @@ Transform:
   - {fileID: 648335151}
   m_Father: {fileID: 523996509}
   m_RootOrder: 11
+--- !u!1001 &1881176094
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1628677792}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 2a11525c5dc34e741bec398ecd202640, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -52.3571587
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a11525c5dc34e741bec398ecd202640, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a11525c5dc34e741bec398ecd202640, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a11525c5dc34e741bec398ecd202640, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a11525c5dc34e741bec398ecd202640, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a11525c5dc34e741bec398ecd202640, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a11525c5dc34e741bec398ecd202640, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a11525c5dc34e741bec398ecd202640, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2a11525c5dc34e741bec398ecd202640, type: 2}
+  m_RootGameObject: {fileID: 285953769}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1889713741
 GameObject:
   m_ObjectHideFlags: 0
@@ -18900,6 +19027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1893972233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20253,6 +20381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &2060921655
 SpriteRenderer:
   m_ObjectHideFlags: 0
