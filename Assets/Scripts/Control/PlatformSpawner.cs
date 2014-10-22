@@ -105,8 +105,10 @@ public class PlatformSpawner : MonoBehaviour {
 		position.y = this.platformSpawnHeight + this.spawn.collider2D.bounds.size.y;
 		//Notifiy listeners
 		if (shouldSpawnNewGameObject()){
-			var listener = this.listeners[(int)Random.Range(0,this.listeners.Count)];
-			((PlatformSpawnListener)listener).onPlatformSpawn(position);
+			if (this.listeners.Count > 0){
+				var listener = this.listeners[(int)Random.Range(0,this.listeners.Count)];
+				((PlatformSpawnListener)listener).onPlatformSpawn(position);
+			}
 		}
 	
 
