@@ -80,7 +80,9 @@ public class StoreScript : MonoBehaviour {
 		style.alignment = TextAnchor.MiddleCenter;
 		style.fontSize = (int)(Screen.width * 0.025f);
 		if (destroyPowerup == 0) {
-			if(GUI.Button (new Rect (Screen.width /6f, Screen.height / 1.75f, Screen.width * 0.07f, Screen.height * 0.07f), "Buy")) {
+			image = (Texture)Resources.Load ("Buy");
+			content.image = image;
+			if(GUI.Button (new Rect (Screen.width /6f, Screen.height / 1.75f, Screen.width * 0.07f, Screen.height * 0.07f), image)) {
 				if (coin >= destroyPowerAmount){
 					destroyPowerup += 1;
 					PlayerPrefs.SetInt("destroyPowerup", destroyPowerup);
@@ -107,7 +109,9 @@ public class StoreScript : MonoBehaviour {
 		style.alignment = TextAnchor.MiddleCenter;
 		style.fontSize = (int)(Screen.width * 0.025f);
 		if (timerPowerup == 0) {
-			if(GUI.Button (new Rect (Screen.width /2.3f, Screen.height / 1.75f, Screen.width * 0.07f, Screen.height * 0.07f), "Buy")) {
+			image = (Texture)Resources.Load ("Buy");
+			content.image = image;
+			if(GUI.Button (new Rect (Screen.width /2.3f, Screen.height / 1.75f, Screen.width * 0.07f, Screen.height * 0.07f), image)) {
 				if (coin >= timerPowerAmount){
 					timerPowerup += 1;
 					PlayerPrefs.SetInt("timerPowerup", timerPowerup);
@@ -132,7 +136,9 @@ public class StoreScript : MonoBehaviour {
 		style.alignment = TextAnchor.MiddleCenter;
 		style.fontSize = (int)(Screen.width * 0.025f);
 		if (heartPowerup == 0) {
-			if(GUI.Button (new Rect (Screen.width /1.32f, Screen.height / 1.75f, Screen.width * 0.07f, Screen.height * 0.07f), "Buy")) {
+			image = (Texture)Resources.Load ("Buy");
+			content.image = image;
+			if(GUI.Button (new Rect (Screen.width /1.32f, Screen.height / 1.75f, Screen.width * 0.07f, Screen.height * 0.07f), image)) {
 				if (coin >= heartPowerAmount){
 					heartPowerup += 1;
 					PlayerPrefs.SetInt("heartPowerup", heartPowerup);
