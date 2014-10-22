@@ -118,6 +118,10 @@ public class Enemy : Destructible
 	public override void OnAvatarAttack(Avatar.Attack attack)
 	{
 		// Debug.Log ("Avatar Attacked Enemy");
+		if(this == null) {
+			Avatar.attackListenerList.Remove (this);
+			return;
+		}
 
 		if (shielded) {
 			switch (attack)
