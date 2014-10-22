@@ -35,10 +35,10 @@ public class HUDScript : MonoBehaviour {
 		style.fontSize = (int)(Screen.width * 0.04f);
 		GameObject cam = GameObject.FindGameObjectWithTag("MainCamera");
 		Transform transform = cam.transform.Find ("Heart");
-		transform.localPosition = new Vector3 (-Screen.width/60f, Screen.height/63f, 1);
+		transform.localPosition = new Vector3 (-14, 8.5f, 1);
 
 		transform = cam.transform.Find ("PoweUpDisplay");
-		transform.localPosition = new Vector3 (Screen.width/100f, Screen.height/63f, 1);
+		transform.localPosition = new Vector3 (9, 8.5f, 1);
 
 		//Score
 		GUI.Label (new Rect (Screen.width * 0.15f, Screen.height * 0.03f, Screen.width * 0.2f,Screen.height * 0.1f), "Score: " + (playerScore), style);
