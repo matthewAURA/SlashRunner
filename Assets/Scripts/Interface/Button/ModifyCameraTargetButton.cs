@@ -1,16 +1,16 @@
-﻿using UnityEngine;
+﻿﻿using UnityEngine;
 using System.Collections;
 
 /// <summary>
 /// Moves the camera to a new target on press.
 /// </summary>
 public class ModifyCameraTargetButton : ButtonBehaviour {
-
+	
 	/// <summary>
 	/// Camera 
 	/// </summary>
 	public GameObject cam;
-
+	
 	/// <summary>
 	/// The new camera target after button press
 	/// </summary>

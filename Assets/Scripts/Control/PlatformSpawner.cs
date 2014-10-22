@@ -62,7 +62,7 @@ public class PlatformSpawner : MonoBehaviour {
 	}
 
 
-	private bool shouldSpawnNewSection(){
+	protected virtual bool shouldSpawnNewSection(){
 		var width = this.target.collider2D.bounds.size.x;
 		return this.target.position.x + width / 2 > this.active.position.x - this.active.collider2D.bounds.size.x*2;
 	}
