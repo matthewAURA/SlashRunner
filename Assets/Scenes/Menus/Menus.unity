@@ -330,6 +330,7 @@ GameObject:
   - 114: {fileID: 340895506}
   - 114: {fileID: 340895507}
   - 82: {fileID: 340895508}
+  - 114: {fileID: 340895509}
   m_Layer: 0
   m_Name: Scaled Camera
   m_TagString: MainCamera
@@ -503,6 +504,22 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &340895509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 340895499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0adcbc817dd8648c9a5e501ff32059d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GuiSkin: {fileID: 0}
+  SignInButtonGuiSkin: {fileID: 0}
+  GooglePlusTex: {fileID: 0}
+  SignInBarTex: {fileID: 0}
+  UiBeepFx: {fileID: 0}
 --- !u!1 &394875932
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,11 +895,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 635802193}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb1679eb82bf24a48a60f2fceaf786a5, type: 3}
+  m_Script: {fileID: 11500000, guid: b921dd114127145ca9894f79bef80350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: HighScores
-  remains: {fileID: 100032, guid: ee1671bb763f94a288938e426f236eff, type: 2}
 --- !u!1 &659911379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,11 +1896,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1625714808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb1679eb82bf24a48a60f2fceaf786a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c9129e939caa4ed6b591c623621501b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Achievements
-  remains: {fileID: 100032, guid: bfa6c109758e945f582b0f7c6bfef268, type: 2}
 --- !u!1 &1643005088
 GameObject:
   m_ObjectHideFlags: 0
