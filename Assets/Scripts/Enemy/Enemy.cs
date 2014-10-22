@@ -162,6 +162,7 @@ public class Enemy : Destructible
 		}
 
 		Avatar.attackListenerList.Remove (this);
+		DetermineWaitTime(attack);
 		this.takeDamage (1);
 
 	}
