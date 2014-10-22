@@ -48,6 +48,9 @@ public class Barrel : Destructible {
 		GameObject o = other.gameObject;
 		if (o.tag == "Player" && o.GetComponents(typeof(EnemyAttackListener)).Length > 0) {
 			// Debug.Log ("Added " + o.tag + " to list");
+			GameObject barrelShake = GameObject.Find("BarrelShake");
+			DamageFeedbackScript df = (DamageFeedbackScript) barrelShake.GetComponent<DamageFeedbackScript>();
+			df.shake();
 			foreach(EnemyAttackListener obj in o.GetComponents(typeof(EnemyAttackListener))) {
 				obj.OnEnemyAttack();
 				Avatar.attackListenerList.Remove (this);

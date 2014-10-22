@@ -6,6 +6,15 @@ public class DamageFeedbackScript : MonoBehaviour {
 	
 	public Camera mainCamera;// Camera that will be shaked
 
+	void Start(){
+		mainCamera = GameObject.FindGameObjectWithTag("MainCamera").camera;
+	}
+
+	public void shake() {
+		InvokeRepeating("CameraShake", 0, .01f);
+		Invoke("StopShaking", 0.3f);
+	}
+
 	// If player collides to enemy, invoke CameraShake.
 	void OnTriggerEnter2D(Collider2D other) {
 		GameObject o = other.gameObject;

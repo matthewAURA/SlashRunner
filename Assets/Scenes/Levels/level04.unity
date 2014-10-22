@@ -1789,7 +1789,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 2928febe667e77141b59c4cfa9ce2493, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 2928febe667e77141b59c4cfa9ce2493, type: 2}
       propertyPath: hp
@@ -4637,6 +4637,7 @@ GameObject:
   - 61: {fileID: 515163269}
   - 50: {fileID: 515163268}
   - 114: {fileID: 515163267}
+  - 114: {fileID: 515163270}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -4697,6 +4698,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &515163270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1165504839}
+  m_GameObject: {fileID: 515163265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &515180811
 GameObject:
   m_ObjectHideFlags: 0
@@ -10016,7 +10031,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 04809585cefc8264d84dd615af47f628, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 04809585cefc8264d84dd615af47f628, type: 2}
       propertyPath: shortShield
@@ -11715,7 +11730,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: f0ae5db422beefb478e3f7774a094dad, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f0ae5db422beefb478e3f7774a094dad, type: 2}
       propertyPath: shortShield
@@ -11917,6 +11932,7 @@ GameObject:
   - 61: {fileID: 1186378088}
   - 50: {fileID: 1186378087}
   - 114: {fileID: 1186378086}
+  - 114: {fileID: 1186378089}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -11977,6 +11993,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1186378089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 108368861}
+  m_GameObject: {fileID: 1186378084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1189231653
 GameObject:
   m_ObjectHideFlags: 0
@@ -16119,6 +16149,7 @@ GameObject:
   - 61: {fileID: 1609320613}
   - 50: {fileID: 1609320612}
   - 114: {fileID: 1609320611}
+  - 114: {fileID: 1609320614}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -16179,6 +16210,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1609320614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 04809585cefc8264d84dd615af47f628,
+    type: 2}
+  m_PrefabInternal: {fileID: 993741929}
+  m_GameObject: {fileID: 1609320609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1624392921
 GameObject:
   m_ObjectHideFlags: 0
@@ -16384,6 +16429,7 @@ GameObject:
   - 61: {fileID: 1628911079}
   - 50: {fileID: 1628911078}
   - 114: {fileID: 1628911077}
+  - 114: {fileID: 1628911080}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -16444,6 +16490,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1628911080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 04809585cefc8264d84dd615af47f628,
+    type: 2}
+  m_PrefabInternal: {fileID: 2107813891}
+  m_GameObject: {fileID: 1628911075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1633934277
 GameObject:
   m_ObjectHideFlags: 0
@@ -17576,6 +17636,47 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cca167e0cae9f31478fe53a51faebe60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1782513405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1782513407}
+  - 114: {fileID: 1782513406}
+  m_Layer: 0
+  m_Name: BarrelShake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1782513406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1782513405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
+--- !u!4 &1782513407
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1782513405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 77.7117081, y: 1.65709972, z: 73.9985352}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1 &1785717422
 GameObject:
   m_ObjectHideFlags: 0
@@ -18442,6 +18543,7 @@ GameObject:
   - 61: {fileID: 1924065359}
   - 50: {fileID: 1924065358}
   - 114: {fileID: 1924065357}
+  - 114: {fileID: 1924065360}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -18502,6 +18604,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1924065360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2928febe667e77141b59c4cfa9ce2493,
+    type: 2}
+  m_PrefabInternal: {fileID: 238952436}
+  m_GameObject: {fileID: 1924065355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1931374792
 GameObject:
   m_ObjectHideFlags: 0
@@ -19051,6 +19167,7 @@ GameObject:
   - 61: {fileID: 2020421096}
   - 50: {fileID: 2020421095}
   - 114: {fileID: 2020421094}
+  - 114: {fileID: 2020421097}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -19111,6 +19228,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &2020421097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 2057434699}
+  m_GameObject: {fileID: 2020421092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &2033010138
 GameObject:
   m_ObjectHideFlags: 0
@@ -19460,7 +19591,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: f0ae5db422beefb478e3f7774a094dad, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f0ae5db422beefb478e3f7774a094dad, type: 2}
       propertyPath: shortShield
@@ -20024,7 +20155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 04809585cefc8264d84dd615af47f628, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 04809585cefc8264d84dd615af47f628, type: 2}
       propertyPath: shortShield
