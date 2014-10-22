@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 /// <summary>
@@ -11,17 +11,21 @@ public class SpeedUpAvatarScript : MonoBehaviour {
 	
 	void Start ()
 	{
+		this.speedUp ();
+	}
+
+	protected void speedUp(){
 		// Increase avatar speed
 		GameObject character = GameObject.Find ("Character");
 		character.GetComponent<Avatar> ().movementForce += increase;
-
+		
 		// Increase speed of any objects that may be linked to avatar
 		GameObject playerGroup = GameObject.Find ("6 - Player");
 		foreach (var u in playerGroup.GetComponentsInChildren<UnidirectionalMovement>())
 		{
 			u.speed += increase;
 		}
-
+		
 		// Adjust camera to compensate
 		GameObject cam = GameObject.Find ("Main Camera");
 		cam.GetComponent<FollowingDistanceCamera> ().offsetX += increase/2;

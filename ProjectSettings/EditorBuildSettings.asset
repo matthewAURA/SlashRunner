@@ -8,32 +8,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Menus.unity
   - enabled: 1
-    path: Assets/Scenes/Menus/HighScores.unity
-  - enabled: 1
-    path: Assets/Scenes/Menus/Store.unity
-  - enabled: 1
-    path: Assets/Scenes/Menus/Achievements.unity
-  - enabled: 1
-    path: Assets/Scenes/Menus/Settings.unity
-  - enabled: 1
-    path: Assets/Scenes/Levels/Tutorial.unity
-  - enabled: 0
-    path: Assets/Scenes/TestScoringSystem/TestScoringSystem.unity
-  - enabled: 0
-    path: Assets/Scenes/Levels/LevelEnd.unity
+    path: Assets/Scenes/Levels/EndlessRunnerLevel.unity
   - enabled: 1
     path: Assets/Scenes/Levels/Gameover.unity
-  - enabled: 1
-    path: Assets/Scenes/Levels/LevelEndSuccess.unity
-  - enabled: 0
-    path: Assets/Scenes/TestScoringSystem/GameOver.unity
-  - enabled: 0
-    path: Assets/Scenes/TestScoringSystem/TestScoringSystem.unity
-  - enabled: 0
-    path: Assets/Scenes/Levels/LevelEnd.unity
-  - enabled: 1
-    path: Assets/Scenes/Levels/EndlessRunnerLevel.unity
   - enabled: 1
     path: Assets/Scenes/Levels/level01.unity
   - enabled: 1
     path: Assets/Scenes/Levels/level02.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level03.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level04.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/LevelEndSuccess.unity
+  - enabled: 0
+    path: Assets/Scenes/Levels/TemplateLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/Tutorial.unity
+  - enabled: 1
+    path: Assets/Scenes/Menus/Settings.unity
+  - enabled: 1
+    path: Assets/Scenes/Menus/Store.unity

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 797aa1f14acaadb4aa38ebab714b1e4e
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - dieSound: {fileID: 8300000, guid: aedad71ef1e76dd4c8756218715eb1f0, type: 3}
+  - remains: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -15,6 +15,8 @@ public class Scene_Tracking : MonoBehaviour {
 		scenes.Add("Tutorial");
 		scenes.Add("level01");
 		scenes.Add("level02");
+		scenes.Add("level03");
+		scenes.Add("level04");
 		scenes.Add("Menus");
 		currentScene = Application.loadedLevelName;
 	}
@@ -37,6 +39,11 @@ public class Scene_Tracking : MonoBehaviour {
 
 	public static string GetNextLevel() {
 		int nextLevel = scenes.IndexOf(previousScene) + 1;
+		return scenes[nextLevel];
+	}
+
+	public static string GetNextLevelInGame() {
+		int nextLevel = scenes.IndexOf(currentScene) + 1;
 		return scenes[nextLevel];
 	}
 
