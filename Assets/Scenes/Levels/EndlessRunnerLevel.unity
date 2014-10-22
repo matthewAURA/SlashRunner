@@ -621,57 +621,6 @@ Prefab:
   m_RootGameObject: {fileID: 1024533216}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &378523278
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 378523279}
-  - 114: {fileID: 378523281}
-  - 61: {fileID: 378523280}
-  m_Layer: 0
-  m_Name: KillBox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &378523279
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 378523278}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1677919965}
-  m_RootOrder: 0
---- !u!61 &378523280
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 378523278}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 100, y: 1}
-  m_Center: {x: 0, y: -15}
---- !u!114 &378523281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 378523278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9506b6a47e8078d4793cc4bc87cac0b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &424704757
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,7 +897,7 @@ Transform:
   m_LocalScale: {x: .100000001, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 1677919965}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!114 &533841633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2746,7 +2695,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1677919965}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &1321399903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4737,7 +4686,6 @@ Transform:
   m_LocalPosition: {x: 45, y: 7, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 378523279}
   - {fileID: 533841632}
   - {fileID: 1321399902}
   m_Father: {fileID: 66093433}
