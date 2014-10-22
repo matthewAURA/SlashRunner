@@ -2024,6 +2024,7 @@ GameObject:
   - 114: {fileID: 1063513124}
   - 114: {fileID: 1063513123}
   - 114: {fileID: 1063513126}
+  - 114: {fileID: 1063513127}
   m_Layer: 0
   m_Name: EndlessRunnerController
   m_TagString: Untagged
@@ -2134,6 +2135,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increase: 2
   SpeedUpScore: 200
+--- !u!114 &1063513127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1063513118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470cc953a89b2473d8b7a9c6e6f3e678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 1469735410}
+  spawner: {fileID: 1063513120}
 --- !u!1 &1068740744
 GameObject:
   m_ObjectHideFlags: 0
