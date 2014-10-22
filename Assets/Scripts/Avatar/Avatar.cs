@@ -204,6 +204,11 @@ public class Avatar : Destructible, EnemyAttackListener {
 		GameObject o = otherCollider.gameObject;
 
 		if (o.tag == "Sanic") {
+
+			Social.ReportProgress("CgkI3OiBg-AbEAIQBw", 100.0f, (bool success) => {
+            	Debug.Log("Successfully sent Achievement!");
+        	});
+
 			movementForce = 30f;
 			anim.runtimeAnimatorController = sanicAnimController;
 		}
