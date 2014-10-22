@@ -32,7 +32,7 @@ public class Avatar : Destructible, EnemyAttackListener {
 	public static List<IPowerUpChangeListener> powerUpChangeListenerList = new List<IPowerUpChangeListener>();
 
 	public enum Attack {
-		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP
+		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP, KILL
 	}
 	
 	void Awake() {
@@ -51,8 +51,9 @@ public class Avatar : Destructible, EnemyAttackListener {
 		inputMap.Add (MultiPlatformInputs.SwipeRight, Pierce);
 		inputMap.Add (MultiPlatformInputs.Shift, OverHeadSwipe);
 		inputMap.Add (MultiPlatformInputs.SwipeRightDown, OverHeadSwipe);
+		inputMap.Add (MultiPlatformInputs.SwipeRightDown, LowSwipe);
 		inputMap.Add (MultiPlatformInputs.DownArrow, LowSwipe);
-		inputMap.Add (MultiPlatformInputs.SwipeDownRight, LowSwipe);
+		inputMap.Add (MultiPlatformInputs.SwipeDown, LowSwipe);
 		inputMap.Add (MultiPlatformInputs.SpaceBar, JumpStomp);
 		inputMap.Add (MultiPlatformInputs.SwipeUpRightDown, JumpStomp);
 		inputMap.Add (MultiPlatformInputs.Shake, GoBerserk);
@@ -101,26 +102,30 @@ public class Avatar : Destructible, EnemyAttackListener {
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 			
 			// Debug.Log ("Doing Jump Attack");
-			FireAttackAnimation (Attack.JUMPSWIPE);
+			anim.SetTrigger("char_downslash");
+
 			FireAttackActionEvent(Attack.JUMPSWIPE);	
 		}
 	}
 	
 	public void Pierce () {
 		// Debug.Log ("Doing Pierce Attack");
-		FireAttackAnimation (Attack.PIERCE);
+		anim.SetTrigger("char_stab");
+
 		FireAttackActionEvent(Attack.PIERCE);
 	}
 	
 	public void OverHeadSwipe () {
 		// Debug.Log ("Doing Over Head Swipe");
-		FireAttackAnimation (Attack.OVERHEADSWIPE);
+		anim.SetTrigger("char_downslash");
+
 		FireAttackActionEvent(Attack.OVERHEADSWIPE);
 	}
 	
 	public void LowSwipe () {
 		// Debug.Log ("Doing Low Swipe Attack");
-		FireAttackAnimation (Attack.LOWSWIPE);
+		anim.SetTrigger("char_upslash");
+
 		FireAttackActionEvent(Attack.LOWSWIPE);
 	}
 	
@@ -130,7 +135,8 @@ public class Avatar : Destructible, EnemyAttackListener {
 			rigidbody2D.AddForce (new Vector2 (0f, (jumpForce*1.5f)));
 			
 			// Debug.Log ("Doing Jump Stomp Attack");
-			FireAttackAnimation(Attack.JUMPSTOMP);
+			anim.SetTrigger("char_stomp");
+
 			FireAttackActionEvent(Attack.JUMPSTOMP);
 		}
 	}
@@ -166,6 +172,10 @@ public class Avatar : Destructible, EnemyAttackListener {
 	protected override void AfterDeath() {
 		Application.LoadLevel("Gameover");
 	}
+	
+	protected override void BeforeDeath() {
+		this.Destruct ();
+	}
 
 	public override void OnHealthChange() {
 		// Debug.Log ("AvatarTakingDamage");
@@ -174,45 +184,16 @@ public class Avatar : Destructible, EnemyAttackListener {
 		}
 	}
 
-	private void FireAttackAnimation(Avatar.Attack attack)
-	{
-		if (attackAnimation != null)
-		{
-			if (slash != null)
-			{
-				Destroy (slash);
-			}
-			// Spawn animation
-			slash = new GameObject ();
-			slash.AddComponent<SpriteRenderer> ();
-			slash.GetComponent<SpriteRenderer> ().sprite = attackAnimation;
-			slash.transform.position = new Vector3 (gameObject.transform.position.x + 5, 
-                                        gameObject.transform.position.y, 0);
-			Destroy(slash, 0.3f);
-
-			switch (attack) {
-			case Attack.JUMPSWIPE:
-				slash.transform.Rotate (new Vector3(0, 0, 30));
-				break;
-			case Attack.LOWSWIPE:
-				slash.transform.Rotate (new Vector3(0, 0, -30));
-				break;
-			case Attack.JUMPSTOMP:
-			case Attack.OVERHEADSWIPE:
-			default:
-				break;
-			}
-		}
-	}
 	
 	private void FireAttackActionEvent(Avatar.Attack attack) {
 		if (slashSound != null && attackListenerList.Count == 0) {
 			AudioSource.PlayClipAtPoint (slashSound, transform.position);	
 		}
-
+		
 		for (int i = attackListenerList.Count - 1; i >= 0; i--) {
 			attackListenerList[i].OnAvatarAttack(attack);
 		}
+		
 	}
 
 	void OnTriggerEnter2D(Collider2D otherCollider)
@@ -273,6 +254,9 @@ public class Avatar : Destructible, EnemyAttackListener {
 		renderer.enabled = false;
 		//Wait for destruction animation
 		yield return new WaitForSeconds(waitTime);
+		GameObject sword = this.gameObject.transform.Find("Sword").gameObject;
+		Destroy(sword);
+		Destroy(o);
 		//Continue with after death scene
 		AfterDeath ();
 	}

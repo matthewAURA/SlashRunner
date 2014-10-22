@@ -43,7 +43,7 @@ public class HUDScript : MonoBehaviour {
 		GUI.Label (new Rect (Screen.width * 0.35f, Screen.height * 0.01f, Screen.width * 0.1f,Screen.height * 0.1f), (coin - initialCoin).ToString(),style);
 
 		//Pause button
-		image = (Texture)Resources.Load ("shadedDark14");
+		image = (Texture)Resources.Load ("Pause");
 		content.image = image;
 		if (GUI.Button (new Rect (Screen.width - Screen.width * 0.09f, Screen.height * 0.03f, Screen.width * 0.07f, Screen.width * 0.07f), image)) {
 			pause = true;

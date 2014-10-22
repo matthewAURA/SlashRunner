@@ -19,26 +19,14 @@ public class PowerUp : MonoBehaviour {
 	}
 
 	void Awake () {
-		//For testing purposes only
-		if(!PlayerPrefs.HasKey("powerBirdSpawn")) {
-			PlayerPrefs.SetInt("powerBirdSpawn",1);
-		}
-		if(!PlayerPrefs.HasKey("powerSlowMotion")) {
-			PlayerPrefs.SetInt("powerSlowMotion",1);
-		}
-		if(!PlayerPrefs.HasKey("powerBlast")) {
-			PlayerPrefs.SetInt("powerBlast",1);
-		}
-
-
 		powerUps = new List<Power> ();
-		if (PlayerPrefs.HasKey ("powerBirdSpawn")) {
+		if (PlayerPrefs.GetInt ("heartPowerup") == 1) {
 			powerUps.Add (Power.birdSpawn);
 		}
-		if (PlayerPrefs.HasKey ("powerSlowMotion")) {
+		if (PlayerPrefs.GetInt ("timerPowerup") == 1) {
 			powerUps.Add (Power.slowMotion);
 		}
-		if(PlayerPrefs.HasKey("powerBlast")) {
+		if(PlayerPrefs.GetInt("destroyPowerup")== 1) {
 			powerUps.Add (Power.blast);
 		}
 	}
@@ -53,26 +41,6 @@ public class PowerUp : MonoBehaviour {
 		
 	}
 
-	public static void addPlayerPower(Power power) {
-		switch (power) {
-			case Power.blast:
-				if(!PlayerPrefs.HasKey("powerBlast")) {
-					PlayerPrefs.SetInt("powerBlast",1);
-				}
-				break;
-			case Power.birdSpawn:
-				if(!PlayerPrefs.HasKey("powerBirdSpawn")) {
-					PlayerPrefs.SetInt("powerBirdSpawn",1);
-				}
-				break;
-			case Power.slowMotion:
-				if(!PlayerPrefs.HasKey("powerSlowMotion")) {
-					PlayerPrefs.SetInt("powerSlowMotion",1);
-				}
-				break;
-		}
-	}
-	
 	// Method for handling when object with 2D collider enters the Attack-Range-Box
 	void OnTriggerEnter2D(Collider2D other) {
 

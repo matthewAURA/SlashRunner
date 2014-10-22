@@ -8,7 +8,8 @@ public class Pickup : MonoBehaviour {
 	private int period=0;
 	public int scoreReward=100;
 	public AudioClip coinSound;
-	
+	public int coinWorth = 1;
+
 	void Update(){
 		if (isPickedUp) {
 			transform.Translate(new Vector3(0,Time.deltaTime*speed,0));
@@ -28,6 +29,10 @@ public class Pickup : MonoBehaviour {
 			GameObject scoreSystem = GameObject.FindGameObjectWithTag("MainCamera");
 			ScoringSystem s = (ScoringSystem)scoreSystem.GetComponent("ScoringSystem");
 			s.IncreaseScore(scoreReward);
+
+			GameObject coinSystem = GameObject.FindGameObjectWithTag("MainCamera");
+			CoinSystemScript c = (CoinSystemScript)coinSystem.GetComponent("CoinSystemScript");
+			c.AddCoin(coinWorth);
 			
 		}
 	}

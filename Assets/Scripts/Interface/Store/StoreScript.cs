@@ -18,6 +18,9 @@ public class StoreScript : MonoBehaviour {
 	private float startMessageTime;
 	public float messageInterval;
 
+
+	private CoinSystemScript c;
+
 	void Start(){
 		isEnoughMoney = true;
 		messageInterval = 1.5f;
@@ -25,7 +28,7 @@ public class StoreScript : MonoBehaviour {
 		destroyPowerup = PlayerPrefs.GetInt("destroyPowerup");
 		heartPowerup = PlayerPrefs.GetInt("heartPowerup");
 		timerPowerup = PlayerPrefs.GetInt("timerPowerup");
-		timerPowerup = PlayerPrefs.GetInt("coin");
+		coin = PlayerPrefs.GetInt("Coins");
 
 		if (destroyPowerup == null) {
 			destroyPowerup = 0;
@@ -41,10 +44,14 @@ public class StoreScript : MonoBehaviour {
 			timerPowerup = 0;
 			PlayerPrefs.SetInt("timerPowerup", timerPowerup);
 		}
-		if (coin == null) {
-			coin = 0;
-			//PlayerPrefs.SetInt("timerPowerup", timerPowerup);
-		}
+
+		GameObject coinSystem = GameObject.FindGameObjectWithTag("MainCamera");
+		c = (CoinSystemScript)coinSystem.GetComponent("CoinSystemScript");
+		coin = c.GetCoin ();
+	}
+
+	void Update(){
+		coin = c.GetCoin ();
 	}
 	
 	void OnGUI(){
@@ -66,15 +73,20 @@ public class StoreScript : MonoBehaviour {
 		GUI.Label (new Rect (Screen.width / 7.3f, Screen.height / 2.5f, Screen.width * 0.15f, Screen.height * 0.1f), image);// image
 		style.alignment = TextAnchor.MiddleLeft;
 		style.fontSize = (int)(Screen.width * 0.02f);
-		GUI.Label(new Rect (Screen.width / 7f, Screen.height / 2.2f,Screen.width * 0.15f, Screen.height * 0.15f),destroyPowerup.ToString(),style);
-		GUI.Label(new Rect (Screen.width / 5f, Screen.height / 2.2f,Screen.width * 0.15f, Screen.height * 0.15f),"100",style);
+		image = (Texture)Resources.Load ("gold-coin-icon");
+		content.image = image;
+		GUI.Label(new Rect (Screen.width / 6.5f, Screen.height / 1.98f,Screen.width * 0.05f, Screen.height * 0.05f),image);
+		GUI.Label(new Rect (Screen.width / 5f, Screen.height / 2.2f,Screen.width * 0.15f, Screen.height * 0.15f),destroyPowerAmount.ToString(),style);
 		style.alignment = TextAnchor.MiddleCenter;
 		style.fontSize = (int)(Screen.width * 0.025f);
 		if (destroyPowerup == 0) {
-			if(GUI.Button (new Rect (Screen.width /6f, Screen.height / 1.75f, Screen.width * 0.07f, Screen.height * 0.07f), "Buy")) {
+			image = (Texture)Resources.Load ("Buy");
+			content.image = image;
+			if(GUI.Button (new Rect (Screen.width /6f, Screen.height / 1.75f, Screen.width * 0.07f, Screen.height * 0.07f), image)) {
 				if (coin >= destroyPowerAmount){
 					destroyPowerup += 1;
 					PlayerPrefs.SetInt("destroyPowerup", destroyPowerup);
+					c.TakeOutCoin(destroyPowerAmount);
 				} else{
 					isEnoughMoney = false;
 					startMessageTime = Time.time;
@@ -90,15 +102,20 @@ public class StoreScript : MonoBehaviour {
 		GUI.Label (new Rect (Screen.width / 2.2f, Screen.height / 2.5f, Screen.width * 0.15f, Screen.height * 0.1f), image);
 		style.alignment = TextAnchor.MiddleLeft;
 		style.fontSize = (int)(Screen.width * 0.02f);
-		GUI.Label(new Rect (Screen.width / 2.3f, Screen.height / 2.2f,Screen.width * 0.15f, Screen.height * 0.15f),timerPowerup.ToString(),style);
-		GUI.Label(new Rect (Screen.width / 2.1f, Screen.height / 2.2f,Screen.width * 0.15f, Screen.height * 0.15f),"100",style);
+		image = (Texture)Resources.Load ("gold-coin-icon");
+		content.image = image;
+		GUI.Label(new Rect (Screen.width / 2.3f, Screen.height / 1.98f,Screen.width * 0.05f, Screen.height * 0.05f),image);
+		GUI.Label(new Rect (Screen.width / 2.1f, Screen.height / 2.2f,Screen.width * 0.15f, Screen.height * 0.15f),timerPowerAmount.ToString(),style);
 		style.alignment = TextAnchor.MiddleCenter;
 		style.fontSize = (int)(Screen.width * 0.025f);
 		if (timerPowerup == 0) {
-			if(GUI.Button (new Rect (Screen.width /2.3f, Screen.height / 1.75f, Screen.width * 0.07f, Screen.height * 0.07f), "Buy")) {
+			image = (Texture)Resources.Load ("Buy");
+			content.image = image;
+			if(GUI.Button (new Rect (Screen.width /2.3f, Screen.height / 1.75f, Screen.width * 0.07f, Screen.height * 0.07f), image)) {
 				if (coin >= timerPowerAmount){
 					timerPowerup += 1;
 					PlayerPrefs.SetInt("timerPowerup", timerPowerup);
+					c.TakeOutCoin(timerPowerAmount);
 				} else{
 					isEnoughMoney = false;
 					startMessageTime = Time.time;
@@ -112,15 +129,20 @@ public class StoreScript : MonoBehaviour {
 		GUI.Label (new Rect (Screen.width / 1.3f, Screen.height / 2.5f, Screen.width * 0.15f, Screen.height * 0.1f), image);
 		style.alignment = TextAnchor.MiddleLeft;
 		style.fontSize = (int)(Screen.width * 0.02f);
-		GUI.Label(new Rect (Screen.width / 1.32f, Screen.height / 2.2f,Screen.width * 0.15f, Screen.height * 0.15f),heartPowerup.ToString(),style);
-		GUI.Label(new Rect (Screen.width / 1.25f, Screen.height / 2.2f,Screen.width * 0.15f, Screen.height * 0.15f),"100",style);
+		image = (Texture)Resources.Load ("gold-coin-icon");
+		content.image = image;
+		GUI.Label(new Rect (Screen.width / 1.33f, Screen.height / 1.98f,Screen.width * 0.05f, Screen.height * 0.05f),image);
+		GUI.Label(new Rect (Screen.width / 1.25f, Screen.height / 2.2f,Screen.width * 0.15f, Screen.height * 0.15f),heartPowerAmount.ToString(),style);
 		style.alignment = TextAnchor.MiddleCenter;
 		style.fontSize = (int)(Screen.width * 0.025f);
 		if (heartPowerup == 0) {
-			if(GUI.Button (new Rect (Screen.width /1.32f, Screen.height / 1.75f, Screen.width * 0.07f, Screen.height * 0.07f), "Buy")) {
+			image = (Texture)Resources.Load ("Buy");
+			content.image = image;
+			if(GUI.Button (new Rect (Screen.width /1.32f, Screen.height / 1.75f, Screen.width * 0.07f, Screen.height * 0.07f), image)) {
 				if (coin >= heartPowerAmount){
 					heartPowerup += 1;
 					PlayerPrefs.SetInt("heartPowerup", heartPowerup);
+					c.TakeOutCoin(heartPowerAmount);
 				} else{
 					isEnoughMoney = false;
 					startMessageTime = Time.time;
@@ -137,5 +159,7 @@ public class StoreScript : MonoBehaviour {
 				isEnoughMoney = true;
 			}
 		}
+		style.fontSize = (int)(Screen.width * 0.04f);
+		GUI.Label(new Rect(Screen.width / 3.5f, Screen.height / 1.3f,Screen.width * 0.6f, Screen.height * 0.15f),"You have: " + coin + " coins", style);
 	}
 }

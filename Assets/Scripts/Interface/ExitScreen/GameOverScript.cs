@@ -12,6 +12,11 @@ public class GameOverScript : MonoBehaviour {
 		scoreEntry.name = PlayerPrefs.GetString("Name");
 		scoreEntry.score = PlayerPrefs.GetFloat ("ScoreFloat");
 		scoring.AddScoreIntoHighScore (scoreEntry);
+
+		//on gameover screen
+
+		//fix for time still being slowed after a gameover
+		Time.timeScale = 1.0F;
 	}
 
 	void OnGUI(){
