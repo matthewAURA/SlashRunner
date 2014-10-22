@@ -101,7 +101,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 2.42000008, y: 5.96999979}
+  m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
 --- !u!212 &143488500
 SpriteRenderer:
@@ -969,10 +969,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 659911379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
+  m_Script: {fileID: 11500000, guid: cb1679eb82bf24a48a60f2fceaf786a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Settings
+  remains: {fileID: 100008, guid: d8fa2164d381b5149b740efbad631a04, type: 2}
 --- !u!1 &713706657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,10 +1333,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1020809738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
+  m_Script: {fileID: 11500000, guid: cb1679eb82bf24a48a60f2fceaf786a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Store
+  remains: {fileID: 100032, guid: 297354a78a4a547158c9f48fe9baef0c, type: 2}
 --- !u!1 &1043104017
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,6 +53,18 @@ public class ScoringSystem : MonoBehaviour {
 			Social.ReportScore((int)entry.score, "CgkI3OiBg-AbEAIQAg", (bool success) => {
         		// handle success or failure
     		});
+
+    		if ((int)entry.score >= 100) {
+				Social.ReportProgress("CgkI3OiBg-AbEAIQBQ", 100.0f, (bool success) => {
+        	    	Debug.Log("Successfully sent Achievement!");
+    	    	});
+			} 
+
+			if ((int)entry.score > 10000) {
+				Social.ReportProgress("CgkI3OiBg-AbEAIQBg", 100.0f, (bool success) => {
+	            	Debug.Log("Successfully sent Achievement!");
+        		});
+			}
     	}
 
 		SaveScores ();
