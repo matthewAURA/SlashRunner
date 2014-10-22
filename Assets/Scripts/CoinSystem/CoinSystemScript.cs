@@ -10,8 +10,17 @@ public class CoinSystemScript : MonoBehaviour {
 			coin = 0;
 		}
 	}
+
+	public int GetCoin(){
+		return coin;
+	}
 	public void AddCoin(int amount){
 		coin += amount;
+		Debug.Log (coin);
+	}
+
+	public void TakeOutCoin(int amount){
+		coin -= amount;
 		Debug.Log (coin);
 	}
 
