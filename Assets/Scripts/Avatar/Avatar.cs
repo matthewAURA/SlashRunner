@@ -51,8 +51,9 @@ public class Avatar : Destructible, EnemyAttackListener {
 		inputMap.Add (MultiPlatformInputs.SwipeRight, Pierce);
 		inputMap.Add (MultiPlatformInputs.Shift, OverHeadSwipe);
 		inputMap.Add (MultiPlatformInputs.SwipeRightDown, OverHeadSwipe);
+		inputMap.Add (MultiPlatformInputs.SwipeRightDown, LowSwipe);
 		inputMap.Add (MultiPlatformInputs.DownArrow, LowSwipe);
-		inputMap.Add (MultiPlatformInputs.SwipeDownRight, LowSwipe);
+		inputMap.Add (MultiPlatformInputs.SwipeDown, LowSwipe);
 		inputMap.Add (MultiPlatformInputs.SpaceBar, JumpStomp);
 		inputMap.Add (MultiPlatformInputs.SwipeUpRightDown, JumpStomp);
 		inputMap.Add (MultiPlatformInputs.Shake, GoBerserk);
@@ -143,7 +144,7 @@ public class Avatar : Destructible, EnemyAttackListener {
 	public void GoBerserk() {
 		if (powerUp != null) {
 			powerUp.UsePowerUp (this);
-			setPowerUp(null);
+
 
 			if (blastSound != null && powerUp is DoPowerBlast) {
 				AudioSource.PlayClipAtPoint (blastSound, transform.position);	
@@ -154,6 +155,8 @@ public class Avatar : Destructible, EnemyAttackListener {
 			if (slowSound != null && powerUp is PowerSlowMotion) {
 				AudioSource.PlayClipAtPoint (slowSound, transform.position);	
 			}
+
+			setPowerUp(null);
 		}
 	}
 
