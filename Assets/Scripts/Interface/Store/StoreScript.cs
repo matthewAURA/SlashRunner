@@ -153,7 +153,7 @@ public class StoreScript : MonoBehaviour {
 				isEnoughMoney = true;
 			}
 		}
-
+		style.fontSize = (int)(Screen.width * 0.04f);
 		GUI.Label(new Rect(Screen.width / 3.5f, Screen.height / 1.3f,Screen.width * 0.3f, Screen.height * 0.05f),"You have: " + coin + " coins", style);
 	}
 }
