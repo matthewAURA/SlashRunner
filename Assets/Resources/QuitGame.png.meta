@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 06ee6528f158abc4fb484b91c4d60117
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: QuitGame
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
