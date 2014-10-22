@@ -154,7 +154,7 @@ public class StoreScript : MonoBehaviour {
 			content.image = image;
 			style.normal.textColor = Color.white;
 			GUI.Box(new Rect((Screen.width /9.2f), Screen.height / 1.95f, Screen.width /1.5f, Screen.height * 0.1f),"");
-			GUI.Label(new Rect((Screen.width / 5), Screen.height / 1.8f, Screen.width /2, Screen.height * 0.02f),"Sorry, you do not have enough money to buy this item", style);
+			GUI.Label(new Rect((Screen.width /10), Screen.height / 1.8f, Screen.width/1.5f , Screen.height * 0.02f),"Sorry, not enough coins to buy this item", style);
 			if((Time.time - startMessageTime) >= messageInterval){
 				isEnoughMoney = true;
 			}
