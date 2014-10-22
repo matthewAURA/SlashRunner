@@ -38,4 +38,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/level02.unity
   - enabled: 1
+    path: Assets/Scenes/Levels/level03.unity
+  - enabled: 1
     path: Assets/Scenes/Levels/level04.unity
