@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
+
 public class Avatar : Destructible, EnemyAttackListener {
 	
 	[SerializeField] LayerMask whatIsGround = 0;
