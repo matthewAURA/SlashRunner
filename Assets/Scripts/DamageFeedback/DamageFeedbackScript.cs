@@ -20,6 +20,7 @@ public class DamageFeedbackScript : MonoBehaviour {
 		GameObject o = other.gameObject;
 		if (o.tag == "Player") {
 			InvokeRepeating("CameraShake", 0, .01f);
+			Handheld.Vibrate();
 			Invoke("StopShaking", 0.3f);
 		}
 	}
