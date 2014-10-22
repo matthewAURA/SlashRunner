@@ -2133,7 +2133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdaa754ae505d458abe684dce2cdd873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  increase: 2
+  increase: 4
   SpeedUpScore: 200
 --- !u!114 &1063513127
 MonoBehaviour:
