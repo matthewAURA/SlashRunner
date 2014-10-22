@@ -1,11 +1,22 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 /// <summary>
-/// Loads the given scene when pressed.
+/// Moves the camera to a new target on press.
 /// </summary>
-public class AchievementButton : MonoBehaviour {
-
+public class SwipePlayerInMenu : MonoBehaviour {
+	
+	/// <summary>
+	/// Camera 
+	/// </summary>
+	public GameObject cam;
+	public GameObject playButton;
+	
+	/// <summary>
+	/// The new camera target after button press
+	/// </summary>
+	public Transform target;
+	
 	
 	public string sceneName;
 	public GameObject remains;
@@ -76,20 +87,20 @@ public class AchievementButton : MonoBehaviour {
 		//Wait for destruction animation
 		yield return new WaitForSeconds(waitTime);
 		//Continue with after death scene
-		GameManager.Instance.ShowAchievementsUI();
-		StartCoroutine (SecondWait(0.5f));
-	}
+		var dampScript = cam.GetComponent<DampenedCamera>();
+		if (dampScript != null)
+		{
+			dampScript.target = this.target;
+		}
+		else
+		{
+			cam.transform.position = target.position;
+		}
 
-	IEnumerator SecondWait(float waitTime) 
-	{
-		GameObject o = this.gameObject.transform.parent == null ? this.gameObject : this.gameObject.transform.parent.gameObject;
-		//Hide avatar sprite
-		Renderer renderer = o.GetComponentInChildren< Renderer >();;
-		
-		//Wait for destruction animation
-		yield return new WaitForSeconds(waitTime);
 		renderer.enabled = true;
+		Instantiate(playButton, this.transform.position, this.transform.rotation);
+
 	}
-
-
+	
+	
 }
