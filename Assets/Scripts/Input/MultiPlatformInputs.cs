@@ -1,6 +1,7 @@
 ﻿public enum MultiPlatformInputs {
 	//TouchScreen Inputs
 	SwipeUp,
+	SwipeDown,
 	SwipeRight,
 	SwipeRightDown,
 	SwipeDownRight,
