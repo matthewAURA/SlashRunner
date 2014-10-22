@@ -878,10 +878,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 635802193}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
+  m_Script: {fileID: 11500000, guid: cb1679eb82bf24a48a60f2fceaf786a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: HighScores
+  remains: {fileID: 100032, guid: ee1671bb763f94a288938e426f236eff, type: 2}
 --- !u!1 &659911379
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,10 +954,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 659911379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
+  m_Script: {fileID: 11500000, guid: cb1679eb82bf24a48a60f2fceaf786a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Settings
+  remains: {fileID: 100008, guid: d8fa2164d381b5149b740efbad631a04, type: 2}
 --- !u!1 &713706657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,10 +1330,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1020809738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
+  m_Script: {fileID: 11500000, guid: cb1679eb82bf24a48a60f2fceaf786a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Store
+  remains: {fileID: 100032, guid: 297354a78a4a547158c9f48fe9baef0c, type: 2}
 --- !u!1 &1043104017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,10 +1893,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1625714808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea15142e1888d645a842e97c69d8b41, type: 3}
+  m_Script: {fileID: 11500000, guid: cb1679eb82bf24a48a60f2fceaf786a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Achievements
+  remains: {fileID: 100032, guid: bfa6c109758e945f582b0f7c6bfef268, type: 2}
 --- !u!1 &1643005088
 GameObject:
   m_ObjectHideFlags: 0
