@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: 7df0919648ee4471499195f420ed60c4
+guid: 91247eab5796944a89644f810be4e3f7
 TextureImporter:
   fileIDToRecycleName:
-    21300000: sanic
-    21300002: sanic_1
+    21300000: sanic_animation
+    21300002: sanic_animation_0
+    21300004: sanic_animation_1
+    21300006: sanic_animation_2
+    21300008: sanic_animation_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -45,15 +48,45 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: sanic_1
+    - name: sanic_animation_0
       rect:
         serializedVersion: 2
-        x: 133
-        y: 378
-        width: 80
-        height: 96
+        x: 6
+        y: 2
+        width: 62
+        height: 70
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sanic_animation_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2
+        width: 62
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sanic_animation_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 66
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sanic_animation_3
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 0
+        width: 66
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

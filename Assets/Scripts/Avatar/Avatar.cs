@@ -32,7 +32,7 @@ public class Avatar : Destructible, EnemyAttackListener {
 	public static List<IAvatarHeathChangeListener> healthChangeListenerList = new List<IAvatarHeathChangeListener>();
 	public static List<IPowerUpChangeListener> powerUpChangeListenerList = new List<IPowerUpChangeListener>();
 
-	public Sprite[] sanicSprite;
+	public RuntimeAnimatorController sanicAnimController;
 
 	public enum Attack {
 		JUMPSWIPE, PIERCE, OVERHEADSWIPE, LOWSWIPE, JUMPSTOMP, KILL
@@ -204,9 +204,8 @@ public class Avatar : Destructible, EnemyAttackListener {
 		GameObject o = otherCollider.gameObject;
 
 		if (o.tag == "Sanic") {
-			SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
 			movementForce = 30f;
-			spriteRenderer.sprite = sanicSprite[0];
+			anim.runtimeAnimatorController = sanicAnimController;
 		}
 
 		// Damage is caused if player is hit by colliders harmful to players
