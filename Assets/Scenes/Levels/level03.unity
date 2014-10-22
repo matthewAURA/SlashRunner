@@ -254,6 +254,7 @@ GameObject:
   - 61: {fileID: 8753144}
   - 50: {fileID: 8753143}
   - 114: {fileID: 8753142}
+  - 114: {fileID: 8753145}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -314,6 +315,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &8753145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 195550734}
+  m_GameObject: {fileID: 8753140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1001 &9218150
 Prefab:
   m_ObjectHideFlags: 0
@@ -397,6 +412,7 @@ GameObject:
   - 61: {fileID: 10364544}
   - 50: {fileID: 10364543}
   - 114: {fileID: 10364542}
+  - 114: {fileID: 10364545}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -457,6 +473,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &10364545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 141939402}
+  m_GameObject: {fileID: 10364540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1001 &10397887
 Prefab:
   m_ObjectHideFlags: 0
@@ -936,6 +966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &28710509
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1126,6 +1157,7 @@ GameObject:
   - 61: {fileID: 37310615}
   - 50: {fileID: 37310614}
   - 114: {fileID: 37310613}
+  - 114: {fileID: 37310616}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -1186,6 +1218,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &37310616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2928febe667e77141b59c4cfa9ce2493,
+    type: 2}
+  m_PrefabInternal: {fileID: 251716523}
+  m_GameObject: {fileID: 37310611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &39105347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,6 +1610,7 @@ GameObject:
   - 61: {fileID: 50350825}
   - 50: {fileID: 50350824}
   - 114: {fileID: 50350823}
+  - 114: {fileID: 50350826}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -1624,6 +1671,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &50350826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 437476427}
+  m_GameObject: {fileID: 50350821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &50996269
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,6 +2849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &112706631
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3244,6 +3306,7 @@ GameObject:
   - 61: {fileID: 128917432}
   - 50: {fileID: 128917431}
   - 114: {fileID: 128917430}
+  - 114: {fileID: 128917433}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -3304,6 +3367,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &128917433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 213516201}
+  m_GameObject: {fileID: 128917428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &136045987
 GameObject:
   m_ObjectHideFlags: 0
@@ -4249,6 +4326,7 @@ GameObject:
   - 61: {fileID: 170951196}
   - 50: {fileID: 170951195}
   - 114: {fileID: 170951194}
+  - 114: {fileID: 170951197}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -4309,6 +4387,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &170951197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 491185646}
+  m_GameObject: {fileID: 170951192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1001 &173867986
 Prefab:
   m_ObjectHideFlags: 0
@@ -4593,6 +4685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &185560818
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4871,6 +4964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &197116525
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6042,6 +6136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &241192557
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6088,6 +6183,7 @@ GameObject:
   - 61: {fileID: 241223048}
   - 50: {fileID: 241223047}
   - 114: {fileID: 241223046}
+  - 114: {fileID: 241223049}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -6148,6 +6244,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &241223049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1161214685}
+  m_GameObject: {fileID: 241223044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &245906447
 GameObject:
   m_ObjectHideFlags: 0
@@ -6599,6 +6709,7 @@ GameObject:
   - 61: {fileID: 265245448}
   - 50: {fileID: 265245447}
   - 114: {fileID: 265245446}
+  - 114: {fileID: 265245449}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -6659,6 +6770,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &265245449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1359192268}
+  m_GameObject: {fileID: 265245444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &266863366
 GameObject:
   m_ObjectHideFlags: 0
@@ -7374,6 +7499,7 @@ GameObject:
   - 61: {fileID: 298718881}
   - 50: {fileID: 298718880}
   - 114: {fileID: 298718879}
+  - 114: {fileID: 298718882}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -7434,6 +7560,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &298718882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2928febe667e77141b59c4cfa9ce2493,
+    type: 2}
+  m_PrefabInternal: {fileID: 1584926391}
+  m_GameObject: {fileID: 298718877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &299638211
 GameObject:
   m_ObjectHideFlags: 0
@@ -7722,6 +7862,7 @@ GameObject:
   - 61: {fileID: 326431317}
   - 50: {fileID: 326431316}
   - 114: {fileID: 326431315}
+  - 114: {fileID: 326431318}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -7782,6 +7923,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &326431318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2928febe667e77141b59c4cfa9ce2493,
+    type: 2}
+  m_PrefabInternal: {fileID: 739184589}
+  m_GameObject: {fileID: 326431313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &332328525
 GameObject:
   m_ObjectHideFlags: 0
@@ -8473,6 +8628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &357403917
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9107,6 +9263,7 @@ GameObject:
   - 61: {fileID: 402471419}
   - 50: {fileID: 402471418}
   - 114: {fileID: 402471417}
+  - 114: {fileID: 402471420}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -9167,6 +9324,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &402471420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1223794366}
+  m_GameObject: {fileID: 402471415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &402520796
 GameObject:
   m_ObjectHideFlags: 0
@@ -9298,6 +9469,7 @@ GameObject:
   - 61: {fileID: 409093298}
   - 50: {fileID: 409093297}
   - 114: {fileID: 409093296}
+  - 114: {fileID: 409093299}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -9358,6 +9530,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &409093299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2928febe667e77141b59c4cfa9ce2493,
+    type: 2}
+  m_PrefabInternal: {fileID: 173867986}
+  m_GameObject: {fileID: 409093294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &410049910
 GameObject:
   m_ObjectHideFlags: 0
@@ -9596,6 +9782,7 @@ GameObject:
   - 61: {fileID: 418378705}
   - 50: {fileID: 418378704}
   - 114: {fileID: 418378703}
+  - 114: {fileID: 418378706}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -9656,6 +9843,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &418378706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 802645962}
+  m_GameObject: {fileID: 418378701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &418672621
 GameObject:
   m_ObjectHideFlags: 0
@@ -9899,6 +10100,7 @@ GameObject:
   - 61: {fileID: 428078637}
   - 50: {fileID: 428078636}
   - 114: {fileID: 428078635}
+  - 114: {fileID: 428078638}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -9959,6 +10161,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &428078638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 766953791}
+  m_GameObject: {fileID: 428078633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &429019363
 GameObject:
   m_ObjectHideFlags: 0
@@ -10335,6 +10551,7 @@ GameObject:
   - 61: {fileID: 437974712}
   - 50: {fileID: 437974711}
   - 114: {fileID: 437974710}
+  - 114: {fileID: 437974713}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -10395,6 +10612,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &437974713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1414937076}
+  m_GameObject: {fileID: 437974708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1001 &442758433
 Prefab:
   m_ObjectHideFlags: 0
@@ -10612,6 +10843,7 @@ GameObject:
   - 61: {fileID: 450839562}
   - 50: {fileID: 450839561}
   - 114: {fileID: 450839560}
+  - 114: {fileID: 450839563}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -10672,6 +10904,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &450839563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 04809585cefc8264d84dd615af47f628,
+    type: 2}
+  m_PrefabInternal: {fileID: 10397887}
+  m_GameObject: {fileID: 450839558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &457305211
 GameObject:
   m_ObjectHideFlags: 0
@@ -11364,6 +11610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &479002265
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11410,6 +11657,7 @@ GameObject:
   - 61: {fileID: 479206983}
   - 50: {fileID: 479206982}
   - 114: {fileID: 479206981}
+  - 114: {fileID: 479206984}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -11470,6 +11718,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &479206984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 371457376}
+  m_GameObject: {fileID: 479206979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &481381560
 GameObject:
   m_ObjectHideFlags: 0
@@ -11574,6 +11836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &481381564
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11968,6 +12231,7 @@ GameObject:
   - 61: {fileID: 496813974}
   - 50: {fileID: 496813973}
   - 114: {fileID: 496813972}
+  - 114: {fileID: 496813975}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -12028,6 +12292,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &496813975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 04809585cefc8264d84dd615af47f628,
+    type: 2}
+  m_PrefabInternal: {fileID: 1631329250}
+  m_GameObject: {fileID: 496813970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &499006984
 GameObject:
   m_ObjectHideFlags: 0
@@ -12671,6 +12949,7 @@ GameObject:
   - 61: {fileID: 540553833}
   - 50: {fileID: 540553832}
   - 114: {fileID: 540553831}
+  - 114: {fileID: 540553834}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -12731,6 +13010,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &540553834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 708213200}
+  m_GameObject: {fileID: 540553829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &540718349
 GameObject:
   m_ObjectHideFlags: 0
@@ -12972,6 +13265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &547414636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13767,6 +14061,7 @@ GameObject:
   - 61: {fileID: 588023535}
   - 50: {fileID: 588023534}
   - 114: {fileID: 588023533}
+  - 114: {fileID: 588023536}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -13827,6 +14122,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &588023536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 705267425}
+  m_GameObject: {fileID: 588023531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &589670870
 GameObject:
   m_ObjectHideFlags: 0
@@ -14662,6 +14971,7 @@ GameObject:
   - 61: {fileID: 638437806}
   - 50: {fileID: 638437805}
   - 114: {fileID: 638437804}
+  - 114: {fileID: 638437807}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -14722,6 +15032,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &638437807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 218743595}
+  m_GameObject: {fileID: 638437802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &645979958
 GameObject:
   m_ObjectHideFlags: 0
@@ -15021,6 +15345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &656107613
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15221,6 +15546,7 @@ GameObject:
   - 61: {fileID: 670845731}
   - 50: {fileID: 670845730}
   - 114: {fileID: 670845729}
+  - 114: {fileID: 670845732}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -15281,6 +15607,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &670845732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 798599055}
+  m_GameObject: {fileID: 670845727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &671196788
 GameObject:
   m_ObjectHideFlags: 0
@@ -16443,6 +16783,7 @@ GameObject:
   - 61: {fileID: 715196102}
   - 50: {fileID: 715196101}
   - 114: {fileID: 715196100}
+  - 114: {fileID: 715196103}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -16503,6 +16844,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &715196103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1694608675}
+  m_GameObject: {fileID: 715196098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &718068782
 GameObject:
   m_ObjectHideFlags: 0
@@ -17507,6 +17862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &763448430
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18008,6 +18364,7 @@ GameObject:
   - 61: {fileID: 788479944}
   - 50: {fileID: 788479943}
   - 114: {fileID: 788479942}
+  - 114: {fileID: 788479945}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -18068,6 +18425,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &788479945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 607845742}
+  m_GameObject: {fileID: 788479940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &789470581
 GameObject:
   m_ObjectHideFlags: 0
@@ -18160,6 +18531,7 @@ GameObject:
   - 61: {fileID: 791891276}
   - 50: {fileID: 791891275}
   - 114: {fileID: 791891274}
+  - 114: {fileID: 791891277}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -18220,6 +18592,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &791891277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 04809585cefc8264d84dd615af47f628,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293612076}
+  m_GameObject: {fileID: 791891272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &792701373
 GameObject:
   m_ObjectHideFlags: 0
@@ -19196,6 +19582,7 @@ GameObject:
   - 61: {fileID: 831807892}
   - 50: {fileID: 831807891}
   - 114: {fileID: 831807890}
+  - 114: {fileID: 831807893}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -19256,6 +19643,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &831807893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 207290728}
+  m_GameObject: {fileID: 831807888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &832300177
 GameObject:
   m_ObjectHideFlags: 0
@@ -19331,6 +19732,7 @@ GameObject:
   - 61: {fileID: 836996181}
   - 50: {fileID: 836996180}
   - 114: {fileID: 836996179}
+  - 114: {fileID: 836996182}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -19391,6 +19793,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &836996182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 04809585cefc8264d84dd615af47f628,
+    type: 2}
+  m_PrefabInternal: {fileID: 17479529}
+  m_GameObject: {fileID: 836996177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1001 &840385697
 Prefab:
   m_ObjectHideFlags: 0
@@ -20189,6 +20605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &882049896
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20319,6 +20736,7 @@ GameObject:
   - 61: {fileID: 895840877}
   - 50: {fileID: 895840876}
   - 114: {fileID: 895840875}
+  - 114: {fileID: 895840878}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -20379,6 +20797,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &895840878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 905898289}
+  m_GameObject: {fileID: 895840873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &897797921
 GameObject:
   m_ObjectHideFlags: 0
@@ -22524,6 +22956,7 @@ GameObject:
   - 61: {fileID: 999015397}
   - 50: {fileID: 999015396}
   - 114: {fileID: 999015395}
+  - 114: {fileID: 999015398}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -22584,6 +23017,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &999015398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319375954}
+  m_GameObject: {fileID: 999015393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &999793973
 GameObject:
   m_ObjectHideFlags: 0
@@ -22789,6 +23236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1004196060
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23052,6 +23500,7 @@ GameObject:
   - 61: {fileID: 1011487338}
   - 50: {fileID: 1011487337}
   - 114: {fileID: 1011487336}
+  - 114: {fileID: 1011487339}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -23112,6 +23561,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1011487339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 04809585cefc8264d84dd615af47f628,
+    type: 2}
+  m_PrefabInternal: {fileID: 49042306}
+  m_GameObject: {fileID: 1011487334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1011966650
 GameObject:
   m_ObjectHideFlags: 0
@@ -23374,6 +23837,7 @@ GameObject:
   - 61: {fileID: 1031469325}
   - 50: {fileID: 1031469324}
   - 114: {fileID: 1031469323}
+  - 114: {fileID: 1031469326}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -23434,6 +23898,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1031469326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 73232929}
+  m_GameObject: {fileID: 1031469321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1033072620
 GameObject:
   m_ObjectHideFlags: 0
@@ -23984,6 +24462,7 @@ GameObject:
   - 61: {fileID: 1060010302}
   - 50: {fileID: 1060010301}
   - 114: {fileID: 1060010300}
+  - 114: {fileID: 1060010303}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -24044,6 +24523,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1060010303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 2025663773}
+  m_GameObject: {fileID: 1060010298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1073197185
 GameObject:
   m_ObjectHideFlags: 0
@@ -25477,9 +25970,9 @@ MonoBehaviour:
   groundedRadius: .200000003
   grounded: 1
   slashSound: {fileID: 8300000, guid: 37906b51c8a162447858b0d686faa0c3, type: 3}
-  healthSound: {fileID: 0}
-  blastSound: {fileID: 0}
-  slowSound: {fileID: 0}
+  healthSound: {fileID: 8300000, guid: 3880cf5140ee94a4b8a7de806c516ab8, type: 3}
+  blastSound: {fileID: 8300000, guid: 16553f83cf24f4a48b136c24ab8ecdbf, type: 3}
+  slowSound: {fileID: 8300000, guid: 93d709fcb79ad4042967d320a0d5262a, type: 3}
   jumpForce: 1500
   movementForce: 12
   attackAnimation: {fileID: 0}
@@ -26666,6 +27159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1198796257
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27029,6 +27523,7 @@ GameObject:
   - 61: {fileID: 1222165609}
   - 50: {fileID: 1222165608}
   - 114: {fileID: 1222165607}
+  - 114: {fileID: 1222165610}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -27089,6 +27584,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1222165610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1042291895}
+  m_GameObject: {fileID: 1222165605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1001 &1223794366
 Prefab:
   m_ObjectHideFlags: 0
@@ -28794,6 +29303,7 @@ GameObject:
   - 61: {fileID: 1304228095}
   - 50: {fileID: 1304228094}
   - 114: {fileID: 1304228093}
+  - 114: {fileID: 1304228096}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -28854,6 +29364,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1304228096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 764071154}
+  m_GameObject: {fileID: 1304228091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1304988845
 GameObject:
   m_ObjectHideFlags: 0
@@ -31070,6 +31594,7 @@ GameObject:
   - 61: {fileID: 1343716616}
   - 50: {fileID: 1343716615}
   - 114: {fileID: 1343716614}
+  - 114: {fileID: 1343716617}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -31130,6 +31655,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1343716617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 153685346}
+  m_GameObject: {fileID: 1343716612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1343943628
 GameObject:
   m_ObjectHideFlags: 0
@@ -31984,6 +32523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1391446770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32656,6 +33196,7 @@ GameObject:
   - 61: {fileID: 1416967345}
   - 50: {fileID: 1416967344}
   - 114: {fileID: 1416967343}
+  - 114: {fileID: 1416967346}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -32716,6 +33257,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1416967346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1916292870}
+  m_GameObject: {fileID: 1416967341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1001 &1417411750
 Prefab:
   m_ObjectHideFlags: 0
@@ -32851,6 +33406,7 @@ GameObject:
   - 61: {fileID: 1420306951}
   - 50: {fileID: 1420306950}
   - 114: {fileID: 1420306949}
+  - 114: {fileID: 1420306952}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -32911,6 +33467,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1420306952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1464390822}
+  m_GameObject: {fileID: 1420306947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!114 &1420966968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33057,6 +33627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1425012219
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34019,6 +34590,7 @@ GameObject:
   - 61: {fileID: 1464308265}
   - 50: {fileID: 1464308264}
   - 114: {fileID: 1464308263}
+  - 114: {fileID: 1464308266}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -34079,6 +34651,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1464308266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 261440677}
+  m_GameObject: {fileID: 1464308261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1001 &1464390822
 Prefab:
   m_ObjectHideFlags: 0
@@ -34459,6 +35045,47 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: be8920dc107b80a418e9ac3a7d0d31d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1493530711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 051bde5b4d509404f9000312d790d084, type: 2}
+  m_PrefabInternal: {fileID: 1540605768}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1493530713}
+  - 114: {fileID: 1493530712}
+  m_Layer: 0
+  m_Name: CameraMode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1493530712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 051bde5b4d509404f9000312d790d084,
+    type: 2}
+  m_PrefabInternal: {fileID: 1540605768}
+  m_GameObject: {fileID: 1493530711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895b29c54f91e5748b800fc20b4b9d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cube: {fileID: 100000, guid: 9e71256b9c71c8a429c6e2da9eab287c, type: 2}
+--- !u!4 &1493530713
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 051bde5b4d509404f9000312d790d084, type: 2}
+  m_PrefabInternal: {fileID: 1540605768}
+  m_GameObject: {fileID: 1493530711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 68.0900497, y: 6.30676842, z: 82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1 &1494066635
 GameObject:
   m_ObjectHideFlags: 0
@@ -35146,6 +35773,7 @@ GameObject:
   - 61: {fileID: 1523849670}
   - 50: {fileID: 1523849669}
   - 114: {fileID: 1523849668}
+  - 114: {fileID: 1523849671}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -35206,6 +35834,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1523849671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1728117456}
+  m_GameObject: {fileID: 1523849666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1526282008
 GameObject:
   m_ObjectHideFlags: 0
@@ -35482,6 +36124,50 @@ Transform:
   - {fileID: 624864275}
   m_Father: {fileID: 1980728226}
   m_RootOrder: 0
+--- !u!1001 &1540605768
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 051bde5b4d509404f9000312d790d084, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 68.0900497
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 051bde5b4d509404f9000312d790d084, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6.30676842
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 051bde5b4d509404f9000312d790d084, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 82
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 051bde5b4d509404f9000312d790d084, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 051bde5b4d509404f9000312d790d084, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 051bde5b4d509404f9000312d790d084, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 051bde5b4d509404f9000312d790d084, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 051bde5b4d509404f9000312d790d084, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 051bde5b4d509404f9000312d790d084, type: 2}
+  m_RootGameObject: {fileID: 1493530711}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1542170424
 GameObject:
   m_ObjectHideFlags: 0
@@ -35845,6 +36531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1556283740
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35919,6 +36606,7 @@ GameObject:
   - 61: {fileID: 1560911781}
   - 50: {fileID: 1560911780}
   - 114: {fileID: 1560911779}
+  - 114: {fileID: 1560911782}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -35979,6 +36667,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1560911782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1260776046}
+  m_GameObject: {fileID: 1560911777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1563118098
 GameObject:
   m_ObjectHideFlags: 0
@@ -36373,6 +37075,7 @@ GameObject:
   - 61: {fileID: 1582792662}
   - 50: {fileID: 1582792661}
   - 114: {fileID: 1582792660}
+  - 114: {fileID: 1582792663}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -36433,6 +37136,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1582792663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 681843034}
+  m_GameObject: {fileID: 1582792658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1583899029
 GameObject:
   m_ObjectHideFlags: 0
@@ -36731,6 +37448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1596963793
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36985,6 +37703,7 @@ GameObject:
   - 61: {fileID: 1603896523}
   - 50: {fileID: 1603896522}
   - 114: {fileID: 1603896521}
+  - 114: {fileID: 1603896524}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -37045,6 +37764,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1603896524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 101770303}
+  m_GameObject: {fileID: 1603896519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1604550253
 GameObject:
   m_ObjectHideFlags: 0
@@ -37547,6 +38280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1625748322
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38293,6 +39027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1673274676
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39040,6 +39775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1707473236
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39691,6 +40427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1741230123
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39737,6 +40474,7 @@ GameObject:
   - 61: {fileID: 1746267023}
   - 50: {fileID: 1746267022}
   - 114: {fileID: 1746267021}
+  - 114: {fileID: 1746267024}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -39797,6 +40535,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1746267024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1224726741}
+  m_GameObject: {fileID: 1746267019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1748012753
 GameObject:
   m_ObjectHideFlags: 0
@@ -40183,6 +40935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1776843217
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41021,6 +41774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1814914437
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42208,6 +42962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1871416204
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42475,6 +43230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &1883042481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43410,6 +44166,7 @@ GameObject:
   - 61: {fileID: 1931408943}
   - 50: {fileID: 1931408942}
   - 114: {fileID: 1931408941}
+  - 114: {fileID: 1931408944}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -43470,6 +44227,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &1931408944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 04809585cefc8264d84dd615af47f628,
+    type: 2}
+  m_PrefabInternal: {fileID: 1417411750}
+  m_GameObject: {fileID: 1931408939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &1932204672
 GameObject:
   m_ObjectHideFlags: 0
@@ -44621,6 +45392,7 @@ GameObject:
   - 61: {fileID: 2015166905}
   - 50: {fileID: 2015166904}
   - 114: {fileID: 2015166903}
+  - 114: {fileID: 2015166906}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -44681,6 +45453,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &2015166906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1733361972}
+  m_GameObject: {fileID: 2015166901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &2017464208
 GameObject:
   m_ObjectHideFlags: 0
@@ -44692,6 +45478,7 @@ GameObject:
   - 61: {fileID: 2017464212}
   - 50: {fileID: 2017464211}
   - 114: {fileID: 2017464210}
+  - 114: {fileID: 2017464213}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -44752,6 +45539,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &2017464213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1299994222}
+  m_GameObject: {fileID: 2017464208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &2017880820
 GameObject:
   m_ObjectHideFlags: 0
@@ -45153,6 +45954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &2037421975
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45431,6 +46233,7 @@ GameObject:
   - 61: {fileID: 2043358841}
   - 50: {fileID: 2043358840}
   - 114: {fileID: 2043358839}
+  - 114: {fileID: 2043358842}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -45491,6 +46294,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &2043358842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 612558540}
+  m_GameObject: {fileID: 2043358837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &2045570986
 GameObject:
   m_ObjectHideFlags: 0
@@ -45502,6 +46319,7 @@ GameObject:
   - 61: {fileID: 2045570990}
   - 50: {fileID: 2045570989}
   - 114: {fileID: 2045570988}
+  - 114: {fileID: 2045570991}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -45562,6 +46380,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &2045570991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 512426200}
+  m_GameObject: {fileID: 2045570986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1001 &2047330103
 Prefab:
   m_ObjectHideFlags: 0
@@ -45842,6 +46674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &2058812880
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46038,6 +46871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &2064158569
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46400,6 +47234,7 @@ GameObject:
   - 61: {fileID: 2096416913}
   - 50: {fileID: 2096416912}
   - 114: {fileID: 2096416911}
+  - 114: {fileID: 2096416914}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -46460,6 +47295,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &2096416914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 457636240}
+  m_GameObject: {fileID: 2096416909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &2096607282
 GameObject:
   m_ObjectHideFlags: 0
@@ -46471,6 +47320,7 @@ GameObject:
   - 61: {fileID: 2096607286}
   - 50: {fileID: 2096607285}
   - 114: {fileID: 2096607284}
+  - 114: {fileID: 2096607287}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -46531,6 +47381,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &2096607287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 2000bc0a006a0fb419f8bfe818c195ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 753100758}
+  m_GameObject: {fileID: 2096607282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &2099379303
 GameObject:
   m_ObjectHideFlags: 0
@@ -47361,6 +48225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreReward: 200
   coinSound: {fileID: 8300000, guid: d7b330f271d42be42b7cc98c5c05a890, type: 3}
+  coinWorth: 1
 --- !u!212 &2130628105
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47407,6 +48272,7 @@ GameObject:
   - 61: {fileID: 2130723936}
   - 50: {fileID: 2130723935}
   - 114: {fileID: 2130723934}
+  - 114: {fileID: 2130723937}
   m_Layer: 8
   m_Name: AttackRange
   m_TagString: Untagged
@@ -47467,6 +48333,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 3, y: .600000024}
   m_Center: {x: -1.5, y: .150000006}
+--- !u!114 &2130723937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: f0ae5db422beefb478e3f7774a094dad,
+    type: 2}
+  m_PrefabInternal: {fileID: 257015880}
+  m_GameObject: {fileID: 2130723932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9007b7def3319994c8c548ace6da6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmt: .150000006
+  mainCamera: {fileID: 0}
 --- !u!1 &2133255407
 GameObject:
   m_ObjectHideFlags: 0
