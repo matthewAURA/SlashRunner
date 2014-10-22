@@ -6,8 +6,6 @@ public class HUDScript : MonoBehaviour {
 	private bool pause = false;
 	private bool isMusicMuted = true;
 	private string musicButton;
-	private bool isSoundEffectMuted = true;
-	private string soundEffectButton;
 
 	private Texture image;
 	private GUIContent content;
@@ -72,42 +70,26 @@ public class HUDScript : MonoBehaviour {
 			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 12, Screen.height / 2 - Screen.height / 25f, Screen.width / 5 , Screen.height / 15), image)){
 				Application.Quit();
 			}
-			if (isMusicMuted){
-				image = (Texture)Resources.Load ("Music");
-				content.image = image;
-			}else{
+			if (AudioListener.volume == 0){
 				image = (Texture)Resources.Load ("NoMusic");
 				content.image = image;
+				isMusicMuted = false;
+			}else{
+				image = (Texture)Resources.Load ("Music");
+				content.image = image;
+				isMusicMuted = true;
 			}
 			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 12, Screen.height / 2  + Screen.height / 25f, Screen.width / 5 , Screen.height / 15), image)){
 				if(isMusicMuted == true){
 					image = (Texture)Resources.Load ("NoMusic");
 					content.image = image;
 					isMusicMuted = false;
+					AudioListener.volume = 0;
 				}else{
 					image = (Texture)Resources.Load ("Music");
 					content.image = image;
 					isMusicMuted = true;
-				}
-			}
-			if (isSoundEffectMuted){
-				image = (Texture)Resources.Load ("SoundEffect");
-				content.image = image;
-			}else{
-				image = (Texture)Resources.Load ("NoSoundEffect");
-				content.image = image;
-			}
-			if (GUI.Button (new Rect(Screen.width / 2 - Screen.width / 12, Screen.height / 2  + Screen.height / 8.5f, Screen.width / 5 , Screen.height / 15), image)){
-				if(isSoundEffectMuted == true){
-					Debug.Log(true);
-					image = (Texture)Resources.Load ("NoSoundEffect");
-					content.image = image;
-					isSoundEffectMuted = false;
-				}else{
-					Debug.Log(false);
-					image = (Texture)Resources.Load ("SoundEffect");
-					content.image = image;
-					isSoundEffectMuted = true;
+					AudioListener.volume = 100;
 				}
 			}
 		}

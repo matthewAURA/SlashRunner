@@ -315,6 +315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0e148790179064093fbbfa899a6111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  headerFont: {fileID: 12800000, guid: 61842f4d10fdf114c9c9944858ac76f8, type: 3}
+  bodyFont: {fileID: 12800000, guid: 974447b7894fc374c8f48af54c83d99a, type: 3}
 --- !u!82 &1182909196
 AudioSource:
   m_ObjectHideFlags: 0
