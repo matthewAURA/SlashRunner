@@ -16,6 +16,17 @@ public class CoinSystemScript : MonoBehaviour {
 	}
 	public void AddCoin(int amount){
 		coin += amount;
+
+		if (coin >= 10 && coin < 100) {
+			Social.ReportProgress("CgkI3OiBg-AbEAIQAw", 100.0f, (bool success) => {
+				Debug.Log("Successfully sent Achievement!");
+        	});
+		} else if (coin > 100) {
+			Social.ReportProgress("CgkI3OiBg-AbEAIQBA", 100.0f, (bool success) => {
+				Debug.Log("Successfully sent Achievement!");
+        	});
+		}
+
 		Debug.Log (coin);
 	}
 

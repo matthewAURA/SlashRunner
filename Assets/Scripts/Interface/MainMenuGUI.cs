@@ -22,8 +22,8 @@ public class MainMenuGUI : MonoBehaviour {
             sAutoAuthenticate = false;
         }
 
-         Social.ReportProgress("CgkI3OiBg-AbEAIQAQ", 100.0f, (bool success) => {
-            Debug.Log("Successfully sent Achievement!");
+        Social.ReportProgress("CgkI3OiBg-AbEAIQAQ", 100.0f, (bool success) => {
+           Debug.Log("Successfully sent Achievement!");
         });
     }
 
